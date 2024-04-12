@@ -1,0 +1,14 @@
+version: "1"
+rules:
+  - base: main
+    upstream: doocs:main
+    mergeMethod: merge
+  - base: dev-docs
+    upstream: doocs:dev-docs
+    mergeMethod: merge
+  - base: docs
+    upstream: doocs:docs
+    mergeMethod: merge
+  - base: ph-pages
+    upstream: doocs:ph-pages
+    mergeMethod: merge
