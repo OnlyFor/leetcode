@@ -87,6 +87,7 @@ hooks:
   - hooks/committer.py
 
 markdown_extensions:
+  - admonition
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
@@ -97,6 +98,10 @@ markdown_extensions:
   - pymdownx.tilde
   - attr_list
   - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
 
 extra_javascript:
   - javascripts/katex.js 
