@@ -3134,6 +3134,15 @@ Press <kbd>Control</kbd> + <kbd>F</kbd>(or <kbd>Command</kbd> + <kbd>F</kbd> on 
 |  3123  |  [Find Edges in Shortest Paths](/solution/3100-3199/3123.Find%20Edges%20in%20Shortest%20Paths/README_EN.md)  |  `Depth-First Search`,`Breadth-First Search`,`Graph`,`Shortest Path`,`Heap (Priority Queue)`  |  Hard  |  Weekly Contest 394  |
 |  3124  |  [Find Longest Calls](/solution/3100-3199/3124.Find%20Longest%20Calls/README_EN.md)  |  `Database`  |  Medium  |  🔒  |
 |  3125  |  [Maximum Number That Makes Result of Bitwise AND Zero](/solution/3100-3199/3125.Maximum%20Number%20That%20Makes%20Result%20of%20Bitwise%20AND%20Zero/README_EN.md)  |    |  Medium  |  🔒  |
+|  3126  |  [Server Utilization Time](/solution/3100-3199/3126.Server%20Utilization%20Time/README_EN.md)  |    |  Medium  |    |
+|  3127  |  [Make a Square with the Same Color](/solution/3100-3199/3127.Make%20a%20Square%20with%20the%20Same%20Color/README_EN.md)  |    |  Easy  |  Biweekly Contest 129  |
+|  3128  |  [Right Triangles](/solution/3100-3199/3128.Right%20Triangles/README_EN.md)  |    |  Medium  |  Biweekly Contest 129  |
+|  3129  |  [Find All Possible Stable Binary Arrays I](/solution/3100-3199/3129.Find%20All%20Possible%20Stable%20Binary%20Arrays%20I/README_EN.md)  |    |  Medium  |  Biweekly Contest 129  |
+|  3130  |  [Find All Possible Stable Binary Arrays II](/solution/3100-3199/3130.Find%20All%20Possible%20Stable%20Binary%20Arrays%20II/README_EN.md)  |    |  Hard  |  Biweekly Contest 129  |
+|  3131  |  [Find the Integer Added to Array I](/solution/3100-3199/3131.Find%20the%20Integer%20Added%20to%20Array%20I/README_EN.md)  |    |  Easy  |  Weekly Contest 395  |
+|  3132  |  [Find the Integer Added to Array II](/solution/3100-3199/3132.Find%20the%20Integer%20Added%20to%20Array%20II/README_EN.md)  |    |  Medium  |  Weekly Contest 395  |
+|  3133  |  [Minimum Array End](/solution/3100-3199/3133.Minimum%20Array%20End/README_EN.md)  |    |  Medium  |  Weekly Contest 395  |
+|  3134  |  [Find the Median of the Uniqueness Array](/solution/3100-3199/3134.Find%20the%20Median%20of%20the%20Uniqueness%20Array/README_EN.md)  |    |  Hard  |  Weekly Contest 395  |
 
 ## Copyright
 
