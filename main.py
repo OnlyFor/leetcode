@@ -1,75 +1,5 @@
-import json
 import os
-import re
-import requests
 from collections import defaultdict
-
-
-def load_ratings():
-    res = {}
-    if os.path.exists("rating.json"):
-        with open("rating.json", "r", encoding="utf-8") as f:
-            ratings = json.loads(f.read())
-            for item in ratings:
-                res[str(item["ID"])] = item
-
-    url = "https://zerotrac.github.io/leetcode_problem_rating/data.json"
-    try:
-        resp = requests.get(url)
-        if resp.status_code == 200:
-            ratings = resp.json()
-            for item in ratings:
-                res[str(item["ID"])] = item
-    except Exception as e:
-        print(f"Failed to fetch ratings: {e}")
-    return res
-
-
-rating_dict = load_ratings()
-
-
-for contest_file in ["docs/contest.md", "docs-en/contest.md"]:
-    with open(contest_file, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    content = content.replace("[English Version](/solution/CONTEST_README_EN.md)", "")
-    content = content.replace("[中文文档](/solution/CONTEST_README.md)", "")
-    res = re.findall(r"\[(.*?)\]\((.*?)\)", content)
-    for _, link in res:
-        try:
-            num = link.split("/")[-2].split(".")[0]
-            num = int(num)
-            content = content.replace(link, f"./lc/{num}.md")
-        except:
-            pass
-    content = f"---\ncomments: true\n---\n\n" + content
-
-    with open(contest_file, "w", encoding="utf-8") as f:
-        f.write(content)
-
-
-code_dict = {
-    "py": ("Python3", "python"),
-    "java": ("Java", "java"),
-    "cpp": ("C++", "cpp"),
-    "go": ("Go", "go"),
-    "ts": ("TypeScript", "ts"),
-    "rs": ("Rust", "rust"),
-    "js": ("JavaScript", "js"),
-    "cs": ("C#", "cs"),
-    "php": ("PHP", "php"),
-    "c": ("C", "c"),
-    "scala": ("Scala", "scala"),
-    "swift": ("Swift", "swift"),
-    "rb": ("Ruby", "rb"),
-    "kt": ("Kotlin", "kotlin"),
-    "dart": ("Dart", "dart"),
-    "nim": ("Nim", "nim"),
-    "sql": ("MySQL", "sql"),
-    "sh": ("Shell", "bash"),
-}
-
-mapping = {lang: name for name, lang in code_dict.values()}
 
 
 def get_paths(dirs: str, m: int):
@@ -91,32 +21,13 @@ dirs_mapping = {
     "lcs": ("lcs", 3),
 }
 
-dirs = ["solution", "lcof", "lcof2", "lcci", "lcp", "lcs"]
-
-"""
-nav:
-  - LeetCode
-    - 1. 两数之和: lc/1.md
-    - 2. 两数相加: lc/2.md
-"""
-
 navdata_cn = defaultdict(list)
 navdata_en = defaultdict(list)
 
-for dir in dirs:
-    target_dir, m = dirs_mapping[dir]
+for dir, (target_dir, m) in dirs_mapping.items():
     for p in sorted(get_paths(dir, m)):
-        # example:
-        # p = 'solution/0000-0099/0003.Longest Substring Without Repeating Characters/README.md'
-        edit_url = f"https://github.com/doocs/leetcode/edit/main/{p}"
         with open(p, "r", encoding="utf-8") as f:
             content = f.read()
-
-            # [中文文档](/lcci/01.01.Is%20Unique/README.md)
-            # 正则匹配 [中文文档](xxx) 并且移除
-            content = re.sub(r"\[中文文档]\((.*?)\)", "", content)
-            content = re.sub(r"\[English Version]\((.*?)\)", "", content)
-
             title = content[content.find("[") + 1 : content.find("]")]
             dot = title.find(".") if dir != "lcci" else title.rfind(".")
             num = (
@@ -144,61 +55,15 @@ for dir in dirs:
             elif num.endswith("- I"):
                 num = num[:-3] + ".1"
             num = ".".join([x.strip(" ").lstrip("0") for x in num.split(".")])
-            rat = -1
-            if target_dir == "lc" and num in rating_dict:
-                rat = int(rating_dict[num]["Rating"])
-                print(f"Rating: {num} {rat}")
             is_en = "README_EN" in p
             if is_en:
                 navdata_en[dir].append(f"    - {num}. {name}: {target_dir}/{num}.md")
             else:
                 navdata_cn[dir].append(f"    - {num}. {name}: {target_dir}/{num}.md")
-            # 修改代码块
-            while True:
-                start = "<!-- tabs:start -->"
-                end = "<!-- tabs:end -->"
-                i = content.find(start)
-                j = content.find(end)
-                if i == -1 or j == -1:
-                    break
-                j = content.find(end)
-                codes = content[i + len(start) : j].strip()
-                res = re.findall(r"```(.*?)\n(.*?)\n```", codes, re.S)
-                result = []
-                if res:
-                    for lang, code in res:
-                        name = mapping.get(lang)
-                        code = code or ""
-                        # 需要将 code 缩进 4 个空格
-                        code = code.replace("\n", "\n    ")
-                        code_snippet = f'=== "{name}"\n\n    ```{lang} linenums="1"\n    {code}\n    ```\n'
-                        result.append(code_snippet)
-                content = content[:i] + "\n".join(result) + content[j + len(end) :]
             docs_dir = ("docs-en" if is_en else "docs") + os.sep + target_dir
             if not os.path.exists(docs_dir):
                 os.makedirs(docs_dir)
             new_path = os.path.join(docs_dir, f"{num}.md")
-
-            # 获取 tags
-            match = re.search(r"<!-- tags:(.*?) -->", content)
-            tag_headers = ""
-            if match:
-                tags = match.group(1).split(",")
-                if tags and tags != [""]:
-                    tag_headers = "tags:\n"
-                    tag_headers += "".join([f"  - {tag}\n" for tag in tags])
-                    tag_headers += "\n"
-
-            # 开启评论
-            """
-            ---
-            comments: true
-            ---
-            """
-            content = (
-                f"---\ncomments: true\nedit_url: {edit_url}\n{tag_headers}---\n\n"
-                + content
-            )
             with open(new_path, "w", encoding="utf-8") as f:
                 f.write(content)
 
