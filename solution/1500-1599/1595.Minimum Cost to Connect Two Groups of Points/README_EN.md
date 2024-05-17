@@ -12,11 +12,15 @@ tags:
     - Matrix
 ---
 
+<!-- problem:start -->
+
 # [1595. Minimum Cost to Connect Two Groups of Points](https://leetcode.com/problems/minimum-cost-to-connect-two-groups-of-points)
 
 [中文文档](/solution/1500-1599/1595.Minimum%20Cost%20to%20Connect%20Two%20Groups%20of%20Points/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two groups of points where the first group has <code>size<sub>1</sub></code> points, the second group has <code>size<sub>2</sub></code> points, and <code>size<sub>1</sub> &gt;= size<sub>2</sub></code>.</p>
 
@@ -68,11 +72,17 @@ Note that there are multiple points connected to point 2 in the first group and 
 	<li><code>0 &lt;= cost[i][j] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -90,6 +100,8 @@ class Solution:
                     f[i][j] = min(f[i][j], x)
         return f[m][-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -118,6 +130,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -141,6 +155,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func connectTwoGroups(cost [][]int) int {
@@ -170,6 +186,8 @@ func connectTwoGroups(cost [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function connectTwoGroups(cost: number[][]): number {
     const m = cost.length;
@@ -197,9 +215,15 @@ function connectTwoGroups(cost: number[][]): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -220,6 +244,8 @@ class Solution:
             f = g[:]
         return f[-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -249,6 +275,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -275,6 +303,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func connectTwoGroups(cost [][]int) int {
@@ -304,6 +334,8 @@ func connectTwoGroups(cost [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function connectTwoGroups(cost: number[][]): number {
     const m = cost.length;
@@ -332,4 +364,6 @@ function connectTwoGroups(cost: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

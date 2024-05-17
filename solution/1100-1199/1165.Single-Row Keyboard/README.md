@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1165. 单行键盘 🔒](https://leetcode.cn/problems/single-row-keyboard)
 
 [English Version](/solution/1100-1199/1165.Single-Row%20Keyboard/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>我们定制了一款特殊的键盘，所有的键都 <strong>排列在一行上</strong>&nbsp;。</p>
 
@@ -52,7 +54,11 @@ tags:
 	<li><code>word[i]</code>&nbsp;为小写英文字母</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表或数组
 
@@ -66,6 +72,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def calculateTime(self, keyboard: str, word: str) -> int:
@@ -76,6 +84,8 @@ class Solution:
             i = pos[c]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -95,6 +105,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -113,6 +125,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func calculateTime(keyboard string, word string) (ans int) {
@@ -137,6 +151,8 @@ func abs(x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function calculateTime(keyboard: string, word: string): number {
     const pos: number[] = Array(26).fill(0);
@@ -156,4 +172,6 @@ function calculateTime(keyboard: string, word: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

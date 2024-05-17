@@ -4,11 +4,15 @@ difficulty: Hard
 edit_url: https://github.com/doocs/leetcode/edit/main/lcci/17.25.Word%20Rectangle/README_EN.md
 ---
 
+<!-- problem:start -->
+
 # [17.25. Word Rectangle](https://leetcode.cn/problems/word-rectangle-lcci)
 
 [中文文档](/lcci/17.25.Word%20Rectangle/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a list of millions of words, design an algorithm to create the largest possible rectangle of letters such that every row forms a word (reading left to right) and every column forms a word (reading top to bottom). The words need not be chosen consecutively from the list but all rows must be the same length and all columns must be the same height.</p>
 <p>If there are more than one answer, return any one of them. A word can be used more than once.</p>
@@ -43,11 +47,17 @@ edit_url: https://github.com/doocs/leetcode/edit/main/lcci/17.25.Word%20Rectangl
 	<li>It&#39;s guaranteed that&nbsp;all the words are randomly generated.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Trie:
@@ -113,6 +123,8 @@ class Solution:
             dfs(ws)
         return ans
 ```
+
+#### Java
 
 ```java
 class Trie {
@@ -193,6 +205,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Trie {
@@ -278,6 +292,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 type Trie struct {
 	children [26]*Trie
@@ -353,6 +369,8 @@ func maxRectangle(words []string) (ans []string) {
 	return
 }
 ```
+
+#### Swift
 
 ```swift
 class Trie {
@@ -437,4 +455,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,11 +10,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1598. Crawler Log Folder](https://leetcode.com/problems/crawler-log-folder)
 
 [中文文档](/solution/1500-1599/1598.Crawler%20Log%20Folder/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>The Leetcode file system keeps a log each time some user performs a <em>change folder</em> operation.</p>
 
@@ -70,11 +74,17 @@ tags:
 	<li>Folder names consist of lowercase English letters and digits.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -87,6 +97,8 @@ class Solution:
                 ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -103,6 +115,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -121,6 +135,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minOperations(logs []string) int {
 	ans := 0
@@ -137,6 +153,8 @@ func minOperations(logs []string) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minOperations(logs: string[]): number {
     let depth = 0;
@@ -150,6 +168,8 @@ function minOperations(logs: string[]): number {
     return depth;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -166,6 +186,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 #define max(a, b) (((a) > (b)) ? (a) : (b))
@@ -186,4 +208,6 @@ int minOperations(char** logs, int logsSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

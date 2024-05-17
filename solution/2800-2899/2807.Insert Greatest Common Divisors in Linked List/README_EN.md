@@ -10,11 +10,15 @@ tags:
     - Number Theory
 ---
 
+<!-- problem:start -->
+
 # [2807. Insert Greatest Common Divisors in Linked List](https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list)
 
 [中文文档](/solution/2800-2899/2807.Insert%20Greatest%20Common%20Divisors%20in%20Linked%20List/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given the head of a linked list <code>head</code>, in which each node contains an integer value.</p>
 
@@ -54,7 +58,11 @@ There are no pairs of adjacent nodes, so we return the initial linked list.
 	<li><code>1 &lt;= Node.val &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -63,6 +71,8 @@ We use two pointers $pre$ and $cur$ to point to the current node and the next no
 The time complexity is $O(n \times \log M)$, where $n$ is the length of the linked list, and $M$ is the maximum value of the nodes in the linked list. Ignoring the space consumption of the result linked list, the space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for singly-linked list.
@@ -81,6 +91,8 @@ class Solution:
             pre, cur = cur, cur.next
         return head
 ```
+
+#### Java
 
 ```java
 /**
@@ -112,6 +124,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for singly-linked list.
@@ -137,6 +151,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for singly-linked list.
@@ -161,6 +177,8 @@ func gcd(a, b int) int {
 	return gcd(b, a%b)
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -194,4 +212,6 @@ function gcd(a: number, b: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

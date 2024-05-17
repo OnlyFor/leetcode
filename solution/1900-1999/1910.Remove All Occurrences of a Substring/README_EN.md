@@ -8,11 +8,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1910. Remove All Occurrences of a Substring](https://leetcode.com/problems/remove-all-occurrences-of-a-substring)
 
 [中文文档](/solution/1900-1999/1910.Remove%20All%20Occurrences%20of%20a%20Substring/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given two strings <code>s</code> and <code>part</code>, perform the following operation on <code>s</code> until <strong>all</strong> occurrences of the substring <code>part</code> are removed:</p>
 
@@ -59,11 +63,17 @@ Now s has no occurrences of &quot;xy&quot;.
 	<li><code>s</code>​​​​​​ and <code>part</code> consists of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -72,6 +82,8 @@ class Solution:
             s = s.replace(part, '', 1)
         return s
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -83,6 +95,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -97,6 +111,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func removeOccurrences(s string, part string) string {
 	for strings.Contains(s, part) {
@@ -105,6 +121,8 @@ func removeOccurrences(s string, part string) string {
 	return s
 }
 ```
+
+#### TypeScript
 
 ```ts
 function removeOccurrences(s: string, part: string): string {
@@ -117,4 +135,6 @@ function removeOccurrences(s: string, part: string): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

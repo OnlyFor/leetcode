@@ -8,11 +8,15 @@ tags:
     - Array
 ---
 
+<!-- problem:start -->
+
 # [3105. Longest Strictly Increasing or Strictly Decreasing Subarray](https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray)
 
 [中文文档](/solution/3100-3199/3105.Longest%20Strictly%20Increasing%20or%20Strictly%20Decreasing%20Subarray/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array of integers <code>nums</code>. Return <em>the length of the <strong>longest</strong> <span data-keyword="subarray-nonempty">subarray</span> of </em><code>nums</code><em> which is either <strong><span data-keyword="strictly-increasing-array">strictly increasing</span></strong> or <strong><span data-keyword="strictly-decreasing-array">strictly decreasing</span></strong></em>.</p>
 
@@ -73,7 +77,11 @@ tags:
 	<li><code>1 &lt;= nums[i] &lt;= 50</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Two Passes
 
@@ -82,6 +90,8 @@ We first perform a pass to find the length of the longest strictly increasing su
 The time complexity is $O(n)$, where $n$ is the length of the array. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -102,6 +112,8 @@ class Solution:
                 t = 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -126,6 +138,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -149,6 +163,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func longestMonotonicSubarray(nums []int) int {
@@ -175,6 +191,8 @@ func longestMonotonicSubarray(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function longestMonotonicSubarray(nums: number[]): number {
     let ans = 1;
@@ -198,4 +216,6 @@ function longestMonotonicSubarray(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

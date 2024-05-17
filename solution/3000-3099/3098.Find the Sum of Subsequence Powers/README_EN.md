@@ -10,11 +10,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [3098. Find the Sum of Subsequence Powers](https://leetcode.com/problems/find-the-sum-of-subsequence-powers)
 
 [中文文档](/solution/3000-3099/3098.Find%20the%20Sum%20of%20Subsequence%20Powers/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>nums</code> of length <code>n</code>, and a <strong>positive</strong> integer <code>k</code>.</p>
 
@@ -70,7 +74,11 @@ tags:
 	<li><code>2 &lt;= k &lt;= n</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Memoization Search
 
@@ -88,6 +96,8 @@ To avoid repeated calculations, we can use the method of memoization search to s
 The time complexity is $O(n^5)$, and the space complexity is $O(n^5)$. Where $n$ is the length of the array.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -109,6 +119,8 @@ class Solution:
         nums.sort()
         return dfs(0, n, k, inf)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -143,6 +155,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -173,6 +187,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func sumOfPowers(nums []int, k int) int {
@@ -208,4 +224,6 @@ func sumOfPowers(nums []int, k int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

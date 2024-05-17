@@ -9,11 +9,15 @@ tags:
     - Number Theory
 ---
 
+<!-- problem:start -->
+
 # [2523. Closest Prime Numbers in Range](https://leetcode.com/problems/closest-prime-numbers-in-range)
 
 [中文文档](/solution/2500-2599/2523.Closest%20Prime%20Numbers%20in%20Range/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given two positive integers <code>left</code> and <code>right</code>, find the two integers <code>num1</code> and <code>num2</code> such that:</p>
 
@@ -62,11 +66,17 @@ Since 11 is smaller than 17, we return the first pair.
 .spoilerbutton[value="Hide Message"] + .spoiler {padding:5px;}
 </style>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -93,6 +103,8 @@ class Solution:
                 ans = [a, b]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -138,6 +150,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -181,6 +195,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func closestPrimes(left int, right int) []int {
@@ -226,4 +242,6 @@ func closestPrimes(left int, right int) []int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

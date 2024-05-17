@@ -10,11 +10,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [1260. Shift 2D Grid](https://leetcode.com/problems/shift-2d-grid)
 
 [中文文档](/solution/1200-1299/1260.Shift%202D%20Grid/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a 2D <code>grid</code> of size <code>m x n</code>&nbsp;and an integer <code>k</code>. You need to shift the <code>grid</code>&nbsp;<code>k</code> times.</p>
 
@@ -62,7 +66,11 @@ tags:
 	<li><code>0 &lt;= k &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Flattening the 2D Array
 
@@ -73,6 +81,8 @@ Therefore, we can flatten the 2D array into a 1D array, then calculate the final
 The time complexity is $O(m \times n)$, where $m$ and $n$ are the number of rows and columns in the `grid` array, respectively. We need to traverse the `grid` array once to calculate the final position of each element. Ignoring the space consumption of the answer array, the space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -85,6 +95,8 @@ class Solution:
                 ans[x][y] = v
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -110,6 +122,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -127,6 +141,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func shiftGrid(grid [][]int, k int) [][]int {
@@ -146,6 +162,8 @@ func shiftGrid(grid [][]int, k int) [][]int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function shiftGrid(grid: number[][], k: number): number[][] {
     const [m, n] = [grid.length, grid[0].length];
@@ -163,4 +181,6 @@ function shiftGrid(grid: number[][], k: number): number[][] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -11,13 +11,15 @@ tags:
     - 矩阵
 ---
 
+<!-- problem:start -->
+
 # [3071. 在矩阵上写出字母 Y 所需的最少操作次数](https://leetcode.cn/problems/minimum-operations-to-write-the-letter-y-on-a-grid)
 
 [English Version](/solution/3000-3099/3071.Minimum%20Operations%20to%20Write%20the%20Letter%20Y%20on%20a%20Grid/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong> 开始、大小为 <code>n x n</code> 的矩阵 <code>grid</code> ，其中 <code>n</code> 为奇数，且 <code>grid[r][c]</code> 的值为 <code>0</code> 、<code>1</code> 或 <code>2</code> 。</p>
 
@@ -70,7 +72,11 @@ tags:
 	<li><code>n</code> 为奇数。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：计数
 
@@ -79,6 +85,8 @@ tags:
 时间复杂度 $O(n^2)$，其中 $n$ 是矩阵的大小。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -99,6 +107,8 @@ class Solution:
             n * n - cnt1[i] - cnt2[j] for i in range(3) for j in range(3) if i != j
         )
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -130,6 +140,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -163,6 +175,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumOperationsToWriteY(grid [][]int) int {
 	n := len(grid)
@@ -191,6 +205,8 @@ func minimumOperationsToWriteY(grid [][]int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minimumOperationsToWriteY(grid: number[][]): number {
@@ -223,4 +239,6 @@ function minimumOperationsToWriteY(grid: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

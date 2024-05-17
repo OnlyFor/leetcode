@@ -10,11 +10,15 @@ tags:
     - Array
 ---
 
+<!-- problem:start -->
+
 # [1707. Maximum XOR With an Element From Array](https://leetcode.com/problems/maximum-xor-with-an-element-from-array)
 
 [中文文档](/solution/1700-1799/1707.Maximum%20XOR%20With%20an%20Element%20From%20Array/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array <code>nums</code> consisting of non-negative integers. You are also given a <code>queries</code> array, where <code>queries[i] = [x<sub>i</sub>, m<sub>i</sub>]</code>.</p>
 
@@ -50,7 +54,11 @@ tags:
 	<li><code>0 &lt;= nums[j], x<sub>i</sub>, m<sub>i</sub> &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Offline Query + Binary Trie
 
@@ -61,6 +69,8 @@ Next, we use a binary trie to maintain the elements in $nums$. We use a pointer 
 The time complexity is $O(m \times \log m + n \times (\log n + \log M))$, and the space complexity is $O(n \times \log M)$. Where $m$ and $n$ are the lengths of the arrays $nums$ and $queries$ respectively, and $M$ is the maximum value in the array $nums$. In this problem, $M \le 10^9$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Trie:
@@ -105,6 +115,8 @@ class Solution:
             ans[i] = trie.search(x)
         return ans
 ```
+
+#### Java
 
 ```java
 class Trie {
@@ -162,6 +174,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Trie {
@@ -223,6 +237,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 type Trie struct {
@@ -286,6 +302,8 @@ func maximizeXor(nums []int, queries [][]int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 class Trie {
     children: (Trie | null)[];
@@ -345,4 +363,6 @@ function maximizeXor(nums: number[], queries: number[][]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

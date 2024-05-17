@@ -11,11 +11,15 @@ tags:
     - Matrix
 ---
 
+<!-- problem:start -->
+
 # [1992. Find All Groups of Farmland](https://leetcode.com/problems/find-all-groups-of-farmland)
 
 [中文文档](/solution/1900-1999/1992.Find%20All%20Groups%20of%20Farmland/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> <code>m x n</code> binary matrix <code>land</code> where a <code>0</code> represents a hectare of forested land and a <code>1</code> represents a hectare of farmland.</p>
 
@@ -65,11 +69,17 @@ There are no groups of farmland.
 	<li>Groups of farmland are <strong>rectangular</strong> in shape.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -92,6 +102,8 @@ class Solution:
                 ans.append([i, j, x, y])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -119,6 +131,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -143,6 +157,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findFarmland(land [][]int) [][]int {
 	m, n := len(land), len(land[0])
@@ -166,4 +182,6 @@ func findFarmland(land [][]int) [][]int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

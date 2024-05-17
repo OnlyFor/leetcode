@@ -10,11 +10,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1487. Making File Names Unique](https://leetcode.com/problems/making-file-names-unique)
 
 [中文文档](/solution/1400-1499/1487.Making%20File%20Names%20Unique/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array of strings <code>names</code> of size <code>n</code>. You will create <code>n</code> folders in your file system <strong>such that</strong>, at the <code>i<sup>th</sup></code> minute, you will create a folder with the name <code>names[i]</code>.</p>
 
@@ -64,11 +68,17 @@ tags:
 	<li><code>names[i]</code> consists of lowercase English letters, digits, and/or round brackets.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -84,6 +94,8 @@ class Solution:
             d[names[i]] = 1
         return names
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -104,6 +116,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -126,6 +140,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func getFolderNames(names []string) []string {
 	d := map[string]int{}
@@ -147,6 +163,8 @@ func getFolderNames(names []string) []string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function getFolderNames(names: string[]): string[] {
     let d: Map<string, number> = new Map();
@@ -167,4 +185,6 @@ function getFolderNames(names: string[]): string[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,13 +9,15 @@ tags:
     - 模拟
 ---
 
+<!-- problem:start -->
+
 # [2739. 总行驶距离](https://leetcode.cn/problems/total-distance-traveled)
 
 [English Version](/solution/2700-2799/2739.Total%20Distance%20Traveled/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>卡车有两个油箱。给你两个整数，<code>mainTank</code> 表示主油箱中的燃料（以升为单位），<code>additionalTank</code> 表示副油箱中的燃料（以升为单位）。</p>
 
@@ -54,7 +56,11 @@ tags:
 	<li><code>1 &lt;= mainTank, additionalTank &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -63,6 +69,8 @@ tags:
 时间复杂度 $O(n + m)$，其中 $n$ 和 $m$ 分别是主油箱和副油箱中的燃料数量。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -77,6 +85,8 @@ class Solution:
                 mainTank += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -95,6 +105,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -115,6 +127,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func distanceTraveled(mainTank int, additionalTank int) (ans int) {
 	cur := 0
@@ -130,6 +144,8 @@ func distanceTraveled(mainTank int, additionalTank int) (ans int) {
 	return
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -153,6 +169,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 var distanceTraveled = function (mainTank, additionalTank) {
     let ans = 0,
@@ -172,4 +190,6 @@ var distanceTraveled = function (mainTank, additionalTank) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

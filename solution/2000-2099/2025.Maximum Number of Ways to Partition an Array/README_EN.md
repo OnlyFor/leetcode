@@ -12,11 +12,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [2025. Maximum Number of Ways to Partition an Array](https://leetcode.com/problems/maximum-number-of-ways-to-partition-an-array)
 
 [中文文档](/solution/2000-2099/2025.Maximum%20Number%20of%20Ways%20to%20Partition%20an%20Array/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code> of length <code>n</code>. The number of ways to <strong>partition</strong> <code>nums</code> is the number of <code>pivot</code> indices that satisfy both conditions:</p>
 
@@ -69,7 +73,11 @@ There are four ways to partition the array.
 	<li><code>-10<sup>5</sup> &lt;= k, nums[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Prefix Sum + Hash Table
 
@@ -84,6 +92,8 @@ Finally, we return $ans$.
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Here, $n$ is the length of the array $nums$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -110,6 +120,8 @@ class Solution:
             right[v] -= 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -142,6 +154,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -172,6 +186,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func waysToPartition(nums []int, k int) (ans int) {
@@ -204,4 +220,6 @@ func waysToPartition(nums []int, k int) (ans int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

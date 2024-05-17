@@ -11,13 +11,15 @@ tags:
     - 滑动窗口
 ---
 
+<!-- problem:start -->
+
 # [2779. 数组的最大美丽值](https://leetcode.cn/problems/maximum-beauty-of-an-array-after-applying-operation)
 
 [English Version](/solution/2700-2799/2779.Maximum%20Beauty%20of%20an%20Array%20After%20Applying%20Operation/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 和一个 <strong>非负</strong> 整数 <code>k</code> 。</p>
 
@@ -68,7 +70,11 @@ tags:
 	<li><code>0 &lt;= nums[i], k &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：差分数组
 
@@ -81,6 +87,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(M + 2 \times k)$。其中 $n$ 是数组 $nums$ 的长度，而 $M$ 是数组 $nums$ 中的最大值。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -96,6 +104,8 @@ class Solution:
             ans = max(ans, s)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -115,6 +125,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -136,6 +148,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximumBeauty(nums []int, k int) (ans int) {
 	m := slices.Max(nums)
@@ -155,6 +169,8 @@ func maximumBeauty(nums []int, k int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maximumBeauty(nums: number[], k: number): number {
@@ -176,4 +192,6 @@ function maximumBeauty(nums: number[], k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

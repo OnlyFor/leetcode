@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [2114. 句子中的最多单词数](https://leetcode.cn/problems/maximum-number-of-words-found-in-sentences)
 
 [English Version](/solution/2100-2199/2114.Maximum%20Number%20of%20Words%20Found%20in%20Sentences/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>一个 <strong>句子</strong>&nbsp;由一些 <strong>单词</strong>&nbsp;以及它们之间的单个空格组成，句子的开头和结尾不会有多余空格。</p>
 
@@ -56,7 +58,11 @@ tags:
 	<li><code>sentences[i]</code>&nbsp;中所有单词由单个空格隔开。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：空格计数
 
@@ -66,11 +72,15 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def mostWordsFound(self, sentences: List[str]) -> int:
         return 1 + max(s.count(' ') for s in sentences)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -90,6 +100,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -104,6 +116,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func mostWordsFound(sentences []string) (ans int) {
 	for _, s := range sentences {
@@ -115,6 +129,8 @@ func mostWordsFound(sentences []string) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function mostWordsFound(sentences: string[]): number {
@@ -128,6 +144,8 @@ function mostWordsFound(sentences: string[]): number {
     );
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -146,6 +164,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 #define max(a, b) (((a) > (b)) ? (a) : (b))
@@ -168,4 +188,6 @@ int mostWordsFound(char** sentences, int sentencesSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

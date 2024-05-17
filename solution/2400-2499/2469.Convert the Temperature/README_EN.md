@@ -8,11 +8,15 @@ tags:
     - Math
 ---
 
+<!-- problem:start -->
+
 # [2469. Convert the Temperature](https://leetcode.com/problems/convert-the-temperature)
 
 [中文文档](/solution/2400-2499/2469.Convert%20the%20Temperature/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a non-negative floating point number rounded to two decimal places <code>celsius</code>, that denotes the <strong>temperature in Celsius</strong>.</p>
 
@@ -51,7 +55,11 @@ tags:
 	<li><code>0 &lt;= celsius &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -61,11 +69,15 @@ The time complexity is $O(1)$, and the space complexity is $O(1)$.
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def convertTemperature(self, celsius: float) -> List[float]:
         return [celsius + 273.15, celsius * 1.8 + 32]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -74,6 +86,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -84,17 +98,23 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func convertTemperature(celsius float64) []float64 {
 	return []float64{celsius + 273.15, celsius*1.8 + 32}
 }
 ```
 
+#### TypeScript
+
 ```ts
 function convertTemperature(celsius: number): number[] {
     return [celsius + 273.15, celsius * 1.8 + 32];
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -103,6 +123,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 /**
@@ -119,4 +141,6 @@ double* convertTemperature(double celsius, int* returnSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,11 +9,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [1491. Average Salary Excluding the Minimum and Maximum Salary](https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary)
 
 [中文文档](/solution/1400-1499/1491.Average%20Salary%20Excluding%20the%20Minimum%20and%20Maximum%20Salary/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array of <strong>unique</strong> integers <code>salary</code> where <code>salary[i]</code> is the salary of the <code>i<sup>th</sup></code> employee.</p>
 
@@ -47,7 +51,11 @@ Average salary excluding minimum and maximum salary is (2000) / 1 = 2000
 	<li>All the integers of <code>salary</code> are <strong>unique</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -59,12 +67,16 @@ The time complexity is $O(n)$, where $n$ is the length of the array `salary`. Th
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def average(self, salary: List[int]) -> float:
         s = sum(salary) - min(salary) - max(salary)
         return s / (len(salary) - 2)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -81,6 +93,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -99,6 +113,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func average(salary []int) float64 {
 	s := 0
@@ -113,6 +129,8 @@ func average(salary []int) float64 {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function average(salary: number[]): number {
     let max = -Infinity;
@@ -126,6 +144,8 @@ function average(salary: number[]): number {
     return (sum - max - min) / (salary.length - 2);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -143,6 +163,8 @@ impl Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -163,6 +185,8 @@ class Solution {
 }
 ```
 
+#### C
+
 ```c
 #define max(a, b) (((a) > (b)) ? (a) : (b))
 #define min(a, b) (((a) < (b)) ? (a) : (b))
@@ -182,4 +206,6 @@ double average(int* salary, int salarySize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

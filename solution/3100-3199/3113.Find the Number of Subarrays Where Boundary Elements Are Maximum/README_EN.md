@@ -11,11 +11,15 @@ tags:
     - Monotonic Stack
 ---
 
+<!-- problem:start -->
+
 # [3113. Find the Number of Subarrays Where Boundary Elements Are Maximum](https://leetcode.com/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum)
 
 [中文文档](/solution/3100-3199/3113.Find%20the%20Number%20of%20Subarrays%20Where%20Boundary%20Elements%20Are%20Maximum/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array of <strong>positive</strong> integers <code>nums</code>.</p>
 
@@ -90,7 +94,11 @@ tags:
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Monotonic Stack
 
@@ -108,6 +116,8 @@ The time complexity is $O(n)$, and the space complexity is $O(n)$. Where $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numberOfSubarrays(self, nums: List[int]) -> int:
@@ -123,6 +133,8 @@ class Solution:
             ans += stk[-1][1]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -144,6 +156,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -167,6 +181,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numberOfSubarrays(nums []int) (ans int64) {
 	stk := [][2]int{}
@@ -184,6 +200,8 @@ func numberOfSubarrays(nums []int) (ans int64) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numberOfSubarrays(nums: number[]): number {
@@ -206,4 +224,6 @@ function numberOfSubarrays(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

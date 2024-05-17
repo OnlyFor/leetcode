@@ -10,13 +10,15 @@ tags:
     - 二叉树
 ---
 
+<!-- problem:start -->
+
 # [863. 二叉树中所有距离为 K 的结点](https://leetcode.cn/problems/all-nodes-distance-k-in-binary-tree)
 
 [English Version](/solution/0800-0899/0863.All%20Nodes%20Distance%20K%20in%20Binary%20Tree/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个二叉树（具有根结点&nbsp;<code>root</code>），&nbsp;一个目标结点&nbsp;<code>target</code>&nbsp;，和一个整数值 <code>k</code> 。</p>
 
@@ -58,7 +60,11 @@ tags:
 
 <p>&nbsp;</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：DFS + 哈希表
 
@@ -67,6 +73,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 是二叉树的结点数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -106,6 +114,8 @@ class Solution:
         dfs(target, k)
         return ans
 ```
+
+#### Java
 
 ```java
 /**
@@ -156,6 +166,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -198,6 +210,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 /**
@@ -243,9 +257,15 @@ func distanceK(root *TreeNode, target *TreeNode, k int) []int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -284,4 +304,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

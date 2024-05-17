@@ -12,13 +12,15 @@ tags:
     - 堆（优先队列）
 ---
 
+<!-- problem:start -->
+
 # [2146. 价格范围内最高排名的 K 样物品](https://leetcode.cn/problems/k-highest-ranked-items-within-a-price-range)
 
 [English Version](/solution/2100-2199/2146.K%20Highest%20Ranked%20Items%20Within%20a%20Price%20Range/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的二维整数数组&nbsp;<code>grid</code>&nbsp;，它的大小为&nbsp;<code>m x n</code>&nbsp;，表示一个商店中物品的分布图。数组中的整数含义为：</p>
 
@@ -111,11 +113,17 @@ tags:
 	<li><code>1 &lt;= k &lt;= m * n</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -141,6 +149,8 @@ class Solution:
         items.sort()
         return [item[2:] for item in items][:k]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -193,6 +203,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -229,6 +241,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func highestRankedKItems(grid [][]int, pricing []int, start []int, k int) [][]int {
@@ -280,4 +294,6 @@ func highestRankedKItems(grid [][]int, pricing []int, start []int, k int) [][]in
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,11 +9,15 @@ tags:
     - Math
 ---
 
+<!-- problem:start -->
+
 # [1342. Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero)
 
 [中文文档](/solution/1300-1399/1342.Number%20of%20Steps%20to%20Reduce%20a%20Number%20to%20Zero/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer <code>num</code>, return <em>the number of steps to reduce it to zero</em>.</p>
 
@@ -60,11 +64,17 @@ Step 4) 1 is odd; subtract 1 and obtain 0.
 	<li><code>0 &lt;= num &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -78,6 +88,8 @@ class Solution:
             ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -93,6 +105,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -106,6 +120,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func numberOfSteps(num int) int {
@@ -122,6 +138,8 @@ func numberOfSteps(num int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function numberOfSteps(num: number): number {
     let ans = 0;
@@ -132,6 +150,8 @@ function numberOfSteps(num: number): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -152,9 +172,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -168,6 +194,8 @@ class Solution:
         )
 ```
 
+#### Java
+
 ```java
 class Solution {
 
@@ -180,6 +208,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -189,6 +219,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func numberOfSteps(num int) int {
@@ -201,6 +233,8 @@ func numberOfSteps(num int) int {
 	return 1 + numberOfSteps(num-1)
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -218,4 +252,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,11 +10,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [1006. Clumsy Factorial](https://leetcode.com/problems/clumsy-factorial)
 
 [中文文档](/solution/1000-1099/1006.Clumsy%20Factorial/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>The <strong>factorial</strong> of a positive integer <code>n</code> is the product of all positive integers less than or equal to <code>n</code>.</p>
 
@@ -58,11 +62,17 @@ tags:
 	<li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -81,6 +91,8 @@ class Solution:
             op = (op + 1) % 4
         return sum(s)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -111,4 +123,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

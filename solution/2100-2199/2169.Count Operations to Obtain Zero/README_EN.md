@@ -9,11 +9,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [2169. Count Operations to Obtain Zero](https://leetcode.com/problems/count-operations-to-obtain-zero)
 
 [中文文档](/solution/2100-2199/2169.Count%20Operations%20to%20Obtain%20Zero/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two <strong>non-negative</strong> integers <code>num1</code> and <code>num2</code>.</p>
 
@@ -57,11 +61,17 @@ So the total number of operations required is 1.
 	<li><code>0 &lt;= num1, num2 &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -74,6 +84,8 @@ class Solution:
             ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -92,6 +104,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -107,6 +121,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countOperations(num1 int, num2 int) int {
 	ans := 0
@@ -121,6 +137,8 @@ func countOperations(num1 int, num2 int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function countOperations(num1: number, num2: number): number {
     let ans = 0;
@@ -134,4 +152,6 @@ function countOperations(num1: number, num2: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

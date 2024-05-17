@@ -10,11 +10,15 @@ tags:
     - Heap (Priority Queue)
 ---
 
+<!-- problem:start -->
+
 # [2532. Time to Cross a Bridge](https://leetcode.com/problems/time-to-cross-a-bridge)
 
 [中文文档](/solution/2500-2599/2532.Time%20to%20Cross%20a%20Bridge/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There are <code>k</code> workers who want to move <code>n</code> boxes from an old warehouse to a new one. You are given the two integers <code>n</code> and <code>k</code>, and a 2D integer array <code>time</code> of size <code>k x 4</code> where <code>time[i] = [leftToRight<sub>i</sub>, pickOld<sub>i</sub>, rightToLeft<sub>i</sub>, putNew<sub>i</sub>]</code>.</p>
 
@@ -89,11 +93,17 @@ The whole process ends after 58 minutes. We return 50 because the problem asks f
 	<li><code>1 &lt;= leftToRight<sub>i</sub>, pickOld<sub>i</sub>, rightToLeft<sub>i</sub>, putNew<sub>i</sub> &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -139,6 +149,8 @@ class Solution:
                 n -= 1
                 heappush(work_in_right, (cur + time[i][1], i))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -205,6 +217,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -273,6 +287,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findCrossingTime(n int, k int, time [][]int) int {
@@ -350,4 +366,6 @@ func (h *hp2) Pop() any          { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1];
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [2663. 字典序最小的美丽字符串](https://leetcode.cn/problems/lexicographically-smallest-beautiful-string)
 
 [English Version](/solution/2600-2699/2663.Lexicographically%20Smallest%20Beautiful%20String/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>如果一个字符串满足以下条件，则称其为 <strong>美丽字符串</strong> ：</p>
 
@@ -62,7 +64,11 @@ tags:
 	<li><code>s</code> 是一个美丽字符串</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心
 
@@ -76,6 +82,8 @@ tags:
 时间复杂度 $O(n)$，其中 $n$ 是字符串的长度。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -99,6 +107,8 @@ class Solution:
                 return ''.join(cs)
         return ''
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -131,6 +141,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -162,6 +174,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func smallestBeautifulString(s string, k int) string {
 	cs := []byte(s)
@@ -190,6 +204,8 @@ func smallestBeautifulString(s string, k int) string {
 	return ""
 }
 ```
+
+#### TypeScript
 
 ```ts
 function smallestBeautifulString(s: string, k: number): string {
@@ -222,4 +238,6 @@ function smallestBeautifulString(s: string, k: number): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

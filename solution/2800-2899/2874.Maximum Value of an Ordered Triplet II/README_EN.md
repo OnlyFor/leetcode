@@ -8,11 +8,15 @@ tags:
     - Array
 ---
 
+<!-- problem:start -->
+
 # [2874. Maximum Value of an Ordered Triplet II](https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-ii)
 
 [中文文档](/solution/2800-2899/2874.Maximum%20Value%20of%20an%20Ordered%20Triplet%20II/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code>.</p>
 
@@ -55,7 +59,11 @@ It can be shown that there are no ordered triplets of indices with a value great
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Maintain Maximum Prefix Value and Maximum Difference
 
@@ -64,6 +72,8 @@ We can use two variables $mx$ and $mx\_diff$ to maintain the maximum prefix valu
 The time complexity is $O(n)$, where $n$ is the length of the array. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -75,6 +85,8 @@ class Solution:
             mx_diff = max(mx_diff, mx - num)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -93,6 +105,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -109,6 +123,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximumTripletValue(nums []int) int64 {
 	ans, mx, mx_diff := 0, 0, 0
@@ -120,6 +136,8 @@ func maximumTripletValue(nums []int) int64 {
 	return int64(ans)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maximumTripletValue(nums: number[]): number {
@@ -135,4 +153,6 @@ function maximumTripletValue(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

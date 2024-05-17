@@ -11,11 +11,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [2055. Plates Between Candles](https://leetcode.com/problems/plates-between-candles)
 
 [中文文档](/solution/2000-2099/2055.Plates%20Between%20Candles/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There is a long table with a line of plates and candles arranged on top of it. You are given a <strong>0-indexed</strong> string <code>s</code> consisting of characters <code>&#39;*&#39;</code> and <code>&#39;|&#39;</code> only, where a <code>&#39;*&#39;</code> represents a <strong>plate</strong> and a <code>&#39;|&#39;</code> represents a <strong>candle</strong>.</p>
 
@@ -59,11 +63,17 @@ tags:
 	<li><code>0 &lt;= left<sub>i</sub> &lt;= right<sub>i</sub> &lt; s.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -91,6 +101,8 @@ class Solution:
                 ans[k] = presum[j] - presum[i + 1]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -127,6 +139,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -154,6 +168,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func platesBetweenCandles(s string, queries [][]int) []int {
@@ -191,4 +207,6 @@ func platesBetweenCandles(s string, queries [][]int) []int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

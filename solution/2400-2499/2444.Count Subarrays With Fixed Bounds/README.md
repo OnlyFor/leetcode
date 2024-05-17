@@ -11,13 +11,15 @@ tags:
     - 单调队列
 ---
 
+<!-- problem:start -->
+
 # [2444. 统计定界子数组的数目](https://leetcode.cn/problems/count-subarrays-with-fixed-bounds)
 
 [English Version](/solution/2400-2499/2444.Count%20Subarrays%20With%20Fixed%20Bounds/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>nums</code> 和两个整数 <code>minK</code> 以及 <code>maxK</code> 。</p>
 
@@ -56,7 +58,11 @@ tags:
 	<li><code>1 &lt;= nums[i], minK, maxK &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举右端点
 
@@ -74,6 +80,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def countSubarrays(self, nums: List[int], minK: int, maxK: int) -> int:
@@ -89,6 +97,8 @@ class Solution:
             ans += max(0, min(j1, j2) - k)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -112,6 +122,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -128,6 +140,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countSubarrays(nums []int, minK int, maxK int) int64 {
@@ -148,6 +162,8 @@ func countSubarrays(nums []int, minK int, maxK int) int64 {
 	return int64(ans)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countSubarrays(nums: number[], minK: number, maxK: number): number {
@@ -170,6 +186,8 @@ function countSubarrays(nums: number[], minK: number, maxK: number): number {
     return res;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -196,6 +214,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 #define max(a, b) (((a) > (b)) ? (a) : (b))
@@ -225,4 +245,6 @@ long long countSubarrays(int* nums, int numsSize, int minK, int maxK) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

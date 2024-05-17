@@ -9,11 +9,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [2734. Lexicographically Smallest String After Substring Operation](https://leetcode.com/problems/lexicographically-smallest-string-after-substring-operation)
 
 [中文文档](/solution/2700-2799/2734.Lexicographically%20Smallest%20String%20After%20Substring%20Operation/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>s</code> consisting of only lowercase English letters. In one operation, you can do the following:</p>
 
@@ -61,11 +65,17 @@ It can be proven that the resulting string is the lexicographically smallest.
 	<li><code>s</code> consists of lowercase English letters</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -81,6 +91,8 @@ class Solution:
             j += 1
         return s[:i] + "".join(chr(ord(c) - 1) for c in s[i:j]) + s[j:]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -103,6 +115,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -127,6 +141,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func smallestString(s string) string {
 	n := len(s)
@@ -147,6 +163,8 @@ func smallestString(s string) string {
 	return string(cs)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function smallestString(s: string): string {
@@ -172,6 +190,8 @@ function smallestString(s: string): string {
     return cs.join('');
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -202,4 +222,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

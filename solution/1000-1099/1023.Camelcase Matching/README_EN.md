@@ -12,11 +12,15 @@ tags:
     - String Matching
 ---
 
+<!-- problem:start -->
+
 # [1023. Camelcase Matching](https://leetcode.com/problems/camelcase-matching)
 
 [中文文档](/solution/1000-1099/1023.Camelcase%20Matching/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array of strings <code>queries</code> and a string <code>pattern</code>, return a boolean array <code>answer</code> where <code>answer[i]</code> is <code>true</code> if <code>queries[i]</code> matches <code>pattern</code>, and <code>false</code> otherwise.</p>
 
@@ -59,7 +63,11 @@ tags:
 	<li><code>queries[i]</code> and <code>pattern</code> consist of English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Two Pointers
 
@@ -74,6 +82,8 @@ If the pointer $i$ has reached the end of the string $s$ or the characters point
 Time complexity $(n \times m)$, where $n$ and $m$ are the length of the array `queries` and the string `pattern` respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -93,6 +103,8 @@ class Solution:
 
         return [check(q, pattern) for q in queries]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -123,6 +135,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -152,6 +166,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func camelMatch(queries []string, pattern string) (ans []bool) {
 	check := func(s, t string) bool {
@@ -176,6 +192,8 @@ func camelMatch(queries []string, pattern string) (ans []bool) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function camelMatch(queries: string[], pattern: string): boolean[] {
@@ -207,4 +225,6 @@ function camelMatch(queries: string[], pattern: string): boolean[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

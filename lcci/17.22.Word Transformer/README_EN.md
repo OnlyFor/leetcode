@@ -4,11 +4,15 @@ difficulty: Medium
 edit_url: https://github.com/doocs/leetcode/edit/main/lcci/17.22.Word%20Transformer/README_EN.md
 ---
 
+<!-- problem:start -->
+
 # [17.22. Word Transformer](https://leetcode.cn/problems/word-transformer-lcci)
 
 [中文文档](/lcci/17.22.Word%20Transformer/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given two words of equal length that are in a dictionary, write a method to transform one word into another word by changing only one letter at a time. The new word you get in each step must be in the dictionary.</p>
 
@@ -54,7 +58,11 @@ wordList = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quo
 
 <strong>Explanation:</strong>&nbsp;<em>endWord</em> &quot;cog&quot; is not in the dictionary, so there&#39;s no possible transforming sequence.</pre>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: DFS
 
@@ -71,6 +79,8 @@ The specific implementation of the function `dfs(s)` is as follows:
 Finally, we call `dfs(beginWord)`. If `True` is returned, the conversion is successful, we return `ans`, otherwise return an empty array.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -96,6 +106,8 @@ class Solution:
         vis = [False] * len(wordList)
         return ans if dfs(beginWord) else []
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -145,6 +157,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -197,6 +211,8 @@ private:
 };
 ```
 
+#### Go
+
 ```go
 func findLadders(beginWord string, endWord string, wordList []string) []string {
 	ans := []string{beginWord}
@@ -237,6 +253,8 @@ func findLadders(beginWord string, endWord string, wordList []string) []string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findLadders(beginWord: string, endWord: string, wordList: string[]): string[] {
     const ans: string[] = [beginWord];
@@ -273,6 +291,8 @@ function findLadders(beginWord: string, endWord: string, wordList: string[]): st
     return dfs(beginWord) ? ans : [];
 }
 ```
+
+#### Swift
 
 ```swift
 class Solution {
@@ -328,4 +348,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

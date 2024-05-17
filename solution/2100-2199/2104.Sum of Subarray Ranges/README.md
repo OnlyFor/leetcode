@@ -10,13 +10,15 @@ tags:
     - 单调栈
 ---
 
+<!-- problem:start -->
+
 # [2104. 子数组范围和](https://leetcode.cn/problems/sum-of-subarray-ranges)
 
 [English Version](/solution/2100-2199/2104.Sum%20of%20Subarray%20Ranges/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>nums</code> 。<code>nums</code> 中，子数组的 <strong>范围</strong> 是子数组中最大元素和最小元素的差值。</p>
 
@@ -76,7 +78,11 @@ tags:
 
 <p><strong>进阶：</strong>你可以设计一种时间复杂度为 <code>O(n)</code> 的解决方案吗？</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：暴力枚举
 
@@ -87,6 +93,8 @@ tags:
 时间复杂度 $O(n^2)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -100,6 +108,8 @@ class Solution:
                 ans += mx - mi
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -118,6 +128,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -138,6 +150,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func subArrayRanges(nums []int) int64 {
 	var ans int64
@@ -153,6 +167,8 @@ func subArrayRanges(nums []int) int64 {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function subArrayRanges(nums: number[]): number {
@@ -170,6 +186,8 @@ function subArrayRanges(nums: number[]): number {
     return res;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -192,6 +210,10 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：单调栈
 
 枚举每个元素 `nums[i]` 作为最大值出现在了多少个子数组中，以及作为最小值出现在多少个子数组中。
@@ -207,6 +229,8 @@ impl Solution {
 -   [907. 子数组的最小值之和](https://github.com/doocs/leetcode/blob/main/solution/0900-0999/0907.Sum%20of%20Subarray%20Minimums/README.md)
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -235,6 +259,8 @@ class Solution:
         mi = f([-v for v in nums])
         return mx + mi
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -282,6 +308,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -316,6 +344,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func subArrayRanges(nums []int) int64 {
@@ -364,4 +394,6 @@ func subArrayRanges(nums []int) int64 {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

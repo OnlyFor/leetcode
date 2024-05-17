@@ -10,13 +10,15 @@ tags:
     - 前缀和
 ---
 
+<!-- problem:start -->
+
 # [1893. 检查是否区域内所有整数都被覆盖](https://leetcode.cn/problems/check-if-all-the-integers-in-a-range-are-covered)
 
 [English Version](/solution/1800-1899/1893.Check%20if%20All%20the%20Integers%20in%20a%20Range%20Are%20Covered/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个二维整数数组 <code>ranges</code> 和两个整数 <code>left</code> 和 <code>right</code> 。每个 <code>ranges[i] = [start<sub>i</sub>, end<sub>i</sub>]</code> 表示一个从 <code>start<sub>i</sub></code> 到 <code>end<sub>i</sub></code> 的 <strong>闭区间</strong> 。</p>
 
@@ -55,7 +57,11 @@ tags:
 	<li><code>1 <= left <= right <= 50</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：差分数组
 
@@ -68,6 +74,8 @@ tags:
 时间复杂度 $O(n + M)$，空间复杂度 $O(M)$。其中 $n$ 和 $M$ 分别为区间的数量和区间的范围。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -83,6 +91,8 @@ class Solution:
                 return False
         return True
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -104,6 +114,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -127,6 +139,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func isCovered(ranges [][]int, left int, right int) bool {
 	diff := [52]int{}
@@ -146,6 +160,8 @@ func isCovered(ranges [][]int, left int, right int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function isCovered(ranges: number[][], left: number, right: number): boolean {
     const diff = new Array(52).fill(0);
@@ -163,6 +179,8 @@ function isCovered(ranges: number[][], left: number, right: number): boolean {
     return true;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -190,4 +208,6 @@ var isCovered = function (ranges, left, right) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

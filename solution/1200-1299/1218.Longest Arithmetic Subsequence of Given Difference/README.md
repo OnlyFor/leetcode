@@ -10,13 +10,15 @@ tags:
     - 动态规划
 ---
 
+<!-- problem:start -->
+
 # [1218. 最长定差子序列](https://leetcode.cn/problems/longest-arithmetic-subsequence-of-given-difference)
 
 [English Version](/solution/1200-1299/1218.Longest%20Arithmetic%20Subsequence%20of%20Given%20Difference/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>arr</code> 和一个整数 <code>difference</code>，请你找出并返回 <code>arr</code> 中最长等差子序列的长度，该子序列中相邻元素之间的差等于 <code>difference</code> 。</p>
 
@@ -56,13 +58,19 @@ tags:
 	<li><code>-10<sup>4</sup> <= arr[i], difference <= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
 时间复杂度 $O(n)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -72,6 +80,8 @@ class Solution:
             f[x] = f[x - difference] + 1
         return max(f.values())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -86,6 +96,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -102,6 +114,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func longestSubsequence(arr []int, difference int) (ans int) {
 	f := map[int]int{}
@@ -113,6 +127,8 @@ func longestSubsequence(arr []int, difference int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function longestSubsequence(arr: number[], difference: number): number {
     const f: Map<number, number> = new Map();
@@ -122,6 +138,8 @@ function longestSubsequence(arr: number[], difference: number): number {
     return Math.max(...f.values());
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -140,4 +158,6 @@ var longestSubsequence = function (arr, difference) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

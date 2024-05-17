@@ -9,11 +9,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1163. Last Substring in Lexicographical Order](https://leetcode.com/problems/last-substring-in-lexicographical-order)
 
 [中文文档](/solution/1100-1199/1163.Last%20Substring%20in%20Lexicographical%20Order/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a string <code>s</code>, return <em>the last substring of</em> <code>s</code> <em>in lexicographical order</em>.</p>
 
@@ -41,7 +45,11 @@ tags:
 	<li><code>s</code> contains only lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Two pointers
 
@@ -63,6 +71,8 @@ The time complexity is $O(n)$, where $n$ is the length of string $s$. The space 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def lastSubstring(self, s: str) -> str:
@@ -80,6 +90,8 @@ class Solution:
                 k = 0
         return s[i:]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -106,6 +118,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -131,6 +145,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func lastSubstring(s string) string {
 	i, n := 0, len(s)
@@ -151,6 +167,8 @@ func lastSubstring(s string) string {
 	return s[i:]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function lastSubstring(s: string): string {
@@ -176,4 +194,6 @@ function lastSubstring(s: string): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,11 +10,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [1840. Maximum Building Height](https://leetcode.com/problems/maximum-building-height)
 
 [中文文档](/solution/1800-1899/1840.Maximum%20Building%20Height/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You want to build <code>n</code> new buildings in a city. The new buildings will be built in a line and are labeled from <code>1</code> to <code>n</code>.</p>
 
@@ -70,11 +74,17 @@ We can build the buildings with heights [0,1,2,3,3,4,4,5,4,3], and the tallest b
 	<li><code>0 &lt;= maxHeight<sub>i</sub> &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -95,6 +105,8 @@ class Solution:
             ans = max(ans, t)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -126,6 +138,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -150,6 +164,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxBuilding(n int, restrictions [][]int) (ans int) {
@@ -176,4 +192,6 @@ func maxBuilding(n int, restrictions [][]int) (ans int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

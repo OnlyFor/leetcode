@@ -10,13 +10,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [2864. 最大二进制奇数](https://leetcode.cn/problems/maximum-odd-binary-number)
 
 [English Version](/solution/2800-2899/2864.Maximum%20Odd%20Binary%20Number/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个 <strong>二进制</strong> 字符串 <code>s</code> ，其中至少包含一个 <code>'1'</code> 。</p>
 
@@ -54,7 +56,11 @@ tags:
 	<li><code>s</code> 中至少包含一个 <code>'1'</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心
 
@@ -64,12 +70,16 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maximumOddBinaryNumber(self, s: str) -> str:
         cnt = s.count("1")
         return "1" * (cnt - 1) + (len(s) - cnt) * "0" + "1"
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -79,6 +89,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -90,6 +102,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximumOddBinaryNumber(s string) string {
 	cnt := strings.Count(s, "1")
@@ -97,12 +111,16 @@ func maximumOddBinaryNumber(s string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maximumOddBinaryNumber(s: string): string {
     const cnt = s.length - s.replace(/1/g, '').length;
     return '1'.repeat(cnt - 1) + '0'.repeat(s.length - cnt) + '1';
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -118,4 +136,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

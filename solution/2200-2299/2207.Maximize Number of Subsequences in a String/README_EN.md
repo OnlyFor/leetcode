@@ -10,11 +10,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [2207. Maximize Number of Subsequences in a String](https://leetcode.com/problems/maximize-number-of-subsequences-in-a-string)
 
 [中文文档](/solution/2200-2299/2207.Maximize%20Number%20of%20Subsequences%20in%20a%20String/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> string <code>text</code> and another <strong>0-indexed</strong> string <code>pattern</code> of length <code>2</code>, both of which consist of only lowercase English letters.</p>
 
@@ -55,11 +59,17 @@ Some of the strings which can be obtained from text and have 6 subsequences &quo
 	<li><code>text</code> and <code>pattern</code> consist only of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -73,6 +83,8 @@ class Solution:
         ans += max(cnt[pattern[0]], cnt[pattern[1]])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -93,6 +105,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -109,6 +123,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maximumSubsequenceCount(text string, pattern string) int64 {
@@ -129,4 +145,6 @@ func maximumSubsequenceCount(text string, pattern string) int64 {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

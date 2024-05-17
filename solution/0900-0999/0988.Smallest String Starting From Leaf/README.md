@@ -9,13 +9,15 @@ tags:
     - 二叉树
 ---
 
+<!-- problem:start -->
+
 # [988. 从叶结点开始的最小字符串](https://leetcode.cn/problems/smallest-string-starting-from-leaf)
 
 [English Version](/solution/0900-0999/0988.Smallest%20String%20Starting%20From%20Leaf/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一颗根结点为&nbsp;<code>root</code>&nbsp;的二叉树，树中的每一个结点都有一个&nbsp;<code>[0, 25]</code>&nbsp;范围内的值，分别代表字母&nbsp;<code>'a'</code> 到&nbsp;<code>'z'</code>。</p>
 
@@ -72,11 +74,17 @@ tags:
 	<li><code>0 &lt;= Node.val &lt;= 25</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -102,6 +110,8 @@ class Solution:
         dfs(root, [])
         return ans
 ```
+
+#### Java
 
 ```java
 /**
@@ -148,6 +158,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -185,6 +197,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -219,4 +233,6 @@ func smallestFromLeaf(root *TreeNode) string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

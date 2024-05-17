@@ -12,13 +12,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [3027. 人员站位的方案数 II](https://leetcode.cn/problems/find-the-number-of-ways-to-place-people-ii)
 
 [English Version](/solution/3000-3099/3027.Find%20the%20Number%20of%20Ways%20to%20Place%20People%20II/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个&nbsp;&nbsp;<code>n x 2</code>&nbsp;的二维数组 <code>points</code>&nbsp;，它表示二维平面上的一些点坐标，其中&nbsp;<code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code>&nbsp;。</p>
 
@@ -85,7 +87,11 @@ tags:
 	<li><code>points[i]</code>&nbsp;点对两两不同。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：排序 + 枚举
 
@@ -101,6 +107,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numberOfPairs(self, points: List[List[int]]) -> int:
@@ -114,6 +122,8 @@ class Solution:
                     ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -137,6 +147,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -163,6 +175,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numberOfPairs(points [][]int) (ans int) {
 	sort.Slice(points, func(i, j int) bool {
@@ -183,6 +197,8 @@ func numberOfPairs(points [][]int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function numberOfPairs(points: number[][]): number {
     points.sort((a, b) => (a[0] === b[0] ? b[1] - a[1] : a[0] - b[0]));
@@ -202,6 +218,8 @@ function numberOfPairs(points: number[][]): number {
     return ans;
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -228,4 +246,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -12,11 +12,15 @@ tags:
     - Enumeration
 ---
 
+<!-- problem:start -->
+
 # [1617. Count Subtrees With Max Distance Between Cities](https://leetcode.com/problems/count-subtrees-with-max-distance-between-cities)
 
 [中文文档](/solution/1600-1699/1617.Count%20Subtrees%20With%20Max%20Distance%20Between%20Cities/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There are <code>n</code> cities numbered from <code>1</code> to <code>n</code>. You are given an array <code>edges</code> of size <code>n-1</code>, where <code>edges[i] = [u<sub>i</sub>, v<sub>i</sub>]</code> represents a bidirectional edge between cities <code>u<sub>i</sub></code> and <code>v<sub>i</sub></code>. There exists a unique path between each pair of cities. In other words, the cities form a <strong>tree</strong>.</p>
 
@@ -88,11 +92,17 @@ No subtree has two nodes where the max distance between them is 3.
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -127,6 +137,8 @@ class Solution:
                 ans[mx - 1] += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -177,6 +189,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -221,6 +235,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countSubgraphsForEachDiameter(n int, edges [][]int) []int {
 	g := make([][]int, n)
@@ -259,6 +275,8 @@ func countSubgraphsForEachDiameter(n int, edges [][]int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countSubgraphsForEachDiameter(n: number, edges: number[][]): number[] {
@@ -325,9 +343,15 @@ function numberOfLeadingZeros(i: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -368,6 +392,8 @@ class Solution:
                 ans[mx - 1] += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -423,6 +449,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -473,6 +501,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countSubgraphsForEachDiameter(n int, edges [][]int) []int {
 	g := make([][]int, n)
@@ -519,6 +549,8 @@ func countSubgraphsForEachDiameter(n int, edges [][]int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countSubgraphsForEachDiameter(n: number, edges: number[][]): number[] {
@@ -590,4 +622,6 @@ function numberOfLeadingZeros(i: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

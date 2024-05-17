@@ -10,11 +10,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [2108. Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array)
 
 [中文文档](/solution/2100-2199/2108.Find%20First%20Palindromic%20String%20in%20the%20Array/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array of strings <code>words</code>, return <em>the first <strong>palindromic</strong> string in the array</em>. If there is no such string, return <em>an <strong>empty string</strong> </em><code>&quot;&quot;</code>.</p>
 
@@ -55,17 +59,25 @@ Note that &quot;racecar&quot; is also palindromic, but it is not the first.
 	<li><code>words[i]</code> consists only of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
     def firstPalindrome(self, words: List[str]) -> str:
         return next((w for w in words if w == w[::-1]), "")
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -85,6 +97,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -106,6 +120,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func firstPalindrome(words []string) string {
 	for _, w := range words {
@@ -122,6 +138,8 @@ func firstPalindrome(words []string) string {
 	return ""
 }
 ```
+
+#### TypeScript
 
 ```ts
 function firstPalindrome(words: string[]): string {
@@ -142,6 +160,8 @@ function firstPalindrome(words: string[]): string {
     return '';
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -166,6 +186,8 @@ impl Solution {
 }
 ```
 
+#### C
+
 ```c
 char* firstPalindrome(char** words, int wordsSize) {
     for (int i = 0; i < wordsSize; i++) {
@@ -188,4 +210,6 @@ char* firstPalindrome(char** words, int wordsSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

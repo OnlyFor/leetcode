@@ -13,13 +13,15 @@ tags:
     - 计数
 ---
 
+<!-- problem:start -->
+
 # [2856. 删除数对后的最小数组长度](https://leetcode.cn/problems/minimum-array-length-after-pair-removals)
 
 [English Version](/solution/2800-2899/2856.Minimum%20Array%20Length%20After%20Pair%20Removals/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong> 开始的 <strong>非递减</strong> 整数数组&nbsp;<code>nums</code>&nbsp;。</p>
 
@@ -83,7 +85,11 @@ tags:
 	<li><code>nums</code>&nbsp;是 <strong>非递减</strong>&nbsp;数组。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心 + 优先队列（大根堆）
 
@@ -92,6 +98,8 @@ tags:
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(n)$。其中 $n$ 是数组 $nums$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -111,6 +119,8 @@ class Solution:
             ans -= 2
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -141,6 +151,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -174,6 +186,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minLengthAfterRemovals(nums []int) int {
@@ -213,6 +227,8 @@ func (h *hp) push(v int) { heap.Push(h, v) }
 func (h *hp) pop() int   { return heap.Pop(h).(int) }
 ```
 
+#### TypeScript
+
 ```ts
 function minLengthAfterRemovals(nums: number[]): number {
     const cnt: Map<number, number> = new Map();
@@ -241,4 +257,6 @@ function minLengthAfterRemovals(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

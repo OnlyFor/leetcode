@@ -10,11 +10,15 @@ tags:
     - Counting
 ---
 
+<!-- problem:start -->
+
 # [1370. Increasing Decreasing String](https://leetcode.com/problems/increasing-decreasing-string)
 
 [中文文档](/solution/1300-1399/1370.Increasing%20Decreasing%20String/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>s</code>. Reorder the string using the following algorithm:</p>
 
@@ -61,7 +65,11 @@ After steps 4, 5 and 6 of the second iteration, result = &quot;abccbaabccba&quot
 	<li><code>s</code> consists of only lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Counting + Simulation
 
@@ -72,6 +80,8 @@ Then, we enumerate the letters $[a,...,z]$. For the current enumerated letter $c
 The time complexity is $O(n \times |\Sigma|)$, and the space complexity is $O(|\Sigma|)$. Where $n$ is the length of the string $s$, and $\Sigma$ is the character set. In this problem, the character set is all lowercase letters, so $|\Sigma| = 26$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -86,6 +96,8 @@ class Solution:
                     cnt[c] -= 1
         return "".join(ans)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -115,6 +127,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -143,6 +157,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sortString(s string) string {
 	cnt := [26]int{}
@@ -169,6 +185,8 @@ func sortString(s string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function sortString(s: string): string {
     const cnt: number[] = Array(26).fill(0);
@@ -193,6 +211,8 @@ function sortString(s: string): string {
     return ans.join('');
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -225,4 +245,6 @@ var sortString = function (s) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

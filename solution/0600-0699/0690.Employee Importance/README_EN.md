@@ -10,11 +10,15 @@ tags:
     - Hash Table
 ---
 
+<!-- problem:start -->
+
 # [690. Employee Importance](https://leetcode.com/problems/employee-importance)
 
 [中文文档](/solution/0600-0699/0690.Employee%20Importance/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You have a data structure of employee information, including the employee&#39;s unique ID, importance value, and direct subordinates&#39; IDs.</p>
 
@@ -60,11 +64,17 @@ Thus, the total importance value of employee 5 is -3.
 	<li>The IDs in <code>employees[i].subordinates</code> are valid IDs.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 """
@@ -90,6 +100,8 @@ class Solution:
 
         return dfs(id)
 ```
+
+#### Java
 
 ```java
 /*
@@ -122,6 +134,8 @@ class Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -157,4 +171,6 @@ var GetImportance = function (employees, id) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

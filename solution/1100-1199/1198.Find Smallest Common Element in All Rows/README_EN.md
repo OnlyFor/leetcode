@@ -12,11 +12,15 @@ tags:
     - Matrix
 ---
 
+<!-- problem:start -->
+
 # [1198. Find Smallest Common Element in All Rows 🔒](https://leetcode.com/problems/find-smallest-common-element-in-all-rows)
 
 [中文文档](/solution/1100-1199/1198.Find%20Smallest%20Common%20Element%20in%20All%20Rows/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an <code>m x n</code> matrix <code>mat</code> where every row is sorted in <strong>strictly</strong> <strong>increasing</strong> order, return <em>the <strong>smallest common element</strong> in all rows</em>.</p>
 
@@ -48,7 +52,11 @@ tags:
 	<li><code>mat[i]</code> is sorted in strictly increasing order.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Counting
 
@@ -59,6 +67,8 @@ If we do not find the smallest common element after the traversal, we return $-1
 The time complexity is $O(m \times n)$, and the space complexity is $O(10^4)$. Here, $m$ and $n$ are the number of rows and columns in the matrix, respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -71,6 +81,8 @@ class Solution:
                     return x
         return -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -87,6 +99,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -105,6 +119,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func smallestCommonElement(mat [][]int) int {
 	cnt := [10001]int{}
@@ -119,6 +135,8 @@ func smallestCommonElement(mat [][]int) int {
 	return -1
 }
 ```
+
+#### TypeScript
 
 ```ts
 function smallestCommonElement(mat: number[][]): number {
@@ -136,4 +154,6 @@ function smallestCommonElement(mat: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,13 +10,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1946. 子字符串突变后可能得到的最大整数](https://leetcode.cn/problems/largest-number-after-mutating-substring)
 
 [English Version](/solution/1900-1999/1946.Largest%20Number%20After%20Mutating%20Substring/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串 <code>num</code> ，该字符串表示一个大整数。另给你一个长度为 <code>10</code> 且 <strong>下标从 0&nbsp; 开始</strong> 的整数数组 <code>change</code> ，该数组将 <code>0-9</code> 中的每个数字映射到另一个数字。更规范的说法是，数字 <code>d</code> 映射为数字 <code>change[d]</code> 。</p>
 
@@ -68,7 +70,11 @@ tags:
 	<li><code>0 &lt;= change[d] &lt;= 9</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心
 
@@ -77,6 +83,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为字符串 `num` 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -90,6 +98,8 @@ class Solution:
                 break
         return ''.join(s)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -107,6 +117,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -126,6 +138,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximumNumber(num string, change []int) string {
 	s := []byte(num)
@@ -143,4 +157,6 @@ func maximumNumber(num string, change []int) string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

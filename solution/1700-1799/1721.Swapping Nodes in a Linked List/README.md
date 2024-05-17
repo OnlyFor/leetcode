@@ -9,13 +9,15 @@ tags:
     - 双指针
 ---
 
+<!-- problem:start -->
+
 # [1721. 交换链表中的节点](https://leetcode.cn/problems/swapping-nodes-in-a-linked-list)
 
 [English Version](/solution/1700-1799/1721.Swapping%20Nodes%20in%20a%20Linked%20List/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你链表的头节点 <code>head</code> 和一个整数 <code>k</code> 。</p>
 
@@ -68,7 +70,11 @@ tags:
 	<li><code>0 <= Node.val <= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：快慢指针
 
@@ -77,6 +83,8 @@ tags:
 时间复杂度 $O(n)$，其中 $n$ 是链表的长度。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for singly-linked list.
@@ -96,6 +104,8 @@ class Solution:
         p.val, q.val = q.val, p.val
         return head
 ```
+
+#### Java
 
 ```java
 /**
@@ -129,6 +139,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for singly-linked list.
@@ -160,6 +172,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for singly-linked list.
@@ -183,6 +197,8 @@ func swapNodes(head *ListNode, k int) *ListNode {
 	return head
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -212,6 +228,8 @@ function swapNodes(head: ListNode | null, k: number): ListNode | null {
     return head;
 }
 ```
+
+#### C#
 
 ```cs
 /**
@@ -248,4 +266,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

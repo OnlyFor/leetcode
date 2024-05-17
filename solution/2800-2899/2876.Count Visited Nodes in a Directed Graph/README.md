@@ -10,13 +10,15 @@ tags:
     - 动态规划
 ---
 
+<!-- problem:start -->
+
 # [2876. 有向图访问计数](https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph)
 
 [English Version](/solution/2800-2899/2876.Count%20Visited%20Nodes%20in%20a%20Directed%20Graph/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>现有一个有向图，其中包含 <code>n</code> 个节点，节点编号从 <code>0</code> 到 <code>n - 1</code> 。此外，该图还包含了 <code>n</code> 条有向边。</p>
 
@@ -63,7 +65,11 @@ tags:
 	<li><code>edges[i] != i</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：基环树 + 遍历搜索
 
@@ -77,6 +83,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 是数组 $edges$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -102,6 +110,8 @@ class Solution:
                     j = edges[j]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -132,6 +142,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -160,6 +172,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countVisitedNodes(edges []int) []int {
@@ -190,6 +204,8 @@ func countVisitedNodes(edges []int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function countVisitedNodes(edges: number[]): number[] {
     const n = edges.length;
@@ -219,9 +235,15 @@ function countVisitedNodes(edges: number[]): number[] {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Java
 
 ```java
 class Solution {
@@ -264,4 +286,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -11,11 +11,15 @@ tags:
     - Backtracking
 ---
 
+<!-- problem:start -->
+
 # [1980. Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string)
 
 [中文文档](/solution/1900-1999/1980.Find%20Unique%20Binary%20String/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array of strings <code>nums</code> containing <code>n</code> <strong>unique</strong> binary strings each of length <code>n</code>, return <em>a binary string of length </em><code>n</code><em> that <strong>does not appear</strong> in </em><code>nums</code><em>. If there are multiple answers, you may return <strong>any</strong> of them</em>.</p>
 
@@ -55,7 +59,11 @@ tags:
 	<li>All the strings of <code>nums</code> are <strong>unique</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Counting + Enumeration
 
@@ -69,6 +77,8 @@ The time complexity is $O(L)$, where $L$ is the total length of the strings in `
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def findDifferentBinaryString(self, nums: List[str]) -> str:
@@ -80,6 +90,8 @@ class Solution:
             if mask >> i & 1 ^ 1:
                 return "1" * i + "0" * (n - i)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -103,6 +115,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -121,6 +135,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findDifferentBinaryString(nums []string) string {
 	mask := 0
@@ -134,6 +150,8 @@ func findDifferentBinaryString(nums []string) string {
 	}
 }
 ```
+
+#### TypeScript
 
 ```ts
 function findDifferentBinaryString(nums: string[]): string {
@@ -149,6 +167,8 @@ function findDifferentBinaryString(nums: string[]): string {
     }
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -169,4 +189,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,11 +9,15 @@ tags:
     - Counting
 ---
 
+<!-- problem:start -->
+
 # [1121. Divide Array Into Increasing Sequences 🔒](https://leetcode.com/problems/divide-array-into-increasing-sequences)
 
 [中文文档](/solution/1100-1199/1121.Divide%20Array%20Into%20Increasing%20Sequences/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer array <code>nums</code> sorted in non-decreasing order and an integer <code>k</code>, return <code>true</code><em> if this array can be divided into one or more disjoint increasing subsequences of length at least </em><code>k</code><em>, or </em><code>false</code><em> otherwise</em>.</p>
 
@@ -43,7 +47,11 @@ tags:
 	<li><code>nums</code> is sorted in non-decreasing order.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Quick Thinking
 
@@ -53,12 +61,16 @@ The time complexity is $O(n)$, and the space complexity is $O(1)$. Here, $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def canDivideIntoSubsequences(self, nums: List[int], k: int) -> bool:
         mx = max(len(list(x)) for _, x in groupby(nums))
         return mx * k <= len(nums)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -72,6 +84,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -90,6 +104,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func canDivideIntoSubsequences(nums []int, k int) bool {
@@ -110,9 +126,15 @@ func canDivideIntoSubsequences(nums []int, k int) bool {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Java
 
 ```java
 class Solution {
@@ -133,4 +155,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

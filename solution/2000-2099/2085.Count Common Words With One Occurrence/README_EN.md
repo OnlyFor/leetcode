@@ -11,11 +11,15 @@ tags:
     - Counting
 ---
 
+<!-- problem:start -->
+
 # [2085. Count Common Words With One Occurrence](https://leetcode.com/problems/count-common-words-with-one-occurrence)
 
 [中文文档](/solution/2000-2099/2085.Count%20Common%20Words%20With%20One%20Occurrence/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given two string arrays <code>words1</code> and <code>words2</code>, return <em>the number of strings that appear <strong>exactly once</strong> in <b>each</b>&nbsp;of the two arrays.</em></p>
 
@@ -58,7 +62,11 @@ Thus, there are 2 strings that appear exactly once in each of the two arrays.
 	<li><code>words1[i]</code> and <code>words2[j]</code> consists only of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table + Counting
 
@@ -68,6 +76,8 @@ The time complexity is $O(n + m)$, and the space complexity is $O(n + m)$. Where
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def countWords(self, words1: List[str], words2: List[str]) -> int:
@@ -75,6 +85,8 @@ class Solution:
         cnt2 = Counter(words2)
         return sum(v == 1 and cnt2[w] == 1 for w, v in cnt1.items())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -98,6 +110,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -119,6 +133,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countWords(words1 []string, words2 []string) (ans int) {
 	cnt1 := map[string]int{}
@@ -137,6 +153,8 @@ func countWords(words1 []string, words2 []string) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countWords(words1: string[], words2: string[]): number {
@@ -160,4 +178,6 @@ function countWords(words1: string[], words2: string[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

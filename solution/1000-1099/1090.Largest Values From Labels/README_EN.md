@@ -12,11 +12,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [1090. Largest Values From Labels](https://leetcode.com/problems/largest-values-from-labels)
 
 [中文文档](/solution/1000-1099/1090.Largest%20Values%20From%20Labels/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There is a set of <code>n</code> items. You are given two integer arrays <code>values</code> and <code>labels</code> where the value and the label of the <code>i<sup>th</sup></code> element are <code>values[i]</code> and <code>labels[i]</code> respectively. You are also given two integers <code>numWanted</code> and <code>useLimit</code>.</p>
 
@@ -66,11 +70,17 @@ tags:
 	<li><code>1 &lt;= numWanted, useLimit &lt;= n</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -88,6 +98,8 @@ class Solution:
                     break
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -112,6 +124,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -138,6 +152,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func largestValsFromLabels(values []int, labels []int, numWanted int, useLimit int) (ans int) {
 	n := len(values)
@@ -158,6 +174,8 @@ func largestValsFromLabels(values []int, labels []int, numWanted int, useLimit i
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function largestValsFromLabels(
@@ -188,4 +206,6 @@ function largestValsFromLabels(
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

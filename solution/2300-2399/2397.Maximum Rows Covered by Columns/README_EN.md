@@ -12,11 +12,15 @@ tags:
     - Matrix
 ---
 
+<!-- problem:start -->
+
 # [2397. Maximum Rows Covered by Columns](https://leetcode.com/problems/maximum-rows-covered-by-columns)
 
 [中文文档](/solution/2300-2399/2397.Maximum%20Rows%20Covered%20by%20Columns/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> <code>m x n</code> binary matrix <code>matrix</code> and an integer <code>numSelect</code>, which denotes the number of <strong>distinct</strong> columns you must select from <code>matrix</code>.</p>
 
@@ -67,7 +71,11 @@ Therefore, we return 2.
 	<li><code>1 &lt;= numSelect&nbsp;&lt;= n</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Binary Enumeration
 
@@ -78,6 +86,8 @@ Next, we enumerate all $2^n$ column selection schemes, where $n$ is the number o
 The time complexity is $O(2^n \times m)$, and the space complexity is $O(m)$. Where $m$ and $n$ are the number of rows and columns in the matrix, respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -95,6 +105,8 @@ class Solution:
             ans = max(ans, t)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -126,6 +138,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -156,6 +170,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximumRows(matrix [][]int, numSelect int) (ans int) {
 	m, n := len(matrix), len(matrix[0])
@@ -184,6 +200,8 @@ func maximumRows(matrix [][]int, numSelect int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maximumRows(matrix: number[][], numSelect: number): number {
@@ -224,4 +242,6 @@ function bitCount(i: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

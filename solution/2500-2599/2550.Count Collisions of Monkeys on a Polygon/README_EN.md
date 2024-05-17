@@ -9,11 +9,15 @@ tags:
     - Math
 ---
 
+<!-- problem:start -->
+
 # [2550. Count Collisions of Monkeys on a Polygon](https://leetcode.com/problems/count-collisions-of-monkeys-on-a-polygon)
 
 [中文文档](/solution/2500-2599/2550.Count%20Collisions%20of%20Monkeys%20on%20a%20Polygon/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There is a regular convex polygon with <code>n</code> vertices. The vertices are labeled from <code>0</code> to <code>n - 1</code> in a clockwise direction, and each vertex has <strong>exactly one monkey</strong>. The following figure shows a convex polygon of <code>6</code> vertices.</p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2500-2599/2550.Count%20Collisions%20of%20Monkeys%20on%20a%20Polygon/images/hexagon.jpg" style="width: 300px; height: 293px;" />
@@ -55,7 +59,11 @@ Two ways such that they collide at some point are:</p>
 	<li><code>3 &lt;= n &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Mathematics (Fast Power)
 
@@ -67,12 +75,16 @@ The time complexity is $O(\log n)$, where $n$ is the number of monkeys. The spac
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def monkeyMove(self, n: int) -> int:
         mod = 10**9 + 7
         return (pow(2, n, mod) - 2) % mod
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -93,6 +105,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -115,6 +129,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func monkeyMove(n int) int {
 	const mod = 1e9 + 7
@@ -131,6 +147,8 @@ func monkeyMove(n int) int {
 	return (qpow(2, n) - 2 + mod) % mod
 }
 ```
+
+#### TypeScript
 
 ```ts
 function monkeyMove(n: number): number {
@@ -151,4 +169,6 @@ function monkeyMove(n: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

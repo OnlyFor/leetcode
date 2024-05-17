@@ -10,11 +10,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [1252. Cells with Odd Values in a Matrix](https://leetcode.com/problems/cells-with-odd-values-in-a-matrix)
 
 [中文文档](/solution/1200-1299/1252.Cells%20with%20Odd%20Values%20in%20a%20Matrix/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There is an <code>m x n</code> matrix that is initialized to all <code>0</code>&#39;s. There is also a 2D array <code>indices</code> where each <code>indices[i] = [r<sub>i</sub>, c<sub>i</sub>]</code> represents a <strong>0-indexed location</strong> to perform some increment operations on the matrix.</p>
 
@@ -59,7 +63,11 @@ The final matrix is [[1,3,1],[1,3,1]], which contains 6 odd numbers.
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong> Could you solve this in <code>O(n + m + indices.length)</code> time with only <code>O(n + m)</code> extra space?</p>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -70,6 +78,8 @@ After the simulation, we traverse the matrix and count the number of odd numbers
 The time complexity is $O(\text{indices.length} \times (m+n) + mn)$, and the space complexity is $O(mn)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -82,6 +92,8 @@ class Solution:
                 g[r][j] += 1
         return sum(v % 2 for row in g for v in row)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -107,6 +119,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -124,6 +138,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func oddCells(m int, n int, indices [][]int) int {
@@ -152,6 +168,10 @@ func oddCells(m int, n int, indices [][]int) int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Space Optimization
 
 We use row array $row$ and column array $col$ to record the number of times each row and column are increased. For each pair $(r_i, c_i)$ in $indices$, we add $1$ to $row[r_i]$ and $col[c_i]$ respectively.
@@ -161,6 +181,8 @@ After the operation, we can calculate that the count at position $(i, j)$ is $ro
 The time complexity is $O(\text{indices.length} + mn)$, and the space complexity is $O(m+n)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -172,6 +194,8 @@ class Solution:
             col[c] += 1
         return sum((i + j) % 2 for i in row for j in col)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -194,6 +218,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -212,6 +238,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func oddCells(m int, n int, indices [][]int) int {
@@ -234,6 +262,10 @@ func oddCells(m int, n int, indices [][]int) int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 3: Mathematical Optimization
 
 We notice that only when exactly one of $row[i]$ and $col[j]$ is odd, the number at position $(i, j)$ in the matrix will be odd.
@@ -243,6 +275,8 @@ We count the number of odd numbers in $row$, denoted as $cnt1$; the number of od
 The time complexity is $O(\text{indices.length} + m + n)$, and the space complexity is $O(m+n)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -256,6 +290,8 @@ class Solution:
         cnt2 = sum(v % 2 for v in col)
         return cnt1 * (n - cnt2) + cnt2 * (m - cnt1)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -279,6 +315,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -297,6 +335,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func oddCells(m int, n int, indices [][]int) int {
@@ -320,4 +360,6 @@ func oddCells(m int, n int, indices [][]int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

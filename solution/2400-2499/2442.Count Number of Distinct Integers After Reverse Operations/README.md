@@ -10,13 +10,15 @@ tags:
     - 数学
 ---
 
+<!-- problem:start -->
+
 # [2442. 反转之后不同整数的数目](https://leetcode.cn/problems/count-number-of-distinct-integers-after-reverse-operations)
 
 [English Version](/solution/2400-2499/2442.Count%20Number%20of%20Distinct%20Integers%20After%20Reverse%20Operations/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个由 <strong>正</strong> 整数组成的数组 <code>nums</code> 。</p>
 
@@ -53,7 +55,11 @@ tags:
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表
 
@@ -62,6 +68,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 是数组的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -72,6 +80,8 @@ class Solution:
             s.add(y)
         return len(s)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -93,6 +103,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -110,6 +122,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countDistinctIntegers(nums []int) int {
@@ -129,6 +143,8 @@ func countDistinctIntegers(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function countDistinctIntegers(nums: number[]): number {
     const n = nums.length;
@@ -138,6 +154,8 @@ function countDistinctIntegers(nums: number[]): number {
     return new Set(nums).size;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashSet;
@@ -163,4 +181,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

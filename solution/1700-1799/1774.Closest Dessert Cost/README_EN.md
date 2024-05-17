@@ -10,11 +10,15 @@ tags:
     - Backtracking
 ---
 
+<!-- problem:start -->
+
 # [1774. Closest Dessert Cost](https://leetcode.com/problems/closest-dessert-cost)
 
 [中文文档](/solution/1700-1799/1774.Closest%20Dessert%20Cost/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You would like to make dessert and are preparing to buy the ingredients. You have <code>n</code> ice cream base flavors and <code>m</code> types of toppings to choose from. You must follow these rules when making your dessert:</p>
 
@@ -81,11 +85,17 @@ Total: 3 + 4 + 10 + 0 = 17. You cannot make a dessert with a total cost of 18.
 	<li><code>1 &lt;= target &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -118,6 +128,8 @@ class Solution:
                             ans = x + y + arr[j]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -175,6 +187,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -213,6 +227,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func closestCost(baseCosts []int, toppingCosts []int, target int) int {
@@ -258,6 +274,8 @@ func abs(x int) int {
 }
 ```
 
+#### JavaScript
+
 ```js
 const closestCost = function (baseCosts, toppingCosts, target) {
     let closestDessertCost = -Infinity;
@@ -284,4 +302,6 @@ const closestCost = function (baseCosts, toppingCosts, target) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

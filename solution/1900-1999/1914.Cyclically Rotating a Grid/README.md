@@ -10,13 +10,15 @@ tags:
     - 模拟
 ---
 
+<!-- problem:start -->
+
 # [1914. 循环轮转矩阵](https://leetcode.cn/problems/cyclically-rotating-a-grid)
 
 [English Version](/solution/1900-1999/1914.Cyclically%20Rotating%20a%20Grid/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个大小为 <code>m x n</code> 的整数矩阵 <code>grid</code>​​​ ，其中 <code>m</code> 和 <code>n</code> 都是 <strong>偶数</strong> ；另给你一个整数 <code>k</code> 。</p>
 
@@ -57,7 +59,11 @@ tags:
 	<li><code>1 &lt;= k &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：逐层模拟
 
@@ -68,6 +74,8 @@ tags:
 时间复杂度 $O(m \times n)$，空间复杂度 $O(m + n)$。其中 $m$ 和 $n$ 分别是矩阵的行数和列数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -105,6 +113,8 @@ class Solution:
             rotate(p, k)
         return grid
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -157,6 +167,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -201,6 +213,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func rotateGrid(grid [][]int, k int) [][]int {
@@ -250,6 +264,8 @@ func rotateGrid(grid [][]int, k int) [][]int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function rotateGrid(grid: number[][], k: number): number[][] {
     const m = grid.length;
@@ -295,4 +311,6 @@ function rotateGrid(grid: number[][], k: number): number[][] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

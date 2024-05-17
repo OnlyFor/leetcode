@@ -9,13 +9,15 @@ tags:
     - 数学
 ---
 
+<!-- problem:start -->
+
 # [1390. 四因数](https://leetcode.cn/problems/four-divisors)
 
 [English Version](/solution/1300-1399/1390.Four%20Divisors/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>nums</code>，请你返回该数组中恰有四个因数的这些整数的各因数之和。如果数组中不存在满足题意的整数，则返回 <code>0</code> 。</p>
 
@@ -55,7 +57,11 @@ tags:
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：因数分解
 
@@ -64,6 +70,8 @@ tags:
 时间复杂度 $O(n \times \sqrt{n})$，其中 $n$ 是数组的长度。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -83,6 +91,8 @@ class Solution:
 
         return sum(f(x) for x in nums)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -110,6 +120,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -139,6 +151,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sumFourDivisors(nums []int) (ans int) {
 	f := func(x int) int {
@@ -164,6 +178,8 @@ func sumFourDivisors(nums []int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function sumFourDivisors(nums: number[]): number {
@@ -192,4 +208,6 @@ function sumFourDivisors(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

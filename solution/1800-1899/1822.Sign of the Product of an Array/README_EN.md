@@ -9,11 +9,15 @@ tags:
     - Math
 ---
 
+<!-- problem:start -->
+
 # [1822. Sign of the Product of an Array](https://leetcode.com/problems/sign-of-the-product-of-an-array)
 
 [中文文档](/solution/1800-1899/1822.Sign%20of%20the%20Product%20of%20an%20Array/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There is a function <code>signFunc(x)</code> that returns:</p>
 
@@ -60,7 +64,11 @@ tags:
 	<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Direct Traversal
 
@@ -76,6 +84,8 @@ The time complexity is $O(n)$, where $n$ is the length of the array. The space c
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def arraySign(self, nums: List[int]) -> int:
@@ -87,6 +97,8 @@ class Solution:
                 ans *= -1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -105,6 +117,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -118,6 +132,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func arraySign(nums []int) int {
@@ -133,6 +149,8 @@ func arraySign(nums []int) int {
 	return ans
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -150,6 +168,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -170,6 +190,8 @@ var arraySign = function (nums) {
 };
 ```
 
+#### C
+
 ```c
 int arraySign(int* nums, int numsSize) {
     int ans = 1;
@@ -187,4 +209,6 @@ int arraySign(int* nums, int numsSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

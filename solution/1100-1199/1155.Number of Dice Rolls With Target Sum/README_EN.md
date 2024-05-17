@@ -8,11 +8,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [1155. Number of Dice Rolls With Target Sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum)
 
 [中文文档](/solution/1100-1199/1155.Number%20of%20Dice%20Rolls%20With%20Target%20Sum/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You have <code>n</code> dice, and each dice has <code>k</code> faces numbered from <code>1</code> to <code>k</code>.</p>
 
@@ -53,7 +57,11 @@ There are 6 ways to get a sum of 7: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1.
 	<li><code>1 &lt;= target &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming
 
@@ -73,6 +81,8 @@ We notice that the state $f[i][j]$ only depends on $f[i-1][]$, so we can use a r
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numRollsToTarget(self, n: int, k: int, target: int) -> int:
@@ -85,6 +95,8 @@ class Solution:
                     f[i][j] = (f[i][j] + f[i - 1][j - h]) % mod
         return f[n][target]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -103,6 +115,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -124,6 +138,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numRollsToTarget(n int, k int, target int) int {
 	const mod int = 1e9 + 7
@@ -143,6 +159,8 @@ func numRollsToTarget(n int, k int, target int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function numRollsToTarget(n: number, k: number, target: number): number {
     const f = Array.from({ length: n + 1 }, () => Array(target + 1).fill(0));
@@ -158,6 +176,8 @@ function numRollsToTarget(n: number, k: number, target: number): number {
     return f[n][target];
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -184,9 +204,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -201,6 +227,8 @@ class Solution:
             f = g
         return f[target]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -221,6 +249,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -243,6 +273,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numRollsToTarget(n int, k int, target int) int {
 	const mod int = 1e9 + 7
@@ -261,6 +293,8 @@ func numRollsToTarget(n int, k int, target int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function numRollsToTarget(n: number, k: number, target: number): number {
     const f = Array(target + 1).fill(0);
@@ -278,6 +312,8 @@ function numRollsToTarget(n: number, k: number, target: number): number {
     return f[target];
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -306,4 +342,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

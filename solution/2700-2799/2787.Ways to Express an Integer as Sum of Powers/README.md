@@ -8,13 +8,15 @@ tags:
     - 动态规划
 ---
 
+<!-- problem:start -->
+
 # [2787. 将一个数字表示成幂的和的方案数](https://leetcode.cn/problems/ways-to-express-an-integer-as-sum-of-powers)
 
 [English Version](/solution/2700-2799/2787.Ways%20to%20Express%20an%20Integer%20as%20Sum%20of%20Powers/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你两个 <strong>正</strong>&nbsp;整数&nbsp;<code>n</code> 和&nbsp;<code>x</code>&nbsp;。</p>
 
@@ -52,11 +54,17 @@ tags:
 	<li><code>1 &lt;= x &lt;= 5</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -72,6 +80,8 @@ class Solution:
                     f[i][j] = (f[i][j] + f[i - 1][j - k]) % mod
         return f[n][n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -92,6 +102,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -115,6 +127,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numberOfWays(n int, x int) int {
 	const mod int = 1e9 + 7
@@ -135,6 +149,8 @@ func numberOfWays(n int, x int) int {
 	return f[n][n]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numberOfWays(n: number, x: number): number {
@@ -158,4 +174,6 @@ function numberOfWays(n: number, x: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

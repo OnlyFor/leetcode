@@ -9,11 +9,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [2772. Apply Operations to Make All Array Elements Equal to Zero](https://leetcode.com/problems/apply-operations-to-make-all-array-elements-equal-to-zero)
 
 [中文文档](/solution/2700-2799/2772.Apply%20Operations%20to%20Make%20All%20Array%20Elements%20Equal%20to%20Zero/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code> and a positive integer <code>k</code>.</p>
 
@@ -55,7 +59,11 @@ tags:
 	<li><code>0 &lt;= nums[i] &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Difference Array + Prefix Sum
 
@@ -78,6 +86,8 @@ The time complexity is $O(n)$, and the space complexity is $O(n)$, where $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def checkArray(self, nums: List[int], k: int) -> bool:
@@ -95,6 +105,8 @@ class Solution:
             d[i + k] += x
         return True
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -118,6 +130,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -143,6 +157,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func checkArray(nums []int, k int) bool {
 	n := len(nums)
@@ -163,6 +179,8 @@ func checkArray(nums []int, k int) bool {
 	return true
 }
 ```
+
+#### TypeScript
 
 ```ts
 function checkArray(nums: number[], k: number): boolean {
@@ -187,4 +205,6 @@ function checkArray(nums: number[], k: number): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

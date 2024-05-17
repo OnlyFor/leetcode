@@ -11,13 +11,15 @@ tags:
     - 博弈
 ---
 
+<!-- problem:start -->
+
 # [1563. 石子游戏 V](https://leetcode.cn/problems/stone-game-v)
 
 [English Version](/solution/1500-1599/1563.Stone%20Game%20V/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>几块石子 <strong>排成一行</strong> ，每块石子都有一个关联值，关联值为整数，由数组 <code>stoneValue</code> 给出。</p>
 
@@ -59,7 +61,11 @@ tags:
 	<li><code>1 &lt;=&nbsp;stoneValue[i] &lt;= 10^6</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：记忆化搜索 + 剪枝
 
@@ -81,6 +87,8 @@ tags:
 时间复杂度 $O(n^3)$，空间复杂度 $O(n^2)$。其中 $n$ 为数组 $stoneValue$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -108,6 +116,8 @@ class Solution:
         s = list(accumulate(stoneValue, initial=0))
         return dfs(0, len(stoneValue) - 1)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -158,6 +168,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -202,6 +214,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func stoneGameV(stoneValue []int) int {
@@ -249,4 +263,6 @@ func stoneGameV(stoneValue []int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

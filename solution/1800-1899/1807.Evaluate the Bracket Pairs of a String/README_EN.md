@@ -10,11 +10,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1807. Evaluate the Bracket Pairs of a String](https://leetcode.com/problems/evaluate-the-bracket-pairs-of-a-string)
 
 [中文文档](/solution/1800-1899/1807.Evaluate%20the%20Bracket%20Pairs%20of%20a%20String/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>s</code> that contains some bracket pairs, with each pair containing a <strong>non-empty</strong> key.</p>
 
@@ -80,7 +84,11 @@ Notice that the &quot;a&quot;s not in a bracket pair are not evaluated.
 	<li>Each <code>key<sub>i</sub></code> in <code>knowledge</code> is unique.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table + Simulation
 
@@ -91,6 +99,8 @@ Then we traverse the string $s$. If the current character is an open parenthesis
 The time complexity is $O(n + m)$, and the space complexity is $O(L)$. Here, $n$ and $m$ are the lengths of the string $s$ and the list `knowledge` respectively, and $L$ is the sum of the lengths of all strings in `knowledge`.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -108,6 +118,8 @@ class Solution:
             i += 1
         return ''.join(ans)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -130,6 +142,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -154,6 +168,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func evaluate(s string, knowledge [][]string) string {
@@ -182,6 +198,8 @@ func evaluate(s string, knowledge [][]string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function evaluate(s: string, knowledge: string[][]): string {
     const n = s.length;
@@ -204,6 +222,8 @@ function evaluate(s: string, knowledge: string[][]): string {
     return ans.join('');
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -240,4 +260,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

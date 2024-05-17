@@ -9,13 +9,15 @@ tags:
     - 枚举
 ---
 
+<!-- problem:start -->
+
 # [2443. 反转之后的数字和](https://leetcode.cn/problems/sum-of-number-and-its-reverse)
 
 [English Version](/solution/2400-2499/2443.Sum%20of%20Number%20and%20Its%20Reverse/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个 <strong>非负</strong> 整数 <code>num</code> 。如果存在某个 <strong>非负</strong> 整数 <code>k</code> 满足 <code>k + reverse(k) = num</code>&nbsp; ，则返回 <code>true</code> ；否则，返回<em> </em><code>false</code> 。</p>
 
@@ -55,7 +57,11 @@ tags:
 	<li><code>0 &lt;= num &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：暴力枚举
 
@@ -65,11 +71,15 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def sumOfNumberAndReverse(self, num: int) -> bool:
         return any(k + int(str(k)[::-1]) == num for k in range(num + 1))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -89,6 +99,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -110,6 +122,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sumOfNumberAndReverse(num int) bool {
 	for x := 0; x <= num; x++ {
@@ -126,6 +140,8 @@ func sumOfNumberAndReverse(num int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function sumOfNumberAndReverse(num: number): boolean {
     for (let i = 0; i <= num; i++) {
@@ -136,6 +152,8 @@ function sumOfNumberAndReverse(num: number): boolean {
     return false;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -161,6 +179,8 @@ impl Solution {
 }
 ```
 
+#### C
+
 ```c
 bool sumOfNumberAndReverse(int num) {
     for (int i = 0; i <= num; i++) {
@@ -180,4 +200,6 @@ bool sumOfNumberAndReverse(int num) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,13 +9,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [2191. 将杂乱无章的数字排序](https://leetcode.cn/problems/sort-the-jumbled-numbers)
 
 [English Version](/solution/2100-2199/2191.Sort%20the%20Jumbled%20Numbers/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>mapping</code>&nbsp;，它表示一个十进制数的映射规则，<code>mapping[i] = j</code>&nbsp;表示这个规则下将数位&nbsp;<code>i</code>&nbsp;映射为数位 <code>j</code>&nbsp;。</p>
 
@@ -68,7 +70,11 @@ tags:
 	<li><code>0 &lt;= nums[i] &lt; 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：自定义排序
 
@@ -77,6 +83,8 @@ tags:
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(n)$。其中 $n$ 为数组 $nums$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -95,6 +103,8 @@ class Solution:
         arr = sorted((f(x), i) for i, x in enumerate(nums))
         return [nums[i] for _, i in arr]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -130,6 +140,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -161,6 +173,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sortJumbled(mapping []int, nums []int) (ans []int) {
 	n := len(nums)
@@ -187,6 +201,8 @@ func sortJumbled(mapping []int, nums []int) (ans []int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function sortJumbled(mapping: number[], nums: number[]): number[] {
     const n = nums.length;
@@ -207,6 +223,8 @@ function sortJumbled(mapping: number[], nums: number[]): number[] {
     return arr.map(x => nums[x[1]]);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -242,6 +260,8 @@ impl Solution {
     }
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -280,4 +300,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

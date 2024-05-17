@@ -10,13 +10,15 @@ tags:
     - 计数
 ---
 
+<!-- problem:start -->
+
 # [1221. 分割平衡字符串](https://leetcode.cn/problems/split-a-string-in-balanced-strings)
 
 [English Version](/solution/1200-1299/1221.Split%20a%20String%20in%20Balanced%20Strings/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p><strong>平衡字符串</strong> 中，<code>'L'</code> 和 <code>'R'</code> 字符的数量是相同的。</p>
 
@@ -64,7 +66,11 @@ tags:
 	<li><code>s</code> 是一个 <strong>平衡</strong> 字符串</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心
 
@@ -75,6 +81,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为字符串 $s$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -89,6 +97,8 @@ class Solution:
                 ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -109,6 +119,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -126,6 +138,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func balancedStringSplit(s string) int {
 	ans, l := 0, 0
@@ -142,6 +156,8 @@ func balancedStringSplit(s string) int {
 	return ans
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -167,4 +183,6 @@ var balancedStringSplit = function (s) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,11 +10,15 @@ tags:
     - Array
 ---
 
+<!-- problem:start -->
+
 # [2039. The Time When the Network Becomes Idle](https://leetcode.com/problems/the-time-when-the-network-becomes-idle)
 
 [中文文档](/solution/2000-2099/2039.The%20Time%20When%20the%20Network%20Becomes%20Idle/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There is a network of <code>n</code> servers, labeled from <code>0</code> to <code>n - 1</code>. You are given a 2D integer array <code>edges</code>, where <code>edges[i] = [u<sub>i</sub>, v<sub>i</sub>]</code> indicates there is a message channel between servers <code>u<sub>i</sub></code> and <code>v<sub>i</sub></code>, and they can pass <strong>any</strong> number of messages to <strong>each other</strong> directly in <strong>one</strong> second. You are also given a <strong>0-indexed</strong> integer array <code>patience</code> of length <code>n</code>.</p>
 
@@ -91,7 +95,11 @@ From the beginning of the second 3, the network becomes idle.
 	<li>Each server can directly or indirectly reach another server.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: BFS
 
@@ -102,6 +110,8 @@ Then, we can use breadth-first search (BFS) to find the shortest distance $d_i$ 
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Here, $n$ is the number of nodes.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -125,6 +135,8 @@ class Solution:
                         ans = max(ans, (t - 1) // patience[v] * patience[v] + t + 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -160,6 +172,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -197,6 +211,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func networkBecomesIdle(edges [][]int, patience []int) (ans int) {
 	n := len(patience)
@@ -226,6 +242,8 @@ func networkBecomesIdle(edges [][]int, patience []int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function networkBecomesIdle(edges: number[][], patience: number[]): number {
@@ -259,4 +277,6 @@ function networkBecomesIdle(edges: number[][], patience: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

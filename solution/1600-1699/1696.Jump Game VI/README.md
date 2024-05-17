@@ -12,13 +12,15 @@ tags:
     - 堆（优先队列）
 ---
 
+<!-- problem:start -->
+
 # [1696. 跳跃游戏 VI](https://leetcode.cn/problems/jump-game-vi)
 
 [English Version](/solution/1600-1699/1696.Jump%20Game%20VI/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 和一个整数 <code>k</code> 。</p>
 
@@ -62,7 +64,11 @@ tags:
 	<li><code>-10<sup>4</sup> <= nums[i] <= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划 + 单调队列优化
 
@@ -80,6 +86,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maxResult(self, nums: List[int], k: int) -> int:
@@ -95,6 +103,8 @@ class Solution:
             q.append(i)
         return f[-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -118,6 +128,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -140,6 +152,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxResult(nums []int, k int) int {
@@ -217,6 +231,8 @@ func (q Deque) Get(i int) int {
 	return q.r[i-len(q.l)]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxResult(nums: number[], k: number): number {
@@ -336,4 +352,6 @@ class Deque<T> {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

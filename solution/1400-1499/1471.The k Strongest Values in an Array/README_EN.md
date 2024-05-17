@@ -10,11 +10,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [1471. The k Strongest Values in an Array](https://leetcode.com/problems/the-k-strongest-values-in-an-array)
 
 [中文文档](/solution/1400-1499/1471.The%20k%20Strongest%20Values%20in%20an%20Array/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array of integers <code>arr</code> and an integer <code>k</code>.</p>
 
@@ -66,11 +70,17 @@ Any permutation of [11,8,6,6,7] is <strong>accepted</strong>.
 	<li><code>1 &lt;= k &lt;= arr.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -80,6 +90,8 @@ class Solution:
         arr.sort(key=lambda x: (-abs(x - m), -x))
         return arr[:k]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -104,6 +116,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -119,6 +133,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func getStrongest(arr []int, k int) []int {
@@ -144,4 +160,6 @@ func abs(x int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

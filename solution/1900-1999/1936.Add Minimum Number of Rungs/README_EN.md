@@ -9,11 +9,15 @@ tags:
     - Array
 ---
 
+<!-- problem:start -->
+
 # [1936. Add Minimum Number of Rungs](https://leetcode.com/problems/add-minimum-number-of-rungs)
 
 [中文文档](/solution/1900-1999/1936.Add%20Minimum%20Number%20of%20Rungs/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>strictly increasing</strong> integer array <code>rungs</code> that represents the <strong>height</strong> of rungs on a ladder. You are currently on the <strong>floor</strong> at height <code>0</code>, and you want to reach the last rung.</p>
 
@@ -63,7 +67,11 @@ The ladder will now have rungs at [<u>1</u>,3,4,6,7].
 	<li><code>rungs</code> is <strong>strictly increasing</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Greedy + Simulation
 
@@ -73,12 +81,16 @@ The time complexity is $O(n)$, where $n$ is the length of `rungs`. The space com
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def addRungs(self, rungs: List[int], dist: int) -> int:
         rungs = [0] + rungs
         return sum((b - a - 1) // dist for a, b in pairwise(rungs))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -92,6 +104,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -107,6 +121,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func addRungs(rungs []int, dist int) (ans int) {
 	prev := 0
@@ -117,6 +133,8 @@ func addRungs(rungs []int, dist int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function addRungs(rungs: number[], dist: number): number {
@@ -129,6 +147,8 @@ function addRungs(rungs: number[], dist: number): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -148,4 +168,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

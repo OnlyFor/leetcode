@@ -10,13 +10,15 @@ tags:
     - 枚举
 ---
 
+<!-- problem:start -->
+
 # [2048. 下一个更大的数值平衡数](https://leetcode.cn/problems/next-greater-numerically-balanced-number)
 
 [English Version](/solution/2000-2099/2048.Next%20Greater%20Numerically%20Balanced%20Number/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>如果整数&nbsp; <code>x</code> 满足：对于每个数位&nbsp;<code>d</code> ，这个数位&nbsp;<strong>恰好</strong> 在 <code>x</code> 中出现 <code>d</code> 次。那么整数 <code>x</code> 就是一个 <strong>数值平衡数</strong> 。</p>
 
@@ -67,7 +69,11 @@ tags:
 	<li><code>0 &lt;= n &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举
 
@@ -76,6 +82,8 @@ tags:
 时间复杂度 $O(M - n)$，其中 $M = 1224444$。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -89,6 +97,8 @@ class Solution:
             if all(v == 0 or i == v for i, v in enumerate(cnt)):
                 return x
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -112,6 +122,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -137,6 +149,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func nextBeautifulNumber(n int) int {
 	for x := n + 1; ; x++ {
@@ -157,6 +171,8 @@ func nextBeautifulNumber(n int) int {
 	}
 }
 ```
+
+#### TypeScript
 
 ```ts
 function nextBeautifulNumber(n: number): number {
@@ -181,4 +197,6 @@ function nextBeautifulNumber(n: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

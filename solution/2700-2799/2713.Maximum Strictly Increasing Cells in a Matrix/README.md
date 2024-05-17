@@ -13,13 +13,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [2713. 矩阵中严格递增的单元格数](https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix)
 
 [English Version](/solution/2700-2799/2713.Maximum%20Strictly%20Increasing%20Cells%20in%20a%20Matrix/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>1</strong> 开始、大小为 <code>m x n</code> 的整数矩阵 <code>mat</code>，你可以选择任一单元格作为 <strong>起始单元格</strong> 。</p>
 
@@ -72,11 +74,17 @@ tags:
 	<li><code>-10<sup>5</sup>&nbsp;&lt;= mat[i][j] &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -99,6 +107,8 @@ class Solution:
                 colMax[j] = max(colMax[j], mx[k])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -133,6 +143,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -163,6 +175,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxIncreasingCells(mat [][]int) (ans int) {
@@ -198,4 +212,6 @@ func maxIncreasingCells(mat [][]int) (ans int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

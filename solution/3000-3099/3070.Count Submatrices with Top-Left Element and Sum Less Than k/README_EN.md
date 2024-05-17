@@ -10,11 +10,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [3070. Count Submatrices with Top-Left Element and Sum Less Than k](https://leetcode.com/problems/count-submatrices-with-top-left-element-and-sum-less-than-k)
 
 [中文文档](/solution/3000-3099/3070.Count%20Submatrices%20with%20Top-Left%20Element%20and%20Sum%20Less%20Than%20k/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer matrix <code>grid</code> and an integer <code>k</code>.</p>
 
@@ -47,7 +51,11 @@ tags:
 	<li><code>1 &lt;= k &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Two-Dimensional Prefix Sum
 
@@ -63,6 +71,8 @@ The time complexity is $O(m \times n)$, and the space complexity is $O(m \times 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def countSubmatrices(self, grid: List[List[int]], k: int) -> int:
@@ -74,6 +84,8 @@ class Solution:
                 ans += s[i][j] <= k
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -93,6 +105,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -115,6 +129,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countSubmatrices(grid [][]int, k int) (ans int) {
 	s := make([][]int, len(grid)+1)
@@ -132,6 +148,8 @@ func countSubmatrices(grid [][]int, k int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countSubmatrices(grid: number[][], k: number): number {
@@ -153,4 +171,6 @@ function countSubmatrices(grid: number[][], k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1513. 仅含 1 的子串数](https://leetcode.cn/problems/number-of-substrings-with-only-1s)
 
 [English Version](/solution/1500-1599/1513.Number%20of%20Substrings%20With%20Only%201s/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个二进制字符串 <code>s</code>（仅由 &#39;0&#39; 和 &#39;1&#39; 组成的字符串）。</p>
 
@@ -63,7 +65,11 @@ tags:
 	<li><code>1 &lt;= s.length &lt;= 10^5</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：遍历计数
 
@@ -80,6 +86,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numSub(self, s: str) -> int:
@@ -92,6 +100,8 @@ class Solution:
             ans += cnt
         return ans % (10**9 + 7)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -107,6 +117,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -121,6 +133,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func numSub(s string) (ans int) {
@@ -138,6 +152,8 @@ func numSub(s string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function numSub(s: string): number {
     const mod = 10 ** 9 + 7;
@@ -153,4 +169,6 @@ function numSub(s: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

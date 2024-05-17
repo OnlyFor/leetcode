@@ -10,13 +10,15 @@ tags:
     - 计数
 ---
 
+<!-- problem:start -->
+
 # [3046. 分割数组](https://leetcode.cn/problems/split-the-array)
 
 [English Version](/solution/3000-3099/3046.Split%20the%20Array/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个长度为 <strong>偶数 </strong>的整数数组 <code>nums</code> 。你需要将这个数组分割成 <code>nums1</code> 和 <code>nums2</code> 两部分，要求：</p>
 
@@ -56,7 +58,11 @@ tags:
 	<li><code>1 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：计数
 
@@ -66,11 +72,15 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def isPossibleToSplit(self, nums: List[int]) -> bool:
         return max(Counter(nums).values()) < 3
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -85,6 +95,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -101,6 +113,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func isPossibleToSplit(nums []int) bool {
 	cnt := [101]int{}
@@ -113,6 +127,8 @@ func isPossibleToSplit(nums []int) bool {
 	return true
 }
 ```
+
+#### TypeScript
 
 ```ts
 function isPossibleToSplit(nums: number[]): boolean {
@@ -128,4 +144,6 @@ function isPossibleToSplit(nums: number[]): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

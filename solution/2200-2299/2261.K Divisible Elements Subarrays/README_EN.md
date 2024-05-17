@@ -13,11 +13,15 @@ tags:
     - Rolling Hash
 ---
 
+<!-- problem:start -->
+
 # [2261. K Divisible Elements Subarrays](https://leetcode.com/problems/k-divisible-elements-subarrays)
 
 [中文文档](/solution/2200-2299/2261.K%20Divisible%20Elements%20Subarrays/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer array <code>nums</code> and two integers <code>k</code> and <code>p</code>, return <em>the number of <strong>distinct subarrays,</strong> which have <strong>at most</strong></em> <code>k</code> <em>elements </em>that are <em>divisible by</em> <code>p</code>.</p>
 
@@ -69,11 +73,17 @@ Since all subarrays are distinct, the total number of subarrays satisfying all t
 
 <p>Can you solve this problem in O(n<sup>2</sup>) time complexity?</p>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -89,6 +99,8 @@ class Solution:
                 s.add(tuple(nums[i : j + 1]))
         return len(s)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -110,6 +122,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -133,6 +147,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countDistinct(nums []int, k int, p int) int {
 	s := map[string]struct{}{}
@@ -152,6 +168,8 @@ func countDistinct(nums []int, k int, p int) int {
 	return len(s)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countDistinct(nums: number[], k: number, p: number): number {
@@ -174,9 +192,15 @@ function countDistinct(nums: number[], k: number, p: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -197,4 +221,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -11,11 +11,15 @@ tags:
     - Heap (Priority Queue)
 ---
 
+<!-- problem:start -->
+
 # [2353. Design a Food Rating System](https://leetcode.com/problems/design-a-food-rating-system)
 
 [中文文档](/solution/2300-2399/2353.Design%20a%20Food%20Rating%20System/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Design a food rating system that can do the following:</p>
 
@@ -82,11 +86,17 @@ foodRatings.highestRated(&quot;japanese&quot;); // return &quot;ramen&quot;
 	<li>At most <code>2 * 10<sup>4</sup></code> calls <strong>in total</strong> will be made to <code>changeRating</code> and <code>highestRated</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 from sortedcontainers import SortedSet
@@ -116,6 +126,8 @@ class FoodRatings:
 # obj.changeRating(food,newRating)
 # param_2 = obj.highestRated(cuisine)
 ```
+
+#### C++
 
 ```cpp
 using pis = pair<int, string>;
@@ -157,4 +169,6 @@ public:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

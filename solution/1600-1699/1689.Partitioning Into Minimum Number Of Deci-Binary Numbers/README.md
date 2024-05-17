@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1689. 十-二进制数的最少数目](https://leetcode.cn/problems/partitioning-into-minimum-number-of-deci-binary-numbers)
 
 [English Version](/solution/1600-1699/1689.Partitioning%20Into%20Minimum%20Number%20Of%20Deci-Binary%20Numbers/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>如果一个十进制数字不含任何前导零，且每一位上的数字不是 <code>0</code> 就是 <code>1</code> ，那么该数字就是一个 <strong>十-二进制数</strong> 。例如，<code>101</code> 和 <code>1100</code> 都是 <strong>十-二进制数</strong>，而 <code>112</code> 和 <code>3001</code> 不是。</p>
 
@@ -52,7 +54,11 @@ tags:
 	<li><code>n</code> 不含任何前导零并总是表示正整数</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：脑筋急转弯
 
@@ -62,11 +68,15 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minPartitions(self, n: str) -> int:
         return int(max(n))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -79,6 +89,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -93,6 +105,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minPartitions(n string) (ans int) {
 	for _, c := range n {
@@ -104,11 +118,15 @@ func minPartitions(n string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minPartitions(n: string): number {
     return Math.max(...n.split('').map(d => parseInt(d)));
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -121,6 +139,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 int minPartitions(char* n) {
@@ -137,4 +157,6 @@ int minPartitions(char* n) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

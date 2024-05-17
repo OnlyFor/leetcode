@@ -9,13 +9,15 @@ tags:
     - 滑动窗口
 ---
 
+<!-- problem:start -->
+
 # [2379. 得到 K 个黑块的最少涂色次数](https://leetcode.cn/problems/minimum-recolors-to-get-k-consecutive-black-blocks)
 
 [English Version](/solution/2300-2399/2379.Minimum%20Recolors%20to%20Get%20K%20Consecutive%20Black%20Blocks/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个长度为 <code>n</code>&nbsp;下标从 <strong>0</strong>&nbsp;开始的字符串&nbsp;<code>blocks</code>&nbsp;，<code>blocks[i]</code>&nbsp;要么是&nbsp;<code>'W'</code>&nbsp;要么是&nbsp;<code>'B'</code>&nbsp;，表示第&nbsp;<code>i</code>&nbsp;块的颜色。字符&nbsp;<code>'W'</code> 和&nbsp;<code>'B'</code>&nbsp;分别表示白色和黑色。</p>
 
@@ -60,7 +62,11 @@ tags:
 	<li><code>1 &lt;= k &lt;= n</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：滑动窗口
 
@@ -74,6 +80,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minimumRecolors(self, blocks: str, k: int) -> int:
@@ -84,6 +92,8 @@ class Solution:
             ans = min(ans, cnt)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -103,6 +113,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -118,6 +130,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimumRecolors(blocks string, k int) int {
@@ -138,6 +152,8 @@ func minimumRecolors(blocks string, k int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumRecolors(blocks: string, k: number): number {
     let cnt = 0;
@@ -153,6 +169,8 @@ function minimumRecolors(blocks: string, k: number): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -180,6 +198,8 @@ impl Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -210,6 +230,8 @@ class Solution {
 }
 ```
 
+#### C
+
 ```c
 #define min(a, b) (((a) < (b)) ? (a) : (b))
 
@@ -231,4 +253,6 @@ int minimumRecolors(char* blocks, int k) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

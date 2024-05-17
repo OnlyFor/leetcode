@@ -12,11 +12,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [1346. Check If N and Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist)
 
 [中文文档](/solution/1300-1399/1346.Check%20If%20N%20and%20Its%20Double%20Exist/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array <code>arr</code> of integers, check if there exist two indices <code>i</code> and <code>j</code> such that :</p>
 
@@ -51,7 +55,11 @@ tags:
 	<li><code>-10<sup>3</sup> &lt;= arr[i] &lt;= 10<sup>3</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table
 
@@ -65,6 +73,8 @@ The time complexity is $O(n)$, and the space complexity is $O(n)$. Where $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def checkIfExist(self, arr: List[int]) -> bool:
@@ -75,6 +85,8 @@ class Solution:
             s.add(x)
         return False
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -90,6 +102,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -107,6 +121,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func checkIfExist(arr []int) bool {
 	s := map[int]bool{}
@@ -119,6 +135,8 @@ func checkIfExist(arr []int) bool {
 	return false
 }
 ```
+
+#### TypeScript
 
 ```ts
 function checkIfExist(arr: number[]): boolean {
@@ -135,4 +153,6 @@ function checkIfExist(arr: number[]): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

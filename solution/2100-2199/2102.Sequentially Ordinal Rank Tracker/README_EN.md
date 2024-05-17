@@ -11,11 +11,15 @@ tags:
     - Heap (Priority Queue)
 ---
 
+<!-- problem:start -->
+
 # [2102. Sequentially Ordinal Rank Tracker](https://leetcode.com/problems/sequentially-ordinal-rank-tracker)
 
 [中文文档](/solution/2100-2199/2102.Sequentially%20Ordinal%20Rank%20Tracker/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>A scenic location is represented by its <code>name</code> and attractiveness <code>score</code>, where <code>name</code> is a <strong>unique</strong> string among all locations and <code>score</code> is an integer. Locations can be ranked from the best to the worst. The <strong>higher</strong> the score, the better the location. If the scores of two locations are equal, then the location with the <strong>lexicographically smaller</strong> name is better.</p>
 
@@ -86,7 +90,11 @@ tracker.get();              // Sorted locations: branford, orlando, alpine, alps
 	<li>At most <code>4 * 10<sup>4</sup></code> calls <strong>in total</strong> will be made to <code>add</code> and <code>get</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Ordered Set
 
@@ -99,6 +107,8 @@ When calling the `get` method, we increment $i$ by one, and then return the name
 The time complexity of each operation is $O(\log n)$, where $n$ is the number of added attractions. The space complexity is $O(n)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 from sortedcontainers import SortedList
@@ -123,6 +133,8 @@ class SORTracker:
 # obj.add(name,score)
 # param_2 = obj.get()
 ```
+
+#### C++
 
 ```cpp
 #include <ext/pb_ds/assoc_container.hpp>
@@ -160,6 +172,10 @@ private:
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Double Priority Queue (Min-Max Heap)
 
 We notice that the query operations in this problem are performed in strictly increasing order. Therefore, we can use a method similar to the median in the data stream. We define two priority queues `good` and `bad`. `good` is a min-heap, storing the current best attractions, and `bad` is a max-heap, storing the current $i$-th best attraction.
@@ -171,6 +187,8 @@ Each time the `get` method is called, we add the best attraction in `bad` to `go
 The time complexity of each operation is $O(\log n)$, where $n$ is the number of added attractions. The space complexity is $O(n)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Node:
@@ -202,6 +220,8 @@ class SORTracker:
 # obj.add(name,score)
 # param_2 = obj.get()
 ```
+
+#### Java
 
 ```java
 class SORTracker {
@@ -235,6 +255,8 @@ class SORTracker {
  * String param_2 = obj.get();
  */
 ```
+
+#### C++
 
 ```cpp
 using pis = pair<int, string>;
@@ -271,4 +293,6 @@ private:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,13 +10,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [1636. 按照频率将数组升序排序](https://leetcode.cn/problems/sort-array-by-increasing-frequency)
 
 [English Version](/solution/1600-1699/1636.Sort%20Array%20by%20Increasing%20Frequency/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>nums</code> ，请你将数组按照每个值的频率 <strong>升序</strong> 排序。如果有多个值的频率相同，请你按照数值本身将它们 <strong>降序</strong> 排序。 </p>
 
@@ -52,7 +54,11 @@ tags:
 	<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：数组或哈希表计数
 
@@ -64,12 +70,16 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def frequencySort(self, nums: List[int]) -> List[int]:
         cnt = Counter(nums)
         return sorted(nums, key=lambda x: (cnt[x], -x))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -92,6 +102,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -109,6 +121,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func frequencySort(nums []int) []int {
 	cnt := make([]int, 201)
@@ -123,6 +137,8 @@ func frequencySort(nums []int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function frequencySort(nums: number[]): number[] {
     const map = new Map<number, number>();
@@ -132,6 +148,8 @@ function frequencySort(nums: number[]): number[] {
     return nums.sort((a, b) => map.get(a) - map.get(b) || b - a);
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -153,6 +171,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[]} nums
@@ -170,4 +190,6 @@ var frequencySort = function (nums) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

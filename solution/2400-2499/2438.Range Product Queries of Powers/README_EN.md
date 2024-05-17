@@ -10,11 +10,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [2438. Range Product Queries of Powers](https://leetcode.com/problems/range-product-queries-of-powers)
 
 [中文文档](/solution/2400-2499/2438.Range%20Product%20Queries%20of%20Powers/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a positive integer <code>n</code>, there exists a <strong>0-indexed</strong> array called <code>powers</code>, composed of the <strong>minimum</strong> number of powers of <code>2</code> that sum to <code>n</code>. The array is sorted in <strong>non-decreasing</strong> order, and there is <strong>only one</strong> way to form the array.</p>
 
@@ -55,7 +59,11 @@ The answer to the only query is powers[0] = 2. The answer modulo 10<sup>9</sup> 
 	<li><code>0 &lt;= start<sub>i</sub> &lt;= end<sub>i</sub> &lt; powers.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Bit Manipulation + Simulation
 
@@ -64,6 +72,8 @@ First, we use bit manipulation (lowbit) to get the powers array, and then simula
 The time complexity is $O(n \times \log n)$, ignoring the space consumption of the answer, the space complexity is $O(\log n)$. Here, $n$ is the length of $queries$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -82,6 +92,8 @@ class Solution:
             ans.append(x)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -107,6 +119,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -134,6 +148,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func productQueries(n int, queries [][]int) []int {
 	var mod int = 1e9 + 7
@@ -158,4 +174,6 @@ func productQueries(n int, queries [][]int) []int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

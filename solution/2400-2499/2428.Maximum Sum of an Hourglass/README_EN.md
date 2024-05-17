@@ -10,11 +10,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [2428. Maximum Sum of an Hourglass](https://leetcode.com/problems/maximum-sum-of-an-hourglass)
 
 [中文文档](/solution/2400-2499/2428.Maximum%20Sum%20of%20an%20Hourglass/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an <code>m x n</code> integer matrix <code>grid</code>.</p>
 
@@ -51,7 +55,11 @@ tags:
 	<li><code>0 &lt;= grid[i][j] &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration
 
@@ -60,6 +68,8 @@ We observe from the problem statement that each hourglass is a $3 \times 3$ matr
 The time complexity is $O(m \times n)$, where $m$ and $n$ are the number of rows and columns of the matrix, respectively. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -75,6 +85,8 @@ class Solution:
                 ans = max(ans, s)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -96,6 +108,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -119,6 +133,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxSum(grid [][]int) (ans int) {
 	m, n := len(grid), len(grid[0])
@@ -136,6 +152,8 @@ func maxSum(grid [][]int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxSum(grid: number[][]): number {
@@ -159,4 +177,6 @@ function maxSum(grid: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

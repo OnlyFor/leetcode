@@ -11,11 +11,15 @@ tags:
     - Bitmask
 ---
 
+<!-- problem:start -->
+
 # [1434. Number of Ways to Wear Different Hats to Each Other](https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other)
 
 [中文文档](/solution/1400-1499/1434.Number%20of%20Ways%20to%20Wear%20Different%20Hats%20to%20Each%20Other/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There are <code>n</code> people and <code>40</code> types of hats labeled from <code>1</code> to <code>40</code>.</p>
 
@@ -64,7 +68,11 @@ Number of Permutations of (1,2,3,4) = 24.
 	<li><code>hats[i]</code> contains a list of <strong>unique</strong> integers.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming
 
@@ -86,6 +94,8 @@ Time complexity $O(m \times 2^n \times n)$, space complexity $O(m \times 2^n)$. 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numberWays(self, hats: List[List[int]]) -> int:
@@ -106,6 +116,8 @@ class Solution:
                         f[i][j] = (f[i][j] + f[i - 1][j ^ (1 << k)]) % mod
         return f[m][-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -142,6 +154,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -176,6 +190,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numberWays(hats [][]int) int {
 	n := len(hats)
@@ -209,6 +225,8 @@ func numberWays(hats [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function numberWays(hats: number[][]): number {
     const n = hats.length;
@@ -240,4 +258,6 @@ function numberWays(hats: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

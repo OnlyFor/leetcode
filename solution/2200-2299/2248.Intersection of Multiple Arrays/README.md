@@ -11,13 +11,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [2248. 多个数组求交集](https://leetcode.cn/problems/intersection-of-multiple-arrays)
 
 [English Version](/solution/2200-2299/2248.Intersection%20of%20Multiple%20Arrays/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个二维整数数组 <code>nums</code> ，其中 <code>nums[i]</code> 是由 <strong>不同</strong> 正整数组成的一个非空数组，按 <strong>升序排列</strong> 返回一个数组，数组中的每个元素在 <code>nums</code>&nbsp;<strong>所有数组</strong> 中都出现过。</p>
 
@@ -51,7 +53,11 @@ nums[0] = [<em><strong>3</strong></em>,1,2,<em><strong>4</strong></em>,5]，nums
 	<li><code>nums[i]</code> 中的所有值 <strong>互不相同</strong></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：计数
 
@@ -60,6 +66,8 @@ nums[0] = [<em><strong>3</strong></em>,1,2,<em><strong>4</strong></em>,5]，nums
 时间复杂度 $O(N)$，空间复杂度 $O(1000)$。其中 $N$ 为数组 `nums` 中数字的总数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -70,6 +78,8 @@ class Solution:
                 cnt[x] += 1
         return [x for x, v in enumerate(cnt) if v == len(nums)]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -90,6 +100,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -112,6 +124,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func intersection(nums [][]int) (ans []int) {
 	cnt := [1001]int{}
@@ -128,6 +142,8 @@ func intersection(nums [][]int) (ans []int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function intersection(nums: number[][]): number[] {
@@ -146,6 +162,8 @@ function intersection(nums: number[][]): number[] {
     return ans;
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -171,9 +189,15 @@ class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -188,6 +212,8 @@ class Solution:
         ans.sort()
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -206,6 +232,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -226,6 +254,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func intersection(nums [][]int) (ans []int) {
 	cnt := map[int]int{}
@@ -241,6 +271,8 @@ func intersection(nums [][]int) (ans []int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function intersection(nums: number[][]): number[] {
@@ -260,4 +292,6 @@ function intersection(nums: number[][]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

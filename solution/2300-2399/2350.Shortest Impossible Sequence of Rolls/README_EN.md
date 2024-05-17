@@ -10,11 +10,15 @@ tags:
     - Hash Table
 ---
 
+<!-- problem:start -->
+
 # [2350. Shortest Impossible Sequence of Rolls](https://leetcode.com/problems/shortest-impossible-sequence-of-rolls)
 
 [中文文档](/solution/2300-2399/2350.Shortest%20Impossible%20Sequence%20of%20Rolls/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>rolls</code> of length <code>n</code> and an integer <code>k</code>. You roll a <code>k</code> sided dice numbered from <code>1</code> to <code>k</code>, <code>n</code> times, where the result of the <code>i<sup>th</sup></code> roll is <code>rolls[i]</code>.</p>
 
@@ -63,11 +67,17 @@ Note that there are other sequences that cannot be taken from rolls but [4] is t
 	<li><code>1 &lt;= rolls[i] &lt;= k &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -81,6 +91,8 @@ class Solution:
                 s.clear()
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -98,6 +110,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -117,6 +131,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func shortestSequence(rolls []int, k int) int {
 	s := map[int]bool{}
@@ -134,4 +150,6 @@ func shortestSequence(rolls []int, k int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

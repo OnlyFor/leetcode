@@ -10,11 +10,15 @@ tags:
     - Breadth-First Search
 ---
 
+<!-- problem:start -->
+
 # [1376. Time Needed to Inform All Employees](https://leetcode.com/problems/time-needed-to-inform-all-employees)
 
 [中文文档](/solution/1300-1399/1376.Time%20Needed%20to%20Inform%20All%20Employees/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>A company has <code>n</code> employees with a unique ID for each employee from <code>0</code> to <code>n - 1</code>. The head of the company is the one with <code>headID</code>.</p>
 
@@ -59,7 +63,11 @@ The tree structure of the employees in the company is shown.
 	<li>It is <strong>guaranteed</strong> that all the employees can be informed.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: DFS
 
@@ -72,6 +80,8 @@ In function $dfs(i)$, we need to traverse all direct subordinates $j$ of $i$. Fo
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Where $n$ is the number of employees.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -89,6 +99,8 @@ class Solution:
             g[x].append(i)
         return dfs(headID)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -117,6 +129,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -139,6 +153,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numOfMinutes(n int, headID int, manager []int, informTime []int) int {
 	g := make([][]int, n)
@@ -158,6 +174,8 @@ func numOfMinutes(n int, headID int, manager []int, informTime []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function numOfMinutes(n: number, headID: number, manager: number[], informTime: number[]): number {
     const g: number[][] = new Array(n).fill(0).map(() => []);
@@ -176,6 +194,8 @@ function numOfMinutes(n: number, headID: number, manager: number[], informTime: 
     return dfs(headID);
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -208,4 +228,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

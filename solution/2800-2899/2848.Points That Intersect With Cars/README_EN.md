@@ -10,11 +10,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [2848. Points That Intersect With Cars](https://leetcode.com/problems/points-that-intersect-with-cars)
 
 [中文文档](/solution/2800-2899/2848.Points%20That%20Intersect%20With%20Cars/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> 2D integer array <code>nums</code> representing the coordinates of the cars parking on a number line. For any index <code>i</code>, <code>nums[i] = [start<sub>i</sub>, end<sub>i</sub>]</code> where <code>start<sub>i</sub></code> is the starting point of the <code>i<sup>th</sup></code> car and <code>end<sub>i</sub></code> is the ending point of the <code>i<sup>th</sup></code> car.</p>
 
@@ -46,7 +50,11 @@ tags:
 	<li><code><font face="monospace">1 &lt;= start<sub>i</sub>&nbsp;&lt;= end<sub>i</sub>&nbsp;&lt;= 100</font></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Difference Array
 
@@ -55,6 +63,8 @@ We create a difference array $d$ of length $110$, then traverse the given array.
 The time complexity is $O(n)$, and the space complexity is $O(M)$. Here, $n$ is the length of the given array, and $M$ is the maximum value in the array.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -65,6 +75,8 @@ class Solution:
             d[b + 1] -= 1
         return sum(s > 0 for s in accumulate(d))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -86,6 +98,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -105,6 +119,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numberOfPoints(nums [][]int) (ans int) {
 	d := [110]int{}
@@ -122,6 +138,8 @@ func numberOfPoints(nums [][]int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numberOfPoints(nums: number[][]): number {
@@ -144,4 +162,6 @@ function numberOfPoints(nums: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

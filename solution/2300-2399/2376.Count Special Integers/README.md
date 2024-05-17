@@ -9,13 +9,15 @@ tags:
     - 动态规划
 ---
 
+<!-- problem:start -->
+
 # [2376. 统计特殊整数](https://leetcode.cn/problems/count-special-integers)
 
 [English Version](/solution/2300-2399/2376.Count%20Special%20Integers/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>如果一个正整数每一个数位都是 <strong>互不相同</strong>&nbsp;的，我们称它是 <strong>特殊整数</strong> 。</p>
 
@@ -55,7 +57,11 @@ tags:
 	<li><code>1 &lt;= n &lt;= 2 * 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：数位 DP
 
@@ -86,6 +92,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def countSpecialNumbers(self, n: int) -> int:
@@ -112,6 +120,8 @@ class Solution:
                 ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -152,6 +162,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -190,6 +202,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countSpecialNumbers(n int) int {
@@ -236,9 +250,15 @@ func A(m, n int) int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -269,6 +289,8 @@ class Solution:
             n //= 10
         return dfs(l, 0, True, True)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -318,6 +340,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -362,6 +386,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countSpecialNumbers(n int) int {
@@ -421,4 +447,6 @@ func f(n int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

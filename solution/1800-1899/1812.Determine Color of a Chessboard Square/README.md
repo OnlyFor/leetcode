@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1812. 判断国际象棋棋盘中一个格子的颜色](https://leetcode.cn/problems/determine-color-of-a-chessboard-square)
 
 [English Version](/solution/1800-1899/1812.Determine%20Color%20of%20a%20Chessboard%20Square/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个坐标 <code>coordinates</code> ，它是一个字符串，表示国际象棋棋盘中一个格子的坐标。下图是国际象棋棋盘示意图。</p>
 
@@ -60,7 +62,11 @@ tags:
 	<li><code>'1' <= coordinates[1] <= '8'</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：找规律
 
@@ -72,11 +78,15 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def squareIsWhite(self, coordinates: str) -> bool:
         return (ord(coordinates[0]) + ord(coordinates[1])) % 2 == 1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -85,6 +95,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -95,17 +107,23 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func squareIsWhite(coordinates string) bool {
 	return (coordinates[0]+coordinates[1])%2 == 1
 }
 ```
 
+#### TypeScript
+
 ```ts
 function squareIsWhite(coordinates: string): boolean {
     return ((coordinates.charCodeAt(0) + coordinates.charCodeAt(1)) & 1) === 1;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -115,6 +133,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -128,6 +148,8 @@ var squareIsWhite = function (coordinates) {
 };
 ```
 
+#### C
+
 ```c
 bool squareIsWhite(char* coordinates) {
     return (coordinates[0] + coordinates[1]) & 1;
@@ -136,4 +158,6 @@ bool squareIsWhite(char* coordinates) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

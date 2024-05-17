@@ -11,13 +11,15 @@ tags:
     - 模拟
 ---
 
+<!-- problem:start -->
+
 # [2326. 螺旋矩阵 IV](https://leetcode.cn/problems/spiral-matrix-iv)
 
 [English Version](/solution/2300-2399/2326.Spiral%20Matrix%20IV/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你两个整数：<code>m</code> 和 <code>n</code> ，表示矩阵的维数。</p>
 
@@ -55,7 +57,11 @@ tags:
 	<li><code>0 &lt;= Node.val &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -70,6 +76,8 @@ tags:
 时间复杂度 $O(m \times n)$，空间复杂度 $O(m \times n)$。其中 $m$ 和 $n$ 分别表示矩阵的行数和列数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for singly-linked list.
@@ -95,6 +103,8 @@ class Solution:
                 k = (k + 1) % 4
         return ans
 ```
+
+#### Java
 
 ```java
 /**
@@ -136,6 +146,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for singly-linked list.
@@ -174,6 +186,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for singly-linked list.
@@ -209,6 +223,8 @@ func spiralMatrix(m int, n int, head *ListNode) [][]int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -249,4 +265,6 @@ function spiralMatrix(m: number, n: number, head: ListNode | null): number[][] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

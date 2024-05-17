@@ -9,11 +9,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [1599. Maximum Profit of Operating a Centennial Wheel](https://leetcode.com/problems/maximum-profit-of-operating-a-centennial-wheel)
 
 [中文文档](/solution/1500-1599/1599.Maximum%20Profit%20of%20Operating%20a%20Centennial%20Wheel/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are the operator of a Centennial Wheel that has <strong>four gondolas</strong>, and each gondola has room for <strong>up</strong> <strong>to</strong> <strong>four people</strong>. You have the ability to rotate the gondolas <strong>counterclockwise</strong>, which costs you <code>runningCost</code> dollars.</p>
 
@@ -76,7 +80,11 @@ The profit was never positive, so return -1.
 	<li><code>1 &lt;= boardingCost, runningCost &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -85,6 +93,8 @@ We directly simulate the rotation process of the Ferris wheel. Each time it rota
 The time complexity is $O(n)$, where $n$ is the length of the `customers` array. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -107,6 +117,8 @@ class Solution:
         return ans
 ```
 
+#### Java
+
 ```java
 class Solution {
     public int minOperationsMaxProfit(int[] customers, int boardingCost, int runningCost) {
@@ -128,6 +140,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -152,6 +166,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minOperationsMaxProfit(customers []int, boardingCost int, runningCost int) int {
 	ans := -1
@@ -173,6 +189,8 @@ func minOperationsMaxProfit(customers []int, boardingCost int, runningCost int) 
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minOperationsMaxProfit(
@@ -198,6 +216,8 @@ function minOperationsMaxProfit(
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -232,4 +252,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,11 +10,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [2567. Minimum Score by Changing Two Elements](https://leetcode.com/problems/minimum-score-by-changing-two-elements)
 
 [中文文档](/solution/2500-2599/2567.Minimum%20Score%20by%20Changing%20Two%20Elements/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code>.</p>
 
@@ -58,7 +62,11 @@ The sum of our high and low score is 3, which we can prove to be minimal.
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sorting + Greedy
 
@@ -79,12 +87,16 @@ Similar problems:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minimizeSum(self, nums: List[int]) -> int:
         nums.sort()
         return min(nums[-1] - nums[2], nums[-2] - nums[1], nums[-3] - nums[0])
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -99,6 +111,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -110,6 +124,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimizeSum(nums []int) int {
 	sort.Ints(nums)
@@ -118,6 +134,8 @@ func minimizeSum(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimizeSum(nums: number[]): number {
     nums.sort((a, b) => a - b);
@@ -125,6 +143,8 @@ function minimizeSum(nums: number[]): number {
     return Math.min(nums[n - 3] - nums[0], nums[n - 2] - nums[1], nums[n - 1] - nums[2]);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -135,6 +155,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 #define min(a, b) (((a) < (b)) ? (a) : (b))
@@ -151,4 +173,6 @@ int minimizeSum(int* nums, int numsSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

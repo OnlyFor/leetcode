@@ -8,11 +8,15 @@ tags:
     - Math
 ---
 
+<!-- problem:start -->
+
 # [1118. Number of Days in a Month 🔒](https://leetcode.com/problems/number-of-days-in-a-month)
 
 [中文文档](/solution/1100-1199/1118.Number%20of%20Days%20in%20a%20Month/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a year <code>year</code> and a month <code>month</code>, return <em>the number of days of that month</em>.</p>
 
@@ -35,7 +39,11 @@ tags:
 	<li><code>1 &lt;= month &lt;= 12</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Determine Leap Year
 
@@ -49,6 +57,8 @@ The time complexity is $O(1)$, and the space complexity is $O(1)$.
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numberOfDays(self, year: int, month: int) -> int:
@@ -56,6 +66,8 @@ class Solution:
         days = [0, 31, 29 if leap else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
         return days[month]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -67,6 +79,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -77,6 +91,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func numberOfDays(year int, month int) int {
@@ -90,6 +106,8 @@ func numberOfDays(year int, month int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function numberOfDays(year: number, month: number): number {
     const leap = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
@@ -100,4 +118,6 @@ function numberOfDays(year: number, month: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

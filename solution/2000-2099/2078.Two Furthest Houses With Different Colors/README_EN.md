@@ -9,11 +9,15 @@ tags:
     - Array
 ---
 
+<!-- problem:start -->
+
 # [2078. Two Furthest Houses With Different Colors](https://leetcode.com/problems/two-furthest-houses-with-different-colors)
 
 [中文文档](/solution/2000-2099/2078.Two%20Furthest%20Houses%20With%20Different%20Colors/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There are <code>n</code> houses evenly lined up on the street, and each house is beautifully painted. You are given a <strong>0-indexed</strong> integer array <code>colors</code> of length <code>n</code>, where <code>colors[i]</code> represents the color of the <code>i<sup>th</sup></code> house.</p>
 
@@ -62,11 +66,17 @@ House 0 has color 0, and house 1 has color 1. The distance between them is abs(0
 	<li>Test data are generated such that <strong>at least</strong> two houses have different colors.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -78,6 +88,8 @@ class Solution:
                     ans = max(ans, abs(i - j))
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -95,6 +107,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -108,6 +122,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxDistance(colors []int) int {
@@ -132,9 +148,15 @@ func abs(x int) int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -149,6 +171,8 @@ class Solution:
             j -= 1
         return max(n - i - 1, j)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -167,6 +191,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -182,6 +208,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxDistance(colors []int) int {
@@ -202,4 +230,6 @@ func maxDistance(colors []int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

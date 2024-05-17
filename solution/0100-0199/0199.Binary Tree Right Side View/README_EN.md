@@ -9,11 +9,15 @@ tags:
     - Binary Tree
 ---
 
+<!-- problem:start -->
+
 # [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view)
 
 [中文文档](/solution/0100-0199/0199.Binary%20Tree%20Right%20Side%20View/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given the <code>root</code> of a binary tree, imagine yourself standing on the <strong>right side</strong> of it, return <em>the values of the nodes you can see ordered from top to bottom</em>.</p>
 
@@ -47,11 +51,17 @@ tags:
 	<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -76,6 +86,8 @@ class Solution:
                     q.append(node.right)
         return ans
 ```
+
+#### Java
 
 ```java
 /**
@@ -118,6 +130,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -156,6 +170,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -186,6 +202,8 @@ func rightSideView(root *TreeNode) (ans []int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -224,6 +242,8 @@ function rightSideView(root: TreeNode | null): number[] {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -277,9 +297,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -302,6 +328,8 @@ class Solution:
         dfs(root, 0)
         return ans
 ```
+
+#### Java
 
 ```java
 /**
@@ -340,6 +368,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -372,6 +402,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -397,6 +429,8 @@ func rightSideView(root *TreeNode) (ans []int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -432,4 +466,6 @@ function rightSideView(root: TreeNode | null): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

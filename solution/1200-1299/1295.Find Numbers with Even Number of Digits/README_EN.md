@@ -8,11 +8,15 @@ tags:
     - Array
 ---
 
+<!-- problem:start -->
+
 # [1295. Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits)
 
 [中文文档](/solution/1200-1299/1295.Find%20Numbers%20with%20Even%20Number%20of%20Digits/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array <code>nums</code> of integers, return how many of them contain an <strong>even number</strong> of digits.</p>
 
@@ -48,17 +52,25 @@ Only 1771 contains an even number of digits.
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
     def findNumbers(self, nums: List[int]) -> int:
         return sum(len(str(v)) % 2 == 0 for v in nums)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -74,6 +86,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -87,6 +101,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findNumbers(nums []int) (ans int) {
 	for _, v := range nums {
@@ -97,6 +113,8 @@ func findNumbers(nums []int) (ans int) {
 	return
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -114,4 +132,6 @@ var findNumbers = function (nums) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

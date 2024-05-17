@@ -13,13 +13,15 @@ tags:
     - 二叉树
 ---
 
+<!-- problem:start -->
+
 # [1261. 在受污染的二叉树中查找元素](https://leetcode.cn/problems/find-elements-in-a-contaminated-binary-tree)
 
 [English Version](/solution/1200-1299/1261.Find%20Elements%20in%20a%20Contaminated%20Binary%20Tree/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给出一个满足下述规则的二叉树：</p>
 
@@ -98,7 +100,11 @@ findElements.find(5); // return True
 	<li><code>0 &lt;= target &lt;= 10^6</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：DFS + 哈希表
 
@@ -107,6 +113,8 @@ findElements.find(5); // return True
 时间复杂度方面，初始化时需要遍历二叉树，时间复杂度为 $O(n)$，查找时只需要判断哈希表中是否存在目标值，时间复杂度为 $O(1)$。空间复杂度 $O(n)$。其中 $n$ 为二叉树节点个数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -139,6 +147,8 @@ class FindElements:
 # obj = FindElements(root)
 # param_1 = obj.find(target)
 ```
+
+#### Java
 
 ```java
 /**
@@ -188,6 +198,8 @@ class FindElements {
  */
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -234,6 +246,8 @@ private:
  */
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -276,6 +290,8 @@ func (this *FindElements) Find(target int) bool {
  * param_1 := obj.Find(target);
  */
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -325,4 +341,6 @@ class FindElements {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

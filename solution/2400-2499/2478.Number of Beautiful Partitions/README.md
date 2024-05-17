@@ -9,13 +9,15 @@ tags:
     - 动态规划
 ---
 
+<!-- problem:start -->
+
 # [2478. 完美分割的方案数](https://leetcode.cn/problems/number-of-beautiful-partitions)
 
 [English Version](/solution/2400-2499/2478.Number%20of%20Beautiful%20Partitions/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串&nbsp;<code>s</code>&nbsp;，每个字符是数字&nbsp;<code>'1'</code>&nbsp;到&nbsp;<code>'9'</code>&nbsp;，再给你两个整数&nbsp;<code>k</code> 和&nbsp;<code>minLength</code>&nbsp;。</p>
 
@@ -69,7 +71,11 @@ tags:
 	<li><code>s</code>&nbsp;每个字符都为数字&nbsp;<code>'1'</code>&nbsp;到&nbsp;<code>'9'</code> 之一。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -98,6 +104,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def beautifulPartitions(self, s: str, k: int, minLength: int) -> int:
@@ -117,6 +125,8 @@ class Solution:
                 g[i][j] = (g[i - 1][j] + f[i][j]) % mod
         return f[n][k]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -149,6 +159,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -176,6 +188,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func beautifulPartitions(s string, k int, minLength int) int {
@@ -207,6 +221,8 @@ func beautifulPartitions(s string, k int, minLength int) int {
 	return f[n][k]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function beautifulPartitions(s: string, k: number, minLength: number): number {
@@ -240,4 +256,6 @@ function beautifulPartitions(s: string, k: number, minLength: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

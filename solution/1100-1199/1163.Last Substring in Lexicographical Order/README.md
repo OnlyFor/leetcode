@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1163. 按字典序排在最后的子串](https://leetcode.cn/problems/last-substring-in-lexicographical-order)
 
 [English Version](/solution/1100-1199/1163.Last%20Substring%20in%20Lexicographical%20Order/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串&nbsp;<code>s</code>&nbsp;，找出它的所有子串并按字典序排列，返回排在最后的那个子串。</p>
 
@@ -45,7 +47,11 @@ tags:
 	<li><code>s</code> 仅含有小写英文字符。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：双指针
 
@@ -67,6 +73,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def lastSubstring(self, s: str) -> str:
@@ -84,6 +92,8 @@ class Solution:
                 k = 0
         return s[i:]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -110,6 +120,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -135,6 +147,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func lastSubstring(s string) string {
 	i, n := 0, len(s)
@@ -155,6 +169,8 @@ func lastSubstring(s string) string {
 	return s[i:]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function lastSubstring(s: string): string {
@@ -180,4 +196,6 @@ function lastSubstring(s: string): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

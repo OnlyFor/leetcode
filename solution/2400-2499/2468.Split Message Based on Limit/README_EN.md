@@ -9,11 +9,15 @@ tags:
     - Binary Search
 ---
 
+<!-- problem:start -->
+
 # [2468. Split Message Based on Limit](https://leetcode.com/problems/split-message-based-on-limit)
 
 [中文文档](/solution/2400-2499/2468.Split%20Message%20Based%20on%20Limit/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string, <code>message</code>, and a positive integer, <code>limit</code>.</p>
 
@@ -56,7 +60,11 @@ Under the given constraints, the string can be split into two parts:
 	<li><code>1 &lt;= limit &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumerate the Number of Segments + Simulation
 
@@ -73,6 +81,8 @@ Therefore, the number of characters that can be filled in all segments is $limit
 The time complexity is $O(n\times \log n)$, where $n$ is the length of the string `message`. Ignoring the space consumption of the answer, the space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -94,6 +104,8 @@ class Solution:
                 return ans
         return []
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -123,6 +135,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -151,6 +165,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func splitMessage(message string, limit int) (ans []string) {
 	n := len(message)
@@ -177,4 +193,6 @@ func splitMessage(message string, limit int) (ans []string) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

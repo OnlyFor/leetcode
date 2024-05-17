@@ -10,11 +10,15 @@ tags:
     - Suffix Array
 ---
 
+<!-- problem:start -->
+
 # [1977. Number of Ways to Separate Numbers](https://leetcode.com/problems/number-of-ways-to-separate-numbers)
 
 [中文文档](/solution/1900-1999/1977.Number%20of%20Ways%20to%20Separate%20Numbers/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You wrote down many <strong>positive</strong> integers in a string called <code>num</code>. However, you realized that you forgot to add commas to seperate the different numbers. You remember that the list of integers was <strong>non-decreasing</strong> and that <strong>no</strong> integer had leading zeros.</p>
 
@@ -55,11 +59,17 @@ tags:
 	<li><code>num</code> consists of digits <code>&#39;0&#39;</code> through <code>&#39;9&#39;</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -89,6 +99,8 @@ class Solution:
                 dp[i][j] = (dp[i][j - 1] + v) % mod
         return dp[n][n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -128,6 +140,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -166,6 +180,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func numberOfCombinations(num string) int {
@@ -208,4 +224,6 @@ func numberOfCombinations(num string) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

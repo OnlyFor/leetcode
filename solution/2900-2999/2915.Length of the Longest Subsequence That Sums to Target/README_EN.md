@@ -9,11 +9,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [2915. Length of the Longest Subsequence That Sums to Target](https://leetcode.com/problems/length-of-the-longest-subsequence-that-sums-to-target)
 
 [中文文档](/solution/2900-2999/2915.Length%20of%20the%20Longest%20Subsequence%20That%20Sums%20to%20Target/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> array of integers <code>nums</code>, and an integer <code>target</code>.</p>
 
@@ -55,7 +59,11 @@ tags:
 	<li><code>1 &lt;= target &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming
 
@@ -75,6 +83,8 @@ We notice that the state of $f[i][j]$ is only related to $f[i-1][\cdot]$, so we 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def lengthOfLongestSubsequence(self, nums: List[int], target: int) -> int:
@@ -88,6 +98,8 @@ class Solution:
                     f[i][j] = max(f[i][j], f[i - 1][j - x] + 1)
         return -1 if f[n][target] <= 0 else f[n][target]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -113,6 +125,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -134,6 +148,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func lengthOfLongestSubsequence(nums []int, target int) int {
@@ -162,6 +178,8 @@ func lengthOfLongestSubsequence(nums []int, target int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function lengthOfLongestSubsequence(nums: number[], target: number): number {
     const n = nums.length;
@@ -182,9 +200,15 @@ function lengthOfLongestSubsequence(nums: number[], target: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -195,6 +219,8 @@ class Solution:
                 f[j] = max(f[j], f[j - x] + 1)
         return -1 if f[-1] <= 0 else f[-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -213,6 +239,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -229,6 +257,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func lengthOfLongestSubsequence(nums []int, target int) int {
@@ -249,6 +279,8 @@ func lengthOfLongestSubsequence(nums []int, target int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function lengthOfLongestSubsequence(nums: number[], target: number): number {
     const f: number[] = Array(target + 1).fill(-Infinity);
@@ -264,4 +296,6 @@ function lengthOfLongestSubsequence(nums: number[], target: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

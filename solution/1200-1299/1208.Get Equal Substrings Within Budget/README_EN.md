@@ -11,11 +11,15 @@ tags:
     - Sliding Window
 ---
 
+<!-- problem:start -->
+
 # [1208. Get Equal Substrings Within Budget](https://leetcode.com/problems/get-equal-substrings-within-budget)
 
 [中文文档](/solution/1200-1299/1208.Get%20Equal%20Substrings%20Within%20Budget/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two strings <code>s</code> and <code>t</code> of the same length and an integer <code>maxCost</code>.</p>
 
@@ -59,7 +63,11 @@ That costs 3, so the maximum length is 3.
 	<li><code>s</code> and <code>t</code> consist of only lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Prefix Sum + Binary Search
 
@@ -74,6 +82,8 @@ Next, we define the left boundary $l$ of binary search as $0$ and the right boun
 The time complexity is $O(n \times \log n)$, and the space complexity is $O(n)$. Here, $n$ is the length of string $s$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -96,6 +106,8 @@ class Solution:
                 r = mid - 1
         return l
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -135,6 +147,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -167,6 +181,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func equalSubstring(s string, t string, maxCost int) int {
@@ -205,6 +221,10 @@ func abs(x int) int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Two Pointers
 
 We can maintain two pointers $j$ and $i$, initially $i = j = 0$; maintain a variable $sum$, representing the sum of the absolute differences of ASCII values in the index interval $[i,..j]$. In each step, we move $i$ to the right by one position, then update $sum = sum + |s[i] - t[i]|$. If $sum \gt maxCost$, then we move the pointer $j$ to the right in a loop, and continuously reduce the value of $sum$ during the moving process until $sum \leq maxCost$. Then we update the answer, i.e., $ans = \max(ans, i - j + 1)$.
@@ -214,6 +234,8 @@ Finally, return the answer.
 The time complexity is $O(n)$, and the space complexity is $O(1)$. Here, $n$ is the length of string $s$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -229,6 +251,8 @@ class Solution:
             ans = max(ans, i - j + 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -249,6 +273,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -267,6 +293,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func equalSubstring(s string, t string, maxCost int) (ans int) {
@@ -293,4 +321,6 @@ func abs(x int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

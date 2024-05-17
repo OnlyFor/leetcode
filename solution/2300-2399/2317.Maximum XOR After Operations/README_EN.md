@@ -10,11 +10,15 @@ tags:
     - Math
 ---
 
+<!-- problem:start -->
+
 # [2317. Maximum XOR After Operations](https://leetcode.com/problems/maximum-xor-after-operations)
 
 [中文文档](/solution/2300-2399/2317.Maximum%20XOR%20After%20Operations/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code>. In one operation, select <strong>any</strong> non-negative integer <code>x</code> and an index <code>i</code>, then <strong>update</strong> <code>nums[i]</code> to be equal to <code>nums[i] AND (nums[i] XOR x)</code>.</p>
 
@@ -50,17 +54,25 @@ It can be shown that 11 is the maximum possible bitwise XOR.</pre>
 	<li><code>0 &lt;= nums[i] &lt;= 10<sup>8</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
     def maximumXOR(self, nums: List[int]) -> int:
         return reduce(or_, nums)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -73,6 +85,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -87,6 +101,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximumXOR(nums []int) (ans int) {
 	for _, x := range nums {
@@ -95,6 +111,8 @@ func maximumXOR(nums []int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maximumXOR(nums: number[]): number {
@@ -108,4 +126,6 @@ function maximumXOR(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,11 +10,15 @@ tags:
     - Counting
 ---
 
+<!-- problem:start -->
+
 # [2453. Destroy Sequential Targets](https://leetcode.com/problems/destroy-sequential-targets)
 
 [中文文档](/solution/2400-2499/2453.Destroy%20Sequential%20Targets/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> array <code>nums</code> consisting of positive integers, representing targets on a number line. You are also given an integer <code>space</code>.</p>
 
@@ -60,7 +64,11 @@ Since nums[0] is the minimal integer that can destroy 3 targets, we return 1.
 	<li><code>1 &lt;= space &lt;=&nbsp;10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Modulo + Enumeration
 
@@ -69,6 +77,8 @@ We traverse the array $nums$ and use a hash table $cnt$ to count the frequency o
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Here, $n$ is the length of the array $nums$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -82,6 +92,8 @@ class Solution:
                 mx = t
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -104,6 +116,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -122,6 +136,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func destroyTargets(nums []int, space int) int {
@@ -143,4 +159,6 @@ func destroyTargets(nums []int, space int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

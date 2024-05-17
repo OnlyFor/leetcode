@@ -9,11 +9,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [1913. Maximum Product Difference Between Two Pairs](https://leetcode.com/problems/maximum-product-difference-between-two-pairs)
 
 [中文文档](/solution/1900-1999/1913.Maximum%20Product%20Difference%20Between%20Two%20Pairs/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>The <strong>product difference</strong> between two pairs <code>(a, b)</code> and <code>(c, d)</code> is defined as <code>(a * b) - (c * d)</code>.</p>
 
@@ -69,11 +73,17 @@ The product difference is (9 * 8) - (2 * 4) = 64.
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -81,6 +91,8 @@ class Solution:
         nums.sort()
         return nums[-1] * nums[-2] - nums[0] * nums[1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -91,6 +103,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -103,6 +117,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxProductDifference(nums []int) int {
 	sort.Ints(nums)
@@ -110,6 +126,8 @@ func maxProductDifference(nums []int) int {
 	return nums[n-1]*nums[n-2] - nums[0]*nums[1]
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -126,4 +144,6 @@ var maxProductDifference = function (nums) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -8,13 +8,15 @@ tags:
     - 哈希表
 ---
 
+<!-- problem:start -->
+
 # [305. 岛屿数量 II 🔒](https://leetcode.cn/problems/number-of-islands-ii)
 
 [English Version](/solution/0300-0399/0305.Number%20of%20Islands%20II/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个大小为 <code>m x n</code> 的二进制网格 <code>grid</code> 。网格表示一个地图，其中，<code>0</code> 表示水，<code>1</code> 表示陆地。最初，<code>grid</code> 中的所有单元格都是水单元格（即，所有单元格都是 <code>0</code>）。</p>
 
@@ -61,7 +63,11 @@ tags:
 
 <p><strong>进阶：</strong>你可以设计一个时间复杂度 <code>O(k log(mn))</code> 的算法解决此问题吗？（其中 <code>k == positions.length</code>）</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：并查集
 
@@ -72,6 +78,8 @@ tags:
 时间复杂度 $O(k \times \alpha(m \times n))$ 或 $O(k \times \log(m \times n))$，其中 $k$ 是 $positions$ 的长度，而 $\alpha$ 是阿克曼函数的反函数，本题中 $\alpha(m \times n)$ 可以认为是一个很小的常数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class UnionFind:
@@ -122,6 +130,8 @@ class Solution:
             ans.append(cnt)
         return ans
 ```
+
+#### Java
 
 ```java
 class UnionFind {
@@ -189,6 +199,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class UnionFind {
 public:
@@ -253,6 +265,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 type unionFind struct {
@@ -319,6 +333,8 @@ func numIslands2(m int, n int, positions [][]int) (ans []int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 class UnionFind {
     p: number[];
@@ -383,4 +399,6 @@ function numIslands2(m: number, n: number, positions: number[][]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

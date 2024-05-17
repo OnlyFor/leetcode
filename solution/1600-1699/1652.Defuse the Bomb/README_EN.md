@@ -9,11 +9,15 @@ tags:
     - Sliding Window
 ---
 
+<!-- problem:start -->
+
 # [1652. Defuse the Bomb](https://leetcode.com/problems/defuse-the-bomb)
 
 [中文文档](/solution/1600-1699/1652.Defuse%20the%20Bomb/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You have a bomb to defuse, and your time is running out! Your informer will provide you with a <strong>circular</strong> array <code>code</code>&nbsp;of length of <code>n</code>&nbsp;and a key <code>k</code>.</p>
 
@@ -64,7 +68,11 @@ tags:
 	<li><code>-(n - 1) &lt;= k &lt;= n - 1</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -88,6 +96,8 @@ The time complexity is $O(n \times |k|)$, ignoring the space consumption of the 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def decrypt(self, code: List[int], k: int) -> List[int]:
@@ -104,6 +114,8 @@ class Solution:
                     ans[i] += code[(j + n) % n]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -128,6 +140,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -154,6 +168,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func decrypt(code []int, k int) []int {
 	n := len(code)
@@ -175,6 +191,8 @@ func decrypt(code []int, k int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function decrypt(code: number[], k: number): number[] {
@@ -203,6 +221,10 @@ function decrypt(code: number[], k: number): number[] {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Prefix Sum
 
 In Solution 1, for each position $i$, we need to traverse $k$ positions, which involves a lot of repeated calculations. We can optimize this by using prefix sums.
@@ -216,6 +238,8 @@ If $k$ is a negative number, then the value at position $i$ is the sum of the va
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Here, $n$ is the length of the `code` array.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -232,6 +256,8 @@ class Solution:
                 ans[i] = s[i + n] - s[i + k + n]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -256,6 +282,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -282,6 +310,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func decrypt(code []int, k int) []int {
 	n := len(code)
@@ -303,6 +333,8 @@ func decrypt(code []int, k int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function decrypt(code: number[], k: number): number[] {
@@ -332,4 +364,6 @@ function decrypt(code: number[], k: number): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,11 +9,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [2771. Longest Non-decreasing Subarray From Two Arrays](https://leetcode.com/problems/longest-non-decreasing-subarray-from-two-arrays)
 
 [中文文档](/solution/2700-2799/2771.Longest%20Non-decreasing%20Subarray%20From%20Two%20Arrays/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two <strong>0-indexed</strong> integer arrays <code>nums1</code> and <code>nums2</code> of length <code>n</code>.</p>
 
@@ -64,7 +68,11 @@ The entire array forms a non-decreasing subarray of length 2, making it the maxi
 	<li><code>1 &lt;= nums1[i], nums2[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming
 
@@ -87,6 +95,8 @@ The time complexity is $O(n)$, where $n$ is the length of the array. The space c
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maxNonDecreasingLength(self, nums1: List[int], nums2: List[int]) -> int:
@@ -107,6 +117,8 @@ class Solution:
             ans = max(ans, f, g)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -136,6 +148,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -167,6 +181,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxNonDecreasingLength(nums1 []int, nums2 []int) int {
 	n := len(nums1)
@@ -191,6 +207,8 @@ func maxNonDecreasingLength(nums1 []int, nums2 []int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxNonDecreasingLength(nums1: number[], nums2: number[]): number {
@@ -220,4 +238,6 @@ function maxNonDecreasingLength(nums1: number[], nums2: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

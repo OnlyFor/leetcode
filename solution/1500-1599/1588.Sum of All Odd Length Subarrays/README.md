@@ -10,13 +10,15 @@ tags:
     - 前缀和
 ---
 
+<!-- problem:start -->
+
 # [1588. 所有奇数长度子数组的和](https://leetcode.cn/problems/sum-of-all-odd-length-subarrays)
 
 [English Version](/solution/1500-1599/1588.Sum%20of%20All%20Odd%20Length%20Subarrays/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个正整数数组&nbsp;<code>arr</code>&nbsp;，请你计算所有可能的奇数长度子数组的和。</p>
 
@@ -72,7 +74,11 @@ tags:
 
 <p>你可以设计一个 O(n) 时间复杂度的算法解决此问题吗？</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举 + 前缀和
 
@@ -81,6 +87,8 @@ tags:
 时间复杂度 $O(n^2)$，空间复杂度 $O(1)$。其中 $n$ 是数组的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -94,6 +102,8 @@ class Solution:
                     ans += s
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -113,6 +123,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -134,6 +146,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sumOddLengthSubarrays(arr []int) (ans int) {
 	n := len(arr)
@@ -149,6 +163,8 @@ func sumOddLengthSubarrays(arr []int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function sumOddLengthSubarrays(arr: number[]): number {
@@ -166,6 +182,8 @@ function sumOddLengthSubarrays(arr: number[]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -186,6 +204,8 @@ impl Solution {
 }
 ```
 
+#### C
+
 ```c
 int sumOddLengthSubarrays(int* arr, int arrSize) {
     int ans = 0;
@@ -204,4 +224,6 @@ int sumOddLengthSubarrays(int* arr, int arrSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

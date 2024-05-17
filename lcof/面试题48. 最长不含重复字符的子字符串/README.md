@@ -4,9 +4,13 @@ difficulty: 中等
 edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9848.%20%E6%9C%80%E9%95%BF%E4%B8%8D%E5%90%AB%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2/README.md
 ---
 
+<!-- problem:start -->
+
 # [面试题 48. 最长不含重复字符的子字符串](https://leetcode.cn/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>请从字符串中找出一个最长的不包含重复字符的子字符串，计算该最长子字符串的长度。</p>
 
@@ -44,7 +48,11 @@ edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9
 
 <p>注意：本题与主站 3 题相同：<a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters/">https://leetcode.cn/problems/longest-substring-without-repeating-characters/</a></p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：双指针 + 哈希表
 
@@ -57,6 +65,8 @@ edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9
 时间复杂度 $O(n)$，空间复杂度 $O(C)$。其中 $n$ 是字符串 $s$ 的长度；而 $C$ 是字符集的大小。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -71,6 +81,8 @@ class Solution:
             ans = max(ans, i - j + 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -88,6 +100,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -107,6 +121,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func lengthOfLongestSubstring(s string) (ans int) {
 	vis := map[byte]bool{}
@@ -123,6 +139,8 @@ func lengthOfLongestSubstring(s string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function lengthOfLongestSubstring(s: string): number {
     let ans = 0;
@@ -137,6 +155,8 @@ function lengthOfLongestSubstring(s: string): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashSet;
@@ -160,6 +180,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {string} s
@@ -178,6 +200,8 @@ var lengthOfLongestSubstring = function (s) {
     return ans;
 };
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -198,9 +222,15 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start-->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -215,6 +245,8 @@ class Solution:
             ans = max(ans, i - j + 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -235,6 +267,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -254,6 +288,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func lengthOfLongestSubstring(s string) (ans int) {
 	ss := make([]bool, 128)
@@ -270,6 +306,8 @@ func lengthOfLongestSubstring(s string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function lengthOfLongestSubstring(s: string): number {
     let ans = 0;
@@ -285,6 +323,8 @@ function lengthOfLongestSubstring(s: string): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -311,4 +351,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

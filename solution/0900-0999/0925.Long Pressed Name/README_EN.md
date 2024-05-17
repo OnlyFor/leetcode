@@ -7,11 +7,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [925. Long Pressed Name](https://leetcode.com/problems/long-pressed-name)
 
 [中文文档](/solution/0900-0999/0925.Long%20Pressed%20Name/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Your friend is typing his <code>name</code> into a keyboard. Sometimes, when typing a character <code>c</code>, the key might get <em>long pressed</em>, and the character will be typed 1 or more times.</p>
 
@@ -42,11 +46,17 @@ tags:
 	<li><code>name</code> and <code>typed</code> consist of only lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -69,6 +79,8 @@ class Solution:
             i, j = i + 1, j + 1
         return i == m and j == n
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -98,6 +110,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -122,6 +136,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func isLongPressedName(name string, typed string) bool {
@@ -151,4 +167,6 @@ func isLongPressedName(name string, typed string) bool {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

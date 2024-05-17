@@ -10,11 +10,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [2105. Watering Plants II](https://leetcode.com/problems/watering-plants-ii)
 
 [中文文档](/solution/2100-2199/2105.Watering%20Plants%20II/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Alice and Bob want to water <code>n</code> plants in their garden. The plants are arranged in a row and are labeled from <code>0</code> to <code>n - 1</code> from left to right where the <code>i<sup>th</sup></code> plant is located at <code>x = i</code>.</p>
 
@@ -77,7 +81,11 @@ So, the total number of times they have to refill is 0.
 	<li><code>max(plants[i]) &lt;= capacityA, capacityB &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Two Pointers + Simulation
 
@@ -88,6 +96,8 @@ When $i < j$, we judge whether Alice and Bob have enough water to water the plan
 The time complexity is $O(n)$, where $n$ is the length of the plant array. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -108,6 +118,8 @@ class Solution:
         ans += i == j and max(a, b) < plants[i]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -132,6 +144,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -158,6 +172,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumRefill(plants []int, capacityA int, capacityB int) (ans int) {
 	a, b := capacityA, capacityB
@@ -181,6 +197,8 @@ func minimumRefill(plants []int, capacityA int, capacityB int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumRefill(plants: number[], capacityA: number, capacityB: number): number {
     let [a, b] = [capacityA, capacityB];
@@ -202,6 +220,8 @@ function minimumRefill(plants: number[], capacityA: number, capacityB: number): 
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -240,4 +260,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

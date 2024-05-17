@@ -9,13 +9,15 @@ tags:
     - 数学
 ---
 
+<!-- problem:start -->
+
 # [1342. 将数字变成 0 的操作次数](https://leetcode.cn/problems/number-of-steps-to-reduce-a-number-to-zero)
 
 [English Version](/solution/1300-1399/1342.Number%20of%20Steps%20to%20Reduce%20a%20Number%20to%20Zero/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个非负整数&nbsp;<code>num</code>&nbsp;，请你返回将它变成 0 所需要的步数。 如果当前数字是偶数，你需要把它除以 2 ；否则，减去 1 。</p>
 
@@ -59,11 +61,17 @@ tags:
 	<li><code>0 &lt;= num &lt;= 10^6</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -77,6 +85,8 @@ class Solution:
             ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -92,6 +102,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -105,6 +117,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func numberOfSteps(num int) int {
@@ -121,6 +135,8 @@ func numberOfSteps(num int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function numberOfSteps(num: number): number {
     let ans = 0;
@@ -131,6 +147,8 @@ function numberOfSteps(num: number): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -151,9 +169,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -167,6 +191,8 @@ class Solution:
         )
 ```
 
+#### Java
+
 ```java
 class Solution {
 
@@ -179,6 +205,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -188,6 +216,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func numberOfSteps(num int) int {
@@ -200,6 +230,8 @@ func numberOfSteps(num int) int {
 	return 1 + numberOfSteps(num-1)
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -217,4 +249,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

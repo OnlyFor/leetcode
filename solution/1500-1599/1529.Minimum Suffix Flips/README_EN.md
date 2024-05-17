@@ -9,11 +9,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1529. Minimum Suffix Flips](https://leetcode.com/problems/minimum-suffix-flips)
 
 [中文文档](/solution/1500-1599/1529.Minimum%20Suffix%20Flips/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> binary string <code>target</code> of length <code>n</code>. You have another binary string <code>s</code> of length <code>n</code> that is initially set to all zeros. You want to make <code>s</code> equal to <code>target</code>.</p>
 
@@ -63,11 +67,17 @@ We need at least 3 flip operations to form target.
 	<li><code>target[i]</code> is either <code>&#39;0&#39;</code> or <code>&#39;1&#39;</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -78,6 +88,8 @@ class Solution:
                 ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -93,6 +105,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -110,6 +124,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minFlips(target string) int {
 	ans := 0
@@ -125,4 +141,6 @@ func minFlips(target string) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

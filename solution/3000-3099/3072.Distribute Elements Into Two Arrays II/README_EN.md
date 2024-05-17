@@ -11,11 +11,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [3072. Distribute Elements Into Two Arrays II](https://leetcode.com/problems/distribute-elements-into-two-arrays-ii)
 
 [中文文档](/solution/3000-3099/3072.Distribute%20Elements%20Into%20Two%20Arrays%20II/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>1-indexed</strong> array of integers <code>nums</code> of length <code>n</code>.</p>
 
@@ -77,7 +81,11 @@ Hence, the array result formed by concatenation is [3,3,3,3].
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Discretization + Binary Indexed Tree
 
@@ -88,6 +96,8 @@ Since the range of numbers given in the problem is very large, we need to discre
 The time complexity is $O(n \times \log n)$, and the space complexity is $O(n)$, where $n$ is the length of the array `nums`.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class BinaryIndexedTree:
@@ -139,6 +149,8 @@ class Solution:
         return arr1 + arr2
 ```
 
+#### Python3
+
 ```python
 from sortedcontainers import SortedList
 
@@ -166,6 +178,8 @@ class Solution:
                 sl2.add(x)
         return arr1 + arr2
 ```
+
+#### Java
 
 ```java
 class BinaryIndexedTree {
@@ -232,6 +246,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class BinaryIndexedTree {
 private:
@@ -294,6 +310,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 type BinaryIndexedTree struct {
 	n int
@@ -351,6 +369,8 @@ func resultArray(nums []int) []int {
 	return arr1
 }
 ```
+
+#### TypeScript
 
 ```ts
 class BinaryIndexedTree {
@@ -422,4 +442,6 @@ function resultArray(nums: number[]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

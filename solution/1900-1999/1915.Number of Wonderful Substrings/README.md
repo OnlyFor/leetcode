@@ -11,13 +11,15 @@ tags:
     - 前缀和
 ---
 
+<!-- problem:start -->
+
 # [1915. 最美子字符串的数目](https://leetcode.cn/problems/number-of-wonderful-substrings)
 
 [English Version](/solution/1900-1999/1915.Number%20of%20Wonderful%20Substrings/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>如果某个字符串中 <strong>至多一个</strong> 字母出现 <strong>奇数</strong> 次，则称其为 <strong>最美</strong> 字符串。</p>
 
@@ -79,7 +81,11 @@ tags:
 	<li><code>word</code> 由从 <code>'a'</code> 到 <code>'j'</code> 的小写英文字母组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：前缀异或 + 计数
 
@@ -97,6 +103,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def wonderfulSubstrings(self, word: str) -> int:
@@ -110,6 +118,8 @@ class Solution:
             cnt[st] += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -131,6 +141,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -151,6 +163,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func wonderfulSubstrings(word string) (ans int64) {
 	cnt := [1024]int{1}
@@ -166,6 +180,8 @@ func wonderfulSubstrings(word string) (ans int64) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function wonderfulSubstrings(word: string): number {
@@ -184,6 +200,8 @@ function wonderfulSubstrings(word: string): number {
     return ans;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -209,4 +227,6 @@ var wonderfulSubstrings = function (word) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

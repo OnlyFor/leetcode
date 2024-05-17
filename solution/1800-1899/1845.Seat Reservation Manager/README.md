@@ -9,13 +9,15 @@ tags:
     - 堆（优先队列）
 ---
 
+<!-- problem:start -->
+
 # [1845. 座位预约管理系统](https://leetcode.cn/problems/seat-reservation-manager)
 
 [English Version](/solution/1800-1899/1845.Seat%20Reservation%20Manager/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>请你设计一个管理 <code>n</code> 个座位预约的系统，座位编号从 <code>1</code> 到 <code>n</code> 。</p>
 
@@ -61,7 +63,11 @@ seatManager.unreserve(5); // 将座位 5 变为可以预约，现在可预约的
 	<li>对 <code>reserve</code> 和 <code>unreserve</code> 的调用 <strong>总共</strong> 不超过 <code>10<sup>5</sup></code> 次。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：优先队列（小根堆）
 
@@ -76,6 +82,8 @@ seatManager.unreserve(5); // 将座位 5 变为可以预约，现在可预约的
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(n)$。其中 $n$ 为座位的数量。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class SeatManager:
@@ -95,6 +103,8 @@ class SeatManager:
 # param_1 = obj.reserve()
 # obj.unreserve(seatNumber)
 ```
+
+#### Java
 
 ```java
 class SeatManager {
@@ -122,6 +132,8 @@ class SeatManager {
  * obj.unreserve(seatNumber);
  */
 ```
+
+#### C++
 
 ```cpp
 class SeatManager {
@@ -153,6 +165,8 @@ private:
  * obj->unreserve(seatNumber);
  */
 ```
+
+#### Go
 
 ```go
 type SeatManager struct {
@@ -194,6 +208,8 @@ func (h *hp) Pop() any {
  */
 ```
 
+#### C#
+
 ```cs
 public class SeatManager {
     private SortedSet<int> availableSeats;
@@ -226,4 +242,6 @@ public class SeatManager {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

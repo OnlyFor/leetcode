@@ -7,11 +7,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [416. Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum)
 
 [中文文档](/solution/0400-0499/0416.Partition%20Equal%20Subset%20Sum/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer array <code>nums</code>, return <code>true</code> <em>if you can partition the array into two subsets such that the sum of the elements in both subsets is equal or </em><code>false</code><em> otherwise</em>.</p>
 
@@ -40,11 +44,17 @@ tags:
 	<li><code>1 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -60,6 +70,8 @@ class Solution:
                 f[i][j] = f[i - 1][j] or (j >= x and f[i - 1][j - x])
         return f[n][m]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -87,6 +99,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -110,6 +124,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func canPartition(nums []int) bool {
@@ -136,6 +152,8 @@ func canPartition(nums []int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function canPartition(nums: number[]): boolean {
     const s = nums.reduce((a, b) => a + b, 0);
@@ -157,6 +175,8 @@ function canPartition(nums: number[]): boolean {
     return f[n][m];
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -194,6 +214,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[]} nums
@@ -222,9 +244,15 @@ var canPartition = function (nums) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -238,6 +266,8 @@ class Solution:
                 f[j] = f[j] or f[j - x]
         return f[m]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -263,6 +293,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -285,6 +317,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func canPartition(nums []int) bool {
 	s := 0
@@ -306,6 +340,8 @@ func canPartition(nums []int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function canPartition(nums: number[]): boolean {
     const s = nums.reduce((a, b) => a + b, 0);
@@ -323,6 +359,8 @@ function canPartition(nums: number[]): boolean {
     return f[m];
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -360,6 +398,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[]} nums
@@ -384,4 +424,6 @@ var canPartition = function (nums) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,11 +9,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1180. Count Substrings with Only One Distinct Letter 🔒](https://leetcode.com/problems/count-substrings-with-only-one-distinct-letter)
 
 [中文文档](/solution/1100-1199/1180.Count%20Substrings%20with%20Only%20One%20Distinct%20Letter/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a string <code>s</code>, return <em>the number of substrings that have only <strong>one distinct</strong> letter</em>.</p>
 
@@ -46,7 +50,11 @@ So the answer is 1 + 2 + 4 + 1 = 8.
 	<li><code>s[i]</code> consists of only lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Two Pointers
 
@@ -55,6 +63,8 @@ We can use two pointers, where pointer $i$ points to the start of the current su
 The time complexity is $O(n)$, where $n$ is the length of the string $s$. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -69,6 +79,8 @@ class Solution:
             i = j
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -86,6 +98,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -105,6 +119,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countLetters(s string) int {
 	ans := 0
@@ -119,6 +135,8 @@ func countLetters(s string) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countLetters(s: string): number {
@@ -139,9 +157,15 @@ function countLetters(s: string): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -158,6 +182,8 @@ class Solution:
             i = j
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -177,6 +203,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -198,6 +226,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countLetters(s string) (ans int) {
 	i, n := 0, len(s)
@@ -217,4 +247,6 @@ func countLetters(s string) (ans int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -12,13 +12,15 @@ tags:
     - 枚举
 ---
 
+<!-- problem:start -->
+
 # [2249. 统计圆内格点数目](https://leetcode.cn/problems/count-lattice-points-inside-a-circle)
 
 [English Version](/solution/2200-2299/2249.Count%20Lattice%20Points%20Inside%20a%20Circle/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个二维整数数组 <code>circles</code> ，其中 <code>circles[i] = [x<sub>i</sub>, y<sub>i</sub>, r<sub>i</sub>]</code> 表示网格上圆心为 <code>(x<sub>i</sub>, y<sub>i</sub>)</code> 且半径为 <code>r<sub>i</sub></code> 的第 <code>i</code> 个圆，返回出现在<strong> 至少一个 </strong>圆内的 <strong>格点数目</strong> 。</p>
 
@@ -68,7 +70,11 @@ tags:
 	<li><code>1 &lt;= r<sub>i</sub> &lt;= min(x<sub>i</sub>, y<sub>i</sub>)</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举
 
@@ -79,6 +85,8 @@ tags:
 时间复杂度 $O(X \times Y \times n)$，空间复杂度 $O(1)$。其中 $X$ 和 $Y$ 分别为所有圆的最大横纵坐标，而 $n$ 为圆的个数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -95,6 +103,8 @@ class Solution:
                         break
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -120,6 +130,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -147,6 +159,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countLatticePoints(circles [][]int) (ans int) {
 	mx, my := 0, 0
@@ -168,6 +182,8 @@ func countLatticePoints(circles [][]int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countLatticePoints(circles: number[][]): number {
@@ -196,4 +212,6 @@ function countLatticePoints(circles: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

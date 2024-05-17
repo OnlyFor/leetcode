@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1180. 统计只含单一字母的子串 🔒](https://leetcode.cn/problems/count-substrings-with-only-one-distinct-letter)
 
 [English Version](/solution/1100-1199/1180.Count%20Substrings%20with%20Only%20One%20Distinct%20Letter/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串 <code>s</code>，返回 <em>只含 <strong>单一字母</strong> 的子串个数</em> 。</p>
 
@@ -48,7 +50,11 @@ tags:
 	<li><code>s[i]</code> 仅由小写英文字母组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：双指针
 
@@ -57,6 +63,8 @@ tags:
 时间复杂度 $O(n)$，其中 $n$ 是字符串 $s$ 的长度。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -71,6 +79,8 @@ class Solution:
             i = j
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -88,6 +98,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -107,6 +119,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countLetters(s string) int {
 	ans := 0
@@ -121,6 +135,8 @@ func countLetters(s string) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countLetters(s: string): number {
@@ -141,9 +157,15 @@ function countLetters(s: string): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -160,6 +182,8 @@ class Solution:
             i = j
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -179,6 +203,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -200,6 +226,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countLetters(s string) (ans int) {
 	i, n := 0, len(s)
@@ -219,4 +247,6 @@ func countLetters(s string) (ans int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

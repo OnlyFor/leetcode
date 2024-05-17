@@ -13,11 +13,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [3117. Minimum Sum of Values by Dividing Array](https://leetcode.com/problems/minimum-sum-of-values-by-dividing-array)
 
 [中文文档](/solution/3100-3199/3117.Minimum%20Sum%20of%20Values%20by%20Dividing%20Array/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two arrays <code>nums</code> and <code>andValues</code> of length <code>n</code> and <code>m</code> respectively.</p>
 
@@ -91,7 +95,11 @@ tags:
 	<li><code>0 &lt;= andValues[j] &lt; 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Memoization Search
 
@@ -111,6 +119,8 @@ To avoid repeated calculations, we use the method of memoization search and stor
 The time complexity is $O(n \times m \times \log M)$, and the space complexity is $O(n \times m \times \log M)$. Where $n$ and $m$ are the lengths of the arrays $nums$ and $andValues$ respectively; and $M$ is the maximum value in the array $nums$, in this problem $M \leq 10^5$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -133,6 +143,8 @@ class Solution:
         ans = dfs(0, 0, -1)
         return ans if ans < inf else -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -173,6 +185,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -218,6 +232,8 @@ private:
 };
 ```
 
+#### Go
+
 ```go
 func minimumValueSum(nums []int, andValues []int) int {
 	n, m := len(nums), len(andValues)
@@ -256,6 +272,8 @@ func minimumValueSum(nums []int, andValues []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumValueSum(nums: number[], andValues: number[]): number {
     const [n, m] = [nums.length, andValues.length];
@@ -289,4 +307,6 @@ function minimumValueSum(nums: number[], andValues: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

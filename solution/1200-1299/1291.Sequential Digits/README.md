@@ -8,13 +8,15 @@ tags:
     - 枚举
 ---
 
+<!-- problem:start -->
+
 # [1291. 顺次数](https://leetcode.cn/problems/sequential-digits)
 
 [English Version](/solution/1200-1299/1291.Sequential%20Digits/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>我们定义「顺次数」为：每一位上的数字都比前一位上的数字大 <code>1</code> 的整数。</p>
 
@@ -42,7 +44,11 @@ tags:
 	<li><code>10 &lt;= low &lt;= high &lt;= 10^9</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举
 
@@ -53,6 +59,8 @@ tags:
 时间复杂度近似 $O(1)$，空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -66,6 +74,8 @@ class Solution:
                     ans.append(x)
         return sorted(ans)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -85,6 +95,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -106,6 +118,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sequentialDigits(low int, high int) (ans []int) {
 	for i := 1; i < 9; i++ {
@@ -121,6 +135,8 @@ func sequentialDigits(low int, high int) (ans []int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function sequentialDigits(low: number, high: number): number[] {
@@ -141,4 +157,6 @@ function sequentialDigits(low: number, high: number): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

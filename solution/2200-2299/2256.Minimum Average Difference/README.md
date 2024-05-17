@@ -9,13 +9,15 @@ tags:
     - 前缀和
 ---
 
+<!-- problem:start -->
+
 # [2256. 最小平均差](https://leetcode.cn/problems/minimum-average-difference)
 
 [English Version](/solution/2200-2299/2256.Minimum%20Average%20Difference/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始长度为 <code>n</code>&nbsp;的整数数组&nbsp;<code>nums</code>&nbsp;。</p>
 
@@ -65,7 +67,11 @@ tags:
 	<li><code>0 &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：遍历
 
@@ -76,6 +82,8 @@ tags:
 时间复杂度 $O(n)$，其中 $n$ 是数组 $nums$ 的长度。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -93,6 +101,8 @@ class Solution:
                 mi = t
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -120,6 +130,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -145,6 +157,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimumAverageDifference(nums []int) (ans int) {
@@ -178,6 +192,8 @@ func abs(x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumAverageDifference(nums: number[]): number {
     const n = nums.length;
@@ -202,4 +218,6 @@ function minimumAverageDifference(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

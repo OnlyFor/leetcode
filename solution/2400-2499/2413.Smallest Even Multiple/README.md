@@ -9,13 +9,15 @@ tags:
     - 数论
 ---
 
+<!-- problem:start -->
+
 # [2413. 最小偶倍数](https://leetcode.cn/problems/smallest-even-multiple)
 
 [English Version](/solution/2400-2499/2413.Smallest%20Even%20Multiple/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 给你一个正整数 <code>n</code> ，返回 <code>2</code><em> </em>和<em> </em><code>n</code> 的最小公倍数（正整数）。
 
@@ -43,7 +45,11 @@ tags:
 	<li><code>1 &lt;= n &lt;= 150</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：数学
 
@@ -53,11 +59,15 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def smallestEvenMultiple(self, n: int) -> int:
         return n if n % 2 == 0 else n * 2
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -66,6 +76,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -76,6 +88,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func smallestEvenMultiple(n int) int {
 	if n%2 == 0 {
@@ -85,11 +99,15 @@ func smallestEvenMultiple(n int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function smallestEvenMultiple(n: number): number {
     return n % 2 === 0 ? n : n * 2;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -102,6 +120,8 @@ impl Solution {
 }
 ```
 
+#### C
+
 ```c
 int smallestEvenMultiple(int n) {
     return n % 2 == 0 ? n : n * 2;
@@ -110,4 +130,6 @@ int smallestEvenMultiple(int n) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

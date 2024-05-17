@@ -9,11 +9,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1796. Second Largest Digit in a String](https://leetcode.com/problems/second-largest-digit-in-a-string)
 
 [中文文档](/solution/1700-1799/1796.Second%20Largest%20Digit%20in%20a%20String/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an alphanumeric string <code>s</code>, return <em>the <strong>second largest</strong> numerical digit that appears in </em><code>s</code><em>, or </em><code>-1</code><em> if it does not exist</em>.</p>
 
@@ -44,7 +48,11 @@ tags:
 	<li><code>s</code> consists of only lowercase English letters and/or digits.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: One Pass
 
@@ -57,6 +65,8 @@ After the traversal, we return $b$.
 The time complexity is $O(n)$, where $n$ is the length of the string $s$. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -71,6 +81,8 @@ class Solution:
                     b = v
         return b
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -93,6 +105,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -113,6 +127,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func secondHighest(s string) int {
 	a, b := -1, -1
@@ -129,6 +145,8 @@ func secondHighest(s string) int {
 	return b
 }
 ```
+
+#### TypeScript
 
 ```ts
 function secondHighest(s: string): number {
@@ -147,6 +165,8 @@ function secondHighest(s: string): number {
     return second;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -169,6 +189,8 @@ impl Solution {
 }
 ```
 
+#### C
+
 ```c
 int secondHighest(char* s) {
     int first = -1;
@@ -190,6 +212,10 @@ int secondHighest(char* s) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Bit Manipulation
 
 We can use an integer $mask$ to mark the numbers that appear in the string, where the $i$-th bit of $mask$ indicates whether the number $i$ has appeared.
@@ -201,6 +227,8 @@ Finally, we traverse $mask$ from high to low, find the second bit that is $1$, a
 The time complexity is $O(n)$, where $n$ is the length of the string $s$. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -214,6 +242,8 @@ class Solution:
                 return i
         return -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -235,6 +265,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -248,6 +280,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func secondHighest(s string) int {
@@ -271,4 +305,6 @@ func secondHighest(s string) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

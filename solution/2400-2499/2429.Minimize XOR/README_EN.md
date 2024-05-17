@@ -9,11 +9,15 @@ tags:
     - Bit Manipulation
 ---
 
+<!-- problem:start -->
+
 # [2429. Minimize XOR](https://leetcode.com/problems/minimize-xor)
 
 [中文文档](/solution/2400-2499/2429.Minimize%20XOR/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given two positive integers <code>num1</code> and <code>num2</code>, find the positive integer <code>x</code> such that:</p>
 
@@ -56,7 +60,11 @@ The integer <strong>3</strong> has the same number of set bits as num2, and the 
 	<li><code>1 &lt;= num1, num2 &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Greedy + Bit Manipulation
 
@@ -65,6 +73,8 @@ According to the problem description, we first calculate the number of set bits 
 The time complexity is $O(\log n)$, and the space complexity is $O(1)$. Here, $n$ is the maximum value of $num1$ and $num2$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -81,6 +91,8 @@ class Solution:
                 cnt -= 1
         return x
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -103,6 +115,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -127,6 +141,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimizeXor(num1 int, num2 int) int {
 	cnt := bits.OnesCount(uint(num2))
@@ -146,6 +162,8 @@ func minimizeXor(num1 int, num2 int) int {
 	return x
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minimizeXor(num1: number, num2: number): number {
@@ -173,9 +191,15 @@ function minimizeXor(num1: number, num2: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -190,6 +214,8 @@ class Solution:
             cnt1 += 1
         return num1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -206,6 +232,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -224,6 +252,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimizeXor(num1 int, num2 int) int {
 	cnt1 := bits.OnesCount(uint(num1))
@@ -237,6 +267,8 @@ func minimizeXor(num1 int, num2 int) int {
 	return num1
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minimizeXor(num1: number, num2: number): number {
@@ -263,4 +295,6 @@ function bitCount(i: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

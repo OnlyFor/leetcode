@@ -9,11 +9,15 @@ tags:
     - Sliding Window
 ---
 
+<!-- problem:start -->
+
 # [2090. K Radius Subarray Averages](https://leetcode.com/problems/k-radius-subarray-averages)
 
 [中文文档](/solution/2000-2099/2090.K%20Radius%20Subarray%20Averages/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> array <code>nums</code> of <code>n</code> integers, and an integer <code>k</code>.</p>
 
@@ -70,7 +74,11 @@ tags:
 	<li><code>0 &lt;= nums[i], k &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sliding Window
 
@@ -90,6 +98,8 @@ The time complexity is $O(n)$, where $n$ is the length of the array `nums`. Igno
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def getAverages(self, nums: List[int], k: int) -> List[int]:
@@ -107,6 +117,8 @@ class Solution:
             ans[j] = s // k
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -133,6 +145,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -154,6 +168,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func getAverages(nums []int, k int) []int {
@@ -181,6 +197,8 @@ func getAverages(nums []int, k int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function getAverages(nums: number[], k: number): number[] {
     k = (k << 1) | 1;
@@ -202,6 +220,10 @@ function getAverages(nums: number[], k: number): number[] {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Another Way of Sliding Window
 
 We maintain a window of size $k \times 2 + 1$, and let the sum of all elements in the window be $s$.
@@ -216,6 +238,8 @@ The time complexity is $O(n)$, where $n$ is the length of the array `nums`. Igno
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def getAverages(self, nums: List[int], k: int) -> List[int]:
@@ -228,6 +252,8 @@ class Solution:
                 s -= nums[i - k * 2]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -248,6 +274,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -267,6 +295,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func getAverages(nums []int, k int) []int {
 	ans := make([]int, len(nums))
@@ -282,6 +312,8 @@ func getAverages(nums []int, k int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function getAverages(nums: number[], k: number): number[] {
@@ -301,4 +333,6 @@ function getAverages(nums: number[], k: number): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

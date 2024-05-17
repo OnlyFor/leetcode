@@ -9,11 +9,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [1664. Ways to Make a Fair Array](https://leetcode.com/problems/ways-to-make-a-fair-array)
 
 [中文文档](/solution/1600-1699/1664.Ways%20to%20Make%20a%20Fair%20Array/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array&nbsp;<code>nums</code>. You can choose <strong>exactly one</strong> index (<strong>0-indexed</strong>) and remove the element. Notice that the index of the elements may change after the removal.</p>
 
@@ -67,7 +71,11 @@ There is 1 index that you can remove to make nums fair.
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration + Prefix Sum
 
@@ -87,6 +95,8 @@ The time complexity is $O(n)$, where $n$ is the length of the array. The space c
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def waysToMakeFair(self, nums: List[int]) -> int:
@@ -99,6 +109,8 @@ class Solution:
             t2 += v if i % 2 == 1 else 0
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -123,6 +135,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -146,6 +160,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func waysToMakeFair(nums []int) (ans int) {
@@ -173,6 +189,8 @@ func waysToMakeFair(nums []int) (ans int) {
 	return
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -203,4 +221,6 @@ var waysToMakeFair = function (nums) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

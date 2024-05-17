@@ -9,11 +9,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [1223. Dice Roll Simulation](https://leetcode.com/problems/dice-roll-simulation)
 
 [中文文档](/solution/1200-1299/1223.Dice%20Roll%20Simulation/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>A die simulator generates a random number from <code>1</code> to <code>6</code> for each roll. You introduced a constraint to the generator such that it cannot roll the number <code>i</code> more than <code>rollMax[i]</code> (<strong>1-indexed</strong>) consecutive times.</p>
 
@@ -53,7 +57,11 @@ tags:
 	<li><code>1 &lt;= rollMax[i] &lt;= 15</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Memoization Search
 
@@ -69,6 +77,8 @@ During the process, we can use memoization search to avoid repeated calculations
 The time complexity is $O(n \times k^2 \times M)$, and the space complexity is $O(n \times k \times M)$. Here, $k$ is the range of dice points, and $M$ is the maximum number of times a certain point can be rolled consecutively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -87,6 +97,8 @@ class Solution:
 
         return dfs(0, 0, 0)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -120,6 +132,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -150,6 +164,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func dieSimulator(n int, rollMax []int) int {
 	f := make([][7][16]int, n)
@@ -179,6 +195,10 @@ func dieSimulator(n int, rollMax []int) int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Dynamic Programming
 
 We can change the memoization search in Solution 1 to dynamic programming.
@@ -199,6 +219,8 @@ The final answer is the sum of all $f[n][j][x]$.
 The time complexity is $O(n \times k^2 \times M)$, and the space complexity is $O(n \times k \times M)$. Here, $k$ is the range of dice points, and $M$ is the maximum number of times a certain point can be rolled consecutively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -221,6 +243,8 @@ class Solution:
                 ans = (ans + f[n][j][x]) % mod
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -253,6 +277,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -288,6 +314,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func dieSimulator(n int, rollMax []int) (ans int) {
 	f := make([][7][16]int, n+1)
@@ -319,4 +347,6 @@ func dieSimulator(n int, rollMax []int) (ans int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

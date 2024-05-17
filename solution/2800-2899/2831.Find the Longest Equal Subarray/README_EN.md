@@ -11,11 +11,15 @@ tags:
     - Sliding Window
 ---
 
+<!-- problem:start -->
+
 # [2831. Find the Longest Equal Subarray](https://leetcode.com/problems/find-the-longest-equal-subarray)
 
 [中文文档](/solution/2800-2899/2831.Find%20the%20Longest%20Equal%20Subarray/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code> and an integer <code>k</code>.</p>
 
@@ -57,7 +61,11 @@ It can be proven that no longer equal subarrays can be created.
 	<li><code>0 &lt;= k &lt;= nums.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table + Two Pointers
 
@@ -73,6 +81,8 @@ The time complexity is $O(n)$, and the space complexity is $O(n)$. Here, $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def longestEqualSubarray(self, nums: List[int], k: int) -> int:
@@ -87,6 +97,8 @@ class Solution:
                 l += 1
         return mx
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -105,6 +117,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -122,6 +136,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func longestEqualSubarray(nums []int, k int) int {
 	cnt := map[int]int{}
@@ -137,6 +153,8 @@ func longestEqualSubarray(nums []int, k int) int {
 	return mx
 }
 ```
+
+#### TypeScript
 
 ```ts
 function longestEqualSubarray(nums: number[], k: number): number {
@@ -157,4 +175,6 @@ function longestEqualSubarray(nums: number[], k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

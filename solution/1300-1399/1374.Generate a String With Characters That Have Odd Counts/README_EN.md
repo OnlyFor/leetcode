@@ -8,11 +8,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1374. Generate a String With Characters That Have Odd Counts](https://leetcode.com/problems/generate-a-string-with-characters-that-have-odd-counts)
 
 [中文文档](/solution/1300-1399/1374.Generate%20a%20String%20With%20Characters%20That%20Have%20Odd%20Counts/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an&nbsp;integer <code>n</code>, <em>return a string with <code>n</code>&nbsp;characters such that each character in such string occurs <strong>an odd number of times</strong></em>.</p>
 
@@ -49,7 +53,11 @@ tags:
 	<li><code>1 &lt;= n &lt;= 500</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Construction
 
@@ -61,11 +69,15 @@ The time complexity is $O(n)$, and the space complexity is $O(n)$. Where $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def generateTheString(self, n: int) -> str:
         return 'a' * n if n & 1 else 'a' * (n - 1) + 'b'
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -74,6 +86,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -88,6 +102,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func generateTheString(n int) string {
 	ans := strings.Repeat("a", n-1)
@@ -99,6 +115,8 @@ func generateTheString(n int) string {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function generateTheString(n: number): string {
@@ -112,4 +130,6 @@ function generateTheString(n: number): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

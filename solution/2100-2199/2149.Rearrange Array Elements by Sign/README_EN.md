@@ -10,11 +10,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [2149. Rearrange Array Elements by Sign](https://leetcode.com/problems/rearrange-array-elements-by-sign)
 
 [中文文档](/solution/2100-2199/2149.Rearrange%20Array%20Elements%20by%20Sign/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code> of <strong>even</strong> length consisting of an <strong>equal</strong> number of positive and negative integers.</p>
 
@@ -63,11 +67,17 @@ So nums is rearranged to [1,-1].
 <p>&nbsp;</p>
 It is not required to do the modifications in-place.
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -83,6 +93,8 @@ class Solution:
                 j += 2
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -104,6 +116,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -124,6 +138,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func rearrangeArray(nums []int) []int {
 	ans := make([]int, len(nums))
@@ -140,6 +156,8 @@ func rearrangeArray(nums []int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function rearrangeArray(nums: number[]): number[] {
@@ -161,4 +179,6 @@ function rearrangeArray(nums: number[]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

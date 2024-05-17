@@ -11,11 +11,15 @@ tags:
     - Sliding Window
 ---
 
+<!-- problem:start -->
+
 # [1876. Substrings of Size Three with Distinct Characters](https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters)
 
 [中文文档](/solution/1800-1899/1876.Substrings%20of%20Size%20Three%20with%20Distinct%20Characters/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>A string is <strong>good</strong> if there are no repeated characters.</p>
 
@@ -52,11 +56,17 @@ The good substrings are &quot;abc&quot;, &quot;bca&quot;, &quot;cab&quot;, and &
 	<li><code>s</code>​​​​​​ consists of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -66,6 +76,8 @@ class Solution:
             count += s[i] != s[i + 1] and s[i] != s[i + 2] and s[i + 1] != s[i + 2]
         return count
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -82,6 +94,8 @@ class Solution {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function countGoodSubstrings(s: string): number {
     const n: number = s.length;
@@ -97,6 +111,8 @@ function countGoodSubstrings(s: string): number {
     return count;
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -118,4 +134,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

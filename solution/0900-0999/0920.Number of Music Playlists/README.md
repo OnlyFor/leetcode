@@ -8,13 +8,15 @@ tags:
     - 组合数学
 ---
 
+<!-- problem:start -->
+
 # [920. 播放列表的数量](https://leetcode.cn/problems/number-of-music-playlists)
 
 [English Version](/solution/0900-0999/0920.Number%20of%20Music%20Playlists/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你的音乐播放器里有 <code>n</code> 首不同的歌，在旅途中，你计划听 <code>goal</code> 首歌（不一定不同，即，允许歌曲重复）。你将会按如下规则创建播放列表：</p>
 
@@ -58,7 +60,11 @@ tags:
 	<li><code>0 &lt;= k &lt; n &lt;= goal &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -83,6 +89,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numMusicPlaylists(self, n: int, goal: int, k: int) -> int:
@@ -97,6 +105,8 @@ class Solution:
                 f[i][j] %= mod
         return f[goal][n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -117,6 +127,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -140,6 +152,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numMusicPlaylists(n int, goal int, k int) int {
 	const mod = 1e9 + 7
@@ -161,6 +175,8 @@ func numMusicPlaylists(n int, goal int, k int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function numMusicPlaylists(n: number, goal: number, k: number): number {
     const mod = 1e9 + 7;
@@ -178,6 +194,8 @@ function numMusicPlaylists(n: number, goal: number, k: number): number {
     return f[goal][n];
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -213,9 +231,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -233,6 +257,8 @@ class Solution:
             f = g
         return f[n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -255,6 +281,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -279,6 +307,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numMusicPlaylists(n int, goal int, k int) int {
 	const mod = 1e9 + 7
@@ -298,6 +328,8 @@ func numMusicPlaylists(n int, goal int, k int) int {
 	return f[n]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numMusicPlaylists(n: number, goal: number, k: number): number {
@@ -321,4 +353,6 @@ function numMusicPlaylists(n: number, goal: number, k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

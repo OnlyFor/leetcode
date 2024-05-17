@@ -11,13 +11,15 @@ tags:
     - 数论
 ---
 
+<!-- problem:start -->
+
 # [2761. 和等于目标值的质数对](https://leetcode.cn/problems/prime-pairs-with-target-sum)
 
 [English Version](/solution/2700-2799/2761.Prime%20Pairs%20With%20Target%20Sum/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数 <code>n</code> 。如果两个整数 <code>x</code> 和 <code>y</code> 满足下述条件，则认为二者形成一个质数对：</p>
 
@@ -56,7 +58,11 @@ tags:
 	<li><code>1 &lt;= n &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：预处理 + 枚举
 
@@ -69,6 +75,8 @@ tags:
 时间复杂度 $O(n \log \log n)$，空间复杂度 $O(n)$。其中 $n$ 是题目给定的数字。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -85,6 +93,8 @@ class Solution:
                 ans.append([x, y])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -109,6 +119,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -135,6 +147,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findPrimePairs(n int) (ans [][]int) {
 	primes := make([]bool, n)
@@ -157,6 +171,8 @@ func findPrimePairs(n int) (ans [][]int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function findPrimePairs(n: number): number[][] {
@@ -181,4 +197,6 @@ function findPrimePairs(n: number): number[][] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

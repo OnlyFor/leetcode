@@ -10,13 +10,15 @@ tags:
     - 枚举
 ---
 
+<!-- problem:start -->
+
 # [1995. 统计特殊四元组](https://leetcode.cn/problems/count-special-quadruplets)
 
 [English Version](/solution/1900-1999/1995.Count%20Special%20Quadruplets/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个 <strong>下标从 0 开始</strong> 的整数数组 <code>nums</code> ，返回满足下述条件的 <strong>不同</strong> 四元组 <code>(a, b, c, d)</code> 的 <strong>数目</strong> ：</p>
 
@@ -61,11 +63,17 @@ tags:
 	<li><code>1 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -79,6 +87,8 @@ class Solution:
                             ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -100,6 +110,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -114,6 +126,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countQuadruplets(nums []int) int {
@@ -135,9 +149,15 @@ func countQuadruplets(nums []int) int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -151,6 +171,8 @@ class Solution:
                     ans += counter[nums[a] + nums[b] + nums[c]]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -170,6 +192,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -188,6 +212,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countQuadruplets(nums []int) int {
@@ -207,9 +233,15 @@ func countQuadruplets(nums []int) int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法三
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -224,6 +256,8 @@ class Solution:
                 ans += counter[nums[a] + nums[b]]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -246,6 +280,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -267,6 +303,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countQuadruplets(nums []int) int {
@@ -289,4 +327,6 @@ func countQuadruplets(nums []int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

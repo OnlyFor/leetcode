@@ -11,13 +11,15 @@ tags:
     - 状态压缩
 ---
 
+<!-- problem:start -->
+
 # [1681. 最小不兼容性](https://leetcode.cn/problems/minimum-incompatibility)
 
 [English Version](/solution/1600-1699/1681.Minimum%20Incompatibility/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>nums</code>​​​ 和一个整数 <code>k</code> 。你需要将这个数组划分到 <code>k</code> 个相同大小的子集中，使得同一个子集里面没有两个相同的元素。</p>
 
@@ -65,7 +67,11 @@ tags:
 	<li><code>1 <= nums[i] <= nums.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：预处理 + 状态压缩 + 动态规划
 
@@ -84,6 +90,8 @@ tags:
 时间复杂度 $O(3^n)$，空间复杂度 $O(2^n)$。其中 $n$ 是数组的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -125,6 +133,8 @@ class Solution:
                 j = (j - 1) & mask
         return f[-1] if f[-1] != inf else -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -182,6 +192,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -238,6 +250,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimumIncompatibility(nums []int, k int) int {
@@ -298,6 +312,8 @@ func minimumIncompatibility(nums []int, k int) int {
 	return f[1<<n-1]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minimumIncompatibility(nums: number[], k: number): number {
@@ -360,6 +376,8 @@ function bitCount(i: number): number {
     return i & 0x3f;
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -429,9 +447,15 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -460,4 +484,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

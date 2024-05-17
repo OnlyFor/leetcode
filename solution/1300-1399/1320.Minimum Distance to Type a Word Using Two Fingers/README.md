@@ -9,13 +9,15 @@ tags:
     - 动态规划
 ---
 
+<!-- problem:start -->
+
 # [1320. 二指输入的的最小距离](https://leetcode.cn/problems/minimum-distance-to-type-a-word-using-two-fingers)
 
 [English Version](/solution/1300-1399/1320.Minimum%20Distance%20to%20Type%20a%20Word%20Using%20Two%20Fingers/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1300-1399/1320.Minimum%20Distance%20to%20Type%20a%20Word%20Using%20Two%20Fingers/images/leetcode_keyboard.png" /></p>
 
@@ -71,7 +73,11 @@ tags:
 	<li>每个 <code>word[i]</code>&nbsp;都是一个大写英文字母。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -95,6 +101,8 @@ tags:
 时间复杂度 $O(n \times 26^2)$，空间复杂度 $O(n \times 26^2)$。其中 $n$ 为字符串 $word$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -124,6 +132,8 @@ class Solution:
         b = min(f[n - 1][j][ord(word[-1]) - ord('A')] for j in range(26))
         return int(min(a, b))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -172,6 +182,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -214,6 +226,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimumDistance(word string) int {
@@ -269,4 +283,6 @@ func abs(x int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

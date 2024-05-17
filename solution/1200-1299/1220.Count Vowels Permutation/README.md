@@ -8,13 +8,15 @@ tags:
     - 动态规划
 ---
 
+<!-- problem:start -->
+
 # [1220. 统计元音字母序列的数目](https://leetcode.cn/problems/count-vowels-permutation)
 
 [English Version](/solution/1200-1299/1220.Count%20Vowels%20Permutation/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数&nbsp;<code>n</code>，请你帮忙统计一下我们可以按下述规则形成多少个长度为&nbsp;<code>n</code>&nbsp;的字符串：</p>
 
@@ -58,7 +60,11 @@ tags:
 	<li><code>1 &lt;= n &lt;= 2 * 10^4</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -103,6 +109,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def countVowelPermutation(self, n: int) -> int:
@@ -118,6 +126,8 @@ class Solution:
             f = g
         return sum(f) % mod
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -143,6 +153,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -163,6 +175,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countVowelPermutation(n int) (ans int) {
@@ -187,6 +201,8 @@ func countVowelPermutation(n int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function countVowelPermutation(n: number): number {
     const f: number[] = Array(5).fill(1);
@@ -203,6 +219,8 @@ function countVowelPermutation(n: number): number {
     return f.reduce((a, b) => (a + b) % mod);
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -227,11 +245,17 @@ var countVowelPermutation = function (n) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：矩阵快速幂加速递推
 
 时间复杂度 $O(C^3 \times \log n)$，空间复杂度 $O(C^2)$，其中 $C$ 是元音字母的个数，本题中 $C=5$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -266,6 +290,8 @@ class Solution:
         res = pow(a, n - 1)
         return sum(map(sum, res)) % mod
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -309,6 +335,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -356,6 +384,8 @@ private:
 };
 ```
 
+#### Go
+
 ```go
 const mod = 1e9 + 7
 
@@ -402,6 +432,8 @@ func pow(a [][]int, n int) [][]int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 const mod = 1e9 + 7;
 
@@ -443,6 +475,8 @@ function pow(a: number[][], n: number): number[][] {
     return res;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -493,9 +527,15 @@ function pow(a, n) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法三
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 import numpy as np
@@ -523,6 +563,8 @@ class Solution:
             n >>= 1
         return res.sum() % mod
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -552,4 +594,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

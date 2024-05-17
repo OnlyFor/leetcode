@@ -9,13 +9,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [1637. 两点之间不包含任何点的最宽垂直区域](https://leetcode.cn/problems/widest-vertical-area-between-two-points-containing-no-points)
 
 [English Version](/solution/1600-1699/1637.Widest%20Vertical%20Area%20Between%20Two%20Points%20Containing%20No%20Points/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你&nbsp;<code>n</code>&nbsp;个二维平面上的点 <code>points</code> ，其中&nbsp;<code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code>&nbsp;，请你返回两点之间内部不包含任何点的&nbsp;<strong>最宽垂直区域</strong> 的宽度。</p>
 
@@ -51,7 +53,11 @@ tags:
 	<li><code>0 &lt;= x<sub>i</sub>, y<sub>i</sub>&nbsp;&lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：排序
 
@@ -61,12 +67,16 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maxWidthOfVerticalArea(self, points: List[List[int]]) -> int:
         points.sort()
         return max(b[0] - a[0] for a, b in pairwise(points))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -80,6 +90,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -95,6 +107,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxWidthOfVerticalArea(points [][]int) (ans int) {
 	sort.Slice(points, func(i, j int) bool { return points[i][0] < points[j][0] })
@@ -104,6 +118,8 @@ func maxWidthOfVerticalArea(points [][]int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxWidthOfVerticalArea(points: number[][]): number {
@@ -115,6 +131,8 @@ function maxWidthOfVerticalArea(points: number[][]): number {
     return ans;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -134,6 +152,10 @@ var maxWidthOfVerticalArea = function (points) {
 ```
 
 <!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- solution:start -->
 
 ### 方法二：桶排序
 
@@ -159,6 +181,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maxWidthOfVerticalArea(self, points: List[List[int]]) -> int:
@@ -181,6 +205,8 @@ class Solution:
             prev = curmax
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -222,6 +248,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -256,6 +284,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxWidthOfVerticalArea(points [][]int) (ans int) {
@@ -293,6 +323,8 @@ func maxWidthOfVerticalArea(points [][]int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maxWidthOfVerticalArea(points: number[][]): number {
     const nums: number[] = points.map(point => point[0]);
@@ -324,6 +356,8 @@ function maxWidthOfVerticalArea(points: number[][]): number {
     return ans;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -363,4 +397,6 @@ var maxWidthOfVerticalArea = function (points) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

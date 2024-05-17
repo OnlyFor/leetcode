@@ -10,11 +10,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [2562. Find the Array Concatenation Value](https://leetcode.com/problems/find-the-array-concatenation-value)
 
 [中文文档](/solution/2500-2599/2562.Find%20the%20Array%20Concatenation%20Value/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code>.</p>
 
@@ -88,7 +92,11 @@ Since the concatenation value is 673 so the answer is 673.
 .spoilerbutton[value="Hide Message"] + .spoiler {padding:5px;}
 </style>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -97,6 +105,8 @@ Starting from both ends of the array, we take out one element at a time, concate
 The time complexity is $O(n \times \log M)$, and the space complexity is $O(\log M)$. Here, $n$ and $M$ are the length of the array and the maximum value in the array, respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -110,6 +120,8 @@ class Solution:
             ans += nums[i]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -126,6 +138,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -144,6 +158,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findTheArrayConcVal(nums []int) (ans int64) {
 	i, j := 0, len(nums)-1
@@ -157,6 +173,8 @@ func findTheArrayConcVal(nums []int) (ans int64) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function findTheArrayConcVal(nums: number[]): number {
@@ -175,6 +193,8 @@ function findTheArrayConcVal(nums: number[]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -195,6 +215,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 int getLen(int num) {
@@ -224,9 +246,15 @@ long long findTheArrayConcVal(int* nums, int numsSize) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -251,4 +279,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

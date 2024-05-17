@@ -4,11 +4,15 @@ difficulty: Easy
 edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3142.Check%20if%20Grid%20Satisfies%20Conditions/README_EN.md
 ---
 
+<!-- problem:start -->
+
 # [3142. Check if Grid Satisfies Conditions](https://leetcode.com/problems/check-if-grid-satisfies-conditions)
 
 [中文文档](/solution/3100-3199/3142.Check%20if%20Grid%20Satisfies%20Conditions/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a 2D matrix <code>grid</code> of size <code>m x n</code>. You need to check if each cell <code>grid[i][j]</code> is:</p>
 
@@ -70,7 +74,11 @@ edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3142.Ch
 	<li><code>0 &lt;= grid[i][j] &lt;= 9</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -79,6 +87,8 @@ We can iterate through each cell and determine whether it meets the conditions s
 The time complexity is $O(m \times n)$, where $m$ and $n$ are the number of rows and columns of the matrix `grid` respectively. The space complexity is $O(1)`.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -92,6 +102,8 @@ class Solution:
                     return False
         return True
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -111,6 +123,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -132,6 +146,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func satisfiesConditions(grid [][]int) bool {
 	m, n := len(grid), len(grid[0])
@@ -148,6 +164,8 @@ func satisfiesConditions(grid [][]int) bool {
 	return true
 }
 ```
+
+#### TypeScript
 
 ```ts
 function satisfiesConditions(grid: number[][]): boolean {
@@ -168,4 +186,6 @@ function satisfiesConditions(grid: number[][]): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

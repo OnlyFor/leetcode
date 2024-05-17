@@ -9,11 +9,15 @@ tags:
     - Sliding Window
 ---
 
+<!-- problem:start -->
+
 # [1151. Minimum Swaps to Group All 1's Together 🔒](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together)
 
 [中文文档](/solution/1100-1199/1151.Minimum%20Swaps%20to%20Group%20All%201%27s%20Together/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a&nbsp;binary array <code>data</code>, return&nbsp;the minimum number of swaps required to group all <code>1</code>&rsquo;s present in the array together in <strong>any place</strong> in the array.</p>
 
@@ -54,7 +58,11 @@ The minimum is 1.
 	<li><code>data[i]</code> is either <code>0</code> or <code>1</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sliding Window
 
@@ -63,6 +71,8 @@ First, we count the number of $1$s in the array, denoted as $k$. Then we use a s
 The time complexity is $O(n)$, and the space complexity is $O(1)$. Here, $n$ is the length of the array.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -75,6 +85,8 @@ class Solution:
             mx = max(mx, t)
         return k - mx
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -97,6 +109,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -121,6 +135,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minSwaps(data []int) int {
 	k := 0
@@ -141,6 +157,8 @@ func minSwaps(data []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minSwaps(data: number[]): number {
     const k = data.reduce((acc, cur) => acc + cur, 0);
@@ -153,6 +171,8 @@ function minSwaps(data: number[]): number {
     return k - mx;
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -172,4 +192,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

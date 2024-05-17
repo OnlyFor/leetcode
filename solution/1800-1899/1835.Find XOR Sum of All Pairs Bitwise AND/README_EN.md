@@ -10,11 +10,15 @@ tags:
     - Math
 ---
 
+<!-- problem:start -->
+
 # [1835. Find XOR Sum of All Pairs Bitwise AND](https://leetcode.com/problems/find-xor-sum-of-all-pairs-bitwise-and)
 
 [中文文档](/solution/1800-1899/1835.Find%20XOR%20Sum%20of%20All%20Pairs%20Bitwise%20AND/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>The <strong>XOR sum</strong> of a list is the bitwise <code>XOR</code> of all its elements. If the list only contains one element, then its <strong>XOR sum</strong> will be equal to this element.</p>
 
@@ -54,7 +58,11 @@ The XOR sum = 0 XOR 1 XOR 2 XOR 0 XOR 2 XOR 1 = 0.
 	<li><code>0 &lt;= arr1[i], arr2[j] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Bitwise Operation
 
@@ -81,6 +89,8 @@ The time complexity is $O(n + m)$, where $n$ and $m$ are the lengths of arrays $
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def getXORSum(self, arr1: List[int], arr2: List[int]) -> int:
@@ -88,6 +98,8 @@ class Solution:
         b = reduce(xor, arr2)
         return a & b
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -104,6 +116,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -114,6 +128,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func getXORSum(arr1 []int, arr2 []int) int {
@@ -128,6 +144,8 @@ func getXORSum(arr1 []int, arr2 []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function getXORSum(arr1: number[], arr2: number[]): number {
     const a = arr1.reduce((acc, x) => acc ^ x);
@@ -138,4 +156,6 @@ function getXORSum(arr1: number[], arr2: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

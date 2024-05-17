@@ -11,11 +11,15 @@ tags:
     - Number Theory
 ---
 
+<!-- problem:start -->
+
 # [1201. Ugly Number III](https://leetcode.com/problems/ugly-number-iii)
 
 [中文文档](/solution/1200-1299/1201.Ugly%20Number%20III/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>An <strong>ugly number</strong> is a positive integer that is divisible by <code>a</code>, <code>b</code>, or <code>c</code>.</p>
 
@@ -55,7 +59,11 @@ tags:
 	<li>It is guaranteed that the result will be in range <code>[1, 2 * 10<sup>9</sup>]</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Binary Search + Inclusion-Exclusion Principle
 
@@ -74,6 +82,8 @@ Define the left boundary of binary search as $l=1$ and the right boundary as $r=
 The time complexity is $O(\log m)$, where $m = 2 \times 10^9$. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -100,6 +110,8 @@ class Solution:
                 l = mid + 1
         return l
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -129,6 +141,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -160,6 +174,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func nthUglyNumber(n int, a int, b int, c int) int {
 	ab, bc, ac := lcm(a, b), lcm(b, c), lcm(a, c)
@@ -187,6 +203,8 @@ func lcm(a, b int) int {
 	return a * b / gcd(a, b)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function nthUglyNumber(n: number, a: number, b: number, c: number): number {
@@ -226,4 +244,6 @@ function lcm(a: bigint, b: bigint): bigint {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -8,13 +8,15 @@ tags:
     - 数学
 ---
 
+<!-- problem:start -->
+
 # [3099. 哈沙德数](https://leetcode.cn/problems/harshad-number)
 
 [English Version](/solution/3000-3099/3099.Harshad%20Number/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>如果一个整数能够被其各个数位上的数字之和整除，则称之为<strong> 哈沙德数</strong>（Harshad number）。给你一个整数 <code>x</code> 。如果 <code>x</code> 是 <strong>哈沙德数 </strong>，则返回<em> </em><code>x</code> 各个数位上的数字之和，否则，返回<em> </em><code>-1</code> 。</p>
 
@@ -52,7 +54,11 @@ tags:
 	<li><code>1 &lt;= x &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -61,6 +67,8 @@ tags:
 时间复杂度 $O(\log x)$，其中 $x$ 是输入的整数。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -71,6 +79,8 @@ class Solution:
             y //= 10
         return s if x % s == 0 else -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -83,6 +93,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -97,6 +109,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sumOfTheDigitsOfHarshadNumber(x int) int {
 	s := 0
@@ -110,6 +124,8 @@ func sumOfTheDigitsOfHarshadNumber(x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function sumOfTheDigitsOfHarshadNumber(x: number): number {
     let s = 0;
@@ -122,4 +138,6 @@ function sumOfTheDigitsOfHarshadNumber(x: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,11 +10,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [1324. Print Words Vertically](https://leetcode.com/problems/print-words-vertically)
 
 [中文文档](/solution/1300-1399/1324.Print%20Words%20Vertically/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a string <code>s</code>.&nbsp;Return&nbsp;all the words vertically in the same order in which they appear in <code>s</code>.<br />
 
@@ -84,11 +88,17 @@ Each word would be put on only one column and that in one column there will be o
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -103,6 +113,8 @@ class Solution:
             ans.append(''.join(t))
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -127,6 +139,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -156,6 +170,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func printVertically(s string) (ans []string) {
 	words := strings.Split(s, " ")
@@ -183,4 +199,6 @@ func printVertically(s string) (ans []string) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

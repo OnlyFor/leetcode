@@ -11,13 +11,15 @@ tags:
     - 滑动窗口
 ---
 
+<!-- problem:start -->
+
 # [1871. 跳跃游戏 VII](https://leetcode.cn/problems/jump-game-vii)
 
 [English Version](/solution/1800-1899/1871.Jump%20Game%20VII/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0 </strong>开始的二进制字符串 <code>s</code> 和两个整数 <code>minJump</code> 和 <code>maxJump</code> 。一开始，你在下标 <code>0</code> 处，且该位置的值一定为 <code>'0'</code> 。当同时满足如下条件时，你可以从下标 <code>i</code> 移动到下标 <code>j</code> 处：</p>
 
@@ -58,7 +60,11 @@ tags:
 	<li><code>1 <= minJump <= maxJump < s.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：前缀和 + 动态规划
 
@@ -71,6 +77,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为字符串 $s$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -86,6 +94,8 @@ class Solution:
             pre[i + 1] = pre[i] + f[i]
         return f[-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -107,6 +117,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -132,6 +144,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func canReach(s string, minJump int, maxJump int) bool {
 	n := len(s)
@@ -153,6 +167,8 @@ func canReach(s string, minJump int, maxJump int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function canReach(s: string, minJump: number, maxJump: number): boolean {
     const n = s.length;
@@ -170,6 +186,8 @@ function canReach(s: string, minJump: number, maxJump: number): boolean {
     return f[n - 1];
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -197,4 +215,6 @@ var canReach = function (s, minJump, maxJump) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

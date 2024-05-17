@@ -10,13 +10,15 @@ tags:
     - 模拟
 ---
 
+<!-- problem:start -->
+
 # [1222. 可以攻击国王的皇后](https://leetcode.cn/problems/queens-that-can-attack-the-king)
 
 [English Version](/solution/1200-1299/1222.Queens%20That%20Can%20Attack%20the%20King/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>在一个 <strong>下标从 0 开始</strong> 的 <code>8 x 8</code> 棋盘上，可能有多个黑皇后和一个白国王。</p>
 
@@ -56,7 +58,11 @@ tags:
 	<li>所有给定的位置都是 <strong>唯一</strong> 的。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：直接搜索
 
@@ -69,6 +75,8 @@ tags:
 时间复杂度 $O(n^2)$，空间复杂度 $O(n^2)$。本题中 $n = 8$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -89,6 +97,8 @@ class Solution:
                             break
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -118,6 +128,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -149,6 +161,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func queensAttacktheKing(queens [][]int, king []int) (ans [][]int) {
 	n := 8
@@ -174,6 +188,8 @@ func queensAttacktheKing(queens [][]int, king []int) (ans [][]int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function queensAttacktheKing(queens: number[][], king: number[]): number[][] {
@@ -202,4 +218,6 @@ function queensAttacktheKing(queens: number[][], king: number[]): number[][] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

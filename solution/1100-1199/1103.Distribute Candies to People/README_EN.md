@@ -9,11 +9,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [1103. Distribute Candies to People](https://leetcode.com/problems/distribute-candies-to-people)
 
 [中文文档](/solution/1100-1199/1103.Distribute%20Candies%20to%20People/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>We distribute some&nbsp;number of <code>candies</code>, to a row of <strong><code>n =&nbsp;num_people</code></strong>&nbsp;people in the following way:</p>
 
@@ -58,7 +62,11 @@ On the fourth turn, ans[0] += 4, and the final array is [5,2,3].
 	<li>1 &lt;= num_people &lt;= 1000</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -67,6 +75,8 @@ We can directly simulate the process of each person receiving candies, following
 The time complexity is $O(\max(\sqrt{candies}, num\_people))$, and the space complexity is $O(num\_people)$. Here, $candies$ is the number of candies.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -80,6 +90,8 @@ class Solution:
         return ans
 ```
 
+#### Java
+
 ```java
 class Solution {
     public int[] distributeCandies(int candies, int num_people) {
@@ -92,6 +104,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -107,6 +121,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func distributeCandies(candies int, num_people int) []int {
 	ans := make([]int, num_people)
@@ -117,6 +133,8 @@ func distributeCandies(candies int, num_people int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function distributeCandies(candies: number, num_people: number): number[] {
@@ -131,4 +149,6 @@ function distributeCandies(candies: number, num_people: number): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

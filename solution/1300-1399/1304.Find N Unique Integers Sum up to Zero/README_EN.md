@@ -9,11 +9,15 @@ tags:
     - Math
 ---
 
+<!-- problem:start -->
+
 # [1304. Find N Unique Integers Sum up to Zero](https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero)
 
 [中文文档](/solution/1300-1399/1304.Find%20N%20Unique%20Integers%20Sum%20up%20to%20Zero/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer <code>n</code>, return <strong>any</strong> array containing <code>n</code> <strong>unique</strong> integers such that they add up to <code>0</code>.</p>
 
@@ -47,11 +51,17 @@ tags:
 	<li><code>1 &lt;= n &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -65,6 +75,8 @@ class Solution:
         return ans
 ```
 
+#### Java
+
 ```java
 class Solution {
     public int[] sumZero(int n) {
@@ -77,6 +89,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -92,6 +106,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sumZero(n int) []int {
 	ans := make([]int, n)
@@ -103,6 +119,8 @@ func sumZero(n int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function sumZero(n: number): number[] {
@@ -117,9 +135,15 @@ function sumZero(n: number): number[] {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -128,6 +152,8 @@ class Solution:
         ans.append(-sum(ans))
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -142,6 +168,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -154,6 +182,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sumZero(n int) []int {
 	ans := make([]int, n)
@@ -164,6 +194,8 @@ func sumZero(n int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function sumZero(n: number): number[] {
@@ -178,4 +210,6 @@ function sumZero(n: number): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

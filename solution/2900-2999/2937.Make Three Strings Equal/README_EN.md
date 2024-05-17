@@ -8,11 +8,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [2937. Make Three Strings Equal](https://leetcode.com/problems/make-three-strings-equal)
 
 [中文文档](/solution/2900-2999/2937.Make%20Three%20Strings%20Equal/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given three strings: <code>s1</code>, <code>s2</code>, and <code>s3</code>. In one operation you can choose one of these strings and delete its <strong>rightmost</strong> character. Note that you <strong>cannot</strong> completely empty a string.</p>
 
@@ -47,7 +51,11 @@ tags:
 	<li><font face="monospace"><code>s1</code>,</font> <code><font face="monospace">s2</font></code><font face="monospace"> and</font> <code><font face="monospace">s3</font></code> consist only of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration
 
@@ -56,6 +64,8 @@ According to the problem description, we know that if the three strings are equa
 The time complexity is $O(n)$, where $n$ is the minimum length of the three strings. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -67,6 +77,8 @@ class Solution:
                 return -1 if i == 0 else s - 3 * i
         return s - 3 * n
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -82,6 +94,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -99,6 +113,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findMinimumOperations(s1 string, s2 string, s3 string) int {
 	s := len(s1) + len(s2) + len(s3)
@@ -115,6 +131,8 @@ func findMinimumOperations(s1 string, s2 string, s3 string) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findMinimumOperations(s1: string, s2: string, s3: string): number {
     const s = s1.length + s2.length + s3.length;
@@ -130,4 +148,6 @@ function findMinimumOperations(s1: string, s2: string, s3: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

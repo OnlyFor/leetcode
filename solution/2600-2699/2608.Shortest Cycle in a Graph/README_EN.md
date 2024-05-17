@@ -9,11 +9,15 @@ tags:
     - Graph
 ---
 
+<!-- problem:start -->
+
 # [2608. Shortest Cycle in a Graph](https://leetcode.com/problems/shortest-cycle-in-a-graph)
 
 [中文文档](/solution/2600-2699/2608.Shortest%20Cycle%20in%20a%20Graph/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There is a <strong>bi-directional </strong>graph with <code>n</code> vertices, where each vertex is labeled from <code>0</code> to <code>n - 1</code>. The edges in the graph are represented by a given 2D integer array <code>edges</code>, where <code>edges[i] = [u<sub>i</sub>, v<sub>i</sub>]</code> denotes an edge between vertex <code>u<sub>i</sub></code> and vertex <code>v<sub>i</sub></code>. Every vertex pair is connected by at most one edge, and no vertex has an edge to itself.</p>
 
@@ -50,7 +54,11 @@ tags:
 	<li>There are no repeated edges.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumerate edges + BFS
 
@@ -61,6 +69,8 @@ Then we enumerate the two-directional edge $(u, v)$, if the path from vertex $u$
 The time complexity is $O(m^2)$ and the space complexity is $O(m + n)$, where $m$ and $n$ are the length of the array $edges$ and the number of vertices.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -84,6 +94,8 @@ class Solution:
         ans = min(bfs(u, v) for u, v in edges)
         return ans if ans < inf else -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -127,6 +139,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -165,6 +179,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findShortestCycle(n int, edges [][]int) int {
@@ -207,6 +223,8 @@ func findShortestCycle(n int, edges [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findShortestCycle(n: number, edges: number[][]): number {
     const g: number[][] = new Array(n).fill(0).map(() => []);
@@ -241,6 +259,10 @@ function findShortestCycle(n: number, edges: number[][]): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Enumerate points + BFS
 
 Similar to Solution 1, we first construct the adjacency list $g$ of the graph according to the array $edges$, where $g[u]$ represents all the adjacent vertices of vertex $u$.
@@ -250,6 +272,8 @@ Then we enumerate the vertex $u$, if there are two paths from vertex $u$ to vert
 The time complexity is $O(m \times n)$ and the space complexity is $O(m + n)$, where $m$ and $n$ are the length of the array $edges$ and the number of vertices.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -276,6 +300,8 @@ class Solution:
         ans = min(bfs(i) for i in range(n))
         return ans if ans < inf else -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -322,6 +348,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -364,6 +392,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findShortestCycle(n int, edges [][]int) int {
@@ -409,6 +439,8 @@ func findShortestCycle(n int, edges [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findShortestCycle(n: number, edges: number[][]): number {
     const g: number[][] = new Array(n).fill(0).map(() => []);
@@ -447,4 +479,6 @@ function findShortestCycle(n: number, edges: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

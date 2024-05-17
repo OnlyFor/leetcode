@@ -9,11 +9,15 @@ tags:
     - Binary Search
 ---
 
+<!-- problem:start -->
+
 # [1011. Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days)
 
 [中文文档](/solution/1000-1099/1011.Capacity%20To%20Ship%20Packages%20Within%20D%20Days/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>A conveyor belt has packages that must be shipped from one port to another within <code>days</code> days.</p>
 
@@ -68,11 +72,17 @@ Note that the cargo must be shipped in the order given, so using a ship of capac
 	<li><code>1 &lt;= weights[i] &lt;= 500</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -89,6 +99,8 @@ class Solution:
         left, right = max(weights), sum(weights) + 1
         return left + bisect_left(range(left, right), True, key=check)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -123,6 +135,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -156,6 +170,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func shipWithinDays(weights []int, days int) int {
 	var left, right int
@@ -179,6 +195,8 @@ func shipWithinDays(weights []int, days int) int {
 	})
 }
 ```
+
+#### TypeScript
 
 ```ts
 function shipWithinDays(weights: number[], days: number): number {
@@ -214,4 +232,6 @@ function shipWithinDays(weights: number[], days: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

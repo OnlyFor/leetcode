@@ -9,13 +9,15 @@ tags:
     - 滑动窗口
 ---
 
+<!-- problem:start -->
+
 # [2090. 半径为 k 的子数组平均值](https://leetcode.cn/problems/k-radius-subarray-averages)
 
 [English Version](/solution/2000-2099/2090.K%20Radius%20Subarray%20Averages/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong> 开始的数组 <code>nums</code> ，数组中有 <code>n</code> 个整数，另给你一个整数 <code>k</code> 。</p>
 
@@ -76,7 +78,11 @@ tags:
 	<li><code>0 &lt;= nums[i], k &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：滑动窗口（写法一）
 
@@ -96,6 +102,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def getAverages(self, nums: List[int], k: int) -> List[int]:
@@ -113,6 +121,8 @@ class Solution:
             ans[j] = s // k
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -139,6 +149,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -160,6 +172,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func getAverages(nums []int, k int) []int {
@@ -187,6 +201,8 @@ func getAverages(nums []int, k int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function getAverages(nums: number[], k: number): number[] {
     k = (k << 1) | 1;
@@ -208,6 +224,10 @@ function getAverages(nums: number[], k: number): number[] {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：滑动窗口的另一种写法
 
 我们维护一个大小为 $k \times 2 + 1$ 的窗口，记窗口中的所有元素和为 $s$。
@@ -222,6 +242,8 @@ function getAverages(nums: number[], k: number): number[] {
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def getAverages(self, nums: List[int], k: int) -> List[int]:
@@ -234,6 +256,8 @@ class Solution:
                 s -= nums[i - k * 2]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -254,6 +278,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -273,6 +299,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func getAverages(nums []int, k int) []int {
 	ans := make([]int, len(nums))
@@ -288,6 +316,8 @@ func getAverages(nums []int, k int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function getAverages(nums: number[], k: number): number[] {
@@ -307,4 +337,6 @@ function getAverages(nums: number[], k: number): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

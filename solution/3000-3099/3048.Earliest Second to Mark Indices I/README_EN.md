@@ -9,11 +9,15 @@ tags:
     - Binary Search
 ---
 
+<!-- problem:start -->
+
 # [3048. Earliest Second to Mark Indices I](https://leetcode.com/problems/earliest-second-to-mark-indices-i)
 
 [中文文档](/solution/3000-3099/3048.Earliest%20Second%20to%20Mark%20Indices%20I/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two <strong>1-indexed</strong> integer arrays, <code>nums</code> and, <code>changeIndices</code>, having lengths <code>n</code> and <code>m</code>, respectively.</p>
 
@@ -85,7 +89,11 @@ Hence, the answer is -1.
 	<li><code>1 &lt;= changeIndices[i] &lt;= n</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Binary Search
 
@@ -100,6 +108,8 @@ We traverse the first $t$ elements of the array `changeIndices`, for each elemen
 The time complexity is $O(m \times \log m)$, and the space complexity is $O(n)$. Where $n$ and $m$ are the lengths of `nums` and `changeIndices` respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -124,6 +134,8 @@ class Solution:
         l = bisect_left(range(1, m + 2), True, key=check) + 1
         return -1 if l > m else l
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -170,6 +182,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -212,6 +226,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func earliestSecondToMarkIndices(nums []int, changeIndices []int) int {
 	n, m := len(nums), len(changeIndices)
@@ -240,6 +256,8 @@ func earliestSecondToMarkIndices(nums []int, changeIndices []int) int {
 	return l
 }
 ```
+
+#### TypeScript
 
 ```ts
 function earliestSecondToMarkIndices(nums: number[], changeIndices: number[]): number {
@@ -279,4 +297,6 @@ function earliestSecondToMarkIndices(nums: number[], changeIndices: number[]): n
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

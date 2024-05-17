@@ -13,13 +13,15 @@ tags:
     - 动态规划
 ---
 
+<!-- problem:start -->
+
 # [3117. 划分数组得到最小的值之和](https://leetcode.cn/problems/minimum-sum-of-values-by-dividing-array)
 
 [English Version](/solution/3100-3199/3117.Minimum%20Sum%20of%20Values%20by%20Dividing%20Array/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你两个数组 <code>nums</code> 和 <code>andValues</code>，长度分别为 <code>n</code> 和 <code>m</code>。</p>
 
@@ -95,7 +97,11 @@ tags:
 	<li><code>0 &lt;= andValues[j] &lt; 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：记忆化搜索
 
@@ -115,6 +121,8 @@ tags:
 时间复杂度 $O(n \times m \times \log M)$，空间复杂度 $O(n \times m \times \log M)$。其中 $n$ 和 $m$ 分别是数组 $nums$ 和 $andValues$ 的长度；而 $M$ 是数组 $nums$ 中的最大值，本题中 $M \leq 10^5$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -137,6 +145,8 @@ class Solution:
         ans = dfs(0, 0, -1)
         return ans if ans < inf else -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -177,6 +187,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -222,6 +234,8 @@ private:
 };
 ```
 
+#### Go
+
 ```go
 func minimumValueSum(nums []int, andValues []int) int {
 	n, m := len(nums), len(andValues)
@@ -260,6 +274,8 @@ func minimumValueSum(nums []int, andValues []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumValueSum(nums: number[], andValues: number[]): number {
     const [n, m] = [nums.length, andValues.length];
@@ -293,4 +309,6 @@ function minimumValueSum(nums: number[], andValues: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,13 +10,15 @@ tags:
     - 枚举
 ---
 
+<!-- problem:start -->
+
 # [2975. 移除栅栏得到的正方形田地的最大面积](https://leetcode.cn/problems/maximum-square-area-by-removing-fences-from-a-field)
 
 [English Version](/solution/2900-2999/2975.Maximum%20Square%20Area%20by%20Removing%20Fences%20From%20a%20Field/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>有一个大型的 <code>(m - 1) x (n - 1)</code> 矩形田地，其两个对角分别是 <code>(1, 1)</code> 和 <code>(m, n)</code> ，田地内部有一些水平栅栏和垂直栅栏，分别由数组 <code>hFences</code> 和 <code>vFences</code> 给出。</p>
 
@@ -62,7 +64,11 @@ tags:
 	<li><code>hFences</code> 和 <code>vFences</code> 中的元素是唯一的。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举
 
@@ -71,6 +77,8 @@ tags:
 时间复杂度 $O(h^2 + v^2)$，空间复杂度 $O(h^2 + v^2)$。其中 $h$ 和 $v$ 分别是 $hFences$ 和 $vFences$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -88,6 +96,8 @@ class Solution:
         ans = max(hs & vs, default=0)
         return ans**2 % mod if ans else -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -120,6 +130,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -150,6 +162,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximizeSquareArea(m int, n int, hFences []int, vFences []int) int {
 	f := func(nums []int, k int) map[int]bool {
@@ -178,6 +192,8 @@ func maximizeSquareArea(m int, n int, hFences []int, vFences []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maximizeSquareArea(m: number, n: number, hFences: number[], vFences: number[]): number {
     const f = (nums: number[], k: number): Set<number> => {
@@ -205,4 +221,6 @@ function maximizeSquareArea(m: number, n: number, hFences: number[], vFences: nu
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

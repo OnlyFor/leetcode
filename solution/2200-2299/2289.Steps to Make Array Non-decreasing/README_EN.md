@@ -11,11 +11,15 @@ tags:
     - Monotonic Stack
 ---
 
+<!-- problem:start -->
+
 # [2289. Steps to Make Array Non-decreasing](https://leetcode.com/problems/steps-to-make-array-non-decreasing)
 
 [中文文档](/solution/2200-2299/2289.Steps%20to%20Make%20Array%20Non-decreasing/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code>. In one step, <strong>remove</strong> all elements <code>nums[i]</code> where <code>nums[i - 1] &gt; nums[i]</code> for all <code>0 &lt; i &lt; nums.length</code>.</p>
 
@@ -50,11 +54,17 @@ tags:
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -68,6 +78,8 @@ class Solution:
             stk.append(i)
         return max(dp)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -87,6 +99,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -108,6 +122,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func totalSteps(nums []int) int {
 	stk := []int{}
@@ -124,6 +140,8 @@ func totalSteps(nums []int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function totalSteps(nums: number[]): number {
@@ -145,4 +163,6 @@ function totalSteps(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

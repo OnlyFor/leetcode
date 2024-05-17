@@ -11,11 +11,15 @@ tags:
     - Hash Table
 ---
 
+<!-- problem:start -->
+
 # [1036. Escape a Large Maze](https://leetcode.com/problems/escape-a-large-maze)
 
 [中文文档](/solution/1000-1099/1036.Escape%20a%20Large%20Maze/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There is a 1 million by 1 million grid on an XY-plane, and the coordinates of each grid square are <code>(x, y)</code>.</p>
 
@@ -57,11 +61,17 @@ We cannot move south or west because we cannot go outside of the grid.
 	<li>It is guaranteed that <code>source</code> and <code>target</code> are not blocked.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -88,6 +98,8 @@ class Solution:
         blocked = set((x, y) for x, y in blocked)
         return dfs(source, target, set()) and dfs(target, source, set())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -124,6 +136,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 typedef unsigned long long ULL;
 
@@ -156,6 +170,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func isEscapePossible(blocked [][]int, source []int, target []int) bool {
 	const N = 1e6
@@ -187,6 +203,8 @@ func isEscapePossible(blocked [][]int, source []int, target []int) bool {
 	return dfs(source, target, s1) && dfs(target, source, s2)
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::{ HashSet, VecDeque };
@@ -240,4 +258,6 @@ fn bfs(block: &HashSet<(i32, i32)>, source: &Vec<i32>, target: &Vec<i32>) -> boo
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

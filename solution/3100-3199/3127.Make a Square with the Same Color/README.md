@@ -10,13 +10,15 @@ tags:
     - 矩阵
 ---
 
+<!-- problem:start -->
+
 # [3127. 构造相同颜色的正方形](https://leetcode.cn/problems/make-a-square-with-the-same-color)
 
 [English Version](/solution/3100-3199/3127.Make%20a%20Square%20with%20the%20Same%20Color/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个二维 <code>3 x 3</code>&nbsp;的矩阵&nbsp;<code>grid</code>&nbsp;，每个格子都是一个字符，要么是&nbsp;<code>'B'</code>&nbsp;，要么是&nbsp;<code>'W'</code>&nbsp;。字符&nbsp;<code>'W'</code>&nbsp;表示白色，字符&nbsp;<code>'B'</code>&nbsp;表示黑色。</p>
 
@@ -149,7 +151,11 @@ tags:
 	<li><code>grid[i][j]</code>&nbsp;要么是&nbsp;<code>'W'</code>&nbsp;，要么是&nbsp;<code>'B'</code> 。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举
 
@@ -160,6 +166,8 @@ tags:
 时间复杂度 $O(1)$，空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -175,6 +183,8 @@ class Solution:
                     return True
         return False
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -197,6 +207,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -221,6 +233,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func canMakeSquare(grid [][]byte) bool {
 	dirs := [5]int{0, 0, 1, 1, 0}
@@ -243,6 +257,8 @@ func canMakeSquare(grid [][]byte) bool {
 	return false
 }
 ```
+
+#### TypeScript
 
 ```ts
 function canMakeSquare(grid: string[][]): boolean {
@@ -269,4 +285,6 @@ function canMakeSquare(grid: string[][]): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

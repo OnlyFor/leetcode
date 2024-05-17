@@ -10,11 +10,15 @@ tags:
     - Binary Tree
 ---
 
+<!-- problem:start -->
+
 # [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree)
 
 [中文文档](/solution/0800-0899/0863.All%20Nodes%20Distance%20K%20in%20Binary%20Tree/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given the <code>root</code> of a binary tree, the value of a target node <code>target</code>, and an integer <code>k</code>, return <em>an array of the values of all nodes that have a distance </em><code>k</code><em> from the target node.</em></p>
 
@@ -47,11 +51,17 @@ Explanation: The nodes that are a distance 2 from the target node (with value 5)
 	<li><code>0 &lt;= k &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -91,6 +101,8 @@ class Solution:
         dfs(target, k)
         return ans
 ```
+
+#### Java
 
 ```java
 /**
@@ -141,6 +153,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -183,6 +197,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 /**
@@ -228,9 +244,15 @@ func distanceK(root *TreeNode, target *TreeNode, k int) []int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -269,4 +291,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

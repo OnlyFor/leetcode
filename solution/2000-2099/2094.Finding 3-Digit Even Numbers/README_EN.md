@@ -11,11 +11,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [2094. Finding 3-Digit Even Numbers](https://leetcode.com/problems/finding-3-digit-even-numbers)
 
 [中文文档](/solution/2000-2099/2094.Finding%203-Digit%20Even%20Numbers/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>digits</code>, where each element is a digit. The array may contain duplicates.</p>
 
@@ -66,11 +70,17 @@ In this example, the digit 8 is used twice each time in 288, 828, and 882.
 	<li><code>0 &lt;= digits[i] &lt;= 9</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -88,6 +98,8 @@ class Solution:
                 ans.append(i)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -127,6 +139,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -159,6 +173,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findEvenNumbers(digits []int) []int {
@@ -197,6 +213,8 @@ func check(cnt1, cnt2 []int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findEvenNumbers(digits: number[]): number[] {
     let record = new Array(10).fill(0);
@@ -227,4 +245,6 @@ function check(target: Array<number>, digits: string): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

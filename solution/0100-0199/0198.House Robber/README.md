@@ -7,13 +7,15 @@ tags:
     - 动态规划
 ---
 
+<!-- problem:start -->
+
 # [198. 打家劫舍](https://leetcode.cn/problems/house-robber)
 
 [English Version](/solution/0100-0199/0198.House%20Robber/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，<strong>如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警</strong>。</p>
 
@@ -47,7 +49,11 @@ tags:
 	<li><code>0 <= nums[i] <= 400</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -77,6 +83,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def rob(self, nums: List[int]) -> int:
@@ -87,6 +95,8 @@ class Solution:
             f[i] = max(f[i - 1], f[i - 2] + nums[i - 1])
         return f[n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -101,6 +111,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -118,6 +130,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func rob(nums []int) int {
 	n := len(nums)
@@ -130,6 +144,8 @@ func rob(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function rob(nums: number[]): number {
     const n = nums.length;
@@ -141,6 +157,8 @@ function rob(nums: number[]): number {
     return f[n];
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -156,9 +174,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -168,6 +192,8 @@ class Solution:
             f, g = max(f, g), f + x
         return max(f, g)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -182,6 +208,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -198,6 +226,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func rob(nums []int) int {
 	f, g := 0, 0
@@ -207,6 +237,8 @@ func rob(nums []int) int {
 	return max(f, g)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function rob(nums: number[]): number {
@@ -220,4 +252,6 @@ function rob(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

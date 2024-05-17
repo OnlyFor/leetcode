@@ -8,13 +8,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [2194. Excel 表中某个范围内的单元格](https://leetcode.cn/problems/cells-in-a-range-on-an-excel-sheet)
 
 [English Version](/solution/2100-2199/2194.Cells%20in%20a%20Range%20on%20an%20Excel%20Sheet/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>Excel 表中的一个单元格 <code>(r, c)</code> 会以字符串 <code>"&lt;col&gt;&lt;row&gt;"</code> 的形式进行表示，其中：</p>
 
@@ -70,7 +72,11 @@ tags:
 	<li><code>s</code> 由大写英文字母、数字、和 <code>':'</code> 组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -79,6 +85,8 @@ tags:
 时间复杂度 $O(m \times n)$，空间复杂度 $O(m \times n)$，其中 $m$ 和 $n$ 分别为行数和列数的取值范围。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -89,6 +97,8 @@ class Solution:
             for j in range(int(s[1]), int(s[-1]) + 1)
         ]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -103,6 +113,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -119,6 +131,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func cellsInRange(s string) (ans []string) {
 	for i := s[0]; i <= s[3]; i++ {
@@ -129,6 +143,8 @@ func cellsInRange(s string) (ans []string) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function cellsInRange(s: string): string[] {
@@ -144,4 +160,6 @@ function cellsInRange(s: string): string[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

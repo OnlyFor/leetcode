@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1003. 检查替换后的词是否有效](https://leetcode.cn/problems/check-if-word-is-valid-after-substitutions)
 
 [English Version](/solution/1000-1099/1003.Check%20If%20Word%20Is%20Valid%20After%20Substitutions/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 给你一个字符串 <code>s</code> ，请你判断它是否 <strong>有效</strong> 。
 
@@ -63,7 +65,11 @@ tags:
 	<li><code>s</code> 由字母 <code>'a'</code>、<code>'b'</code> 和 <code>'c'</code> 组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：栈
 
@@ -77,6 +83,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def isValid(self, s: str) -> bool:
@@ -89,6 +97,8 @@ class Solution:
                 t[-3:] = []
         return not t
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -107,6 +117,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -127,6 +139,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func isValid(s string) bool {
 	if len(s)%3 > 0 {
@@ -142,6 +156,8 @@ func isValid(s string) bool {
 	return len(t) == 0
 }
 ```
+
+#### TypeScript
 
 ```ts
 function isValid(s: string): boolean {
@@ -161,4 +177,6 @@ function isValid(s: string): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

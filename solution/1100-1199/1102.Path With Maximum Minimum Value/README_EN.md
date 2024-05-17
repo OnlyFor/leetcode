@@ -14,11 +14,15 @@ tags:
     - Heap (Priority Queue)
 ---
 
+<!-- problem:start -->
+
 # [1102. Path With Maximum Minimum Value 🔒](https://leetcode.com/problems/path-with-maximum-minimum-value)
 
 [中文文档](/solution/1100-1199/1102.Path%20With%20Maximum%20Minimum%20Value/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an <code>m x n</code> integer matrix <code>grid</code>, return <em>the maximum <strong>score</strong> of a path starting at </em><code>(0, 0)</code><em> and ending at </em><code>(m - 1, n - 1)</code> moving in the 4 cardinal directions.</p>
 
@@ -61,7 +65,11 @@ tags:
 	<li><code>0 &lt;= grid[i][j] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sorting + Union-Find
 
@@ -72,6 +80,8 @@ Next, we take out the triplets from $q$ in order, use the corresponding element 
 The time complexity is $O(m \times n \times (\log (m \times n) + \alpha(m \times n)))$, where $m$ and $n$ are the number of rows and columns of the matrix, respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -98,6 +108,8 @@ class Solution:
                     p[find(i * n + j)] = find(x * n + y)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -140,6 +152,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -178,6 +192,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maximumMinimumPath(grid [][]int) (ans int) {
@@ -219,6 +235,8 @@ func maximumMinimumPath(grid [][]int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maximumMinimumPath(grid: number[][]): number {
     const m = grid.length;
@@ -258,6 +276,8 @@ function maximumMinimumPath(grid: number[][]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 struct UnionFind {
@@ -341,9 +361,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class UnionFind:
@@ -390,6 +416,8 @@ class Solution:
                     uf.union(x * n + y, i * n + j)
         return ans
 ```
+
+#### Java
 
 ```java
 class UnionFind {
@@ -455,6 +483,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class UnionFind {
@@ -523,6 +553,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 type unionFind struct {
 	p, size []int
@@ -588,6 +620,8 @@ func maximumMinimumPath(grid [][]int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 class UnionFind {
@@ -658,4 +692,6 @@ function maximumMinimumPath(grid: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

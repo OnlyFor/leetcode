@@ -9,11 +9,15 @@ tags:
     - Enumeration
 ---
 
+<!-- problem:start -->
+
 # [1534. Count Good Triplets](https://leetcode.com/problems/count-good-triplets)
 
 [中文文档](/solution/1500-1599/1534.Count%20Good%20Triplets/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array of integers <code>arr</code>, and three integers&nbsp;<code>a</code>,&nbsp;<code>b</code>&nbsp;and&nbsp;<code>c</code>. You need to find the number of good triplets.</p>
 
@@ -75,11 +79,17 @@ tags:
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -95,6 +105,8 @@ class Solution:
                     )
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -116,6 +128,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -133,6 +147,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countGoodTriplets(arr []int, a int, b int, c int) (ans int) {
@@ -159,4 +175,6 @@ func abs(x int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

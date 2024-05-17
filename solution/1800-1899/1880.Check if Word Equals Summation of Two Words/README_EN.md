@@ -8,11 +8,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1880. Check if Word Equals Summation of Two Words](https://leetcode.com/problems/check-if-word-equals-summation-of-two-words)
 
 [中文文档](/solution/1800-1899/1880.Check%20if%20Word%20Equals%20Summation%20of%20Two%20Words/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>The <strong>letter value</strong> of a letter is its position in the alphabet <strong>starting from 0</strong> (i.e. <code>&#39;a&#39; -&gt; 0</code>, <code>&#39;b&#39; -&gt; 1</code>, <code>&#39;c&#39; -&gt; 2</code>, etc.).</p>
 
@@ -71,11 +75,17 @@ We return true because 0 + 0 == 0.
 	<li><code>firstWord</code>, <code>secondWord</code>, and <code>targetWord</code> consist of lowercase English letters from <code>&#39;a&#39;</code> to <code>&#39;j&#39;</code> <strong>inclusive</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -88,6 +98,8 @@ class Solution:
 
         return f(firstWord) + f(secondWord) == f(targetWord)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -105,6 +117,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -120,6 +134,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func isSumEqual(firstWord string, secondWord string, targetWord string) bool {
 	f := func(s string) int {
@@ -133,6 +149,8 @@ func isSumEqual(firstWord string, secondWord string, targetWord string) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function isSumEqual(firstWord: string, secondWord: string, targetWord: string): boolean {
     const calc = (s: string) => {
@@ -145,6 +163,8 @@ function isSumEqual(firstWord: string, secondWord: string, targetWord: string): 
     return calc(firstWord) + calc(secondWord) === calc(targetWord);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -161,6 +181,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -181,6 +203,8 @@ var isSumEqual = function (firstWord, secondWord, targetWord) {
 };
 ```
 
+#### C
+
 ```c
 int calc(char* s) {
     int res = 0;
@@ -197,4 +221,6 @@ bool isSumEqual(char* firstWord, char* secondWord, char* targetWord) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,11 +10,15 @@ tags:
     - Ordered Set
 ---
 
+<!-- problem:start -->
+
 # [2276. Count Integers in Intervals](https://leetcode.com/problems/count-integers-in-intervals)
 
 [中文文档](/solution/2200-2299/2276.Count%20Integers%20in%20Intervals/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an <strong>empty</strong> set of intervals, implement a data structure that can:</p>
 
@@ -67,11 +71,17 @@ countIntervals.count();    // return 8
 	<li>At least <strong>one</strong> call will be made to <code>count</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Node:
@@ -117,6 +127,8 @@ class CountIntervals:
 # obj.add(left,right)
 # param_2 = obj.count()
 ```
+
+#### Java
 
 ```java
 class Node {
@@ -230,6 +242,8 @@ class CountIntervals {
  * int param_2 = obj.count();
  */
 ```
+
+#### C++
 
 ```cpp
 class Node {
@@ -345,6 +359,8 @@ private:
  * int param_2 = obj->count();
  */
 ```
+
+#### Go
 
 ```go
 type Node struct {
@@ -470,6 +486,8 @@ func (ci *CountIntervals) Count() int {
  */
 ```
 
+#### TypeScript
+
 ```ts
 class CountIntervals {
     left: null | CountIntervals;
@@ -514,9 +532,15 @@ class CountIntervals {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Node:
@@ -603,4 +627,6 @@ class CountIntervals:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

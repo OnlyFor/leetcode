@@ -8,13 +8,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [2288. 价格减免](https://leetcode.cn/problems/apply-discount-to-prices)
 
 [English Version](/solution/2200-2299/2288.Apply%20Discount%20to%20Prices/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p><strong>句子</strong> 是由若干个单词组成的字符串，单词之间用单个空格分隔，其中每个单词可以包含数字、小写字母、和美元符号 <code>'$'</code> 。如果单词的形式为美元符号后跟着一个非负实数，那么这个单词就表示一个 <strong>价格</strong> 。</p>
 
@@ -65,7 +67,11 @@ tags:
 	<li><code>0 &lt;= discount &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -74,6 +80,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为字符串 `sentence` 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -85,6 +93,8 @@ class Solution:
             ans.append(w)
         return ' '.join(ans)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -112,6 +122,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -148,6 +160,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func discountPrices(sentence string, discount int) string {
 	words := strings.Split(sentence, " ")
@@ -161,6 +175,8 @@ func discountPrices(sentence string, discount int) string {
 	return strings.Join(words, " ")
 }
 ```
+
+#### TypeScript
 
 ```ts
 function discountPrices(sentence: string, discount: number): string {
@@ -178,4 +194,6 @@ function discountPrices(sentence: string, discount: number): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

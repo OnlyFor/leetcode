@@ -9,13 +9,15 @@ tags:
     - 数学
 ---
 
+<!-- problem:start -->
+
 # [2834. 找出美丽数组的最小和](https://leetcode.cn/problems/find-the-minimum-possible-sum-of-a-beautiful-array)
 
 [English Version](/solution/2800-2899/2834.Find%20the%20Minimum%20Possible%20Sum%20of%20a%20Beautiful%20Array/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你两个正整数：<code>n</code> 和 <code>target</code> 。</p>
 
@@ -71,7 +73,11 @@ nums = [1,3,4] 是美丽数组。
 	<li><code>1 &lt;= target &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心 + 数学
 
@@ -89,6 +95,8 @@ nums = [1,3,4] 是美丽数组。
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minimumPossibleSum(self, n: int, target: int) -> int:
@@ -98,6 +106,8 @@ class Solution:
             return ((1 + n) * n // 2) % mod
         return ((1 + m) * m // 2 + (target + target + n - m - 1) * (n - m) // 2) % mod
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -113,6 +123,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -130,6 +142,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumPossibleSum(n int, target int) int {
 	const mod int = 1e9 + 7
@@ -143,6 +157,8 @@ func minimumPossibleSum(n int, target int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumPossibleSum(n: number, target: number): number {
     const mod = 10 ** 9 + 7;
@@ -153,6 +169,8 @@ function minimumPossibleSum(n: number, target: number): number {
     return (((1 + m) * m) / 2 + ((target + target + n - m - 1) * (n - m)) / 2) % mod;
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -171,4 +189,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

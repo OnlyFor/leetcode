@@ -9,11 +9,15 @@ tags:
     - Array
 ---
 
+<!-- problem:start -->
+
 # [1144. Decrease Elements To Make Array Zigzag](https://leetcode.com/problems/decrease-elements-to-make-array-zigzag)
 
 [中文文档](/solution/1100-1199/1144.Decrease%20Elements%20To%20Make%20Array%20Zigzag/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array <code>nums</code> of integers, a <em>move</em>&nbsp;consists of choosing any element and <strong>decreasing it by 1</strong>.</p>
 
@@ -50,7 +54,11 @@ tags:
 	<li><code>1 &lt;= nums[i] &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration + Greedy
 
@@ -59,6 +67,8 @@ We can separately enumerate the even and odd positions as the elements "smaller 
 The time complexity is $O(n)$, where $n$ is the length of the array $nums$. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -75,6 +85,8 @@ class Solution:
                 ans[i] += d
         return min(ans)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -98,6 +110,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -116,6 +130,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func movesToMakeZigzag(nums []int) int {
@@ -137,6 +153,8 @@ func movesToMakeZigzag(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function movesToMakeZigzag(nums: number[]): number {
     const ans: number[] = Array(2).fill(0);
@@ -156,6 +174,8 @@ function movesToMakeZigzag(nums: number[]): number {
     return Math.min(...ans);
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -181,4 +201,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

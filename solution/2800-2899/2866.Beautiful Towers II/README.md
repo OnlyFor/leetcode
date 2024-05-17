@@ -10,13 +10,15 @@ tags:
     - 单调栈
 ---
 
+<!-- problem:start -->
+
 # [2866. 美丽塔 II](https://leetcode.cn/problems/beautiful-towers-ii)
 
 [English Version](/solution/2800-2899/2866.Beautiful%20Towers%20II/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个长度为 <code>n</code>&nbsp;下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>maxHeights</code>&nbsp;。</p>
 
@@ -81,7 +83,11 @@ tags:
 	<li><code>1 &lt;= maxHeights[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划 + 单调栈
 
@@ -102,6 +108,8 @@ $$
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为数组 $maxHeights$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -140,6 +148,8 @@ class Solution:
                 g[i] = maxHeights[i] * (j - i) + (g[j] if j != n else 0)
         return max(a + b - c for a, b, c in zip(f, g, maxHeights))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -200,6 +210,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -256,6 +268,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maximumSumOfHeights(maxHeights []int) (ans int64) {
@@ -319,6 +333,8 @@ func maximumSumOfHeights(maxHeights []int) (ans int64) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maximumSumOfHeights(maxHeights: number[]): number {
     const n = maxHeights.length;
@@ -376,4 +392,6 @@ function maximumSumOfHeights(maxHeights: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

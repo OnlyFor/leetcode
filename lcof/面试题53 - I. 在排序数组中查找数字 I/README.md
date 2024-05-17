@@ -3,9 +3,13 @@ comments: true
 edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9853%20-%20I.%20%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97%20I/README.md
 ---
 
+<!-- problem:start -->
+
 # [面试题 53 - I. 在排序数组中查找数字 I](https://leetcode.cn/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>统计一个数字在排序数组中出现的次数。</p>
 
@@ -38,7 +42,11 @@ edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9
 
 <p><strong>注意：</strong>本题与主站 34 题相同（仅返回值不同）：<a href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/">https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/</a></p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：二分查找
 
@@ -48,6 +56,8 @@ edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
@@ -55,6 +65,8 @@ class Solution:
         r = bisect_right(nums, target)
         return r - l
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -79,6 +91,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -90,6 +104,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func search(nums []int, target int) int {
 	l := sort.Search(len(nums), func(i int) bool { return nums[i] >= target })
@@ -97,6 +113,8 @@ func search(nums []int, target int) int {
 	return r - l
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -118,6 +136,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -145,6 +165,8 @@ var search = function (nums, target) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int Search(int[] nums, int target) {
@@ -170,4 +192,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

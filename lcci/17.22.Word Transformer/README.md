@@ -4,13 +4,16 @@ difficulty: 中等
 edit_url: https://github.com/doocs/leetcode/edit/main/lcci/17.22.Word%20Transformer/README.md
 ---
 
+<!-- problem:start -->
+
 # [面试题 17.22. 单词转换](https://leetcode.cn/problems/word-transformer-lcci)
 
 [English Version](/lcci/17.22.Word%20Transformer/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
+
 <p>给定字典中的两个词，长度相等。写一个方法，把一个词转换成另一个词， 但是一次只能改变一个字符。每一步得到的新词都必须能在字典中找到。</p>
 
 <p>编写一个程序，返回一个可能的转换序列。如有多个可能的转换序列，你可以返回任何一个。</p>
@@ -37,7 +40,11 @@ wordList = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quo
 
 <strong>解释:</strong>&nbsp;<em>endWord</em> &quot;cog&quot; 不在字典中，所以不存在符合要求的转换序列。</pre>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：DFS
 
@@ -54,6 +61,8 @@ wordList = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quo
 最后，我们调用 $\text{dfs}(\textit{beginWord})$，如果返回 $\text{True}$，说明转换成功，我们返回 $\textit{ans}$，否则返回空数组。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -79,6 +88,8 @@ class Solution:
         vis = [False] * len(wordList)
         return ans if dfs(beginWord) else []
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -128,6 +139,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -180,6 +193,8 @@ private:
 };
 ```
 
+#### Go
+
 ```go
 func findLadders(beginWord string, endWord string, wordList []string) []string {
 	ans := []string{beginWord}
@@ -220,6 +235,8 @@ func findLadders(beginWord string, endWord string, wordList []string) []string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findLadders(beginWord: string, endWord: string, wordList: string[]): string[] {
     const ans: string[] = [beginWord];
@@ -256,6 +273,8 @@ function findLadders(beginWord: string, endWord: string, wordList: string[]): st
     return dfs(beginWord) ? ans : [];
 }
 ```
+
+#### Swift
 
 ```swift
 class Solution {
@@ -311,4 +330,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

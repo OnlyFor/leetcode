@@ -8,13 +8,15 @@ tags:
     - 图
 ---
 
+<!-- problem:start -->
+
 # [1615. 最大网络秩](https://leetcode.cn/problems/maximal-network-rank)
 
 [English Version](/solution/1600-1699/1615.Maximal%20Network%20Rank/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p><code>n</code> 座城市和一些连接这些城市的道路 <code>roads</code> 共同组成一个基础设施网络。每个 <code>roads[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> 都表示在城市 <code>a<sub>i</sub></code> 和 <code>b<sub>i</sub></code> 之间有一条双向道路。</p>
 
@@ -67,7 +69,11 @@ tags:
 	<li>每对城市之间 <strong>最多只有一条</strong> 道路相连</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：计数
 
@@ -78,6 +84,8 @@ tags:
 时间复杂度 $O(n^2)$，空间复杂度 $O(n^2)$。其中 $n$ 是城市的数量。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -93,6 +101,8 @@ class Solution:
                     ans = t
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -116,6 +126,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -142,6 +154,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximalNetworkRank(n int, roads [][]int) (ans int) {
 	g := make([][]int, n)
@@ -163,6 +177,8 @@ func maximalNetworkRank(n int, roads [][]int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maximalNetworkRank(n: number, roads: number[][]): number {
@@ -186,9 +202,15 @@ function maximalNetworkRank(n: number, roads: number[][]): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -204,4 +226,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

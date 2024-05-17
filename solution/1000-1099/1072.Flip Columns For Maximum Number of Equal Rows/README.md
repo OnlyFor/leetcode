@@ -10,13 +10,15 @@ tags:
     - 矩阵
 ---
 
+<!-- problem:start -->
+
 # [1072. 按列翻转得到最大值等行数](https://leetcode.cn/problems/flip-columns-for-maximum-number-of-equal-rows)
 
 [English Version](/solution/1000-1099/1072.Flip%20Columns%20For%20Maximum%20Number%20of%20Equal%20Rows/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定&nbsp;<code>m x n</code>&nbsp;矩阵&nbsp;<code>matrix</code>&nbsp;。</p>
 
@@ -63,7 +65,11 @@ tags:
 	<li><code>matrix[i][j] == 0</code> 或&nbsp;<code>1</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表
 
@@ -89,6 +95,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
@@ -98,6 +106,8 @@ class Solution:
             cnt[t] += 1
         return max(cnt.values())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -115,6 +125,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -134,6 +146,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxEqualRowsAfterFlips(matrix [][]int) (ans int) {
 	cnt := map[string]int{}
@@ -152,6 +166,8 @@ func maxEqualRowsAfterFlips(matrix [][]int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxEqualRowsAfterFlips(matrix: number[][]): number {
@@ -173,4 +189,6 @@ function maxEqualRowsAfterFlips(matrix: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

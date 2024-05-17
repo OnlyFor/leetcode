@@ -10,13 +10,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [1196. 最多可以买到的苹果数量 🔒](https://leetcode.cn/problems/how-many-apples-can-you-put-into-the-basket)
 
 [English Version](/solution/1100-1199/1196.How%20Many%20Apples%20Can%20You%20Put%20into%20the%20Basket/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你有一些苹果和一个可以承载 <code>5000</code> 单位重量的篮子。</p>
 
@@ -49,7 +51,11 @@ tags:
 	<li><code>1 &lt;= weight[i] &lt;= 10<sup>3</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心
 
@@ -60,6 +66,8 @@ tags:
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(\log n)$。其中 $n$ 是苹果的数量。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -72,6 +80,8 @@ class Solution:
                 return i
         return len(weight)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -88,6 +98,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -106,6 +118,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxNumberOfApples(weight []int) int {
 	sort.Ints(weight)
@@ -119,6 +133,8 @@ func maxNumberOfApples(weight []int) int {
 	return len(weight)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxNumberOfApples(weight: number[]): number {
@@ -136,4 +152,6 @@ function maxNumberOfApples(weight: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

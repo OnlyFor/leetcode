@@ -9,11 +9,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1935. Maximum Number of Words You Can Type](https://leetcode.com/problems/maximum-number-of-words-you-can-type)
 
 [中文文档](/solution/1900-1999/1935.Maximum%20Number%20of%20Words%20You%20Can%20Type/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There is a malfunctioning keyboard where some letter keys do not work. All other keys on the keyboard work properly.</p>
 
@@ -55,7 +59,11 @@ tags:
 	<li><code>brokenLetters</code> consists of <strong>distinct</strong> lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Array or Hash Table
 
@@ -69,12 +77,16 @@ The time complexity is $O(n)$, and the space complexity is $O(|\Sigma|)$, where 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def canBeTypedWords(self, text: str, brokenLetters: str) -> int:
         s = set(brokenLetters)
         return sum(all(c not in s for c in w) for w in text.split())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -97,6 +109,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -136,6 +150,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func canBeTypedWords(text string, brokenLetters string) (ans int) {
 	s := [26]bool{}
@@ -154,6 +170,8 @@ func canBeTypedWords(text string, brokenLetters string) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function canBeTypedWords(text: string, brokenLetters: string): number {
@@ -174,6 +192,8 @@ function canBeTypedWords(text: string, brokenLetters: string): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -200,4 +220,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

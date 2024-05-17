@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1154. 一年中的第几天](https://leetcode.cn/problems/day-of-the-year)
 
 [English Version](/solution/1100-1199/1154.Day%20of%20the%20Year/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串&nbsp;<code>date</code> ，按 <code>YYYY-MM-DD</code> 格式表示一个 <a href="https://baike.baidu.com/item/公元/17855" target="_blank">现行公元纪年法</a> 日期。返回该日期是当年的第几天。</p>
 
@@ -45,7 +47,11 @@ tags:
 	<li><code>date</code> 表示的范围从 1900 年 1 月 1 日至 2019 年 12 月 31 日</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：直接计算
 
@@ -63,6 +69,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def dayOfYear(self, date: str) -> int:
@@ -71,6 +79,8 @@ class Solution:
         days = [31, v, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
         return sum(days[: m - 1]) + d
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -89,6 +99,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -106,6 +118,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func dayOfYear(date string) (ans int) {
 	var y, m, d int
@@ -122,6 +136,8 @@ func dayOfYear(date string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function dayOfYear(date: string): number {
     const y = +date.slice(0, 4);
@@ -132,6 +148,8 @@ function dayOfYear(date: string): number {
     return days.slice(0, m - 1).reduce((a, b) => a + b, d);
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -150,4 +168,6 @@ var dayOfYear = function (date) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,13 +10,15 @@ tags:
     - 计数
 ---
 
+<!-- problem:start -->
+
 # [2150. 找出数组中的所有孤独数字](https://leetcode.cn/problems/find-all-lonely-numbers-in-the-array)
 
 [English Version](/solution/2100-2199/2150.Find%20All%20Lonely%20Numbers%20in%20the%20Array/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>nums</code> 。如果数字 <code>x</code> 在数组中仅出现 <strong>一次</strong> ，且没有 <strong>相邻</strong> 数字（即，<code>x + 1</code> 和 <code>x - 1</code>）出现在数组中，则认为数字 <code>x</code> 是 <strong>孤独数字</strong> 。</p>
 
@@ -56,11 +58,17 @@ tags:
 	<li><code>0 &lt;= nums[i] &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -72,6 +80,8 @@ class Solution:
                 ans.append(num)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -92,6 +102,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -108,6 +120,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findLonely(nums []int) []int {
 	counter := make(map[int]int)
@@ -123,6 +137,8 @@ func findLonely(nums []int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function findLonely(nums: number[]): number[] {
@@ -142,4 +158,6 @@ function findLonely(nums: number[]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

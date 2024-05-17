@@ -9,13 +9,15 @@ tags:
     - 数组
 ---
 
+<!-- problem:start -->
+
 # [1827. 最少操作使数组递增](https://leetcode.cn/problems/minimum-operations-to-make-the-array-increasing)
 
 [English Version](/solution/1800-1899/1827.Minimum%20Operations%20to%20Make%20the%20Array%20Increasing/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>nums</code> （<strong>下标从 0 开始</strong>）。每一次操作中，你可以选择数组中一个元素，并将它增加 <code>1</code> 。</p>
 
@@ -60,7 +62,11 @@ tags:
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：一次遍历
 
@@ -72,6 +78,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
@@ -81,6 +89,8 @@ class Solution:
             mx = max(mx + 1, v)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -94,6 +104,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -109,6 +121,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minOperations(nums []int) (ans int) {
 	mx := 0
@@ -119,6 +133,8 @@ func minOperations(nums []int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minOperations(nums: number[]): number {
@@ -131,6 +147,8 @@ function minOperations(nums: number[]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -146,6 +164,8 @@ impl Solution {
 }
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int MinOperations(int[] nums) {
@@ -158,6 +178,8 @@ public class Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 #define max(a, b) (((a) > (b)) ? (a) : (b))
@@ -175,4 +197,6 @@ int minOperations(int* nums, int numsSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

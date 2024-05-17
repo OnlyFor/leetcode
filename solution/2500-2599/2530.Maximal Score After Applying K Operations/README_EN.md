@@ -10,11 +10,15 @@ tags:
     - Heap (Priority Queue)
 ---
 
+<!-- problem:start -->
+
 # [2530. Maximal Score After Applying K Operations](https://leetcode.com/problems/maximal-score-after-applying-k-operations)
 
 [中文文档](/solution/2500-2599/2530.Maximal%20Score%20After%20Applying%20K%20Operations/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code> and an integer <code>k</code>. You have a <strong>starting score</strong> of <code>0</code>.</p>
 
@@ -59,7 +63,11 @@ The final score is 10 + 4 + 3 = 17.
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Priority Queue (Max Heap)
 
@@ -70,6 +78,8 @@ At each step, we take out the element with the maximum value $v$ from the priori
 The time complexity is $O(n + k \times \log n)$, and the space complexity is $O(n)$ or $O(1)$. Here, $n$ is the length of the array $nums$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -83,6 +93,8 @@ class Solution:
             heappush(h, -(ceil(v / 3)))
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -102,6 +114,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -118,6 +132,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxKelements(nums []int, k int) (ans int64) {
@@ -145,6 +161,8 @@ func (h *hp) push(v int) { heap.Push(h, v) }
 func (h *hp) pop() int   { return heap.Pop(h).(int) }
 ```
 
+#### TypeScript
+
 ```ts
 function maxKelements(nums: number[], k: number): number {
     const pq = new MaxPriorityQueue();
@@ -159,6 +177,8 @@ function maxKelements(nums: number[], k: number): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::BinaryHeap;
@@ -182,9 +202,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -197,6 +223,8 @@ class Solution:
             ans -= heapreplace(nums, -ceil(-nums[0] / 3))
         return ans
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -215,6 +243,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxKelements(nums []int, k int) (ans int64) {
@@ -237,4 +267,6 @@ func (hp) Pop() (_ any)         { return }
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

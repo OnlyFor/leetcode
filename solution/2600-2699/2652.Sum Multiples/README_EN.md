@@ -8,11 +8,15 @@ tags:
     - Math
 ---
 
+<!-- problem:start -->
+
 # [2652. Sum Multiples](https://leetcode.com/problems/sum-multiples)
 
 [中文文档](/solution/2600-2699/2652.Sum%20Multiples/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a positive integer <code>n</code>, find the sum of all integers in the range <code>[1, n]</code> <strong>inclusive</strong> that are divisible by <code>3</code>, <code>5</code>, or <code>7</code>.</p>
 
@@ -50,7 +54,11 @@ tags:
 	<li><code>1 &lt;= n &lt;= 10<sup>3</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration
 
@@ -62,11 +70,15 @@ The time complexity is $O(n)$, where $n$ is the given integer. The space complex
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def sumOfMultiples(self, n: int) -> int:
         return sum(x for x in range(1, n + 1) if x % 3 == 0 or x % 5 == 0 or x % 7 == 0)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -81,6 +93,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -97,6 +111,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sumOfMultiples(n int) (ans int) {
 	for x := 1; x <= n; x++ {
@@ -107,6 +123,8 @@ func sumOfMultiples(n int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function sumOfMultiples(n: number): number {
@@ -119,6 +137,8 @@ function sumOfMultiples(n: number): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -138,6 +158,10 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Mathematics (Inclusion-Exclusion Principle)
 
 We define a function $f(x)$ to represent the sum of numbers in $[1,..n]$ that are divisible by $x$. There are $m = \left\lfloor \frac{n}{x} \right\rfloor$ numbers that are divisible by $x$, which are $x$, $2x$, $3x$, $\cdots$, $mx$, forming an arithmetic sequence with the first term $x$, the last term $mx$, and the number of terms $m$. Therefore, $f(x) = \frac{(x + mx) \times m}{2}$.
@@ -152,6 +176,8 @@ The time complexity is $O(1)$, and the space complexity is $O(1)$.
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def sumOfMultiples(self, n: int) -> int:
@@ -161,6 +187,8 @@ class Solution:
 
         return f(3) + f(5) + f(7) - f(3 * 5) - f(3 * 7) - f(5 * 7) + f(3 * 5 * 7)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -178,6 +206,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -191,6 +221,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sumOfMultiples(n int) int {
 	f := func(x int) int {
@@ -200,6 +232,8 @@ func sumOfMultiples(n int) int {
 	return f(3) + f(5) + f(7) - f(3*5) - f(3*7) - f(5*7) + f(3*5*7)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function sumOfMultiples(n: number): number {
@@ -211,6 +245,8 @@ function sumOfMultiples(n: number): number {
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn sum_of_multiples(n: i32) -> i32 {
@@ -221,9 +257,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 3
 
 <!-- tabs:start -->
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -240,4 +282,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

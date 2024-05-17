@@ -10,11 +10,15 @@ tags:
     - Matrix
 ---
 
+<!-- problem:start -->
+
 # [1301. Number of Paths with Max Score](https://leetcode.com/problems/number-of-paths-with-max-score)
 
 [中文文档](/solution/1300-1399/1301.Number%20of%20Paths%20with%20Max%20Score/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a square <code>board</code>&nbsp;of characters. You can move on the board starting at the bottom right square marked with the character&nbsp;<code>&#39;S&#39;</code>.</p>
 
@@ -56,11 +60,17 @@ tags:
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -88,6 +98,8 @@ class Solution:
         mod = 10**9 + 7
         return [0, 0] if f[0][0] == -1 else [f[0][0], g[0][0] % mod]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -143,6 +155,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -189,6 +203,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func pathsWithMaxScore(board []string) []int {
@@ -237,4 +253,6 @@ func pathsWithMaxScore(board []string) []int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,11 +10,15 @@ tags:
     - Counting
 ---
 
+<!-- problem:start -->
+
 # [1941. Check if All Characters Have Equal Number of Occurrences](https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences)
 
 [中文文档](/solution/1900-1999/1941.Check%20if%20All%20Characters%20Have%20Equal%20Number%20of%20Occurrences/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a string <code>s</code>, return <code>true</code><em> if </em><code>s</code><em> is a <strong>good</strong> string, or </em><code>false</code><em> otherwise</em>.</p>
 
@@ -46,11 +50,17 @@ tags:
 	<li><code>s</code> consists of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -58,6 +68,8 @@ class Solution:
         cnt = Counter(s)
         return len(set(cnt.values())) == 1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -80,6 +92,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -104,6 +118,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func areOccurrencesEqual(s string) bool {
 	cnt := [26]int{}
@@ -123,6 +139,8 @@ func areOccurrencesEqual(s string) bool {
 	return true
 }
 ```
+
+#### TypeScript
 
 ```ts
 function areOccurrencesEqual(s: string): boolean {
@@ -144,6 +162,8 @@ function areOccurrencesEqual(s: string): boolean {
 }
 ```
 
+#### PHP
+
 ```php
 class Solution {
     /**
@@ -162,9 +182,15 @@ class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 function areOccurrencesEqual(s: string): boolean {
@@ -179,4 +205,6 @@ function areOccurrencesEqual(s: string): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

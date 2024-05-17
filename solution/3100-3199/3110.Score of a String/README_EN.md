@@ -8,11 +8,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [3110. Score of a String](https://leetcode.com/problems/score-of-a-string)
 
 [中文文档](/solution/3100-3199/3110.Score%20of%20a%20String/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>s</code>. The <strong>score</strong> of a string is defined as the sum of the absolute difference between the <strong>ASCII</strong> values of adjacent characters.</p>
 
@@ -51,7 +55,11 @@ tags:
 	<li><code>s</code> consists only of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -61,11 +69,15 @@ The time complexity is $O(n)$, where $n$ is the length of the string $s$. The sp
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def scoreOfString(self, s: str) -> int:
         return sum(abs(a - b) for a, b in pairwise(map(ord, s)))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -79,6 +91,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -91,6 +105,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func scoreOfString(s string) (ans int) {
@@ -108,6 +124,8 @@ func abs(x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function scoreOfString(s: string): number {
     let ans = 0;
@@ -120,4 +138,6 @@ function scoreOfString(s: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

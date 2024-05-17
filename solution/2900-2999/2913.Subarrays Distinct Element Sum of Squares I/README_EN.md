@@ -9,11 +9,15 @@ tags:
     - Hash Table
 ---
 
+<!-- problem:start -->
+
 # [2913. Subarrays Distinct Element Sum of Squares I](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i)
 
 [中文文档](/solution/2900-2999/2913.Subarrays%20Distinct%20Element%20Sum%20of%20Squares%20I/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed </strong>integer array <code>nums</code>.</p>
 
@@ -62,7 +66,11 @@ The sum of the squares of the distinct counts in all subarrays is equal to 1<sup
 	<li><code>1 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration
 
@@ -73,6 +81,8 @@ After the enumeration, we return the answer.
 The time complexity is $O(n^2)$, and the space complexity is $O(n)$. Here, $n$ is the length of the array $nums$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -85,6 +95,8 @@ class Solution:
                 ans += len(s) * len(s)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -105,6 +117,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -127,6 +141,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sumCounts(nums []int) (ans int) {
 	for i := range nums {
@@ -143,6 +159,8 @@ func sumCounts(nums []int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function sumCounts(nums: number[]): number {
@@ -164,4 +182,6 @@ function sumCounts(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

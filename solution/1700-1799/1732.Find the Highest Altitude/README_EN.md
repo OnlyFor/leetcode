@@ -9,11 +9,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [1732. Find the Highest Altitude](https://leetcode.com/problems/find-the-highest-altitude)
 
 [中文文档](/solution/1700-1799/1732.Find%20the%20Highest%20Altitude/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There is a biker going on a road trip. The road trip consists of <code>n + 1</code> points at different altitudes. The biker starts his trip on point <code>0</code> with altitude equal <code>0</code>.</p>
 
@@ -45,7 +49,11 @@ tags:
 	<li><code>-100 &lt;= gain[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Prefix Sum (Difference Array)
 
@@ -69,11 +77,15 @@ The time complexity is $O(n)$, and the space complexity is $O(1)$. Here, $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def largestAltitude(self, gain: List[int]) -> int:
         return max(accumulate(gain, initial=0))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -88,6 +100,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -98,6 +112,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func largestAltitude(gain []int) (ans int) {
@@ -112,6 +128,8 @@ func largestAltitude(gain []int) (ans int) {
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn largest_altitude(gain: Vec<i32>) -> i32 {
@@ -125,6 +143,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -141,6 +161,8 @@ var largestAltitude = function (gain) {
     return ans;
 };
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -161,6 +183,8 @@ class Solution {
 }
 ```
 
+#### C
+
 ```c
 #define max(a, b) (((a) > (b)) ? (a) : (b))
 
@@ -177,9 +201,15 @@ int largestAltitude(int* gain, int gainSize) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -193,4 +223,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

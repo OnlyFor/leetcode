@@ -11,11 +11,15 @@ tags:
     - Graph
 ---
 
+<!-- problem:start -->
+
 # [2492. Minimum Score of a Path Between Two Cities](https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities)
 
 [中文文档](/solution/2400-2499/2492.Minimum%20Score%20of%20a%20Path%20Between%20Two%20Cities/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a positive integer <code>n</code> representing <code>n</code> cities numbered from <code>1</code> to <code>n</code>. You are also given a <strong>2D</strong> array <code>roads</code> where <code>roads[i] = [a<sub>i</sub>, b<sub>i</sub>, distance<sub>i</sub>]</code> indicates that there is a <strong>bidirectional </strong>road between cities <code>a<sub>i</sub></code> and <code>b<sub>i</sub></code> with a distance equal to <code>distance<sub>i</sub></code>. The cities graph is not necessarily connected.</p>
 
@@ -63,7 +67,11 @@ It can be shown that no other path has less score.
 	<li>There is at least one path between <code>1</code> and <code>n</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: DFS
 
@@ -72,6 +80,8 @@ According to the problem description, each edge can be passed multiple times, an
 The time complexity is $O(n + m)$, where $n$ and $m$ are the number of nodes and edges, respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -93,6 +103,8 @@ class Solution:
         dfs(1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -126,6 +138,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -154,6 +168,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minScore(n int, roads [][]int) int {
 	type pair struct{ i, v int }
@@ -181,6 +197,8 @@ func minScore(n int, roads [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minScore(n: number, roads: number[][]): number {
     const vis = new Array(n + 1).fill(false);
@@ -204,6 +222,8 @@ function minScore(n: number, roads: number[][]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -234,6 +254,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 var minScore = function (n, roads) {
     // 构建点到点的映射表
@@ -261,6 +283,10 @@ var minScore = function (n, roads) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: BFS
 
 We can also use BFS to solve this problem.
@@ -268,6 +294,8 @@ We can also use BFS to solve this problem.
 The time complexity is $O(n + m)$, where $n$ and $m$ are the number of nodes and edges, respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -290,6 +318,8 @@ class Solution:
                         q.append(j)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -324,6 +354,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -356,6 +388,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minScore(n int, roads [][]int) int {
@@ -390,4 +424,6 @@ func minScore(n int, roads [][]int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

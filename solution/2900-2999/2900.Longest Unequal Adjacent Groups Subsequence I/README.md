@@ -11,13 +11,15 @@ tags:
     - 动态规划
 ---
 
+<!-- problem:start -->
+
 # [2900. 最长相邻不相等子序列 I](https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-i)
 
 [English Version](/solution/2900-2999/2900.Longest%20Unequal%20Adjacent%20Groups%20Subsequence%20I/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从&nbsp;<strong>0</strong>&nbsp;开始的字符串数组&nbsp;<code>words</code>&nbsp;，和一个下标从 <strong>0</strong>&nbsp;开始的 <strong>二进制</strong>&nbsp;数组&nbsp;<code>groups</code>&nbsp;，两个数组长度都是&nbsp;<code>n</code>&nbsp;。</p>
 
@@ -67,7 +69,11 @@ tags:
 	<li><code>words[i]</code>&nbsp;只包含小写英文字母。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心 + 一次遍历
 
@@ -77,6 +83,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def getWordsInLongestSubsequence(
@@ -84,6 +92,8 @@ class Solution:
     ) -> List[str]:
         return [words[i] for i, x in enumerate(groups) if i == 0 or x != groups[i - 1]]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -98,6 +108,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -114,6 +126,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func getWordsInLongestSubsequence(n int, words []string, groups []int) (ans []string) {
 	for i, x := range groups {
@@ -124,6 +138,8 @@ func getWordsInLongestSubsequence(n int, words []string, groups []int) (ans []st
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function getWordsInLongestSubsequence(n: number, words: string[], groups: number[]): string[] {
@@ -136,6 +152,8 @@ function getWordsInLongestSubsequence(n: number, words: string[], groups: number
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -159,4 +177,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

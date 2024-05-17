@@ -9,11 +9,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [2943. Maximize Area of Square Hole in Grid](https://leetcode.com/problems/maximize-area-of-square-hole-in-grid)
 
 [中文文档](/solution/2900-2999/2943.Maximize%20Area%20of%20Square%20Hole%20in%20Grid/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given the two integers, <code>n</code> and <code>m</code> and two integer arrays, <code>hBars</code> and <code>vBars</code>. The grid has <code>n + 2</code> horizontal and <code>m + 2</code> vertical bars, creating 1 x 1 unit cells. The bars are indexed starting from <code>1</code>.</p>
 
@@ -80,7 +84,11 @@ tags:
 	<li>All values in <code>vBars</code> are distinct.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sorting
 
@@ -95,6 +103,8 @@ After finding the length of the longest consecutive increasing subsequence in $h
 The time complexity is $O(n \times \log n)$, and the space complexity is $O(n)$. Here, $n$ is the length of the array $hBars$ or $vBars$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -114,6 +124,8 @@ class Solution:
 
         return min(f(hBars), f(vBars)) ** 2
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -137,6 +149,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -159,6 +173,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximizeSquareHoleArea(n int, m int, hBars []int, vBars []int) int {
 	f := func(nums []int) int {
@@ -179,6 +195,8 @@ func maximizeSquareHoleArea(n int, m int, hBars []int, vBars []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maximizeSquareHoleArea(n: number, m: number, hBars: number[], vBars: number[]): number {
     const f = (nums: number[]): number => {
@@ -196,6 +214,8 @@ function maximizeSquareHoleArea(n: number, m: number, hBars: number[], vBars: nu
     return Math.min(f(hBars), f(vBars)) ** 2;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -225,4 +245,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

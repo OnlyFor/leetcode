@@ -10,11 +10,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [1441. Build an Array With Stack Operations](https://leetcode.com/problems/build-an-array-with-stack-operations)
 
 [中文文档](/solution/1400-1499/1441.Build%20an%20Array%20With%20Stack%20Operations/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>target</code> and an integer <code>n</code>.</p>
 
@@ -83,11 +87,17 @@ The answers that read integer 3 from the stream are not accepted.
 	<li><code>target</code> is strictly increasing.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -101,6 +111,8 @@ class Solution:
             ans.append('Push')
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -118,6 +130,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -137,6 +151,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func buildArray(target []int, n int) []string {
 	cur := 0
@@ -151,6 +167,8 @@ func buildArray(target []int, n int) []string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function buildArray(target: number[], n: number): string[] {
     const res = [];
@@ -164,6 +182,8 @@ function buildArray(target: number[], n: number): string[] {
     return res;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -183,6 +203,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 /**
@@ -209,4 +231,6 @@ char** buildArray(int* target, int targetSize, int n, int* returnSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

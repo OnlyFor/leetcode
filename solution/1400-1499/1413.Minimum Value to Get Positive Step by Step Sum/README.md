@@ -9,13 +9,15 @@ tags:
     - 前缀和
 ---
 
+<!-- problem:start -->
+
 # [1413. 逐步求和得到正数的最小值](https://leetcode.cn/problems/minimum-value-to-get-positive-step-by-step-sum)
 
 [English Version](/solution/1400-1499/1413.Minimum%20Value%20to%20Get%20Positive%20Step%20by%20Step%20Sum/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>nums</code>&nbsp;。你可以选定任意的&nbsp;<strong>正数</strong> startValue 作为初始值。</p>
 
@@ -64,11 +66,17 @@ tags:
 	<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -79,6 +87,8 @@ class Solution:
             t = min(t, s)
         return max(1, 1 - t)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -94,6 +104,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -107,6 +119,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minStartValue(nums []int) int {
@@ -124,6 +138,8 @@ func minStartValue(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minStartValue(nums: number[]): number {
     let sum = 0;
@@ -135,6 +151,8 @@ function minStartValue(nums: number[]): number {
     return Math.max(1, 1 - min);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -152,9 +170,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -165,4 +189,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

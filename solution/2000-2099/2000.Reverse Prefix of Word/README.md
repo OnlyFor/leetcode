@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [2000. 反转单词前缀](https://leetcode.cn/problems/reverse-prefix-of-word)
 
 [English Version](/solution/2000-2099/2000.Reverse%20Prefix%20of%20Word/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong> 开始的字符串 <code>word</code> 和一个字符 <code>ch</code> 。找出 <code>ch</code> 第一次出现的下标 <code>i</code> ，<strong>反转 </strong><code>word</code> 中从下标 <code>0</code> 开始、直到下标 <code>i</code> 结束（含下标 <code>i</code> ）的那段字符。如果 <code>word</code> 中不存在字符 <code>ch</code> ，则无需进行任何操作。</p>
 
@@ -61,7 +63,11 @@ tags:
 	<li><code>ch</code> 是一个小写英文字母</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -71,12 +77,16 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def reversePrefix(self, word: str, ch: str) -> str:
         i = word.find(ch)
         return word if i == -1 else word[i::-1] + word[i + 1 :]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -96,6 +106,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -108,6 +120,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func reversePrefix(word string, ch byte) string {
@@ -124,6 +138,8 @@ func reversePrefix(word string, ch byte) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function reversePrefix(word: string, ch: string): string {
     const i = word.indexOf(ch) + 1;
@@ -133,6 +149,8 @@ function reversePrefix(word: string, ch: string): string {
     return [...word.slice(0, i)].reverse().join('') + word.slice(i);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -144,6 +162,8 @@ impl Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -173,4 +193,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

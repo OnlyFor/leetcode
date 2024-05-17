@@ -11,11 +11,15 @@ tags:
     - Combinatorics
 ---
 
+<!-- problem:start -->
+
 # [2963. Count the Number of Good Partitions](https://leetcode.com/problems/count-the-number-of-good-partitions)
 
 [中文文档](/solution/2900-2999/2963.Count%20the%20Number%20of%20Good%20Partitions/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> array <code>nums</code> consisting of <strong>positive</strong> integers.</p>
 
@@ -58,7 +62,11 @@ tags:
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table + Grouping + Fast Power
 
@@ -74,6 +82,8 @@ The time complexity is $O(n)$, and the space complexity is $O(n)$. Here, $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numberOfGoodPartitions(self, nums: List[int]) -> int:
@@ -85,6 +95,8 @@ class Solution:
             k += i == j
         return pow(2, k - 1, mod)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -117,6 +129,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -147,6 +161,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numberOfGoodPartitions(nums []int) int {
 	qpow := func(a, n, mod int) int {
@@ -174,6 +190,8 @@ func numberOfGoodPartitions(nums []int) int {
 	return qpow(2, k-1, mod)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numberOfGoodPartitions(nums: number[]): number {
@@ -206,4 +224,6 @@ function numberOfGoodPartitions(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

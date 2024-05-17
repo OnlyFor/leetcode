@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1328. 破坏回文串](https://leetcode.cn/problems/break-a-palindrome)
 
 [English Version](/solution/1300-1399/1328.Break%20a%20Palindrome/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个由小写英文字母组成的回文字符串&nbsp;<code>palindrome</code> ，请你将其中&nbsp;<strong>一个</strong> 字符用任意小写英文字母替换，使得结果字符串的 <strong>字典序最小</strong> ，且&nbsp;<strong>不是</strong>&nbsp;回文串。</p>
 
@@ -48,7 +50,11 @@ tags:
 	<li><code>palindrome</code>&nbsp;只包含小写英文字母。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心
 
@@ -59,6 +65,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为字符串的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -76,6 +84,8 @@ class Solution:
             s[i] = "a"
         return "".join(s)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -99,6 +109,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -121,6 +133,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func breakPalindrome(palindrome string) string {
 	n := len(palindrome)
@@ -140,6 +154,8 @@ func breakPalindrome(palindrome string) string {
 	return string(s)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function breakPalindrome(palindrome: string): string {
@@ -163,4 +179,6 @@ function breakPalindrome(palindrome: string): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

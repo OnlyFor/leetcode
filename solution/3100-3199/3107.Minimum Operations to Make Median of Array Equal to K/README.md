@@ -10,13 +10,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [3107. 使数组中位数等于 K 的最少操作数](https://leetcode.cn/problems/minimum-operations-to-make-median-of-array-equal-to-k)
 
 [English Version](/solution/3100-3199/3107.Minimum%20Operations%20to%20Make%20Median%20of%20Array%20Equal%20to%20K/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组&nbsp;<code>nums</code>&nbsp;和一个 <strong>非负</strong>&nbsp;整数&nbsp;<code>k</code>&nbsp;。一次操作中，你可以选择任一元素&nbsp;加&nbsp;<code>1</code>&nbsp;或者减&nbsp;<code>1</code>&nbsp;。</p>
 
@@ -66,7 +68,11 @@ tags:
 	<li><code>1 &lt;= k &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心 + 排序
 
@@ -80,6 +86,8 @@ tags:
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(\log n)$。其中 $n$ 是数组 $nums$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -100,6 +108,8 @@ class Solution:
                 ans += k - nums[i]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -122,6 +132,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -143,6 +155,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minOperationsToMakeMedianK(nums []int, k int) (ans int64) {
@@ -170,6 +184,8 @@ func abs(x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minOperationsToMakeMedianK(nums: number[], k: number): number {
     nums.sort((a, b) => a - b);
@@ -191,4 +207,6 @@ function minOperationsToMakeMedianK(nums: number[], k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

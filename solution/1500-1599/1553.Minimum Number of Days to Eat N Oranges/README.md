@@ -9,13 +9,15 @@ tags:
     - 动态规划
 ---
 
+<!-- problem:start -->
+
 # [1553. 吃掉 N 个橘子的最少天数](https://leetcode.cn/problems/minimum-number-of-days-to-eat-n-oranges)
 
 [English Version](/solution/1500-1599/1553.Minimum%20Number%20of%20Days%20to%20Eat%20N%20Oranges/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>厨房里总共有 <code>n</code>&nbsp;个橘子，你决定每一天选择如下方式之一吃这些橘子：</p>
 
@@ -74,7 +76,11 @@ tags:
 	<li><code>1 &lt;= n &lt;= 2*10^9</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：记忆化搜索
 
@@ -97,6 +103,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minDays(self, n: int) -> int:
@@ -108,6 +116,8 @@ class Solution:
 
         return dfs(n)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -130,6 +140,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -154,6 +166,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minDays(n int) int {
 	f := map[int]int{0: 0, 1: 1}
@@ -169,6 +183,8 @@ func minDays(n int) int {
 	return dfs(n)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minDays(n: number): number {
@@ -189,4 +205,6 @@ function minDays(n: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

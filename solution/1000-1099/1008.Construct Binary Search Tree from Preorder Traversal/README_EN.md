@@ -13,11 +13,15 @@ tags:
     - Monotonic Stack
 ---
 
+<!-- problem:start -->
+
 # [1008. Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal)
 
 [中文文档](/solution/1000-1099/1008.Construct%20Binary%20Search%20Tree%20from%20Preorder%20Traversal/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array of integers preorder, which represents the <strong>preorder traversal</strong> of a BST (i.e., <strong>binary search tree</strong>), construct the tree and return <em>its root</em>.</p>
 
@@ -51,11 +55,17 @@ tags:
 	<li>All the values of <code>preorder</code> are <strong>unique</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -83,6 +93,8 @@ class Solution:
 
         return dfs(preorder)
 ```
+
+#### Java
 
 ```java
 /**
@@ -127,6 +139,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -163,6 +177,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -195,6 +211,8 @@ func bstFromPreorder(preorder []int) *TreeNode {
 	return dfs(0, len(preorder)-1)
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -232,6 +250,8 @@ function bstFromPreorder(preorder: number[]): TreeNode | null {
     return dfs(0, n);
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -295,4 +315,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

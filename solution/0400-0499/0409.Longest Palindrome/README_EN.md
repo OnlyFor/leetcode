@@ -8,11 +8,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [409. Longest Palindrome](https://leetcode.com/problems/longest-palindrome)
 
 [中文文档](/solution/0400-0499/0409.Longest%20Palindrome/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a string <code>s</code> which consists of lowercase or uppercase letters, return <em>the length of the <strong>longest palindrome</strong></em>&nbsp;that can be built with those letters.</p>
 
@@ -43,7 +47,11 @@ tags:
 	<li><code>s</code> consists of lowercase <strong>and/or</strong> uppercase English&nbsp;letters only.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Counting
 
@@ -59,6 +67,8 @@ The time complexity is $O(n)$, and the space complexity is $O(C)$. Here, $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def longestPalindrome(self, s: str) -> int:
@@ -69,6 +79,8 @@ class Solution:
             ans += (ans & 1 ^ 1) and (v & 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -88,6 +100,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -109,6 +123,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func longestPalindrome(s string) (ans int) {
 	cnt := [128]int{}
@@ -125,6 +141,8 @@ func longestPalindrome(s string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function longestPalindrome(s: string): number {
     let n = s.length;
@@ -140,6 +158,8 @@ function longestPalindrome(s: string): number {
     return ans < s.length ? ans + 1 : ans;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -166,9 +186,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 function longestPalindrome(s: string): number {
@@ -191,4 +217,6 @@ function longestPalindrome(s: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

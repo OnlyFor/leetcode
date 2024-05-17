@@ -11,11 +11,15 @@ tags:
     - Backtracking
 ---
 
+<!-- problem:start -->
+
 # [2767. Partition String Into Minimum Beautiful Substrings](https://leetcode.com/problems/partition-string-into-minimum-beautiful-substrings)
 
 [中文文档](/solution/2700-2799/2767.Partition%20String%20Into%20Minimum%20Beautiful%20Substrings/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a binary string <code>s</code>, partition the string into one or more <strong>substrings</strong> such that each substring is <strong>beautiful</strong>.</p>
 
@@ -68,7 +72,11 @@ It can be shown that 3 is the minimum number of beautiful substrings that s can 
 	<li><code>s[i]</code> is either <code>&#39;0&#39;</code> or <code>&#39;1&#39;</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Memoization Search
 
@@ -89,6 +97,8 @@ In the main function, we first preprocess all the powers of $5$, and then call $
 Time complexity $O(n^2)$, space complexity $O(n)$. Where $n$ is the length of string $s$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -116,6 +126,8 @@ class Solution:
         ans = dfs(0)
         return -1 if ans == inf else ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -160,6 +172,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -198,6 +212,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimumBeautifulSubstrings(s string) int {
@@ -239,6 +255,8 @@ func minimumBeautifulSubstrings(s string) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumBeautifulSubstrings(s: string): number {
     const ss: Set<number> = new Set();
@@ -274,4 +292,6 @@ function minimumBeautifulSubstrings(s: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

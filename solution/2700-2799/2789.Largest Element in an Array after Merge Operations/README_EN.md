@@ -9,11 +9,15 @@ tags:
     - Array
 ---
 
+<!-- problem:start -->
+
 # [2789. Largest Element in an Array after Merge Operations](https://leetcode.com/problems/largest-element-in-an-array-after-merge-operations)
 
 [中文文档](/solution/2700-2799/2789.Largest%20Element%20in%20an%20Array%20after%20Merge%20Operations/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> array <code>nums</code> consisting of positive integers.</p>
 
@@ -57,7 +61,11 @@ There is only one element in the final array, which is 11.
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Merge in Reverse Order
 
@@ -71,6 +79,8 @@ The time complexity is $O(n)$, where $n$ is the length of the array. The space c
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maxArrayValue(self, nums: List[int]) -> int:
@@ -79,6 +89,8 @@ class Solution:
                 nums[i] += nums[i + 1]
         return max(nums)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -97,6 +109,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -117,6 +131,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxArrayValue(nums []int) int64 {
 	n := len(nums)
@@ -133,6 +149,8 @@ func maxArrayValue(nums []int) int64 {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maxArrayValue(nums: number[]): number {
     for (let i = nums.length - 2; i >= 0; --i) {
@@ -146,4 +164,6 @@ function maxArrayValue(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

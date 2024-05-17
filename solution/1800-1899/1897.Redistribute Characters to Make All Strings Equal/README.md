@@ -10,13 +10,15 @@ tags:
     - 计数
 ---
 
+<!-- problem:start -->
+
 # [1897. 重新分配字符使所有字符串都相等](https://leetcode.cn/problems/redistribute-characters-to-make-all-strings-equal)
 
 [English Version](/solution/1800-1899/1897.Redistribute%20Characters%20to%20Make%20All%20Strings%20Equal/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串数组 <code>words</code>（下标 <strong>从 0 开始</strong> 计数）。</p>
 
@@ -52,11 +54,17 @@ tags:
 	<li><code>words[i]</code> 由小写英文字母组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -68,6 +76,8 @@ class Solution:
         n = len(words)
         return all(count % n == 0 for count in counter.values())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -89,6 +99,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -108,6 +120,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func makeEqual(words []string) bool {
 	counter := [26]int{}
@@ -125,6 +139,8 @@ func makeEqual(words []string) bool {
 	return true
 }
 ```
+
+#### TypeScript
 
 ```ts
 function makeEqual(words: string[]): boolean {
@@ -147,4 +163,6 @@ function makeEqual(words: string[]): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

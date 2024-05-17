@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [2103. 环和杆](https://leetcode.cn/problems/rings-and-rods)
 
 [English Version](/solution/2100-2199/2103.Rings%20and%20Rods/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>总计有 <code>n</code> 个环，环的颜色可以是红、绿、蓝中的一种。这些环分别穿在 10 根编号为 <code>0</code> 到 <code>9</code> 的杆上。</p>
 
@@ -75,7 +77,11 @@ tags:
 	<li>如 <code>i</code> 是 <strong>奇数</strong> ，则&nbsp;<code>rings[i]</code> 的值可以取 <code>'0'</code> 到 <code>'9'</code> 中的一个数字（下标从 <strong>0</strong> 开始计数）</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：位运算
 
@@ -89,6 +95,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def countPoints(self, rings: str) -> int:
@@ -100,6 +108,8 @@ class Solution:
             mask[j] |= d[c]
         return mask.count(7)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -125,6 +135,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -140,6 +152,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countPoints(rings string) (ans int) {
@@ -159,6 +173,8 @@ func countPoints(rings string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function countPoints(rings: string): number {
     const idx = (c: string) => c.charCodeAt(0) - 'A'.charCodeAt(0);
@@ -175,6 +191,8 @@ function countPoints(rings: string): number {
     return mask.filter(x => x === 7).length;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -201,6 +219,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 int countPoints(char* rings) {
@@ -232,9 +252,15 @@ int countPoints(char* rings) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 function countPoints(rings: string): number {
@@ -248,4 +274,6 @@ function countPoints(rings: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

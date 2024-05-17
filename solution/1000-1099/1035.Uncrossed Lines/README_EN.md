@@ -9,11 +9,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [1035. Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines)
 
 [中文文档](/solution/1000-1099/1035.Uncrossed%20Lines/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two integer arrays <code>nums1</code> and <code>nums2</code>. We write the integers of <code>nums1</code> and <code>nums2</code> (in the order they are given) on two separate horizontal lines.</p>
 
@@ -60,11 +64,17 @@ We cannot draw 3 uncrossed lines, because the line from nums1[1] = 4 to nums2[2]
 	<li><code>1 &lt;= nums1[i], nums2[j] &lt;= 2000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -79,6 +89,8 @@ class Solution:
                     dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
         return dp[m][n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -100,6 +112,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -119,6 +133,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxUncrossedLines(nums1 []int, nums2 []int) int {
@@ -140,6 +156,8 @@ func maxUncrossedLines(nums1 []int, nums2 []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maxUncrossedLines(nums1: number[], nums2: number[]): number {
     const m = nums1.length;
@@ -159,4 +177,6 @@ function maxUncrossedLines(nums1: number[], nums2: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

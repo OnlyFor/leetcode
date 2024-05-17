@@ -8,13 +8,15 @@ tags:
     - 数组
 ---
 
+<!-- problem:start -->
+
 # [1431. 拥有最多糖果的孩子](https://leetcode.cn/problems/kids-with-the-greatest-number-of-candies)
 
 [English Version](/solution/1400-1499/1431.Kids%20With%20the%20Greatest%20Number%20of%20Candies/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个数组&nbsp;<code>candies</code>&nbsp;和一个整数&nbsp;<code>extraCandies</code>&nbsp;，其中&nbsp;<code>candies[i]</code>&nbsp;代表第 <code>i</code> 个孩子拥有的糖果数目。</p>
 
@@ -57,11 +59,17 @@ tags:
 	<li><code>1 &lt;= extraCandies &lt;= 50</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -69,6 +77,8 @@ class Solution:
         mx = max(candies)
         return [candy + extraCandies >= mx for candy in candies]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -86,6 +96,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -100,6 +112,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func kidsWithCandies(candies []int, extraCandies int) (ans []bool) {
 	mx := slices.Max(candies)
@@ -110,12 +124,16 @@ func kidsWithCandies(candies []int, extraCandies int) (ans []bool) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function kidsWithCandies(candies: number[], extraCandies: number): boolean[] {
     const max = candies.reduce((r, v) => Math.max(r, v));
     return candies.map(v => v + extraCandies >= max);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -128,6 +146,8 @@ impl Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -146,6 +166,8 @@ class Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 #define max(a, b) (((a) > (b)) ? (a) : (b))
@@ -168,4 +190,6 @@ bool* kidsWithCandies(int* candies, int candiesSize, int extraCandies, int* retu
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

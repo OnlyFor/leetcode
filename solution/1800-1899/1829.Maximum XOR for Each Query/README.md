@@ -10,13 +10,15 @@ tags:
     - 前缀和
 ---
 
+<!-- problem:start -->
+
 # [1829. 每个查询的最大异或值](https://leetcode.cn/problems/maximum-xor-for-each-query)
 
 [English Version](/solution/1800-1899/1829.Maximum%20XOR%20for%20Each%20Query/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个 <strong>有序</strong> 数组 <code>nums</code> ，它由 <code>n</code> 个非负整数组成，同时给你一个整数 <code>maximumBit</code> 。你需要执行以下查询 <code>n</code> 次：</p>
 
@@ -72,7 +74,11 @@ tags:
 	<li><code>nums</code>​​​ 中的数字已经按 <strong>升序</strong> 排好序。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：位运算 + 枚举
 
@@ -85,6 +91,8 @@ tags:
 时间复杂度 $O(n \times m)$，其中 $n$ 和 $m$ 分别是数组 `nums` 和 `maximumBit` 的值。忽略答案数组的空间消耗，空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -100,6 +108,8 @@ class Solution:
             xs ^= x
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -125,6 +135,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -152,6 +164,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func getMaximumXor(nums []int, maximumBit int) (ans []int) {
 	xs := 0
@@ -172,6 +186,8 @@ func getMaximumXor(nums []int, maximumBit int) (ans []int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function getMaximumXor(nums: number[], maximumBit: number): number[] {
@@ -195,6 +211,8 @@ function getMaximumXor(nums: number[], maximumBit: number): number[] {
     return ans;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -223,6 +241,8 @@ var getMaximumXor = function (nums, maximumBit) {
     return ans;
 };
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -251,6 +271,10 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：枚举优化
 
 与方法一类似，我们先预处理出数组 `nums` 的异或和 $xs$，即 $xs=nums[0] \oplus nums[1] \oplus \cdots \oplus nums[n-1]$。
@@ -260,6 +284,8 @@ public class Solution {
 时间复杂度 $O(n)$，其中 $n$ 是数组 `nums` 的长度。忽略答案数组的空间消耗，空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -273,6 +299,8 @@ class Solution:
             xs ^= x
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -294,6 +322,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -317,6 +347,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func getMaximumXor(nums []int, maximumBit int) (ans []int) {
 	xs := 0
@@ -333,6 +365,8 @@ func getMaximumXor(nums []int, maximumBit int) (ans []int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function getMaximumXor(nums: number[], maximumBit: number): number[] {
@@ -352,6 +386,8 @@ function getMaximumXor(nums: number[], maximumBit: number): number[] {
     return ans;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -377,6 +413,8 @@ var getMaximumXor = function (nums, maximumBit) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int[] GetMaximumXor(int[] nums, int maximumBit) {
@@ -400,4 +438,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

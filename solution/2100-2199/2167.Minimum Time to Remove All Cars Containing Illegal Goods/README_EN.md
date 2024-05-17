@@ -9,11 +9,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [2167. Minimum Time to Remove All Cars Containing Illegal Goods](https://leetcode.com/problems/minimum-time-to-remove-all-cars-containing-illegal-goods)
 
 [中文文档](/solution/2100-2199/2167.Minimum%20Time%20to%20Remove%20All%20Cars%20Containing%20Illegal%20Goods/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> binary string <code>s</code> which represents a sequence of train cars. <code>s[i] = &#39;0&#39;</code> denotes that the <code>i<sup>th</sup></code> car does <strong>not</strong> contain illegal goods and <code>s[i] = &#39;1&#39;</code> denotes that the <code>i<sup>th</sup></code> car does contain illegal goods.</p>
 
@@ -80,11 +84,17 @@ There are no other ways to remove them with less time.</pre>
 	<li><code>s[i]</code> is either <code>&#39;0&#39;</code> or <code>&#39;1&#39;</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -98,6 +108,8 @@ class Solution:
             suf[i] = suf[i + 1] if s[i] == '0' else min(suf[i + 1] + 2, n - i)
         return min(a + b for a, b in zip(pre[1:], suf[1:]))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -120,6 +132,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -135,6 +149,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimumTime(s string) int {
@@ -163,4 +179,6 @@ func minimumTime(s string) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

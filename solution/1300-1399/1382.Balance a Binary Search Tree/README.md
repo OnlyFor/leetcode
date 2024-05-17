@@ -13,13 +13,15 @@ tags:
     - 二叉树
 ---
 
+<!-- problem:start -->
+
 # [1382. 将二叉搜索树变平衡](https://leetcode.cn/problems/balance-a-binary-search-tree)
 
 [English Version](/solution/1300-1399/1382.Balance%20a%20Binary%20Search%20Tree/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一棵二叉搜索树，请你返回一棵&nbsp;<strong>平衡后</strong>&nbsp;的二叉搜索树，新生成的树应该与原来的树有着相同的节点值。如果有多种构造方法，请你返回任意一种。</p>
 
@@ -55,7 +57,11 @@ tags:
 	<li><code>1 &lt;= Node.val &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：中序遍历 + 构造平衡二叉树
 
@@ -69,6 +75,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 是二叉搜索树的节点数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -98,6 +106,8 @@ class Solution:
         dfs(root)
         return build(0, len(nums) - 1)
 ```
+
+#### Java
 
 ```java
 /**
@@ -144,6 +154,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -187,6 +199,8 @@ private:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -221,6 +235,8 @@ func balanceBST(root *TreeNode) *TreeNode {
 	return build(0, len(ans)-1)
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -263,4 +279,6 @@ function balanceBST(root: TreeNode | null): TreeNode | null {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

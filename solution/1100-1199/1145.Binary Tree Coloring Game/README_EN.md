@@ -10,11 +10,15 @@ tags:
     - Binary Tree
 ---
 
+<!-- problem:start -->
+
 # [1145. Binary Tree Coloring Game](https://leetcode.com/problems/binary-tree-coloring-game)
 
 [中文文档](/solution/1100-1199/1145.Binary%20Tree%20Coloring%20Game/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Two players play a turn based game on a binary tree. We are given the <code>root</code> of this binary tree, and the number of nodes <code>n</code> in the tree. <code>n</code> is odd, and each node has a distinct value from <code>1</code> to <code>n</code>.</p>
 
@@ -53,7 +57,11 @@ tags:
 	<li>All the values of the tree are <strong>unique</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: DFS
 
@@ -64,6 +72,8 @@ Next, we count the number of nodes in the left and right subtrees of $node$, den
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Here, $n$ is the total number of nodes.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -88,6 +98,8 @@ class Solution:
         l, r = count(node.left), count(node.right)
         return max(l, r, n - l - r - 1) > n // 2
 ```
+
+#### Java
 
 ```java
 /**
@@ -130,6 +142,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -167,6 +181,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -202,6 +218,8 @@ func btreeGameWinningMove(root *TreeNode, n int, x int) bool {
 	return max(max(l, r), n-l-r-1) > n/2
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -239,6 +257,8 @@ function btreeGameWinningMove(root: TreeNode | null, n: number, x: number): bool
     return Math.max(l, r, n - l - r - 1) > n / 2;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -279,4 +299,6 @@ var btreeGameWinningMove = function (root, n, x) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

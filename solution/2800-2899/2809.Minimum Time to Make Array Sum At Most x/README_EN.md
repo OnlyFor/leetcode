@@ -10,11 +10,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [2809. Minimum Time to Make Array Sum At Most x](https://leetcode.com/problems/minimum-time-to-make-array-sum-at-most-x)
 
 [中文文档](/solution/2800-2899/2809.Minimum%20Time%20to%20Make%20Array%20Sum%20At%20Most%20x/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two <strong>0-indexed</strong> integer arrays <code>nums1</code> and <code>nums2</code> of equal length. Every second, for all indices <code>0 &lt;= i &lt; nums1.length</code>, value of <code>nums1[i]</code> is incremented by <code>nums2[i]</code>. <strong>After</strong> this is done, you can do the following operation:</p>
 
@@ -59,7 +63,11 @@ Now sum of nums1 = 4. It can be shown that these operations are optimal, so we r
 	<li><code>0 &lt;= x &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sorting + Dynamic Programming
 
@@ -90,6 +98,8 @@ The time complexity is $O(n^2)$, and the space complexity is $O(n^2)$, where $n$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minimumTime(self, nums1: List[int], nums2: List[int], x: int) -> int:
@@ -107,6 +117,8 @@ class Solution:
                 return j
         return -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -145,6 +157,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -177,6 +191,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimumTime(nums1 []int, nums2 []int, x int) int {
@@ -211,6 +227,8 @@ func minimumTime(nums1 []int, nums2 []int, x int) int {
 	return -1
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minimumTime(nums1: number[], nums2: number[], x: number): number {
@@ -249,6 +267,8 @@ We notice that the state $f[i][j]$ is only related to $f[i-1][j]$ and $f[i-1][j-
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minimumTime(self, nums1: List[int], nums2: List[int], x: int) -> int:
@@ -264,6 +284,8 @@ class Solution:
                 return j
         return -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -299,6 +321,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -328,6 +352,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumTime(nums1 []int, nums2 []int, x int) int {
 	n := len(nums1)
@@ -356,6 +382,8 @@ func minimumTime(nums1 []int, nums2 []int, x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumTime(nums1: number[], nums2: number[], x: number): number {
     const n = nums1.length;
@@ -383,4 +411,6 @@ function minimumTime(nums1: number[], nums2: number[], x: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

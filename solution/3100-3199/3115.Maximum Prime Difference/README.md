@@ -10,13 +10,15 @@ tags:
     - 数论
 ---
 
+<!-- problem:start -->
+
 # [3115. 质数的最大距离](https://leetcode.cn/problems/maximum-prime-difference)
 
 [English Version](/solution/3100-3199/3115.Maximum%20Prime%20Difference/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>nums</code>。</p>
 
@@ -54,7 +56,11 @@ tags:
 	<li>输入保证 <code>nums</code> 中至少有一个质数。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：遍历
 
@@ -65,6 +71,8 @@ tags:
 时间复杂度 $O(n \times \sqrt{M})$，其中 $n$ 和 $M$ 分别是数组 $nums$ 的长度和数组中的最大值。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -80,6 +88,8 @@ class Solution:
                     if is_prime(nums[j]):
                         return j - i
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -108,6 +118,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -138,6 +150,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximumPrimeDifference(nums []int) int {
 	for i := 0; ; i++ {
@@ -163,6 +177,8 @@ func isPrime(n int) bool {
 	return true
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maximumPrimeDifference(nums: number[]): number {
@@ -191,4 +207,6 @@ function maximumPrimeDifference(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

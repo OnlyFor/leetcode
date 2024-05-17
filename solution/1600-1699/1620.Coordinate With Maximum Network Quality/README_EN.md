@@ -9,11 +9,15 @@ tags:
     - Enumeration
 ---
 
+<!-- problem:start -->
+
 # [1620. Coordinate With Maximum Network Quality](https://leetcode.com/problems/coordinate-with-maximum-network-quality)
 
 [中文文档](/solution/1600-1699/1620.Coordinate%20With%20Maximum%20Network%20Quality/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array of network towers <code>towers</code>, where <code>towers[i] = [x<sub>i</sub>, y<sub>i</sub>, q<sub>i</sub>]</code> denotes the <code>i<sup>th</sup></code> network tower with location <code>(x<sub>i</sub>, y<sub>i</sub>)</code> and quality factor <code>q<sub>i</sub></code>. All the coordinates are <strong>integral coordinates</strong> on the X-Y plane, and the distance between the two coordinates is the <strong>Euclidean distance</strong>.</p>
 
@@ -75,11 +79,17 @@ No other coordinate has a higher network quality.</pre>
 	<li><code>1 &lt;= radius &lt;= 50</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -98,6 +108,8 @@ class Solution:
                     ans = [i, j]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -123,6 +135,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -150,6 +164,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func bestCoordinate(towers [][]int, radius int) []int {
 	ans := []int{0, 0}
@@ -175,4 +191,6 @@ func bestCoordinate(towers [][]int, radius int) []int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

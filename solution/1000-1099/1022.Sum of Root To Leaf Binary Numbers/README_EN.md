@@ -10,11 +10,15 @@ tags:
     - Binary Tree
 ---
 
+<!-- problem:start -->
+
 # [1022. Sum of Root To Leaf Binary Numbers](https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers)
 
 [中文文档](/solution/1000-1099/1022.Sum%20of%20Root%20To%20Leaf%20Binary%20Numbers/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given the <code>root</code> of a binary tree where each node has a value <code>0</code> or <code>1</code>. Each root-to-leaf path represents a binary number starting with the most significant bit.</p>
 
@@ -50,7 +54,11 @@ tags:
 	<li><code>Node.val</code> is <code>0</code> or <code>1</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Recursion
 
@@ -64,6 +72,8 @@ The logic of the recursive function is as follows:
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Where $n$ is the number of nodes in the binary tree. Each node is visited once; the recursion stack requires $O(n)$ space.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -84,6 +94,8 @@ class Solution:
 
         return dfs(root, 0)
 ```
+
+#### Java
 
 ```java
 /**
@@ -119,6 +131,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -146,6 +160,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -171,6 +187,8 @@ func sumRootToLeaf(root *TreeNode) int {
 	return dfs(root, 0)
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -202,6 +220,8 @@ function sumRootToLeaf(root: TreeNode | null): number {
     return dfs(root, 0);
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -245,4 +265,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

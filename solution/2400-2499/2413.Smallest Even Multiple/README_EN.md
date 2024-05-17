@@ -9,11 +9,15 @@ tags:
     - Number Theory
 ---
 
+<!-- problem:start -->
+
 # [2413. Smallest Even Multiple](https://leetcode.com/problems/smallest-even-multiple)
 
 [中文文档](/solution/2400-2499/2413.Smallest%20Even%20Multiple/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 Given a <strong>positive</strong> integer <code>n</code>, return <em>the smallest positive integer that is a multiple of <strong>both</strong> </em><code>2</code><em> and </em><code>n</code>.
 
@@ -41,7 +45,11 @@ Given a <strong>positive</strong> integer <code>n</code>, return <em>the smalles
 	<li><code>1 &lt;= n &lt;= 150</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Mathematics
 
@@ -51,11 +59,15 @@ The time complexity is $O(1)$.
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def smallestEvenMultiple(self, n: int) -> int:
         return n if n % 2 == 0 else n * 2
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -64,6 +76,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -74,6 +88,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func smallestEvenMultiple(n int) int {
 	if n%2 == 0 {
@@ -83,11 +99,15 @@ func smallestEvenMultiple(n int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function smallestEvenMultiple(n: number): number {
     return n % 2 === 0 ? n : n * 2;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -100,6 +120,8 @@ impl Solution {
 }
 ```
 
+#### C
+
 ```c
 int smallestEvenMultiple(int n) {
     return n % 2 == 0 ? n : n * 2;
@@ -108,4 +130,6 @@ int smallestEvenMultiple(int n) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -12,11 +12,15 @@ tags:
     - Heap (Priority Queue)
 ---
 
+<!-- problem:start -->
+
 # [1337. The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix)
 
 [中文文档](/solution/1300-1399/1337.The%20K%20Weakest%20Rows%20in%20a%20Matrix/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an <code>m x n</code> binary matrix <code>mat</code> of <code>1</code>&#39;s (representing soldiers) and <code>0</code>&#39;s (representing civilians). The soldiers are positioned <strong>in front</strong> of the civilians. That is, all the <code>1</code>&#39;s will appear to the <strong>left</strong> of all the <code>0</code>&#39;s in each row.</p>
 
@@ -81,11 +85,17 @@ The rows ordered from weakest to strongest are [0,2,3,1].
 	<li><code>matrix[i][j]</code> is either 0 or 1.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -96,6 +106,8 @@ class Solution:
         idx.sort(key=lambda i: ans[i])
         return idx[:k]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -126,6 +138,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -159,6 +173,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func kWeakestRows(mat [][]int, k int) []int {
 	m, n := len(mat), len(mat[0])
@@ -184,6 +200,8 @@ func kWeakestRows(mat [][]int, k int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function kWeakestRows(mat: number[][], k: number): number[] {
     let n = mat.length;
@@ -207,4 +225,6 @@ function kWeakestRows(mat: number[][], k: number): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

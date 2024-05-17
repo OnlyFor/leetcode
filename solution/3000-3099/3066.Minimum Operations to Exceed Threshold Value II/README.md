@@ -10,13 +10,15 @@ tags:
     - 堆（优先队列）
 ---
 
+<!-- problem:start -->
+
 # [3066. 超过阈值的最少操作数 II](https://leetcode.cn/problems/minimum-operations-to-exceed-threshold-value-ii)
 
 [English Version](/solution/3000-3099/3066.Minimum%20Operations%20to%20Exceed%20Threshold%20Value%20II/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>nums</code>&nbsp;和一个整数&nbsp;<code>k</code>&nbsp;。</p>
 
@@ -68,7 +70,11 @@ tags:
 	<li>输入保证答案一定存在，也就是说一定存在一个操作序列使数组中所有元素都大于等于&nbsp;<code>k</code> 。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：优先队列（小根堆）
 
@@ -79,6 +85,8 @@ tags:
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(n)$。其中 $n$ 为数组长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -91,6 +99,8 @@ class Solution:
             ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -108,6 +118,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -130,6 +142,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minOperations(nums []int, k int) (ans int) {
@@ -157,6 +171,8 @@ func (h *hp) Push(x interface{}) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minOperations(nums: number[], k: number): number {
     const pq = new MinPriorityQueue();
@@ -175,4 +191,6 @@ function minOperations(nums: number[], k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

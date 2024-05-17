@@ -10,13 +10,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1598. 文件夹操作日志搜集器](https://leetcode.cn/problems/crawler-log-folder)
 
 [English Version](/solution/1500-1599/1598.Crawler%20Log%20Folder/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>每当用户执行变更文件夹操作时，LeetCode 文件系统都会保存一条日志记录。</p>
 
@@ -71,7 +73,11 @@ tags:
 	<li>文件夹名称由小写英文字母和数字组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -80,6 +86,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为 `logs` 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -92,6 +100,8 @@ class Solution:
                 ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -108,6 +118,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -126,6 +138,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minOperations(logs []string) int {
 	ans := 0
@@ -142,6 +156,8 @@ func minOperations(logs []string) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minOperations(logs: string[]): number {
     let depth = 0;
@@ -155,6 +171,8 @@ function minOperations(logs: string[]): number {
     return depth;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -171,6 +189,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 #define max(a, b) (((a) > (b)) ? (a) : (b))
@@ -191,4 +211,6 @@ int minOperations(char** logs, int logsSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

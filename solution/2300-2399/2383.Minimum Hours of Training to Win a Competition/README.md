@@ -9,13 +9,15 @@ tags:
     - 数组
 ---
 
+<!-- problem:start -->
+
 # [2383. 赢得比赛需要的最少训练时长](https://leetcode.cn/problems/minimum-hours-of-training-to-win-a-competition)
 
 [English Version](/solution/2300-2399/2383.Minimum%20Hours%20of%20Training%20to%20Win%20a%20Competition/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你正在参加一场比赛，给你两个 <strong>正</strong> 整数 <code>initialEnergy</code> 和 <code>initialExperience</code> 分别表示你的初始精力和初始经验。</p>
 
@@ -66,7 +68,11 @@ tags:
 	<li><code>1 &lt;= initialEnergy, initialExperience, energy[i], experience[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心 + 模拟
 
@@ -77,6 +83,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 是对手的数量。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -99,6 +107,8 @@ class Solution:
             initialExperience += b
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -123,6 +133,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -146,6 +158,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minNumberOfHours(initialEnergy int, initialExperience int, energy []int, experience []int) int {
 	ans := 0
@@ -165,6 +179,8 @@ func minNumberOfHours(initialEnergy int, initialExperience int, energy []int, ex
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minNumberOfHours(
@@ -195,6 +211,8 @@ function minNumberOfHours(
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn min_number_of_hours(
@@ -222,6 +240,8 @@ impl Solution {
 }
 ```
 
+#### C
+
 ```c
 int minNumberOfHours(int initialEnergy, int initialExperience, int* energy, int energySize, int* experience, int experienceSize) {
     int res = 0;
@@ -243,6 +263,10 @@ int minNumberOfHours(int initialEnergy, int initialExperience, int* energy, int 
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：贪心
 
 我们可以先在初始时，把精力直接补充到足够击败这 $n$ 个对手，因此初始训练小时数为 $ans = \max(0, (\sum_{i=0}^{n-1} energy[i]) - initialEnergy + 1)$。
@@ -254,6 +278,8 @@ int minNumberOfHours(int initialEnergy, int initialExperience, int* energy, int 
 时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 是对手的数量。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -272,6 +298,8 @@ class Solution:
             initialExperience += x
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -294,6 +322,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -311,6 +341,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minNumberOfHours(initialEnergy int, initialExperience int, energy []int, experience []int) (ans int) {
@@ -331,6 +363,8 @@ func minNumberOfHours(initialEnergy int, initialExperience int, energy []int, ex
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minNumberOfHours(
@@ -360,9 +394,15 @@ function minNumberOfHours(
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法三
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 function minNumberOfHours(
@@ -386,4 +426,6 @@ function minNumberOfHours(
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

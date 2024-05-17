@@ -10,11 +10,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [2384. Largest Palindromic Number](https://leetcode.com/problems/largest-palindromic-number)
 
 [中文文档](/solution/2300-2399/2384.Largest%20Palindromic%20Number/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>num</code> consisting of digits only.</p>
 
@@ -56,11 +60,17 @@ Note that the integer returned should not contain leading zeroes.
 	<li><code>num</code> consists of digits.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -81,6 +91,8 @@ class Solution:
                 ans = s + ans + s
         return ans.strip('0') or '0'
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -113,6 +125,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -148,6 +162,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func largestPalindromic(num string) string {
 	cnt := make([]int, 10)
@@ -176,6 +192,8 @@ func largestPalindromic(num string) string {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function largestPalindromic(num: string): string {
@@ -223,4 +241,6 @@ function largestPalindromic(num: string): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,13 +10,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [1471. 数组中的 k 个最强值](https://leetcode.cn/problems/the-k-strongest-values-in-an-array)
 
 [English Version](/solution/1400-1499/1471.The%20k%20Strongest%20Values%20in%20an%20Array/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>arr</code> 和一个整数 <code>k</code> 。</p>
 
@@ -82,13 +84,19 @@ tags:
 	<li><code>1 &lt;= k &lt;= arr.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：自定义排序
 
 时间复杂度 $O(2nlogn)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -98,6 +106,8 @@ class Solution:
         arr.sort(key=lambda x: (-abs(x - m), -x))
         return arr[:k]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -122,6 +132,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -137,6 +149,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func getStrongest(arr []int, k int) []int {
@@ -162,4 +176,6 @@ func abs(x int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

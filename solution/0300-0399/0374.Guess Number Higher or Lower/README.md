@@ -7,13 +7,15 @@ tags:
     - 交互
 ---
 
+<!-- problem:start -->
+
 # [374. 猜数字大小](https://leetcode.cn/problems/guess-number-higher-or-lower)
 
 [English Version](/solution/0300-0399/0374.Guess%20Number%20Higher%20or%20Lower/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>猜数字游戏的规则如下：</p>
 
@@ -71,7 +73,11 @@ tags:
 	<li><code>1 <= pick <= n</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：二分查找
 
@@ -80,6 +86,8 @@ tags:
 时间复杂度 $O(\log n)$。其中 $n$ 为题目给定的上限。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # The guess API is already defined for you.
@@ -99,6 +107,8 @@ class Solution:
                 left = mid + 1
         return left
 ```
+
+#### Java
 
 ```java
 /**
@@ -125,6 +135,8 @@ public class Solution extends GuessGame {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 /**
@@ -153,6 +165,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Forward declaration of guess API.
@@ -176,6 +190,8 @@ func guessNumber(n int) int {
 	return left
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -202,7 +218,10 @@ function guessNumber(n: number): number {
 }
 ```
 
+#### Rust
+
 ```rust
+
 /**
  * Forward declaration of guess API.
  * @param  num   your guess
@@ -234,6 +253,8 @@ impl Solution {
 }
 ```
 
+#### C#
+
 ```cs
 /**
  * Forward declaration of guess API.
@@ -262,9 +283,15 @@ public class Solution : GuessGame {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # The guess API is already defined for you.
@@ -279,6 +306,8 @@ class Solution:
     def guessNumber(self, n: int) -> int:
         return bisect.bisect(range(1, n + 1), 0, key=lambda x: -guess(x))
 ```
+
+#### Go
 
 ```go
 /**
@@ -300,4 +329,6 @@ func guessNumber(n int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

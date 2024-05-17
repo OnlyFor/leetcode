@@ -8,13 +8,15 @@ tags:
     - 前缀和
 ---
 
+<!-- problem:start -->
+
 # [560. 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k)
 
 [English Version](/solution/0500-0599/0560.Subarray%20Sum%20Equals%20K/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>nums</code> 和一个整数&nbsp;<code>k</code> ，请你统计并返回 <em>该数组中和为&nbsp;<code>k</code><strong>&nbsp;</strong>的子数组的个数&nbsp;</em>。</p>
 
@@ -46,11 +48,17 @@ tags:
 	<li><code>-10<sup>7</sup> &lt;= k &lt;= 10<sup>7</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -63,6 +71,8 @@ class Solution:
             counter[s] += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -79,6 +89,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -97,6 +109,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func subarraySum(nums []int, k int) int {
 	counter := map[int]int{0: 1}
@@ -109,6 +123,8 @@ func subarraySum(nums []int, k int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function subarraySum(nums: number[], k: number): number {
@@ -124,6 +140,8 @@ function subarraySum(nums: number[], k: number): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -149,9 +167,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -174,4 +198,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

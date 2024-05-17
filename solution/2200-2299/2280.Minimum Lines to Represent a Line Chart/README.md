@@ -12,13 +12,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [2280. 表示一个折线图的最少线段数](https://leetcode.cn/problems/minimum-lines-to-represent-a-line-chart)
 
 [English Version](/solution/2200-2299/2280.Minimum%20Lines%20to%20Represent%20a%20Line%20Chart/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个二维整数数组&nbsp;<code>stockPrices</code> ，其中&nbsp;<code>stockPrices[i] = [day<sub>i</sub>, price<sub>i</sub>]</code>&nbsp;表示股票在&nbsp;<code>day<sub>i</sub></code>&nbsp;的价格为&nbsp;<code>price<sub>i</sub></code>&nbsp;。<strong>折线图</strong>&nbsp;是一个二维平面上的若干个点组成的图，横坐标表示日期，纵坐标表示价格，折线图由相邻的点连接而成。比方说下图是一个例子：</p>
 <img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/2200-2299/2280.Minimum%20Lines%20to%20Represent%20a%20Line%20Chart/images/1920px-pushkin_population_historysvg.png" style="width: 500px; height: 313px;">
@@ -62,7 +64,11 @@ tags:
 	<li>所有&nbsp;<code>day<sub>i</sub></code>&nbsp;<strong>互不相同</strong>&nbsp;。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：斜率比较
 
@@ -72,6 +78,8 @@ tags:
 1. 利用除法计算斜率时，会有浮点误差，可以改成乘法比较。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -86,6 +94,8 @@ class Solution:
             dx, dy = dx1, dy1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -108,6 +118,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -128,6 +140,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumLines(stockPrices [][]int) int {
 	ans := 0
@@ -144,6 +158,8 @@ func minimumLines(stockPrices [][]int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minimumLines(stockPrices: number[][]): number {
@@ -165,4 +181,6 @@ function minimumLines(stockPrices: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

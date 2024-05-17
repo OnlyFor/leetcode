@@ -10,11 +10,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [1310. XOR Queries of a Subarray](https://leetcode.com/problems/xor-queries-of-a-subarray)
 
 [中文文档](/solution/1300-1399/1310.XOR%20Queries%20of%20a%20Subarray/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array <code>arr</code> of positive integers. You are also given the array <code>queries</code> where <code>queries[i] = [left<sub>i, </sub>right<sub>i</sub>]</code>.</p>
 
@@ -58,11 +62,17 @@ The XOR values for queries are:
 	<li><code>0 &lt;= left<sub>i</sub> &lt;= right<sub>i</sub> &lt; arr.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -70,6 +80,8 @@ class Solution:
         s = list(accumulate(arr, xor, initial=0))
         return [s[r + 1] ^ s[l] for l, r in queries]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -89,6 +101,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -110,6 +124,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func xorQueries(arr []int, queries [][]int) (ans []int) {
 	n := len(arr)
@@ -125,6 +141,8 @@ func xorQueries(arr []int, queries [][]int) (ans []int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function xorQueries(arr: number[], queries: number[][]): number[] {
     const n = arr.length;
@@ -139,6 +157,8 @@ function xorQueries(arr: number[], queries: number[][]): number[] {
     return ans;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -162,4 +182,6 @@ var xorQueries = function (arr, queries) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,11 +10,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [2451. Odd String Difference](https://leetcode.com/problems/odd-string-difference)
 
 [中文文档](/solution/2400-2499/2451.Odd%20String%20Difference/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array of equal-length strings <code>words</code>. Assume that the length of each string is <code>n</code>.</p>
 
@@ -59,7 +63,11 @@ The odd array out is [1, 1], so we return the corresponding string, &quot;abc&qu
 	<li><code>words[i]</code> consists of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table Simulation
 
@@ -68,6 +76,8 @@ We use a hash table $d$ to maintain the mapping relationship between the differe
 The time complexity is $O(m \times n)$, and the space complexity is $O(m + n)$. Here, $m$ and $n$ are the length of the string and the number of strings, respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -78,6 +88,8 @@ class Solution:
             d[t].append(s)
         return next(ss[0] for ss in d.values() if len(ss) == 1)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -103,6 +115,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -126,6 +140,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func oddString(words []string) string {
 	d := map[string][]string{}
@@ -146,6 +162,8 @@ func oddString(words []string) string {
 	return ""
 }
 ```
+
+#### TypeScript
 
 ```ts
 function oddString(words: string[]): string {
@@ -169,6 +187,8 @@ function oddString(words: string[]): string {
     return '';
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -197,9 +217,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -238,4 +264,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

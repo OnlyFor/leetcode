@@ -9,11 +9,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [2180. Count Integers With Even Digit Sum](https://leetcode.com/problems/count-integers-with-even-digit-sum)
 
 [中文文档](/solution/2100-2199/2180.Count%20Integers%20With%20Even%20Digit%20Sum/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a positive integer <code>num</code>, return <em>the number of positive integers <strong>less than or equal to</strong></em> <code>num</code> <em>whose digit sums are <strong>even</strong></em>.</p>
 
@@ -46,11 +50,17 @@ The 14 integers less than or equal to 30 whose digit sums are even are
 	<li><code>1 &lt;= num &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -64,6 +74,8 @@ class Solution:
             ans += s % 2 == 0
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -83,6 +95,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -100,6 +114,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countEven(num int) (ans int) {
 	for i := 1; i <= num; i++ {
@@ -114,6 +130,8 @@ func countEven(num int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countEven(num: number): number {
@@ -133,9 +151,15 @@ function countEven(num: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -148,6 +172,8 @@ class Solution:
         ans += (num % 10 + 2 - (s & 1)) >> 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -162,6 +188,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -178,6 +206,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countEven(num int) (ans int) {
 	ans = num/10*5 - 1
@@ -189,6 +219,8 @@ func countEven(num int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countEven(num: number): number {
@@ -204,4 +236,6 @@ function countEven(num: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

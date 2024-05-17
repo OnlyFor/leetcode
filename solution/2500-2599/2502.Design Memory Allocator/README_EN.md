@@ -11,11 +11,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [2502. Design Memory Allocator](https://leetcode.com/problems/design-memory-allocator)
 
 [中文文档](/solution/2500-2599/2502.Design%20Memory%20Allocator/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer <code>n</code> representing the size of a <strong>0-indexed</strong> memory array. All memory units are initially free.</p>
 
@@ -73,11 +77,17 @@ loc.free(7); // Free all memory units with mID 7. The memory array remains the s
 	<li>At most <code>1000</code> calls will be made to <code>allocate</code> and <code>free</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Allocator:
@@ -110,6 +120,8 @@ class Allocator:
 # param_1 = obj.allocate(size,mID)
 # param_2 = obj.free(mID)
 ```
+
+#### Java
 
 ```java
 class Allocator {
@@ -151,6 +163,8 @@ class Allocator {
  * int param_2 = obj.free(mID);
  */
 ```
+
+#### C++
 
 ```cpp
 class Allocator {
@@ -201,6 +215,8 @@ private:
  */
 ```
 
+#### Go
+
 ```go
 type Allocator struct {
 	m []int
@@ -248,9 +264,15 @@ func (this *Allocator) Free(mID int) (ans int) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 from sortedcontainers import SortedList
@@ -284,6 +306,8 @@ class Allocator:
 # param_1 = obj.allocate(size,mID)
 # param_2 = obj.free(mID)
 ```
+
+#### Java
 
 ```java
 class Allocator {
@@ -330,6 +354,8 @@ class Allocator {
  * int param_2 = obj.free(mID);
  */
 ```
+
+#### C++
 
 ```cpp
 class Allocator {
@@ -378,6 +404,8 @@ private:
  * int param_2 = obj->free(mID);
  */
 ```
+
+#### Go
 
 ```go
 type Allocator struct {
@@ -432,4 +460,6 @@ func (this *Allocator) Free(mID int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

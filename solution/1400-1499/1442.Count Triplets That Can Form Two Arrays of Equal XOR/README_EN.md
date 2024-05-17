@@ -12,11 +12,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [1442. Count Triplets That Can Form Two Arrays of Equal XOR](https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor)
 
 [中文文档](/solution/1400-1499/1442.Count%20Triplets%20That%20Can%20Form%20Two%20Arrays%20of%20Equal%20XOR/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array of integers <code>arr</code>.</p>
 
@@ -57,11 +61,17 @@ tags:
 	<li><code>1 &lt;= arr[i] &lt;= 10<sup>8</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -79,6 +89,8 @@ class Solution:
                         ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -105,6 +117,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -125,6 +139,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countTriplets(arr []int) int {
@@ -150,4 +166,6 @@ func countTriplets(arr []int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

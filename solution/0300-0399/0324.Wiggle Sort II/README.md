@@ -9,13 +9,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [324. 摆动排序 II](https://leetcode.cn/problems/wiggle-sort-ii)
 
 [English Version](/solution/0300-0399/0324.Wiggle%20Sort%20II/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>nums</code>，将它重新排列成 <code>nums[0] < nums[1] > nums[2] < nums[3]...</code> 的顺序。</p>
 
@@ -52,11 +54,17 @@ tags:
 
 <p><strong>进阶：</strong>你能用 O(n) 时间复杂度和 / 或原地 O(1) 额外空间来实现吗？</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：排序
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -76,6 +84,8 @@ class Solution:
                 j -= 1
 ```
 
+#### Java
+
 ```java
 class Solution {
     public void wiggleSort(int[] nums) {
@@ -93,6 +103,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -112,6 +124,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func wiggleSort(nums []int) {
 	n := len(nums)
@@ -130,6 +144,8 @@ func wiggleSort(nums []int) {
 	}
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -162,9 +178,15 @@ var wiggleSort = function (nums) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：桶排序
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -188,6 +210,8 @@ class Solution:
             nums[i] = j
             bucket[j] -= 1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -216,6 +240,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -237,6 +263,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func wiggleSort(nums []int) {
@@ -264,4 +292,6 @@ func wiggleSort(nums []int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

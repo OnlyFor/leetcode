@@ -8,13 +8,15 @@ tags:
     - 滑动窗口
 ---
 
+<!-- problem:start -->
+
 # [424. 替换后的最长重复字符](https://leetcode.cn/problems/longest-repeating-character-replacement)
 
 [English Version](/solution/0400-0499/0424.Longest%20Repeating%20Character%20Replacement/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串 <code>s</code> 和一个整数 <code>k</code> 。你可以选择字符串中的任一字符，并将其更改为任何其他大写英文字符。该操作最多可执行 <code>k</code> 次。</p>
 
@@ -51,11 +53,17 @@ tags:
 	<li><code>0 &lt;= k &lt;= s.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -71,6 +79,8 @@ class Solution:
             i += 1
         return i - j
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -92,6 +102,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -111,6 +123,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func characterReplacement(s string, k int) int {
@@ -133,4 +147,6 @@ func characterReplacement(s string, k int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -13,11 +13,15 @@ tags:
     - Counting
 ---
 
+<!-- problem:start -->
+
 # [1857. Largest Color Value in a Directed Graph](https://leetcode.com/problems/largest-color-value-in-a-directed-graph)
 
 [中文文档](/solution/1800-1899/1857.Largest%20Color%20Value%20in%20a%20Directed%20Graph/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There is a <strong>directed graph</strong> of <code>n</code> colored nodes and <code>m</code> edges. The nodes are numbered from <code>0</code> to <code>n - 1</code>.</p>
 
@@ -77,11 +81,17 @@ tags:
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -114,6 +124,8 @@ class Solution:
                     ans = max(ans, dp[j][k])
         return -1 if cnt < n else ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -157,6 +169,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -197,6 +211,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func largestPathValue(colors string, edges [][]int) int {
@@ -251,4 +267,6 @@ func largestPathValue(colors string, edges [][]int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

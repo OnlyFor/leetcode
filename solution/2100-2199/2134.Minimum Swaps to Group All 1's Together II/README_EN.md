@@ -9,11 +9,15 @@ tags:
     - Sliding Window
 ---
 
+<!-- problem:start -->
+
 # [2134. Minimum Swaps to Group All 1's Together II](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii)
 
 [中文文档](/solution/2100-2199/2134.Minimum%20Swaps%20to%20Group%20All%201%27s%20Together%20II/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>A <strong>swap</strong> is defined as taking two <strong>distinct</strong> positions in an array and swapping the values in them.</p>
 
@@ -64,7 +68,11 @@ Thus, the minimum number of swaps required is 0.
 	<li><code>nums[i]</code> is either <code>0</code> or <code>1</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sliding Window
 
@@ -75,6 +83,8 @@ We can solve this problem using a sliding window. First, we count the number of 
 The time complexity is $O(n)$, where $n$ is the length of the array $nums$. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -88,6 +98,8 @@ class Solution:
             mx = max(mx, cnt)
         return k - mx
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -108,6 +120,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -124,6 +138,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minSwaps(nums []int) int {
@@ -145,6 +161,8 @@ func minSwaps(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minSwaps(nums: number[]): number {
     const k = nums.reduce((a, b) => a + b, 0);
@@ -158,6 +176,8 @@ function minSwaps(nums: number[]): number {
     return k - mx;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -180,6 +200,8 @@ impl Solution {
 }
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int MinSwaps(int[] nums) {
@@ -201,4 +223,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -11,13 +11,15 @@ tags:
     - 计数
 ---
 
+<!-- problem:start -->
+
 # [2085. 统计出现过一次的公共字符串](https://leetcode.cn/problems/count-common-words-with-one-occurrence)
 
 [English Version](/solution/2000-2099/2085.Count%20Common%20Words%20With%20One%20Occurrence/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你两个字符串数组&nbsp;<code>words1</code>&nbsp;和&nbsp;<code>words2</code>&nbsp;，请你返回在两个字符串数组中 <strong>都恰好出现一次</strong>&nbsp;的字符串的数目。</p>
 
@@ -62,7 +64,11 @@ tags:
 	<li><code>words1[i]</code> 和&nbsp;<code>words2[j]</code>&nbsp;都只包含小写英文字母。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表计数
 
@@ -72,6 +78,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def countWords(self, words1: List[str], words2: List[str]) -> int:
@@ -79,6 +87,8 @@ class Solution:
         cnt2 = Counter(words2)
         return sum(v == 1 and cnt2[w] == 1 for w, v in cnt1.items())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -102,6 +112,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -123,6 +135,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countWords(words1 []string, words2 []string) (ans int) {
 	cnt1 := map[string]int{}
@@ -141,6 +155,8 @@ func countWords(words1 []string, words2 []string) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countWords(words1: string[], words2: string[]): number {
@@ -164,4 +180,6 @@ function countWords(words1: string[], words2: string[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,13 +9,15 @@ tags:
     - 动态规划
 ---
 
+<!-- problem:start -->
+
 # [1223. 掷骰子模拟](https://leetcode.cn/problems/dice-roll-simulation)
 
 [English Version](/solution/1200-1299/1223.Dice%20Roll%20Simulation/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>有一个骰子模拟器会每次投掷的时候生成一个 1 到 6 的随机数。</p>
 
@@ -56,7 +58,11 @@ tags:
 	<li><code>1 &lt;= rollMax[i] &lt;= 15</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：记忆化搜索
 
@@ -72,6 +78,8 @@ tags:
 时间复杂度 $O(n \times k^2 \times M)$，空间复杂度 $O(n \times k \times M)$。其中 $k$ 为点数的取值范围，而 $M$ 为连续掷出某个点数的最大次数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -90,6 +98,8 @@ class Solution:
 
         return dfs(0, 0, 0)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -123,6 +133,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -153,6 +165,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func dieSimulator(n int, rollMax []int) int {
 	f := make([][7][16]int, n)
@@ -182,6 +196,10 @@ func dieSimulator(n int, rollMax []int) int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：动态规划
 
 我们可以将方法一中的记忆化搜索改为动态规划。
@@ -202,6 +220,8 @@ $$
 时间复杂度 $O(n \times k^2 \times M)$，空间复杂度 $O(n \times k \times M)$。其中 $k$ 为点数的取值范围，而 $M$ 为连续掷出某个点数的最大次数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -224,6 +244,8 @@ class Solution:
                 ans = (ans + f[n][j][x]) % mod
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -256,6 +278,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -291,6 +315,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func dieSimulator(n int, rollMax []int) (ans int) {
 	f := make([][7][16]int, n+1)
@@ -322,4 +348,6 @@ func dieSimulator(n int, rollMax []int) (ans int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,11 +9,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1759. Count Number of Homogenous Substrings](https://leetcode.com/problems/count-number-of-homogenous-substrings)
 
 [中文文档](/solution/1700-1799/1759.Count%20Number%20of%20Homogenous%20Substrings/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a string <code>s</code>, return <em>the number of <strong>homogenous</strong> substrings of </em><code>s</code><em>.</em> Since the answer may be too large, return it <strong>modulo</strong> <code>10<sup>9</sup> + 7</code>.</p>
 
@@ -59,11 +63,17 @@ tags:
 	<li><code>s</code> consists of lowercase letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -81,6 +91,8 @@ class Solution:
             i = j
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -103,6 +115,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -123,6 +137,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countHomogenous(s string) (ans int) {
 	n := len(s)
@@ -140,6 +156,8 @@ func countHomogenous(s string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function countHomogenous(s: string): number {
     const mod = 1e9 + 7;
@@ -154,6 +172,8 @@ function countHomogenous(s: string): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -174,6 +194,8 @@ impl Solution {
 }
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int CountHomogenous(string s) {
@@ -193,6 +215,8 @@ public class Solution {
 }
 ```
 
+#### C
+
 ```c
 int countHomogenous(char* s) {
     int MOD = 1e9 + 7;
@@ -209,9 +233,15 @@ int countHomogenous(char* s) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -223,6 +253,8 @@ class Solution:
             ans = (ans + cnt) % mod
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -240,6 +272,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -256,6 +290,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countHomogenous(s string) int {
@@ -276,4 +312,6 @@ func countHomogenous(s string) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

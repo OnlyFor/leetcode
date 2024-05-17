@@ -10,13 +10,15 @@ tags:
     - 二叉树
 ---
 
+<!-- problem:start -->
+
 # [1080. 根到叶路径上的不足节点](https://leetcode.cn/problems/insufficient-nodes-in-root-to-leaf-paths)
 
 [English Version](/solution/1000-1099/1080.Insufficient%20Nodes%20in%20Root%20to%20Leaf%20Paths/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你二叉树的根节点 <code>root</code> 和一个整数 <code>limit</code> ，请你同时删除树中所有 <strong>不足节点 </strong>，并返回最终二叉树的根节点。</p>
 
@@ -59,7 +61,11 @@ tags:
 
 <p>&nbsp;</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：递归
 
@@ -76,6 +82,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 是二叉树的节点个数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -97,6 +105,8 @@ class Solution:
         root.right = self.sufficientSubset(root.right, limit)
         return None if root.left is None and root.right is None else root
 ```
+
+#### Java
 
 ```java
 /**
@@ -130,6 +140,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -158,6 +170,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 /**
@@ -191,6 +205,8 @@ func sufficientSubset(root *TreeNode, limit int) *TreeNode {
 }
 ```
 
+#### TypeScript
+
 ```ts
 /**
  * Definition for a binary tree node.
@@ -219,6 +235,8 @@ function sufficientSubset(root: TreeNode | null, limit: number): TreeNode | null
     return root.left === null && root.right === null ? null : root;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -250,4 +268,6 @@ var sufficientSubset = function (root, limit) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

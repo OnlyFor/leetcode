@@ -10,13 +10,15 @@ tags:
     - 二叉树
 ---
 
+<!-- problem:start -->
+
 # [1530. 好叶子节点对的数量](https://leetcode.cn/problems/number-of-good-leaf-nodes-pairs)
 
 [English Version](/solution/1500-1599/1530.Number%20of%20Good%20Leaf%20Nodes%20Pairs/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你二叉树的根节点 <code>root</code> 和一个整数 <code>distance</code> 。</p>
 
@@ -75,7 +77,11 @@ tags:
 	<li><code>1 &lt;= distance &lt;= 10</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：递归
 
@@ -86,6 +92,8 @@ tags:
 时间复杂度 $O(n \times distance^2 \times h)$，其中 $n$ 是二叉树的节点数，而 $h$ 是二叉树的高度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -121,6 +129,8 @@ class Solution:
                     ans += v1 * v2
         return ans
 ```
+
+#### Java
 
 ```java
 /**
@@ -172,6 +182,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -214,6 +226,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 /**
@@ -258,4 +272,6 @@ func dfs(root *TreeNode, cnt []int, i int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

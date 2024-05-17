@@ -10,11 +10,15 @@ tags:
     - Counting
 ---
 
+<!-- problem:start -->
+
 # [2287. Rearrange Characters to Make Target String](https://leetcode.com/problems/rearrange-characters-to-make-target-string)
 
 [中文文档](/solution/2200-2299/2287.Rearrange%20Characters%20to%20Make%20Target%20String/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two <strong>0-indexed</strong> strings <code>s</code> and <code>target</code>. You can take some letters from <code>s</code> and rearrange them to form new strings.</p>
 
@@ -63,11 +67,17 @@ We can make at most one copy of &quot;aaaaa&quot;, so we return 1.
 	<li><code>s</code> and <code>target</code> consist of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -76,6 +86,8 @@ class Solution:
         cnt2 = Counter(target)
         return min(cnt1[c] // v for c, v in cnt2.items())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -98,6 +110,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -122,6 +136,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func rearrangeCharacters(s string, target string) int {
 	var cnt1, cnt2 [26]int
@@ -140,6 +156,8 @@ func rearrangeCharacters(s string, target string) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function rearrangeCharacters(s: string, target: string): number {
@@ -162,6 +180,8 @@ function rearrangeCharacters(s: string, target: string): number {
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn rearrange_characters(s: String, target: String) -> i32 {
@@ -183,6 +203,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 #define min(a, b) (((a) < (b)) ? (a) : (b))
@@ -208,4 +230,6 @@ int rearrangeCharacters(char* s, char* target) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

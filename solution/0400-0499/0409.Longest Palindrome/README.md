@@ -8,13 +8,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [409. 最长回文串](https://leetcode.cn/problems/longest-palindrome)
 
 [English Version](/solution/0400-0499/0409.Longest%20Palindrome/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个包含大写字母和小写字母的字符串<meta charset="UTF-8" />&nbsp;<code>s</code>&nbsp;，返回&nbsp;<em>通过这些字母构造成的 <strong>最长的回文串</strong></em>&nbsp;。</p>
 
@@ -53,7 +55,11 @@ tags:
 	<li><code>s</code>&nbsp;只由小写 <strong>和/或</strong> 大写英文字母组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：计数
 
@@ -69,6 +75,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def longestPalindrome(self, s: str) -> int:
@@ -79,6 +87,8 @@ class Solution:
             ans += (ans & 1 ^ 1) and (v & 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -98,6 +108,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -119,6 +131,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func longestPalindrome(s string) (ans int) {
 	cnt := [128]int{}
@@ -135,6 +149,8 @@ func longestPalindrome(s string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function longestPalindrome(s: string): number {
     let n = s.length;
@@ -150,6 +166,8 @@ function longestPalindrome(s: string): number {
     return ans < s.length ? ans + 1 : ans;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -176,9 +194,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 function longestPalindrome(s: string): number {
@@ -201,4 +225,6 @@ function longestPalindrome(s: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

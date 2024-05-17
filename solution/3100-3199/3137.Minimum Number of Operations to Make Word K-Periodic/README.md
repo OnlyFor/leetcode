@@ -10,13 +10,15 @@ tags:
     - 计数
 ---
 
+<!-- problem:start -->
+
 # [3137. K 周期字符串需要的最少操作次数](https://leetcode.cn/problems/minimum-number-of-operations-to-make-word-k-periodic)
 
 [English Version](/solution/3100-3199/3137.Minimum%20Number%20of%20Operations%20to%20Make%20Word%20K-Periodic/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个长度为 <code>n</code> 的字符串 <code>word</code> 和一个整数 <code>k</code> ，其中 <code>k</code> 是 <code>n</code> 的因数。</p>
 
@@ -111,7 +113,11 @@ font-size: 0.85rem;
 	<li><code>word</code> 仅由小写英文字母组成。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：计数
 
@@ -121,12 +127,16 @@ font-size: 0.85rem;
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minimumOperationsToMakeKPeriodic(self, word: str, k: int) -> int:
         n = len(word)
         return n // k - max(Counter(word[i : i + k] for i in range(0, n, k)).values())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -141,6 +151,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -157,6 +169,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumOperationsToMakeKPeriodic(word string, k int) int {
 	cnt := map[string]int{}
@@ -170,6 +184,8 @@ func minimumOperationsToMakeKPeriodic(word string, k int) int {
 	return n/k - mx
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minimumOperationsToMakeKPeriodic(word: string, k: number): number {
@@ -187,4 +203,6 @@ function minimumOperationsToMakeKPeriodic(word: string, k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

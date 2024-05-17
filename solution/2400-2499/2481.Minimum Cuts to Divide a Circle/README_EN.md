@@ -9,11 +9,15 @@ tags:
     - Math
 ---
 
+<!-- problem:start -->
+
 # [2481. Minimum Cuts to Divide a Circle](https://leetcode.com/problems/minimum-cuts-to-divide-a-circle)
 
 [中文文档](/solution/2400-2499/2481.Minimum%20Cuts%20to%20Divide%20a%20Circle/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>A <strong>valid cut</strong> in a circle can be:</p>
 
@@ -54,7 +58,11 @@ Also note that the first cut will not divide the circle into distinct parts.
 	<li><code>1 &lt;= n &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Case Discussion
 
@@ -75,11 +83,15 @@ The time complexity is $O(1)$, and the space complexity is $O(1)$.
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numberOfCuts(self, n: int) -> int:
         return n if (n > 1 and n & 1) else n >> 1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -88,6 +100,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -98,6 +112,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numberOfCuts(n int) int {
 	if n > 1 && n%2 == 1 {
@@ -107,11 +123,15 @@ func numberOfCuts(n int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function numberOfCuts(n: number): number {
     return n > 1 && n & 1 ? n : n >> 1;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -124,6 +144,8 @@ impl Solution {
 }
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int NumberOfCuts(int n) {
@@ -134,4 +156,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

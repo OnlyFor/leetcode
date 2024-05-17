@@ -11,11 +11,15 @@ tags:
     - Heap (Priority Queue)
 ---
 
+<!-- problem:start -->
+
 # [1388. Pizza With 3n Slices](https://leetcode.com/problems/pizza-with-3n-slices)
 
 [中文文档](/solution/1300-1399/1388.Pizza%20With%203n%20Slices/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There is a pizza with <code>3n</code> slices of varying size, you and your friends will take slices of pizza as follows:</p>
 
@@ -54,7 +58,11 @@ tags:
 	<li><code>1 &lt;= slices[i] &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming
 
@@ -87,6 +95,8 @@ The time complexity is $O(n^2)$, and the space complexity is $O(n^2)$. Where $n$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maxSizeSlices(self, slices: List[int]) -> int:
@@ -104,6 +114,8 @@ class Solution:
         a, b = g(slices[:-1]), g(slices[1:])
         return max(a, b)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -132,6 +144,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -157,6 +171,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxSizeSlices(slices []int) int {
 	n := len(slices) / 3
@@ -181,6 +197,8 @@ func maxSizeSlices(slices []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maxSizeSlices(slices: number[]): number {
     const n = Math.floor(slices.length / 3);
@@ -204,4 +222,6 @@ function maxSizeSlices(slices: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

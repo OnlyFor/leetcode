@@ -10,13 +10,15 @@ tags:
     - 矩阵
 ---
 
+<!-- problem:start -->
+
 # [1975. 最大方阵和](https://leetcode.cn/problems/maximum-matrix-sum)
 
 [English Version](/solution/1900-1999/1975.Maximum%20Matrix%20Sum/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个&nbsp;<code>n x n</code>&nbsp;的整数方阵&nbsp;<code>matrix</code>&nbsp;。你可以执行以下操作&nbsp;<strong>任意次</strong>&nbsp;：</p>
 
@@ -57,7 +59,11 @@ tags:
 	<li><code>-10<sup>5</sup> &lt;= matrix[i][j] &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心
 
@@ -68,6 +74,8 @@ tags:
 时间复杂度 $O(m\times n)$，其中 $m$ 和 $n$ 分别是矩阵的行数和列数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -84,6 +92,8 @@ class Solution:
             return s
         return s - mi * 2
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -108,6 +118,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -126,6 +138,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxMatrixSum(matrix [][]int) int64 {
@@ -154,6 +168,8 @@ func abs(x int) int {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[][]} matrix
@@ -179,4 +195,6 @@ var maxMatrixSum = function (matrix) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

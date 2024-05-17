@@ -9,11 +9,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [1092. Shortest Common Supersequence](https://leetcode.com/problems/shortest-common-supersequence)
 
 [中文文档](/solution/1000-1099/1092.Shortest%20Common%20Supersequence/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given two strings <code>str1</code> and <code>str2</code>, return <em>the shortest string that has both </em><code>str1</code><em> and </em><code>str2</code><em> as <strong>subsequences</strong></em>. If there are multiple valid strings, return <strong>any</strong> of them.</p>
 
@@ -46,11 +50,17 @@ The answer provided is the shortest such string that satisfies these properties.
 	<li><code>str1</code> and <code>str2</code> consist of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -84,6 +94,8 @@ class Solution:
                     ans.append(str1[i])
         return ''.join(ans[::-1])
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -122,6 +134,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -157,6 +171,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func shortestCommonSupersequence(str1 string, str2 string) string {
@@ -203,6 +219,8 @@ func shortestCommonSupersequence(str1 string, str2 string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function shortestCommonSupersequence(str1: string, str2: string): string {
     const m = str1.length;
@@ -242,4 +260,6 @@ function shortestCommonSupersequence(str1: string, str2: string): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

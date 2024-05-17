@@ -10,13 +10,15 @@ tags:
     - 堆（优先队列）
 ---
 
+<!-- problem:start -->
+
 # [1792. 最大平均通过率](https://leetcode.cn/problems/maximum-average-pass-ratio)
 
 [English Version](/solution/1700-1799/1792.Maximum%20Average%20Pass%20Ratio/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>一所学校里有一些班级，每个班级里有一些学生，现在每个班都会进行一场期末考试。给你一个二维数组 <code>classes</code> ，其中 <code>classes[i] = [pass<sub>i</sub>, total<sub>i</sub>]</code> ，表示你提前知道了第 <code>i</code> 个班级总共有 <code>total<sub>i</sub></code> 个学生，其中只有 <code>pass<sub>i</sub></code> 个学生可以通过考试。</p>
 
@@ -54,7 +56,11 @@ tags:
 	<li><code>1 <= extraStudents <= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：优先队列（增量大根堆）
 
@@ -70,6 +76,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maxAverageRatio(self, classes: List[List[int]], extraStudents: int) -> float:
@@ -81,6 +89,8 @@ class Solution:
             heappush(h, (a / b - (a + 1) / (b + 1), a, b))
         return sum(v[1] / v[2] for v in h) / len(classes)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -107,6 +117,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -136,6 +148,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxAverageRatio(classes [][]int, extraStudents int) float64 {
@@ -179,4 +193,6 @@ func (h *hp) Pop() any     { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1]; retur
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

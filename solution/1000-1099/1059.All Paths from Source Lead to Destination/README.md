@@ -7,13 +7,15 @@ tags:
     - 拓扑排序
 ---
 
+<!-- problem:start -->
+
 # [1059. 从始点到终点的所有路径 🔒](https://leetcode.cn/problems/all-paths-from-source-lead-to-destination)
 
 [English Version](/solution/1000-1099/1059.All%20Paths%20from%20Source%20Lead%20to%20Destination/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定有向图的边&nbsp;<code>edges</code>，以及该图的始点&nbsp;<code>source</code>&nbsp;和目标终点&nbsp;<code>destination</code>，确定从始点&nbsp;<code>source</code>&nbsp;出发的所有路径是否最终结束于目标终点&nbsp;<code>destination</code>，即：</p>
 
@@ -70,7 +72,11 @@ tags:
 	<li>给定的图中可能带有自环和平行边。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：记忆化搜索
 
@@ -91,6 +97,8 @@ tags:
 时间复杂度 $O(n)$。其中 $n$ 为节点数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -115,6 +123,8 @@ class Solution:
         vis = set()
         return dfs(source)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -158,6 +168,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -192,6 +204,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func leadsToDestination(n int, edges [][]int, source int, destination int) bool {
@@ -228,4 +242,6 @@ func leadsToDestination(n int, edges [][]int, source int, destination int) bool 
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

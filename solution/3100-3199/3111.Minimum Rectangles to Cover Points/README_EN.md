@@ -10,11 +10,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [3111. Minimum Rectangles to Cover Points](https://leetcode.com/problems/minimum-rectangles-to-cover-points)
 
 [中文文档](/solution/3100-3199/3111.Minimum%20Rectangles%20to%20Cover%20Points/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a 2D integer array <code>points</code>, where <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code>. You are also given an integer <code>w</code>. Your task is to <strong>cover</strong> <strong>all</strong> the given points with rectangles.</p>
 
@@ -142,7 +146,11 @@ tags:
 	<li>All pairs <code>(x<sub>i</sub>, y<sub>i</sub>)</code> are distinct.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Greedy + Sorting
 
@@ -156,6 +164,8 @@ The time complexity is $O(n \times \log n)$, and the space complexity is $O(\log
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minRectanglesToCoverPoints(self, points: List[List[int]], w: int) -> int:
@@ -167,6 +177,8 @@ class Solution:
                 ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -186,6 +198,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -204,6 +218,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minRectanglesToCoverPoints(points [][]int, w int) (ans int) {
 	sort.Slice(points, func(i, j int) bool { return points[i][0] < points[j][0] })
@@ -217,6 +233,8 @@ func minRectanglesToCoverPoints(points [][]int, w int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minRectanglesToCoverPoints(points: number[][], w: number): number {
@@ -235,4 +253,6 @@ function minRectanglesToCoverPoints(points: number[][], w: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

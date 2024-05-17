@@ -10,11 +10,15 @@ tags:
     - Math
 ---
 
+<!-- problem:start -->
+
 # [2541. Minimum Operations to Make Array Equal II](https://leetcode.com/problems/minimum-operations-to-make-array-equal-ii)
 
 [中文文档](/solution/2500-2599/2541.Minimum%20Operations%20to%20Make%20Array%20Equal%20II/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two integer arrays <code>nums1</code> and <code>nums2</code> of equal length <code>n</code> and an integer <code>k</code>. You can perform the following operation on <code>nums1</code>:</p>
 
@@ -55,7 +59,11 @@ One can prove that it is impossible to make arrays equal in fewer operations.</p
 	<li><code>0 &lt;= k &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Single Pass
 
@@ -68,6 +76,8 @@ Finally, if $x \neq 0$, then it is impossible to make the two arrays equal, so w
 The time complexity is $O(n)$, and the space complexity is $O(1)$, where $n$ is the length of the array.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -85,6 +95,8 @@ class Solution:
             x += y
         return -1 if x else ans // 2
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -110,6 +122,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -134,6 +148,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minOperations(nums1 []int, nums2 []int, k int) int64 {
@@ -167,6 +183,8 @@ func abs(x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minOperations(nums1: number[], nums2: number[], k: number): number {
     const n = nums1.length;
@@ -189,6 +207,8 @@ function minOperations(nums1: number[], nums2: number[], k: number): number {
     return sum2 / (k * 2);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -225,6 +245,8 @@ impl Solution {
 }
 ```
 
+#### C
+
 ```c
 long long minOperations(int* nums1, int nums1Size, int* nums2, int nums2Size, int k) {
     if (k == 0) {
@@ -254,4 +276,6 @@ long long minOperations(int* nums1, int nums1Size, int* nums2, int nums2Size, in
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

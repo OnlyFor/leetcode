@@ -10,11 +10,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [2911. Minimum Changes to Make K Semi-palindromes](https://leetcode.com/problems/minimum-changes-to-make-k-semi-palindromes)
 
 [中文文档](/solution/2900-2999/2911.Minimum%20Changes%20to%20Make%20K%20Semi-palindromes/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a string <code>s</code> and an integer <code>k</code>, partition <code>s</code> into <code>k</code> <strong><span data-keyword="substring-nonempty">substrings</span></strong> such that the letter changes needed to make each substring a <strong>semi-palindrome</strong>&nbsp;are minimized.</p>
 
@@ -90,11 +94,17 @@ tags:
 	<li><code>s</code> contains only lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -123,6 +133,8 @@ class Solution:
                     f[i][j] = min(f[i][j], f[h][j - 1] + g[h + 1][i])
         return f[n][k]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -168,6 +180,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -209,6 +223,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimumChanges(s string, k int) int {
@@ -258,6 +274,8 @@ func minimumChanges(s string, k int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumChanges(s: string, k: number): number {
     const n = s.length;
@@ -297,9 +315,15 @@ function minimumChanges(s: string, k: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Java
 
 ```java
 class Solution {
@@ -386,4 +410,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,13 +9,15 @@ tags:
     - 有序集合
 ---
 
+<!-- problem:start -->
+
 # [732. 我的日程安排表 III](https://leetcode.cn/problems/my-calendar-iii)
 
 [English Version](/solution/0700-0799/0732.My%20Calendar%20III/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>当 <code>k</code> 个日程安排有一些时间上的交叉时（例如 <code>k</code> 个日程安排都在同一时间内），就会产生 <code>k</code> 次预订。</p>
 
@@ -58,7 +60,11 @@ myCalendarThree.book(25, 55); // 返回 3
 	<li>每个测试用例，调用 <code>book</code> 函数最多不超过 <code>400</code>次</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：线段树
 
@@ -79,6 +85,8 @@ myCalendarThree.book(25, 55); // 返回 3
 时间复杂度 $O(nlogn)$，其中 $n$ 表示日程安排的数量。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Node:
@@ -156,6 +164,8 @@ class MyCalendarThree:
 # obj = MyCalendarThree()
 # param_1 = obj.book(start,end)
 ```
+
+#### Java
 
 ```java
 class Node {
@@ -265,6 +275,8 @@ class MyCalendarThree {
  */
 ```
 
+#### C++
+
 ```cpp
 class Node {
 public:
@@ -364,6 +376,8 @@ public:
  * int param_1 = obj->book(start,end);
  */
 ```
+
+#### Go
 
 ```go
 type node struct {
@@ -470,4 +484,6 @@ func (this *MyCalendarThree) Book(start int, end int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

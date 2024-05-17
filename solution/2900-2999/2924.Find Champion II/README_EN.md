@@ -8,11 +8,15 @@ tags:
     - Graph
 ---
 
+<!-- problem:start -->
+
 # [2924. Find Champion II](https://leetcode.com/problems/find-champion-ii)
 
 [中文文档](/solution/2900-2999/2924.Find%20Champion%20II/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There are <code>n</code> teams numbered from <code>0</code> to <code>n - 1</code> in a tournament; each team is also a node in a <strong>DAG</strong>.</p>
 
@@ -66,7 +70,11 @@ tags:
 	<li>The input is generated such that if team <code>a</code> is stronger than team <code>b</code> and team <code>b</code> is stronger than team <code>c</code>, then team <code>a</code> is stronger than team <code>c</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Counting In-degrees
 
@@ -76,6 +84,8 @@ The time complexity is $O(n)$, and the space complexity is $O(n)$. Here, $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def findChampion(self, n: int, edges: List[List[int]]) -> int:
@@ -84,6 +94,8 @@ class Solution:
             indeg[v] += 1
         return -1 if indeg.count(0) != 1 else indeg.index(0)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -103,6 +115,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -125,6 +139,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findChampion(n int, edges [][]int) int {
 	indeg := make([]int, n)
@@ -145,6 +161,8 @@ func findChampion(n int, edges [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findChampion(n: number, edges: number[][]): number {
     const indeg: number[] = Array(n).fill(0);
@@ -164,4 +182,6 @@ function findChampion(n: number, edges: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

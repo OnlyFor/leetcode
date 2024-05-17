@@ -10,11 +10,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [2522. Partition String Into Substrings With Values at Most K](https://leetcode.com/problems/partition-string-into-substrings-with-values-at-most-k)
 
 [中文文档](/solution/2500-2599/2522.Partition%20String%20Into%20Substrings%20With%20Values%20at%20Most%20K/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>s</code> consisting of digits from <code>1</code> to <code>9</code> and an integer <code>k</code>.</p>
 
@@ -70,7 +74,11 @@ It can be shown that we cannot partition the string into less than 4 substrings.
 .spoilerbutton[value="Hide Message"] + .spoiler {padding:5px;}
 </style>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Memoization Search
 
@@ -88,6 +96,8 @@ To avoid repeated calculations, we can use memoization search.
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Where $n$ is the length of the string $s$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -108,6 +118,8 @@ class Solution:
         ans = dfs(0)
         return ans if ans < inf else -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -147,6 +159,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -172,6 +186,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimumPartition(s string, k int) int {
@@ -207,4 +223,6 @@ func minimumPartition(s string, k int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

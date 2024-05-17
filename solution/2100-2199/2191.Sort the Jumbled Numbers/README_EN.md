@@ -9,11 +9,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [2191. Sort the Jumbled Numbers](https://leetcode.com/problems/sort-the-jumbled-numbers)
 
 [中文文档](/solution/2100-2199/2191.Sort%20the%20Jumbled%20Numbers/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>mapping</code> which represents the mapping rule of a shuffled decimal system. <code>mapping[i] = j</code> means digit <code>i</code> should be mapped to digit <code>j</code> in this system.</p>
 
@@ -64,7 +68,11 @@ Thus, the sorted array is [338,38,991].
 	<li><code>0 &lt;= nums[i] &lt; 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Custom Sorting
 
@@ -73,6 +81,8 @@ We traverse each element $nums[i]$ in the array $nums$, store its mapped value $
 The time complexity is $O(n \times \log n)$, and the space complexity is $O(n)$. Where $n$ is the length of the array $nums$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -91,6 +101,8 @@ class Solution:
         arr = sorted((f(x), i) for i, x in enumerate(nums))
         return [nums[i] for _, i in arr]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -126,6 +138,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -157,6 +171,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sortJumbled(mapping []int, nums []int) (ans []int) {
 	n := len(nums)
@@ -183,6 +199,8 @@ func sortJumbled(mapping []int, nums []int) (ans []int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function sortJumbled(mapping: number[], nums: number[]): number[] {
     const n = nums.length;
@@ -203,6 +221,8 @@ function sortJumbled(mapping: number[], nums: number[]): number[] {
     return arr.map(x => nums[x[1]]);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -238,6 +258,8 @@ impl Solution {
     }
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -276,4 +298,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

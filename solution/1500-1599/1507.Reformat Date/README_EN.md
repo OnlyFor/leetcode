@@ -8,11 +8,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1507. Reformat Date](https://leetcode.com/problems/reformat-date)
 
 [中文文档](/solution/1500-1599/1507.Reformat%20Date/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a <code>date</code> string in the form&nbsp;<code>Day Month Year</code>, where:</p>
 
@@ -59,11 +63,17 @@ tags:
 	<li>The given dates are guaranteed to be valid, so no error handling is necessary.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -76,6 +86,8 @@ class Solution:
         return "-".join(s)
 ```
 
+#### Java
+
 ```java
 class Solution {
     public String reformatDate(String date) {
@@ -87,6 +99,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -103,6 +117,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func reformatDate(date string) string {
 	s := strings.Split(date, " ")
@@ -114,6 +130,8 @@ func reformatDate(date string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function reformatDate(date: string): string {
     const s = date.split(' ');
@@ -123,6 +141,8 @@ function reformatDate(date: string): string {
     return `${s[2]}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -159,4 +179,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

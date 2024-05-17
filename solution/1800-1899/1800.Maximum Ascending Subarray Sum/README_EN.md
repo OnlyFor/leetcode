@@ -8,11 +8,15 @@ tags:
     - Array
 ---
 
+<!-- problem:start -->
+
 # [1800. Maximum Ascending Subarray Sum](https://leetcode.com/problems/maximum-ascending-subarray-sum)
 
 [中文文档](/solution/1800-1899/1800.Maximum%20Ascending%20Subarray%20Sum/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array of positive integers <code>nums</code>, return the <em>maximum possible sum of an <strong>ascending</strong> subarray in </em><code>nums</code>.</p>
 
@@ -53,7 +57,11 @@ tags:
 	<li><code>1 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Direct Simulation
 
@@ -69,6 +77,8 @@ The time complexity is $O(n)$, where $n$ is the length of the array $nums$. The 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maxAscendingSum(self, nums: List[int]) -> int:
@@ -81,6 +91,8 @@ class Solution:
                 t = v
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -98,6 +110,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -117,6 +131,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxAscendingSum(nums []int) int {
 	ans, t := 0, 0
@@ -134,6 +150,8 @@ func maxAscendingSum(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maxAscendingSum(nums: number[]): number {
     const n = nums.length;
@@ -149,6 +167,8 @@ function maxAscendingSum(nums: number[]): number {
     return Math.max(res, sum);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -167,6 +187,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 #define max(a, b) (((a) > (b)) ? (a) : (b))
@@ -187,4 +209,6 @@ int maxAscendingSum(int* nums, int numsSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

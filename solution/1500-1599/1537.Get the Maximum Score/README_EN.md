@@ -11,11 +11,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [1537. Get the Maximum Score](https://leetcode.com/problems/get-the-maximum-score)
 
 [中文文档](/solution/1500-1599/1537.Get%20the%20Maximum%20Score/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two <strong>sorted</strong> arrays of distinct integers <code>nums1</code> and <code>nums2</code>.</p>
 
@@ -69,11 +73,17 @@ Maximum sum is obtained with the path [6,7,8,9,10].
 	<li><code>nums1</code> and <code>nums2</code> are strictly increasing.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -102,6 +112,8 @@ class Solution:
         return max(f, g) % mod
 ```
 
+#### Java
+
 ```java
 class Solution {
     public int maxSum(int[] nums1, int[] nums2) {
@@ -128,6 +140,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -156,6 +170,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxSum(nums1 []int, nums2 []int) int {
@@ -187,6 +203,8 @@ func maxSum(nums1 []int, nums2 []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maxSum(nums1: number[], nums2: number[]): number {
     const mod = 1e9 + 7;
@@ -215,4 +233,6 @@ function maxSum(nums1: number[], nums2: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

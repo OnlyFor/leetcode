@@ -11,13 +11,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [1099. 小于 K 的两数之和 🔒](https://leetcode.cn/problems/two-sum-less-than-k)
 
 [English Version](/solution/1000-1099/1099.Two%20Sum%20Less%20Than%20K/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>nums</code> 和整数 <code>k</code> ，返回最大和 <code>sum</code> ，满足存在 <code>i < j</code> 使得 <code>nums[i] + nums[j] = sum</code> 且 <code>sum < k</code> 。如果没有满足此等式的 <code>i,j</code> 存在，则返回 <code>-1</code> 。</p>
 
@@ -50,7 +52,11 @@ tags:
 	<li><code>1 <= k <= 2000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：排序 + 二分查找
 
@@ -64,6 +70,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def twoSumLessThanK(self, nums: List[int], k: int) -> int:
@@ -75,6 +83,8 @@ class Solution:
                 ans = max(ans, x + nums[j])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -105,6 +115,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -122,6 +134,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func twoSumLessThanK(nums []int, k int) int {
 	sort.Ints(nums)
@@ -135,6 +149,8 @@ func twoSumLessThanK(nums []int, k int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function twoSumLessThanK(nums: number[], k: number): number {
@@ -155,6 +171,10 @@ function twoSumLessThanK(nums: number[], k: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：排序 + 双指针
 
 与方法一类似，我们可以先对数组 $nums$ 进行排序，初始化答案为 $-1$。
@@ -166,6 +186,8 @@ function twoSumLessThanK(nums: number[], k: number): number {
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(\log n)$。其中 $n$ 是数组 $nums$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -181,6 +203,8 @@ class Solution:
                 j -= 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -200,6 +224,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -221,6 +247,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func twoSumLessThanK(nums []int, k int) int {
 	sort.Ints(nums)
@@ -239,4 +267,6 @@ func twoSumLessThanK(nums []int, k int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

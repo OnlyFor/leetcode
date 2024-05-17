@@ -10,13 +10,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [1691. 堆叠长方体的最大高度](https://leetcode.cn/problems/maximum-height-by-stacking-cuboids)
 
 [English Version](/solution/1600-1699/1691.Maximum%20Height%20by%20Stacking%20Cuboids/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你 <code>n</code> 个长方体 <code>cuboids</code> ，其中第 <code>i</code> 个长方体的长宽高表示为 <code>cuboids[i] = [width<sub>i</sub>, length<sub>i</sub>, height<sub>i</sub>]</code>（<strong>下标从 0 开始</strong>）。请你从 <code>cuboids</code> 选出一个 <strong>子集</strong> ，并将它们堆叠起来。</p>
 
@@ -71,7 +73,11 @@ tags:
 	<li><code>1 <= width<sub>i</sub>, length<sub>i</sub>, height<sub>i</sub> <= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：排序 + 动态规划
 
@@ -97,6 +103,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maxHeight(self, cuboids: List[List[int]]) -> int:
@@ -112,6 +120,8 @@ class Solution:
             f[i] += cuboids[i][2]
         return max(f)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -136,6 +146,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -159,6 +171,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxHeight(cuboids [][]int) int {
 	for _, c := range cuboids {
@@ -181,6 +195,8 @@ func maxHeight(cuboids [][]int) int {
 	return slices.Max(f)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxHeight(cuboids: number[][]): number {
@@ -208,6 +224,8 @@ function maxHeight(cuboids: number[][]): number {
     return Math.max(...f);
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -242,4 +260,6 @@ var maxHeight = function (cuboids) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

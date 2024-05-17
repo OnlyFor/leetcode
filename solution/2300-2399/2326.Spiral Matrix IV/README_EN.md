@@ -11,11 +11,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [2326. Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv)
 
 [中文文档](/solution/2300-2399/2326.Spiral%20Matrix%20IV/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two integers <code>m</code> and <code>n</code>, which represent the dimensions of a matrix.</p>
 
@@ -53,7 +57,11 @@ The last space in the matrix is set to -1.</pre>
 	<li><code>0 &lt;= Node.val &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -68,6 +76,8 @@ After traversing the linked list, we get a spiral matrix and return it.
 The time complexity is $O(m \times n)$, and the space complexity is $O(m \times n)$, where $m$ and $n$ represent the number of rows and columns of the matrix, respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for singly-linked list.
@@ -93,6 +103,8 @@ class Solution:
                 k = (k + 1) % 4
         return ans
 ```
+
+#### Java
 
 ```java
 /**
@@ -134,6 +146,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for singly-linked list.
@@ -172,6 +186,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for singly-linked list.
@@ -207,6 +223,8 @@ func spiralMatrix(m int, n int, head *ListNode) [][]int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -247,4 +265,6 @@ function spiralMatrix(m: number, n: number, head: ListNode | null): number[][] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,13 +10,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1247. 交换字符使得字符串相同](https://leetcode.cn/problems/minimum-swaps-to-make-strings-equal)
 
 [English Version](/solution/1200-1299/1247.Minimum%20Swaps%20to%20Make%20Strings%20Equal/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>有两个长度相同的字符串&nbsp;<code>s1</code> 和&nbsp;<code>s2</code>，且它们其中&nbsp;<strong>只含有</strong>&nbsp;字符&nbsp;<code>"x"</code> 和&nbsp;<code>"y"</code>，你需要通过「交换字符」的方式使这两个字符串相同。</p>
 
@@ -63,7 +65,11 @@ tags:
 	<li><code>s1, s2</code>&nbsp;只包含&nbsp;<code>'x'</code>&nbsp;或&nbsp;<code>'y'</code>。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心
 
@@ -77,6 +83,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minimumSwap(self, s1: str, s2: str) -> int:
@@ -88,6 +96,8 @@ class Solution:
             return -1
         return xy // 2 + yx // 2 + xy % 2 + yx % 2
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -110,6 +120,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -128,6 +140,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumSwap(s1 string, s2 string) int {
 	xy, yx := 0, 0
@@ -145,6 +159,8 @@ func minimumSwap(s1 string, s2 string) int {
 	return xy/2 + yx/2 + xy%2 + yx%2
 }
 ```
+
+#### JavaScript
 
 ```js
 var minimumSwap = function (s1, s2) {
@@ -169,4 +185,6 @@ var minimumSwap = function (s1, s2) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

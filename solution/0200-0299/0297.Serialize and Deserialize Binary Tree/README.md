@@ -11,13 +11,15 @@ tags:
     - 二叉树
 ---
 
+<!-- problem:start -->
+
 # [297. 二叉树的序列化与反序列化](https://leetcode.cn/problems/serialize-and-deserialize-binary-tree)
 
 [English Version](/solution/0200-0299/0297.Serialize%20and%20Deserialize%20Binary%20Tree/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>序列化是将一个数据结构或者对象转换为连续的比特位的操作，进而可以将转换后的数据存储在一个文件或者内存中，同时也可以通过网络传输到另一个计算机环境，采取相反方式重构得到原数据。</p>
 
@@ -64,11 +66,17 @@ tags:
 	<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -126,6 +134,8 @@ class Codec:
 # deser = Codec()
 # ans = deser.deserialize(ser.serialize(root))
 ```
+
+#### Java
 
 ```java
 /**
@@ -191,6 +201,8 @@ public class Codec {
 // TreeNode ans = deser.deserialize(ser.serialize(root));
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -244,6 +256,8 @@ public:
 // TreeNode* ans = deser.deserialize(ser.serialize(root));
 ```
 
+#### TypeScript
+
 ```ts
 /**
  * Definition for a binary tree node.
@@ -278,6 +292,8 @@ function deserialize(data: string): TreeNode | null {
  * deserialize(serialize(root));
  */
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -351,6 +367,8 @@ impl Codec {
  */
 ```
 
+#### JavaScript
+
 ```js
 /**
  * Definition for a binary tree node.
@@ -414,9 +432,15 @@ const rdeserialize = dataList => {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 /**
@@ -471,4 +495,6 @@ function deserialize(data: string): TreeNode | null {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

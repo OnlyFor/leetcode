@@ -9,13 +9,15 @@ tags:
     - 回溯
 ---
 
+<!-- problem:start -->
+
 # [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer)
 
 [English Version](/solution/2600-2699/2698.Find%20the%20Punishment%20Number%20of%20an%20Integer/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个正整数&nbsp;<code>n</code>&nbsp;，请你返回&nbsp;<code>n</code>&nbsp;的&nbsp;<strong>惩罚数</strong>&nbsp;。</p>
 
@@ -61,7 +63,11 @@ tags:
 	<li><code>1 &lt;= n &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举 + DFS
 
@@ -72,6 +78,8 @@ tags:
 时间复杂度 $O(n^{1 + 2 \log_{10}^2})$，空间复杂度 $O(\log n)$。其中 $n$ 为给定的正整数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -96,6 +104,8 @@ class Solution:
                 ans += x
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -129,6 +139,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -165,6 +177,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func punishmentNumber(n int) (ans int) {
 	var check func(string, int, int) bool
@@ -195,6 +209,8 @@ func punishmentNumber(n int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function punishmentNumber(n: number): number {
@@ -229,4 +245,6 @@ function punishmentNumber(n: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

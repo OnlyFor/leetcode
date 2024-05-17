@@ -10,11 +10,15 @@ tags:
     - Graph
 ---
 
+<!-- problem:start -->
+
 # [2493. Divide Nodes Into the Maximum Number of Groups](https://leetcode.com/problems/divide-nodes-into-the-maximum-number-of-groups)
 
 [中文文档](/solution/2400-2499/2493.Divide%20Nodes%20Into%20the%20Maximum%20Number%20of%20Groups/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a positive integer <code>n</code> representing the number of nodes in an <strong>undirected</strong> graph. The nodes are labeled from <code>1</code> to <code>n</code>.</p>
 
@@ -65,7 +69,11 @@ It can be shown that no grouping is possible.
 	<li>There is at most one edge between any pair of vertices.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: BFS + Enumeration
 
@@ -80,6 +88,8 @@ During the traversal, if we find that the $dist[b]$ of a certain node $b$ is $0$
 The time complexity is $O(n \times (n + m))$, and the space complexity is $O(n + m)$. Where $n$ and $m$ are the number of nodes and edges respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -107,6 +117,8 @@ class Solution:
             d[root] = max(d[root], mx)
         return sum(d.values())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -147,6 +159,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -184,6 +198,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func magnificentSets(n int, edges [][]int) (ans int) {
@@ -230,6 +246,8 @@ func abs(x int) int {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number} n
@@ -270,4 +288,6 @@ var magnificentSets = function (n, edges) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

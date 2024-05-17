@@ -8,13 +8,15 @@ tags:
     - 位运算
 ---
 
+<!-- problem:start -->
+
 # [1318. 或运算的最小翻转次数](https://leetcode.cn/problems/minimum-flips-to-make-a-or-b-equal-to-c)
 
 [English Version](/solution/1300-1399/1318.Minimum%20Flips%20to%20Make%20a%20OR%20b%20Equal%20to%20c/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你三个正整数&nbsp;<code>a</code>、<code>b</code> 和 <code>c</code>。</p>
 
@@ -54,7 +56,11 @@ tags:
 	<li><code>1 &lt;= c&nbsp;&lt;= 10^9</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：位运算
 
@@ -63,6 +69,8 @@ tags:
 时间复杂度 $O(\log M)$，其中 $M$ 是题目中数字的最大值。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -73,6 +81,8 @@ class Solution:
             ans += x + y if z == 0 else int(x == 0 and y == 0)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -86,6 +96,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -101,6 +113,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minFlips(a int, b int, c int) (ans int) {
 	for i := 0; i < 32; i++ {
@@ -115,6 +129,8 @@ func minFlips(a int, b int, c int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minFlips(a: number, b: number, c: number): number {
     let ans = 0;
@@ -128,4 +144,6 @@ function minFlips(a: number, b: number, c: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

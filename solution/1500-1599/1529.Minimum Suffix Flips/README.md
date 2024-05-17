@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1529. 最少的后缀翻转次数](https://leetcode.cn/problems/minimum-suffix-flips)
 
 [English Version](/solution/1500-1599/1529.Minimum%20Suffix%20Flips/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个长度为 <code>n</code> 、下标从 <strong>0</strong> 开始的二进制字符串 <code>target</code> 。你自己有另一个长度为 <code>n</code> 的二进制字符串 <code>s</code> ，最初每一位上都是 0 。你想要让 <code>s</code> 和 <code>target</code> 相等。</p>
 
@@ -71,7 +73,11 @@ tags:
 	<li><code>target[i]</code> 为 <code>'0'</code> 或 <code>'1'</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心
 
@@ -80,6 +86,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -90,6 +98,8 @@ class Solution:
                 ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -105,6 +115,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -122,6 +134,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minFlips(target string) int {
 	ans := 0
@@ -137,4 +151,6 @@ func minFlips(target string) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

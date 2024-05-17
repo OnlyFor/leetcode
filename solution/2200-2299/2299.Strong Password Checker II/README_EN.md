@@ -8,11 +8,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [2299. Strong Password Checker II](https://leetcode.com/problems/strong-password-checker-ii)
 
 [中文文档](/solution/2200-2299/2299.Strong%20Password%20Checker%20II/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>A password is said to be <strong>strong</strong> if it satisfies all the following criteria:</p>
 
@@ -59,11 +63,17 @@ tags:
 	<li><code>password</code> consists of letters, digits, and special characters: <code>&quot;!@#$%^&amp;*()-+&quot;</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -84,6 +94,8 @@ class Solution:
                 mask |= 8
         return mask == 15
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -111,6 +123,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -140,6 +154,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func strongPasswordCheckerII(password string) bool {
 	if len(password) < 8 {
@@ -163,6 +179,8 @@ func strongPasswordCheckerII(password string) bool {
 	return mask == 15
 }
 ```
+
+#### TypeScript
 
 ```ts
 function strongPasswordCheckerII(password: string): boolean {
@@ -188,6 +206,8 @@ function strongPasswordCheckerII(password: string): boolean {
     return mask == 15;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -219,6 +239,8 @@ impl Solution {
 }
 ```
 
+#### C
+
 ```c
 bool strongPasswordCheckerII(char* password) {
     int n = strlen(password);
@@ -248,4 +270,6 @@ bool strongPasswordCheckerII(char* password) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

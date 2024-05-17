@@ -12,11 +12,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [3102. Minimize Manhattan Distances](https://leetcode.com/problems/minimize-manhattan-distances)
 
 [中文文档](/solution/3100-3199/3102.Minimize%20Manhattan%20Distances/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a array <code>points</code> representing integer coordinates of some points on a 2D plane, where <code>points[i] = [x<sub>i</sub>, y<sub>i</sub>]</code>.</p>
 
@@ -67,11 +71,17 @@ tags:
 	<li><code>1 &lt;= points[i][0], points[i][1] &lt;= 10<sup>8</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 from sortedcontainers import SortedList
@@ -93,6 +103,8 @@ class Solution:
             sl2.add(x - y)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -123,6 +135,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -147,6 +161,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimumDistance(points [][]int) int {
@@ -180,4 +196,6 @@ func minimumDistance(points [][]int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

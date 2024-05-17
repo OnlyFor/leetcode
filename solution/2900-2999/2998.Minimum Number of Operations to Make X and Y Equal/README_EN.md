@@ -10,11 +10,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [2998. Minimum Number of Operations to Make X and Y Equal](https://leetcode.com/problems/minimum-number-of-operations-to-make-x-and-y-equal)
 
 [中文文档](/solution/2900-2999/2998.Minimum%20Number%20of%20Operations%20to%20Make%20X%20and%20Y%20Equal/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two positive integers <code>x</code> and <code>y</code>.</p>
 
@@ -76,11 +80,17 @@ It can be shown that 5 is the minimum number of operations required to make 25 e
 	<li><code>1 &lt;= x, y &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -98,6 +108,8 @@ class Solution:
 
         return dfs(x)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -128,6 +140,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -151,6 +165,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumOperationsToMakeEqual(x int, y int) int {
 	f := map[int]int{}
@@ -172,6 +188,8 @@ func minimumOperationsToMakeEqual(x int, y int) int {
 	return dfs(x)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minimumOperationsToMakeEqual(x: number, y: number): number {
@@ -197,4 +215,6 @@ function minimumOperationsToMakeEqual(x: number, y: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

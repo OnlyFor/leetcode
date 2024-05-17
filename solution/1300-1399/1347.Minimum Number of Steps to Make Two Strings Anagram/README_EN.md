@@ -10,11 +10,15 @@ tags:
     - Counting
 ---
 
+<!-- problem:start -->
+
 # [1347. Minimum Number of Steps to Make Two Strings Anagram](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram)
 
 [中文文档](/solution/1300-1399/1347.Minimum%20Number%20of%20Steps%20to%20Make%20Two%20Strings%20Anagram/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two strings of the same length <code>s</code> and <code>t</code>. In one step you can choose <strong>any character</strong> of <code>t</code> and replace it with <strong>another character</strong>.</p>
 
@@ -56,11 +60,17 @@ tags:
 	<li><code>s</code> and <code>t</code> consist of lowercase English letters only.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -74,6 +84,8 @@ class Solution:
                 ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -93,6 +105,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -107,6 +121,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minSteps(s string, t string) (ans int) {
@@ -123,6 +139,8 @@ func minSteps(s string, t string) (ans int) {
 	return
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -147,4 +165,6 @@ var minSteps = function (s, t) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

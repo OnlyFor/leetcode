@@ -10,11 +10,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [2780. Minimum Index of a Valid Split](https://leetcode.com/problems/minimum-index-of-a-valid-split)
 
 [中文文档](/solution/2700-2799/2780.Minimum%20Index%20of%20a%20Valid%20Split/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>An element <code>x</code> of an integer array <code>arr</code> of length <code>m</code> is <strong>dominant</strong> if <code>freq(x) * 2 &gt; m</code>, where <code>freq(x)</code> is the number of occurrences of <code>x</code> in <code>arr</code>. Note that this definition implies that <code>arr</code> can have <strong>at most one</strong> dominant element.</p>
 
@@ -71,11 +75,17 @@ It can be shown that index 4 is the minimum index of a valid split.</pre>
 	<li><code>nums</code> has exactly one dominant element.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -89,6 +99,8 @@ class Solution:
                     return i - 1
         return -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -115,6 +127,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -143,6 +157,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumIndex(nums []int) int {
 	x, cnt := 0, 0
@@ -166,6 +182,8 @@ func minimumIndex(nums []int) int {
 	return -1
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minimumIndex(nums: number[]): number {
@@ -192,4 +210,6 @@ function minimumIndex(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

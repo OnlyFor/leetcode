@@ -9,13 +9,15 @@ tags:
     - 数学
 ---
 
+<!-- problem:start -->
+
 # [2139. 得到目标值的最少行动次数](https://leetcode.cn/problems/minimum-moves-to-reach-target-score)
 
 [English Version](/solution/2100-2199/2139.Minimum%20Moves%20to%20Reach%20Target%20Score/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你正在玩一个整数游戏。从整数 <code>1</code> 开始，期望得到整数 <code>target</code> 。</p>
 
@@ -72,7 +74,11 @@ tags:
 	<li><code>0 &lt;= maxDoubles &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：倒推 + 贪心
 
@@ -92,6 +98,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minMoves(self, target: int, maxDoubles: int) -> int:
@@ -103,6 +111,8 @@ class Solution:
             return 1 + self.minMoves(target >> 1, maxDoubles - 1)
         return 1 + self.minMoves(target - 1, maxDoubles)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -120,6 +130,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -139,6 +151,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minMoves(target int, maxDoubles int) int {
 	if target == 1 {
@@ -153,6 +167,8 @@ func minMoves(target int, maxDoubles int) int {
 	return 1 + minMoves(target-1, maxDoubles)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minMoves(target: number, maxDoubles: number): number {
@@ -171,9 +187,15 @@ function minMoves(target: number, maxDoubles: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -189,6 +211,8 @@ class Solution:
         ans += target - 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -208,6 +232,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -229,6 +255,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minMoves(target int, maxDoubles int) (ans int) {
 	for maxDoubles > 0 && target > 1 {
@@ -244,6 +272,8 @@ func minMoves(target int, maxDoubles int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minMoves(target: number, maxDoubles: number): number {
@@ -264,4 +294,6 @@ function minMoves(target: number, maxDoubles: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

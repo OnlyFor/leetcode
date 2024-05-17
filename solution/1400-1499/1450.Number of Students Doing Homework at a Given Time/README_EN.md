@@ -8,11 +8,15 @@ tags:
     - Array
 ---
 
+<!-- problem:start -->
+
 # [1450. Number of Students Doing Homework at a Given Time](https://leetcode.com/problems/number-of-students-doing-homework-at-a-given-time)
 
 [中文文档](/solution/1400-1499/1450.Number%20of%20Students%20Doing%20Homework%20at%20a%20Given%20Time/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given two integer arrays <code>startTime</code> and <code>endTime</code> and given an integer <code>queryTime</code>.</p>
 
@@ -50,11 +54,17 @@ The third student started doing homework at time 3 and finished at time 7 and wa
 	<li><code>1 &lt;= queryTime &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -63,6 +73,8 @@ class Solution:
     ) -> int:
         return sum(a <= queryTime <= b for a, b in zip(startTime, endTime))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -78,6 +90,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -90,6 +104,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func busyStudent(startTime []int, endTime []int, queryTime int) int {
@@ -104,6 +120,8 @@ func busyStudent(startTime []int, endTime []int, queryTime int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function busyStudent(startTime: number[], endTime: number[], queryTime: number): number {
     const n = startTime.length;
@@ -116,6 +134,8 @@ function busyStudent(startTime: number[], endTime: number[], queryTime: number):
     return res;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -131,6 +151,8 @@ impl Solution {
 }
 ```
 
+#### C
+
 ```c
 int busyStudent(int* startTime, int startTimeSize, int* endTime, int endTimeSize, int queryTime) {
     int res = 0;
@@ -145,9 +167,15 @@ int busyStudent(int* startTime, int startTimeSize, int* endTime, int endTimeSize
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -160,6 +188,8 @@ class Solution:
             c[b + 1] -= 1
         return sum(c[: queryTime + 1])
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -177,6 +207,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -196,6 +228,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func busyStudent(startTime []int, endTime []int, queryTime int) int {
 	c := make([]int, 1010)
@@ -214,4 +248,6 @@ func busyStudent(startTime []int, endTime []int, queryTime int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

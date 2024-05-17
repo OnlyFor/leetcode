@@ -10,11 +10,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [1387. Sort Integers by The Power Value](https://leetcode.com/problems/sort-integers-by-the-power-value)
 
 [中文文档](/solution/1300-1399/1387.Sort%20Integers%20by%20The%20Power%20Value/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>The power of an integer <code>x</code> is defined as the number of steps needed to transform <code>x</code> into <code>1</code> using the following steps:</p>
 
@@ -63,7 +67,11 @@ The fourth number in the sorted array is 7.
 	<li><code>1 &lt;= k &lt;= hi - lo + 1</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Custom Sorting
 
@@ -76,6 +84,8 @@ Finally, we return the $k$-th number after sorting.
 The time complexity is $O(n \times \log n \times M)$, and the space complexity is $O(n)$. Where $n$ is the number of numbers in the interval $[lo, hi]$, and $M$ is the maximum value of $f(x)$. In this problem, the maximum value of $M$ is $178$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 @cache
@@ -94,6 +104,8 @@ class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
         return sorted(range(lo, hi + 1), key=f)[k - 1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -122,6 +134,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -155,6 +169,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func getKth(lo int, hi int, k int) int {
 	f := func(x int) (ans int) {
@@ -182,6 +198,8 @@ func getKth(lo int, hi int, k int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function getKth(lo: number, hi: number, k: number): number {
     const f = (x: number): number => {
@@ -207,4 +225,6 @@ function getKth(lo: number, hi: number, k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

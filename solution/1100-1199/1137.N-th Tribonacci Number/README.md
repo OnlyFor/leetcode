@@ -10,13 +10,15 @@ tags:
     - 动态规划
 ---
 
+<!-- problem:start -->
+
 # [1137. 第 N 个泰波那契数](https://leetcode.cn/problems/n-th-tribonacci-number)
 
 [English Version](/solution/1100-1199/1137.N-th%20Tribonacci%20Number/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>泰波那契序列&nbsp;T<sub>n</sub>&nbsp;定义如下：&nbsp;</p>
 
@@ -50,7 +52,11 @@ T_4 = 1 + 1 + 2 = 4
 	<li>答案保证是一个 32 位整数，即&nbsp;<code>answer &lt;= 2^31 - 1</code>。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -64,6 +70,8 @@ T_4 = 1 + 1 + 2 = 4
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def tribonacci(self, n: int) -> int:
@@ -72,6 +80,8 @@ class Solution:
             a, b, c = b, c, a + b + c
         return a
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -87,6 +97,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -104,6 +116,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func tribonacci(n int) int {
 	a, b, c := 0, 1, 1
@@ -113,6 +127,8 @@ func tribonacci(n int) int {
 	return a
 }
 ```
+
+#### TypeScript
 
 ```ts
 function tribonacci(n: number): number {
@@ -156,6 +172,8 @@ function pow(a: number[][], n: number): number[][] {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number} n
@@ -174,6 +192,8 @@ var tribonacci = function (n) {
     return a;
 };
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -197,6 +217,10 @@ class Solution {
 ```
 
 <!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- solution:start -->
 
 ### 方法二：矩阵快速幂加速递推
 
@@ -226,6 +250,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def tribonacci(self, n: int) -> int:
@@ -254,6 +280,8 @@ class Solution:
         a = [[1, 1, 0], [1, 0, 1], [1, 0, 0]]
         return sum(pow(a, n - 3)[0])
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -300,6 +328,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -343,6 +373,8 @@ private:
     }
 };
 ```
+
+#### Go
 
 ```go
 func tribonacci(n int) (ans int) {
@@ -388,6 +420,8 @@ func pow(a [][]int, n int) [][]int {
 	return res
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -437,9 +471,15 @@ function pow(a, n) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法三
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 import numpy as np
@@ -464,4 +504,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

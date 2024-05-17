@@ -12,11 +12,15 @@ tags:
     - Counting
 ---
 
+<!-- problem:start -->
+
 # [2514. Count Anagrams](https://leetcode.com/problems/count-anagrams)
 
 [中文文档](/solution/2500-2599/2514.Count%20Anagrams/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>s</code> containing one or more words. Every consecutive pair of words is separated by a single space <code>&#39; &#39;</code>.</p>
 
@@ -53,11 +57,17 @@ tags:
 	<li>There is single space between consecutive words.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 mod = 10**9 + 7
@@ -78,6 +88,8 @@ class Solution:
                 ans %= mod
         return ans
 ```
+
+#### Java
 
 ```java
 import java.math.BigInteger;
@@ -108,6 +120,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -141,6 +155,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 const mod int = 1e9 + 7
 
@@ -172,9 +188,15 @@ func pow(x, n int) int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -192,4 +214,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

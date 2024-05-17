@@ -9,13 +9,15 @@ tags:
     - 滑动窗口
 ---
 
+<!-- problem:start -->
+
 # [1456. 定长子串中元音的最大数目](https://leetcode.cn/problems/maximum-number-of-vowels-in-a-substring-of-given-length)
 
 [English Version](/solution/1400-1499/1456.Maximum%20Number%20of%20Vowels%20in%20a%20Substring%20of%20Given%20Length/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你字符串 <code>s</code> 和整数 <code>k</code> 。</p>
 
@@ -69,7 +71,11 @@ tags:
 	<li><code>1 &lt;= k &lt;= s.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：滑动窗口
 
@@ -83,6 +89,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maxVowels(self, s: str, k: int) -> int:
@@ -93,6 +101,8 @@ class Solution:
             ans = max(ans, cnt)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -122,6 +132,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -139,6 +151,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxVowels(s string, k int) int {
@@ -165,6 +179,8 @@ func maxVowels(s string, k int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maxVowels(s: string, k: number): number {
     const isVowel = (c: string) => ['a', 'e', 'i', 'o', 'u'].includes(c);
@@ -187,6 +203,8 @@ function maxVowels(s: string, k: number): number {
     return ans;
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -222,4 +240,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

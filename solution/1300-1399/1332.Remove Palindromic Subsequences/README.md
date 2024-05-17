@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1332. 删除回文子序列](https://leetcode.cn/problems/remove-palindromic-subsequences)
 
 [English Version](/solution/1300-1399/1332.Remove%20Palindromic%20Subsequences/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串&nbsp;<code>s</code>，它仅由字母&nbsp;<code>'a'</code> 和 <code>'b'</code>&nbsp;组成。每一次删除操作都可以从 <code>s</code> 中删除一个回文 <strong>子序列</strong>。</p>
 
@@ -62,7 +64,11 @@ tags:
 	<li><code>s</code> 仅包含字母&nbsp;<code>'a'</code>&nbsp; 和 <code>'b'</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：脑筋急转弯
 
@@ -74,11 +80,15 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def removePalindromeSub(self, s: str) -> int:
         return 1 if s[::-1] == s else 2
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -92,6 +102,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -107,6 +119,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func removePalindromeSub(s string) int {
 	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
@@ -118,6 +132,8 @@ func removePalindromeSub(s string) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function removePalindromeSub(s: string): number {
     for (let i = 0, j = s.length - 1; i < j; ++i, --j) {
@@ -128,6 +144,8 @@ function removePalindromeSub(s: string): number {
     return 1;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -149,4 +167,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

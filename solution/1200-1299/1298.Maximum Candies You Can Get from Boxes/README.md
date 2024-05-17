@@ -10,13 +10,15 @@ tags:
     - 数组
 ---
 
+<!-- problem:start -->
+
 # [1298. 你能从盒子里获得的最大糖果数](https://leetcode.cn/problems/maximum-candies-you-can-get-from-boxes)
 
 [English Version](/solution/1200-1299/1298.Maximum%20Candies%20You%20Can%20Get%20from%20Boxes/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你&nbsp;<code>n</code>&nbsp;个盒子，每个盒子的格式为&nbsp;<code>[status, candies, keys, containedBoxes]</code>&nbsp;，其中：</p>
 
@@ -91,11 +93,17 @@ tags:
 	<li><code>0 &lt;= initialBoxes[i] &lt; status.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：BFS
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -128,6 +136,8 @@ class Solution:
                     q.append(j)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -169,6 +179,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -212,6 +224,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxCandies(status []int, candies []int, keys [][]int, containedBoxes [][]int, initialBoxes []int) int {
 	ans := 0
@@ -253,4 +267,6 @@ func maxCandies(status []int, candies []int, keys [][]int, containedBoxes [][]in
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

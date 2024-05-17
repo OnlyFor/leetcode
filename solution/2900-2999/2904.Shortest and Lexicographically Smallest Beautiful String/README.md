@@ -9,13 +9,15 @@ tags:
     - 滑动窗口
 ---
 
+<!-- problem:start -->
+
 # [2904. 最短且字典序最小的美丽子字符串](https://leetcode.cn/problems/shortest-and-lexicographically-smallest-beautiful-string)
 
 [English Version](/solution/2900-2999/2904.Shortest%20and%20Lexicographically%20Smallest%20Beautiful%20String/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个二进制字符串 <code>s</code> 和一个正整数 <code>k</code> 。</p>
 
@@ -80,7 +82,11 @@ tags:
 	<li><code>1 &lt;= k &lt;= s.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举
 
@@ -89,6 +95,8 @@ tags:
 时间复杂度 $O(n^3)$，空间复杂度 $O(n)$。其中 $n$ 是字符串 $s$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -104,6 +112,8 @@ class Solution:
                     ans = t
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -129,6 +139,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -148,6 +160,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func shortestBeautifulSubstring(s string, k int) (ans string) {
@@ -170,6 +184,8 @@ func shortestBeautifulSubstring(s string, k int) (ans string) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function shortestBeautifulSubstring(s: string, k: number): string {
     const n = s.length;
@@ -189,6 +205,8 @@ function shortestBeautifulSubstring(s: string, k: number): string {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -214,6 +232,10 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：双指针
 
 我们也可以用两个指针维护一个滑动窗口，其中指针 $i$ 指向滑动窗口的左端点，指针 $j$ 指向滑动窗口的右端点。初始时 $i = j = 0$。另外，我们用变量 $cnt$ 记录滑动窗口中的 $1$ 的个数。
@@ -225,6 +247,8 @@ impl Solution {
 时间复杂度 $O(n^2)$，空间复杂度 $O(n)$。其中 $n$ 是字符串 $s$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -244,6 +268,8 @@ class Solution:
                 ans = s[i:j]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -270,6 +296,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -293,6 +321,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func shortestBeautifulSubstring(s string, k int) (ans string) {
 	i, j, cnt := 0, 0, 0
@@ -313,6 +343,8 @@ func shortestBeautifulSubstring(s string, k int) (ans string) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function shortestBeautifulSubstring(s: string, k: number): string {
     let [i, j, cnt] = [0, 0, 0];
@@ -332,6 +364,8 @@ function shortestBeautifulSubstring(s: string, k: number): string {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -372,4 +406,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

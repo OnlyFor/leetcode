@@ -10,13 +10,15 @@ tags:
     - 计数
 ---
 
+<!-- problem:start -->
+
 # [2190. 数组中紧跟 key 之后出现最频繁的数字](https://leetcode.cn/problems/most-frequent-number-following-key-in-an-array)
 
 [English Version](/solution/2100-2199/2190.Most%20Frequent%20Number%20Following%20Key%20In%20an%20Array/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>nums</code>&nbsp;，同时给你一个整数&nbsp;<code>key</code>&nbsp;，它在&nbsp;<code>nums</code>&nbsp;出现过。</p>
 
@@ -59,7 +61,11 @@ target = 2 是紧跟着 key 之后出现次数最多的数字，所以我们返�
 	<li>测试数据保证答案是唯一的。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：遍历计数
 
@@ -72,6 +78,8 @@ target = 2 是紧跟着 key 之后出现次数最多的数字，所以我们返�
 时间复杂度 $O(n)$，空间复杂度 $O(M)$。其中 $n$ 和 $M$ 分别为数组 $nums$ 的长度和数组 $nums$ 中元素的最大值。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -86,6 +94,8 @@ class Solution:
                     ans = b
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -104,6 +114,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -124,6 +136,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func mostFrequent(nums []int, key int) (ans int) {
 	cnt := [1001]int{}
@@ -141,6 +155,8 @@ func mostFrequent(nums []int, key int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function mostFrequent(nums: number[], key: number): number {
     const cnt: number[] = new Array(1001).fill(0);
@@ -157,6 +173,8 @@ function mostFrequent(nums: number[], key: number): number {
     return ans;
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -184,4 +202,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

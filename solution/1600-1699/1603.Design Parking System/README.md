@@ -10,13 +10,15 @@ tags:
     - 模拟
 ---
 
+<!-- problem:start -->
+
 # [1603. 设计停车系统](https://leetcode.cn/problems/design-parking-system)
 
 [English Version](/solution/1600-1699/1603.Design%20Parking%20System/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>请你给一个停车场设计一个停车系统。停车场总共有三种不同大小的车位：大，中和小，每种尺寸分别有固定数目的车位。</p>
 
@@ -56,7 +58,11 @@ parkingSystem.addCar(1); // 返回 false ，因为没有空的大车位，唯一
 	<li>最多会调用 <code>addCar</code> 函数 <code>1000</code> 次</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -65,6 +71,8 @@ parkingSystem.addCar(1); // 返回 false ，因为没有空的大车位，唯一
 时间复杂度 $O(1)$，空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class ParkingSystem:
@@ -82,6 +90,8 @@ class ParkingSystem:
 # obj = ParkingSystem(big, medium, small)
 # param_1 = obj.addCar(carType)
 ```
+
+#### Java
 
 ```java
 class ParkingSystem {
@@ -106,6 +116,8 @@ class ParkingSystem {
  * boolean param_1 = obj.addCar(carType);
  */
 ```
+
+#### C++
 
 ```cpp
 class ParkingSystem {
@@ -133,6 +145,8 @@ private:
  */
 ```
 
+#### Go
+
 ```go
 type ParkingSystem struct {
 	cnt []int
@@ -157,6 +171,8 @@ func (this *ParkingSystem) AddCar(carType int) bool {
  */
 ```
 
+#### TypeScript
+
 ```ts
 class ParkingSystem {
     private count: [number, number, number];
@@ -180,6 +196,8 @@ class ParkingSystem {
  * var param_1 = obj.addCar(carType)
  */
 ```
+
+#### Rust
 
 ```rust
 struct ParkingSystem {
@@ -212,6 +230,8 @@ impl ParkingSystem {
  */
 ```
 
+#### C#
+
 ```cs
 public class ParkingSystem {
 
@@ -236,6 +256,8 @@ public class ParkingSystem {
  * bool param_1 = obj.AddCar(carType);
  */
 ```
+
+#### C
 
 ```c
 typedef struct {
@@ -275,4 +297,6 @@ void parkingSystemFree(ParkingSystem* obj) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

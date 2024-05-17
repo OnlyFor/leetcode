@@ -8,13 +8,15 @@ tags:
     - 交互
 ---
 
+<!-- problem:start -->
+
 # [702. 搜索长度未知的有序数组 🔒](https://leetcode.cn/problems/search-in-a-sorted-array-of-unknown-size)
 
 [English Version](/solution/0700-0799/0702.Search%20in%20a%20Sorted%20Array%20of%20Unknown%20Size/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>这是一个<strong>交互问题</strong>。</p>
 
@@ -62,11 +64,17 @@ tags:
 	<li><code>secret</code>&nbsp;严格递增</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # """
@@ -94,6 +102,8 @@ class Solution:
         return left if reader.get(left) == target else -1
 ```
 
+#### Java
+
 ```java
 /**
  * // This is ArrayReader's API interface.
@@ -118,6 +128,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 /**
@@ -145,6 +157,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 /**
@@ -175,4 +189,6 @@ func search(reader ArrayReader, target int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

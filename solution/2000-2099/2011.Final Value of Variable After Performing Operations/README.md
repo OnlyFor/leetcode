@@ -10,13 +10,15 @@ tags:
     - 模拟
 ---
 
+<!-- problem:start -->
+
 # [2011. 执行操作后的变量值](https://leetcode.cn/problems/final-value-of-variable-after-performing-operations)
 
 [English Version](/solution/2000-2099/2011.Final%20Value%20of%20Variable%20After%20Performing%20Operations/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>存在一种仅支持 4 种操作和 1 个变量 <code>X</code> 的编程语言：</p>
 
@@ -77,7 +79,11 @@ X--：X 减 1 ，X = 1 - 1 = 0
 	<li><code>operations[i]</code> 将会是 <code>"++X"</code>、<code>"X++"</code>、<code>"--X"</code> 或 <code>"X--"</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -87,11 +93,15 @@ X--：X 减 1 ，X = 1 - 1 = 0
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def finalValueAfterOperations(self, operations: List[str]) -> int:
         return sum(1 if s[1] == '+' else -1 for s in operations)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -105,6 +115,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -115,6 +127,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func finalValueAfterOperations(operations []string) (ans int) {
@@ -129,6 +143,8 @@ func finalValueAfterOperations(operations []string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function finalValueAfterOperations(operations: string[]): number {
     let ans = 0;
@@ -138,6 +154,8 @@ function finalValueAfterOperations(operations: string[]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -150,6 +168,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -165,6 +185,8 @@ var finalValueAfterOperations = function (operations) {
 };
 ```
 
+#### C
+
 ```c
 int finalValueAfterOperations(char** operations, int operationsSize) {
     int ans = 0;
@@ -177,9 +199,15 @@ int finalValueAfterOperations(char** operations, int operationsSize) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 function finalValueAfterOperations(operations: string[]): number {
@@ -189,4 +217,6 @@ function finalValueAfterOperations(operations: string[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

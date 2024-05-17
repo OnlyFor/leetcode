@@ -10,11 +10,15 @@ tags:
     - Monotonic Queue
 ---
 
+<!-- problem:start -->
+
 # [918. Maximum Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray)
 
 [中文文档](/solution/0900-0999/0918.Maximum%20Sum%20Circular%20Subarray/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a <strong>circular integer array</strong> <code>nums</code> of length <code>n</code>, return <em>the maximum possible sum of a non-empty <strong>subarray</strong> of </em><code>nums</code>.</p>
 
@@ -56,11 +60,17 @@ tags:
 	<li><code>-3 * 10<sup>4</sup> &lt;= nums[i] &lt;= 3 * 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -73,6 +83,8 @@ class Solution:
             s2 = min(s2, f2)
         return s1 if s1 <= 0 else max(s1, sum(nums) - s2)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -89,6 +101,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -107,6 +121,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxSubarraySumCircular(nums []int) int {
 	s1, s2, f1, f2, total := nums[0], nums[0], nums[0], nums[0], nums[0]
@@ -123,6 +139,8 @@ func maxSubarraySumCircular(nums []int) int {
 	return max(s1, total-s2)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxSubarraySumCircular(nums: number[]): number {
@@ -147,9 +165,15 @@ function maxSubarraySumCircular(nums: number[]): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -164,6 +188,8 @@ class Solution:
             pmx = max(pmx, s)
         return max(ans, s - smi)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -182,6 +208,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -202,6 +230,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxSubarraySumCircular(nums []int) int {
 	const inf = 1 << 30
@@ -217,6 +247,8 @@ func maxSubarraySumCircular(nums []int) int {
 	return max(ans, s-smi)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxSubarraySumCircular(nums: number[]): number {
@@ -236,4 +268,6 @@ function maxSubarraySumCircular(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,11 +9,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1629. Slowest Key](https://leetcode.com/problems/slowest-key)
 
 [中文文档](/solution/1600-1699/1629.Slowest%20Key/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>A newly designed keypad was tested, where a tester pressed a sequence of <code>n</code> keys, one at a time.</p>
 
@@ -65,11 +69,17 @@ The longest of these was the keypress for &#39;a&#39; with duration 16.</pre>
 	<li><code>keysPressed</code> contains only lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -83,6 +93,8 @@ class Solution:
                 ans = keysPressed[i]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -100,6 +112,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -119,6 +133,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func slowestKey(releaseTimes []int, keysPressed string) byte {
 	ans := keysPressed[0]
@@ -136,4 +152,6 @@ func slowestKey(releaseTimes []int, keysPressed string) byte {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

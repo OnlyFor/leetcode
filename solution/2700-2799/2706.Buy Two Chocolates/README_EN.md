@@ -9,11 +9,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [2706. Buy Two Chocolates](https://leetcode.com/problems/buy-two-chocolates)
 
 [中文文档](/solution/2700-2799/2706.Buy%20Two%20Chocolates/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>prices</code> representing the prices of various chocolates in a store. You are also given a single integer <code>money</code>, which represents your initial amount of money.</p>
 
@@ -47,7 +51,11 @@ tags:
 	<li><code>1 &lt;= money &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sorting
 
@@ -57,6 +65,8 @@ The time complexity is $O(n \times \log n)$, and the space complexity is $O(\log
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def buyChoco(self, prices: List[int], money: int) -> int:
@@ -64,6 +74,8 @@ class Solution:
         cost = prices[0] + prices[1]
         return money if money < cost else money - cost
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -74,6 +86,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -86,6 +100,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func buyChoco(prices []int, money int) int {
 	sort.Ints(prices)
@@ -97,6 +113,8 @@ func buyChoco(prices []int, money int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function buyChoco(prices: number[], money: number): number {
     prices.sort((a, b) => a - b);
@@ -104,6 +122,8 @@ function buyChoco(prices: number[], money: number): number {
     return money < cost ? money : money - cost;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -120,6 +140,10 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: One-pass Traversal
 
 We can find the two smallest prices in one pass, and then calculate the cost.
@@ -127,6 +151,8 @@ We can find the two smallest prices in one pass, and then calculate the cost.
 The time complexity is $O(n)$, where $n$ is the length of the array `prices`. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -140,6 +166,8 @@ class Solution:
         cost = a + b
         return money if money < cost else money - cost
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -159,6 +187,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -177,6 +207,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func buyChoco(prices []int, money int) int {
@@ -196,6 +228,8 @@ func buyChoco(prices []int, money int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function buyChoco(prices: number[], money: number): number {
     let [a, b] = [1000, 1000];
@@ -211,6 +245,8 @@ function buyChoco(prices: number[], money: number): number {
     return money < cost ? money : money - cost;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -237,4 +273,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

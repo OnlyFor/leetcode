@@ -9,11 +9,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [2452. Words Within Two Edits of Dictionary](https://leetcode.com/problems/words-within-two-edits-of-dictionary)
 
 [中文文档](/solution/2400-2499/2452.Words%20Within%20Two%20Edits%20of%20Dictionary/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two string arrays, <code>queries</code> and <code>dictionary</code>. All words in each array comprise of lowercase English letters and have the same length.</p>
 
@@ -54,7 +58,11 @@ Applying any two edits to &quot;yes&quot; cannot make it equal to &quot;not&quot
 	<li>All <code>queries[i]</code> and <code>dictionary[j]</code> are composed of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Brute Force Enumeration
 
@@ -63,6 +71,8 @@ We directly traverse each word $s$ in the array $\text{queries}$, and then trave
 The time complexity is $O(m \times n \times l)$, where $m$ and $n$ are the lengths of the arrays $\text{queries}$ and $\text{dictionary}$ respectively, and $l$ is the length of the word.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -75,6 +85,8 @@ class Solution:
                     break
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -100,6 +112,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -122,6 +136,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func twoEditWords(queries []string, dictionary []string) (ans []string) {
 	for _, s := range queries {
@@ -141,6 +157,8 @@ func twoEditWords(queries []string, dictionary []string) (ans []string) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function twoEditWords(queries: string[], dictionary: string[]): string[] {
@@ -162,6 +180,8 @@ function twoEditWords(queries: string[], dictionary: string[]): string[] {
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn two_edit_words(queries: Vec<String>, dictionary: Vec<String>) -> Vec<String> {
@@ -180,6 +200,8 @@ impl Solution {
     }
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -206,4 +228,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

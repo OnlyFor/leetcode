@@ -8,13 +8,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [3119. Maximum Number of Potholes That Can Be Fixed 🔒](https://leetcode.cn/problems/maximum-number-of-potholes-that-can-be-fixed)
 
 [English Version](/solution/3100-3199/3119.Maximum%20Number%20of%20Potholes%20That%20Can%20Be%20Fixed/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>You are given a string <code>road</code>, consisting only of characters <code>&quot;x&quot;</code> and <code>&quot;.&quot;</code>, where each <code>&quot;x&quot;</code> denotes a <em>pothole</em> and each <code>&quot;.&quot;</code> denotes a smooth road, and an integer <code>budget</code>.</p>
 
@@ -68,7 +70,11 @@ tags:
 	<li><code>road</code> consists only of characters <code>&#39;.&#39;</code> and <code>&#39;x&#39;</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：计数 + 贪心
 
@@ -81,6 +87,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为字符串 $road$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -108,6 +116,8 @@ class Solution:
         return ans
 ```
 
+#### Java
+
 ```java
 class Solution {
     public int maxPotholes(String road, int budget) {
@@ -134,6 +144,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -163,6 +175,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxPotholes(road string, budget int) (ans int) {
 	road += "."
@@ -186,6 +200,8 @@ func maxPotholes(road string, budget int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxPotholes(road: string, budget: number): number {
@@ -211,6 +227,8 @@ function maxPotholes(road: string, budget: number): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -248,6 +266,8 @@ impl Solution {
 }
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int MaxPotholes(string road, int budget) {
@@ -277,4 +297,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

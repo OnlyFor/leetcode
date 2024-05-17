@@ -12,11 +12,15 @@ tags:
     - Binary Tree
 ---
 
+<!-- problem:start -->
+
 # [2641. Cousins in Binary Tree II](https://leetcode.com/problems/cousins-in-binary-tree-ii)
 
 [中文文档](/solution/2600-2699/2641.Cousins%20in%20Binary%20Tree%20II/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given the <code>root</code> of a binary tree, replace the value of each node in the tree with the <strong>sum of all its cousins&#39; values</strong>.</p>
 
@@ -60,7 +64,11 @@ tags:
 	<li><code>1 &lt;= Node.val &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Two DFS Traversals
 
@@ -71,6 +79,8 @@ Next, we perform a DFS traversal to calculate the values in the array $s$. Then,
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Here, $n$ is the number of nodes in the binary tree.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -108,6 +118,8 @@ class Solution:
         dfs2(root, 0)
         return root
 ```
+
+#### Java
 
 ```java
 /**
@@ -164,6 +176,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -213,6 +227,8 @@ private:
     };
 };
 ```
+
+#### Go
 
 ```go
 /**
@@ -264,6 +280,8 @@ func replaceValueInTree(root *TreeNode) *TreeNode {
 }
 ```
 
+#### TypeScript
+
 ```ts
 /**
  * Definition for a binary tree node.
@@ -313,6 +331,10 @@ function replaceValueInTree(root: TreeNode | null): TreeNode | null {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Breadth-First Search (BFS)
 
 First, we update the root node's value to $0$, and use a queue $q$ to store all nodes at each level, initially enqueueing the root node.
@@ -324,6 +346,8 @@ After the traversal ends, we return the root node.
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Here, $n$ is the number of nodes in the binary tree.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -357,6 +381,8 @@ class Solution:
             q = t
         return root
 ```
+
+#### Java
 
 ```java
 /**
@@ -408,6 +434,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -454,6 +482,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -499,6 +529,8 @@ func replaceValueInTree(root *TreeNode) *TreeNode {
 	return root
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -548,4 +580,6 @@ function replaceValueInTree(root: TreeNode | null): TreeNode | null {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

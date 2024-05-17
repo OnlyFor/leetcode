@@ -10,13 +10,15 @@ tags:
     - 滑动窗口
 ---
 
+<!-- problem:start -->
+
 # [2953. 统计完全子字符串](https://leetcode.cn/problems/count-complete-substrings)
 
 [English Version](/solution/2900-2999/2953.Count%20Complete%20Substrings/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串&nbsp;<code>word</code>&nbsp;和一个整数 <code>k</code>&nbsp;。</p>
 
@@ -59,7 +61,11 @@ tags:
 	<li><code>1 &lt;= k &lt;= word.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举字符种类数 + 滑动窗口
 
@@ -72,6 +78,8 @@ tags:
 时间复杂度 $O(n \times |\Sigma|)$，空间复杂度 $O(|\Sigma|)$，其中 $n$ 是字符串 $word$ 的长度；而 $\Sigma$ 是字符集的大小，本题中字符集为小写英文字母，因此 $|\Sigma| = 26$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -108,6 +116,8 @@ class Solution:
             i = j
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -163,6 +173,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -217,6 +229,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countCompleteSubstrings(word string, k int) (ans int) {
@@ -274,6 +288,8 @@ func abs(x int) int {
 	return x
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countCompleteSubstrings(word: string, k: number): number {
@@ -333,4 +349,6 @@ function countCompleteSubstrings(word: string, k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

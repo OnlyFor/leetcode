@@ -12,13 +12,15 @@ tags:
     - 状态压缩
 ---
 
+<!-- problem:start -->
+
 # [1723. 完成所有工作的最短时间](https://leetcode.cn/problems/find-minimum-time-to-finish-all-jobs)
 
 [English Version](/solution/1700-1799/1723.Find%20Minimum%20Time%20to%20Finish%20All%20Jobs/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>jobs</code> ，其中 <code>jobs[i]</code> 是完成第 <code>i</code> 项工作要花费的时间。</p>
 
@@ -55,7 +57,11 @@ tags:
 	<li><code>1 <= jobs[i] <= 10<sup>7</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：DFS + 剪枝
 
@@ -64,6 +70,8 @@ tags:
 剪枝优化：优化分配花费时间较大的工作，因此可以先对 $jobs$ 按照降序排列。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -88,6 +96,8 @@ class Solution:
         dfs(0)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -135,6 +145,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -163,6 +175,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimumTimeRequired(jobs []int, k int) int {
@@ -197,4 +211,6 @@ func minimumTimeRequired(jobs []int, k int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

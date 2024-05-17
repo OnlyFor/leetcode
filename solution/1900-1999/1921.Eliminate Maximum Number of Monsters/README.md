@@ -10,13 +10,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [1921. 消灭怪物的最大数量](https://leetcode.cn/problems/eliminate-maximum-number-of-monsters)
 
 [English Version](/solution/1900-1999/1921.Eliminate%20Maximum%20Number%20of%20Monsters/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你正在玩一款电子游戏，在游戏中你需要保护城市免受怪物侵袭。给定一个 <strong>下标从 0 开始</strong> 且大小为 <code>n</code> 的整数数组 <code>dist</code> ，其中 <code>dist[i]</code> 是第 <code>i</code> 个怪物与城市的 <strong>初始距离</strong>（单位：千米）。</p>
 
@@ -73,7 +75,11 @@ tags:
 	<li><code>1 &lt;= dist[i], speed[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：排序 + 贪心
 
@@ -91,6 +97,8 @@ $$times[i] = \lfloor \frac{dist[i]-1}{speed[i]} \rfloor$$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def eliminateMaximum(self, dist: List[int], speed: List[int]) -> int:
@@ -100,6 +108,8 @@ class Solution:
                 return i
         return len(times)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -119,6 +129,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -140,6 +152,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func eliminateMaximum(dist []int, speed []int) int {
 	n := len(dist)
@@ -157,6 +171,8 @@ func eliminateMaximum(dist []int, speed []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function eliminateMaximum(dist: number[], speed: number[]): number {
     const n = dist.length;
@@ -173,6 +189,8 @@ function eliminateMaximum(dist: number[], speed: number[]): number {
     return n;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -195,6 +213,8 @@ var eliminateMaximum = function (dist, speed) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int EliminateMaximum(int[] dist, int[] speed) {
@@ -216,4 +236,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

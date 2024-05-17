@@ -8,11 +8,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k)
 
 [中文文档](/solution/0500-0599/0560.Subarray%20Sum%20Equals%20K/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array of integers <code>nums</code> and an integer <code>k</code>, return <em>the total number of subarrays whose sum equals to</em> <code>k</code>.</p>
 
@@ -35,11 +39,17 @@ tags:
 	<li><code>-10<sup>7</sup> &lt;= k &lt;= 10<sup>7</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -52,6 +62,8 @@ class Solution:
             counter[s] += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -68,6 +80,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -86,6 +100,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func subarraySum(nums []int, k int) int {
 	counter := map[int]int{0: 1}
@@ -98,6 +114,8 @@ func subarraySum(nums []int, k int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function subarraySum(nums: number[], k: number): number {
@@ -113,6 +131,8 @@ function subarraySum(nums: number[], k: number): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -138,9 +158,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -163,4 +189,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

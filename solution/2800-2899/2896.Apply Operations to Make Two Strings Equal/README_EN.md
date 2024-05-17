@@ -9,11 +9,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [2896. Apply Operations to Make Two Strings Equal](https://leetcode.com/problems/apply-operations-to-make-two-strings-equal)
 
 [中文文档](/solution/2800-2899/2896.Apply%20Operations%20to%20Make%20Two%20Strings%20Equal/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two <strong>0-indexed</strong> binary strings <code>s1</code> and <code>s2</code>, both of length <code>n</code>, and a positive integer <code>x</code>.</p>
 
@@ -58,7 +62,11 @@ The total cost is 1 + 1 + 2 = 4. It can be shown that it is the minimum cost pos
 	<li><code>s1</code> and <code>s2</code> consist only of the characters <code>&#39;0&#39;</code> and <code>&#39;1&#39;</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Memoization
 
@@ -84,6 +92,8 @@ The time complexity is $O(n^2)$, and the space complexity is $O(n^2)$. Here, $n$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minOperations(self, s1: str, s2: str, x: int) -> int:
@@ -103,6 +113,8 @@ class Solution:
             return -1
         return dfs(0, m - 1)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -141,6 +153,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -174,6 +188,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minOperations(s1 string, s2 string, x int) int {
@@ -211,6 +227,8 @@ func minOperations(s1 string, s2 string, x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minOperations(s1: string, s2: string, x: number): number {
     const idx: number[] = [];
@@ -245,9 +263,15 @@ function minOperations(s1: string, s2: string, x: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Java
 
 ```java
 class Solution {
@@ -281,4 +305,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

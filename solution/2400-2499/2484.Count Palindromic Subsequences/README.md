@@ -9,13 +9,15 @@ tags:
     - 动态规划
 ---
 
+<!-- problem:start -->
+
 # [2484. 统计回文子序列数目](https://leetcode.cn/problems/count-palindromic-subsequences)
 
 [English Version](/solution/2400-2499/2484.Count%20Palindromic%20Subsequences/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你数字字符串&nbsp;<code>s</code>&nbsp;，请你返回&nbsp;<code>s</code>&nbsp;中长度为&nbsp;<code>5</code>&nbsp;的 <b>回文子序列</b>&nbsp;数目。由于答案可能很大，请你将答案对&nbsp;<code>10<sup>9</sup> + 7</code>&nbsp;<strong>取余</strong>&nbsp;后返回。</p>
 
@@ -60,13 +62,19 @@ tags:
 	<li><code>s</code>&nbsp;只包含数字字符。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举 + 计数
 
 时间复杂度 $O(100 \times n)$，空间复杂度 $O(100 \times n)$。其中 $n$ 为字符串 $s$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -101,6 +109,8 @@ class Solution:
                     ans %= mod
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -153,6 +163,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -207,6 +219,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countPalindromes(s string) int {
 	n := len(s)
@@ -258,4 +272,6 @@ func countPalindromes(s string) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,13 +9,15 @@ tags:
     - 图
 ---
 
+<!-- problem:start -->
+
 # [323. 无向图中连通分量的数目 🔒](https://leetcode.cn/problems/number-of-connected-components-in-an-undirected-graph)
 
 [English Version](/solution/0300-0399/0323.Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你有一个包含&nbsp;<code>n</code> 个节点的图。给定一个整数 <code>n</code> 和一个数组&nbsp;<code>edges</code>&nbsp;，其中&nbsp;<code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code>&nbsp;表示图中&nbsp;<code>a<sub>i</sub></code>&nbsp;和&nbsp;<code>b<sub>i</sub></code>&nbsp;之间有一条边。</p>
 
@@ -53,7 +55,11 @@ tags:
 	<li><code>edges</code> 中不会出现重复的边</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：DFS
 
@@ -64,6 +70,8 @@ tags:
 时间复杂度 $O(n + m)$，空间复杂度 $O(n + m)$。其中 $n$ 和 $m$ 分别是节点数和边数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -83,6 +91,8 @@ class Solution:
         vis = set()
         return sum(dfs(i) for i in range(n))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -118,6 +128,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -148,6 +160,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countComponents(n int, edges [][]int) (ans int) {
 	g := make([][]int, n)
@@ -175,6 +189,8 @@ func countComponents(n int, edges [][]int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function countComponents(n: number, edges: number[][]): number {
     const g: number[][] = Array.from({ length: n }, () => []);
@@ -196,6 +212,8 @@ function countComponents(n: number, edges: number[][]): number {
     return g.reduce((acc, _, i) => acc + dfs(i), 0);
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -226,6 +244,10 @@ var countComponents = function (n, edges) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：并查集
 
 我们可以使用并查集来维护图中的连通分量。
@@ -237,6 +259,8 @@ var countComponents = function (n, edges) {
 时间复杂度 $O(n + m \times \alpha(n))$，空间复杂度 $O(n)$。其中 $n$ 和 $m$ 分别是节点数和边数，而 $\alpha(n)$ 是 Ackermann 函数的反函数，可以看作是一个很小的常数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class UnionFind:
@@ -269,6 +293,8 @@ class Solution:
             n -= uf.union(a, b)
         return n
 ```
+
+#### Java
 
 ```java
 class UnionFind {
@@ -318,6 +344,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class UnionFind {
 public:
@@ -364,6 +392,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 type unionFind struct {
@@ -413,6 +443,8 @@ func countComponents(n int, edges [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 class UnionFind {
     p: number[];
@@ -458,4 +490,6 @@ function countComponents(n: number, edges: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

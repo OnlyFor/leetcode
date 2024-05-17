@@ -10,13 +10,15 @@ tags:
     - 前缀和
 ---
 
+<!-- problem:start -->
+
 # [2017. 网格游戏](https://leetcode.cn/problems/grid-game)
 
 [English Version](/solution/2000-2099/2017.Grid%20Game/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong> 开始的二维数组 <code>grid</code> ，数组大小为 <code>2 x n</code> ，其中 <code>grid[r][c]</code> 表示矩阵中 <code>(r, c)</code> 位置上的点数。现在有两个机器人正在矩阵上参与一场游戏。</p>
 
@@ -71,7 +73,11 @@ tags:
 	<li><code>1 &lt;= grid[r][c] &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：前缀和
 
@@ -87,6 +93,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def gridGame(self, grid: List[List[int]]) -> int:
@@ -98,6 +106,8 @@ class Solution:
             s2 += grid[1][j]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -117,6 +127,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 using ll = long long;
@@ -138,6 +150,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func gridGame(grid [][]int) int64 {
 	ans := math.MaxInt64
@@ -153,6 +167,8 @@ func gridGame(grid [][]int) int64 {
 	return int64(ans)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function gridGame(grid: number[][]): number {
@@ -170,4 +186,6 @@ function gridGame(grid: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,13 +10,15 @@ tags:
     - 前缀和
 ---
 
+<!-- problem:start -->
+
 # [1685. 有序数组中差绝对值之和](https://leetcode.cn/problems/sum-of-absolute-differences-in-a-sorted-array)
 
 [English Version](/solution/1600-1699/1685.Sum%20of%20Absolute%20Differences%20in%20a%20Sorted%20Array/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个 <strong>非递减 </strong>有序整数数组 <code>nums</code> 。</p>
 
@@ -53,7 +55,11 @@ result[2] = |5-2| + |5-3| + |5-5| = 3 + 2 + 0 = 5。
 	<li><code>1 <= nums[i] <= nums[i + 1] <= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：求和 + 枚举
 
@@ -64,6 +70,8 @@ result[2] = |5-2| + |5-3| + |5-5| = 3 + 2 + 0 = 5。
 时间复杂度 $O(n)$，其中 $n$ 为数组 $nums$ 的长度。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -76,6 +84,8 @@ class Solution:
             t += x
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -97,6 +107,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -114,6 +126,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func getSumAbsoluteDifferences(nums []int) (ans []int) {
 	var s, t int
@@ -129,6 +143,8 @@ func getSumAbsoluteDifferences(nums []int) (ans []int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function getSumAbsoluteDifferences(nums: number[]): number[] {
     const s = nums.reduce((a, b) => a + b);
@@ -143,6 +159,8 @@ function getSumAbsoluteDifferences(nums: number[]): number[] {
     return ans;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -162,6 +180,8 @@ var getSumAbsoluteDifferences = function (nums) {
     return ans;
 };
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -184,4 +204,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

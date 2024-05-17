@@ -10,11 +10,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [1314. Matrix Block Sum](https://leetcode.com/problems/matrix-block-sum)
 
 [中文文档](/solution/1300-1399/1314.Matrix%20Block%20Sum/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a <code>m x n</code> matrix <code>mat</code> and an integer <code>k</code>, return <em>a matrix</em> <code>answer</code> <em>where each</em> <code>answer[i][j]</code> <em>is the sum of all elements</em> <code>mat[r][c]</code> <em>for</em>:</p>
 
@@ -49,7 +53,11 @@ tags:
 	<li><code>1 &lt;= mat[i][j] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Two-Dimensional Prefix Sum
 
@@ -73,6 +81,8 @@ The time complexity is $O(m \times n)$, and the space complexity is $O(m \times 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def matrixBlockSum(self, mat: List[List[int]], k: int) -> List[List[int]]:
@@ -91,6 +101,8 @@ class Solution:
                 )
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -118,6 +130,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -147,6 +161,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func matrixBlockSum(mat [][]int, k int) [][]int {
@@ -180,6 +196,8 @@ func matrixBlockSum(mat [][]int, k int) [][]int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function matrixBlockSum(mat: number[][], k: number): number[][] {
     const m: number = mat.length;
@@ -209,4 +227,6 @@ function matrixBlockSum(mat: number[][], k: number): number[][] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

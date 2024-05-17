@@ -9,11 +9,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [3129. Find All Possible Stable Binary Arrays I](https://leetcode.com/problems/find-all-possible-stable-binary-arrays-i)
 
 [中文文档](/solution/3100-3199/3129.Find%20All%20Possible%20Stable%20Binary%20Arrays%20I/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given 3 positive integers <code>zero</code>, <code>one</code>, and <code>limit</code>.</p>
 
@@ -75,7 +79,11 @@ tags:
 	<li><code>1 &lt;= zero, one, limit &lt;= 200</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Memoization Search
 
@@ -89,6 +97,8 @@ The calculation process of the function $dfs(i, j, k)$ is as follows:
 -   If $k = 0$, we consider the case where the previous number is $0$, $dfs(i - 1, j, 0)$, and the case where the previous number is $1$, $dfs(i - 1, j, 1)$. If the previous number is $0$, it may cause more than $\text{limit}$ $0$s in the subarray, i.e., the situation where the $\text{limit} + 1$
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -116,6 +126,8 @@ class Solution:
         dfs.cache_clear()
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -151,6 +163,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 using ll = long long;
@@ -191,6 +205,8 @@ private:
     }
 };
 ```
+
+#### Go
 
 ```go
 func numberOfStableArrays(zero int, one int, limit int) int {
@@ -236,6 +252,10 @@ func numberOfStableArrays(zero int, one int, limit int) int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Dynamic Programming
 
 We can also convert the memoization search of Solution 1 into dynamic programming.
@@ -252,6 +272,8 @@ The state transition equation is as follows:
 The time complexity is $O(zero \times one)$, and the space complexity is $O(zero \times one)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -276,6 +298,8 @@ class Solution:
                 ) % mod
         return sum(f[zero][one]) % mod
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -314,6 +338,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -342,6 +368,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func numberOfStableArrays(zero int, one int, limit int) int {
@@ -374,4 +402,6 @@ func numberOfStableArrays(zero int, one int, limit int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

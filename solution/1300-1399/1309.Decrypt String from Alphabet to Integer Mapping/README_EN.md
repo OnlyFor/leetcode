@@ -8,11 +8,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1309. Decrypt String from Alphabet to Integer Mapping](https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping)
 
 [中文文档](/solution/1300-1399/1309.Decrypt%20String%20from%20Alphabet%20to%20Integer%20Mapping/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>s</code> formed by digits and <code>&#39;#&#39;</code>. We want to map <code>s</code> to English lowercase characters as follows:</p>
 
@@ -50,11 +54,17 @@ tags:
 	<li><code>s</code> will be a valid string such that mapping is always possible.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -73,6 +83,8 @@ class Solution:
                 i += 1
         return ''.join(res)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -97,6 +109,8 @@ class Solution {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function freqAlphabets(s: string): string {
     const n = s.length;
@@ -114,6 +128,8 @@ function freqAlphabets(s: string): string {
     return ans.map(c => String.fromCharCode('a'.charCodeAt(0) + Number(c) - 1)).join('');
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -137,6 +153,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 char* freqAlphabets(char* s) {
@@ -162,4 +180,6 @@ char* freqAlphabets(char* s) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,11 +10,15 @@ tags:
     - Monotonic Stack
 ---
 
+<!-- problem:start -->
+
 # [1475. Final Prices With a Special Discount in a Shop](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop)
 
 [中文文档](/solution/1400-1499/1475.Final%20Prices%20With%20a%20Special%20Discount%20in%20a%20Shop/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>prices</code> where <code>prices[i]</code> is the price of the <code>i<sup>th</sup></code> item in a shop.</p>
 
@@ -58,11 +62,17 @@ For items 3 and 4 you will not receive any discount at all.
 	<li><code>1 &lt;= prices[i] &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -76,6 +86,8 @@ class Solution:
                     break
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -95,6 +107,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -116,6 +130,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func finalPrices(prices []int) []int {
 	n := len(prices)
@@ -133,6 +149,8 @@ func finalPrices(prices []int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function finalPrices(prices: number[]): number[] {
     const n = prices.length;
@@ -149,6 +167,8 @@ function finalPrices(prices: number[]): number[] {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -169,6 +189,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[]} prices
@@ -186,6 +208,8 @@ var finalPrices = function (prices) {
     return prices;
 };
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -209,9 +233,15 @@ class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -224,6 +254,8 @@ class Solution:
             stk.append(i)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -243,6 +275,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -261,6 +295,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func finalPrices(prices []int) []int {
 	var stk []int
@@ -277,6 +313,8 @@ func finalPrices(prices []int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function finalPrices(prices: number[]): number[] {
@@ -296,9 +334,15 @@ function finalPrices(prices: number[]): number[] {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 3
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -313,6 +357,8 @@ class Solution:
             stk.append(i)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -334,6 +380,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -357,6 +405,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func finalPrices(prices []int) []int {
 	stk := []int{}
@@ -375,6 +425,8 @@ func finalPrices(prices []int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function finalPrices(prices: number[]): number[] {
@@ -395,4 +447,6 @@ function finalPrices(prices: number[]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

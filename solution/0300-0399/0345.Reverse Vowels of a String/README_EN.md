@@ -7,11 +7,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [345. Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string)
 
 [中文文档](/solution/0300-0399/0345.Reverse%20Vowels%20of%20a%20String/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a string <code>s</code>, reverse only all the vowels in the string and return it.</p>
 
@@ -33,11 +37,17 @@ tags:
 	<li><code>s</code> consist of <strong>printable ASCII</strong> characters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -55,6 +65,8 @@ class Solution:
                 i, j = i + 1, j - 1
         return "".join(cs)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -85,6 +97,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -111,6 +125,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func reverseVowels(s string) string {
 	vowels := [128]bool{}
@@ -135,6 +151,8 @@ func reverseVowels(s string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function reverseVowels(s: string): string {
     const vowels = new Set(['a', 'e', 'i', 'o', 'u']);
@@ -151,6 +169,8 @@ function reverseVowels(s: string): string {
     return cs.join('');
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -178,4 +198,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

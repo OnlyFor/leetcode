@@ -10,11 +10,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1436. Destination City](https://leetcode.com/problems/destination-city)
 
 [中文文档](/solution/1400-1499/1436.Destination%20City/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given the array <code>paths</code>, where <code>paths[i] = [cityA<sub>i</sub>, cityB<sub>i</sub>]</code> means there exists a direct path going from <code>cityA<sub>i</sub></code> to <code>cityB<sub>i</sub></code>. <em>Return the destination city, that is, the city without any path outgoing to another city.</em></p>
 
@@ -60,11 +64,17 @@ Clearly the destination city is &quot;A&quot;.
 	<li>All strings consist of lowercase and uppercase English letters and the space character.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -72,6 +82,8 @@ class Solution:
         s = {a for a, _ in paths}
         return next(b for _, b in paths if b not in s)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -89,6 +101,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -108,6 +122,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func destCity(paths [][]string) string {
 	s := map[string]bool{}
@@ -123,6 +139,8 @@ func destCity(paths [][]string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function destCity(paths: string[][]): string {
     const set = new Set(paths.map(([a]) => a));
@@ -134,6 +152,8 @@ function destCity(paths: string[][]): string {
     return '';
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashSet;
@@ -153,6 +173,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {string[][]} paths
@@ -171,6 +193,8 @@ var destCity = function (paths) {
     return '';
 };
 ```
+
+#### C
 
 ```c
 char* destCity(char*** paths, int pathsSize, int* pathsColSize) {
@@ -192,4 +216,6 @@ char* destCity(char*** paths, int pathsSize, int* pathsColSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

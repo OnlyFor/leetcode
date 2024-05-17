@@ -10,11 +10,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [2089. Find Target Indices After Sorting Array](https://leetcode.com/problems/find-target-indices-after-sorting-array)
 
 [中文文档](/solution/2000-2099/2089.Find%20Target%20Indices%20After%20Sorting%20Array/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code> and a target element <code>target</code>.</p>
 
@@ -58,11 +62,17 @@ The index where nums[i] == 5 is 4.
 	<li><code>1 &lt;= nums[i], target &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -70,6 +80,8 @@ class Solution:
         nums.sort()
         return [i for i, v in enumerate(nums) if v == target]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -85,6 +97,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -102,6 +116,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func targetIndices(nums []int, target int) (ans []int) {
 	sort.Ints(nums)
@@ -113,6 +129,8 @@ func targetIndices(nums []int, target int) (ans []int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function targetIndices(nums: number[], target: number): number[] {
@@ -129,4 +147,6 @@ function targetIndices(nums: number[], target: number): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

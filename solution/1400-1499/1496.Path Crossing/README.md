@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1496. 判断路径是否相交](https://leetcode.cn/problems/path-crossing)
 
 [English Version](/solution/1400-1499/1496.Path%20Crossing/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串 <code>path</code>，其中 <code>path[i]</code> 的值可以是 <code>'N'</code>、<code>'S'</code>、<code>'E'</code> 或者 <code>'W'</code>，分别表示向北、向南、向东、向西移动一个单位。</p>
 
@@ -52,7 +54,11 @@ tags:
 	<li><code>path[i]</code> 为 <code>'N'</code>、<code>'S'</code>、<code>'E'</code> 或 <code>'W'</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表
 
@@ -65,6 +71,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为字符串 $path$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -86,6 +94,8 @@ class Solution:
             vis.add((i, j))
         return False
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -109,6 +119,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -137,6 +149,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func isPathCrossing(path string) bool {
 	i, j := 0, 0
@@ -160,6 +174,8 @@ func isPathCrossing(path string) bool {
 	return false
 }
 ```
+
+#### TypeScript
 
 ```ts
 function isPathCrossing(path: string): boolean {
@@ -188,4 +204,6 @@ function isPathCrossing(path: string): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

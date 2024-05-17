@@ -4,11 +4,15 @@ difficulty: Easy
 edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3146.Permutation%20Difference%20between%20Two%20Strings/README_EN.md
 ---
 
+<!-- problem:start -->
+
 # [3146. Permutation Difference between Two Strings](https://leetcode.com/problems/permutation-difference-between-two-strings)
 
 [中文文档](/solution/3100-3199/3146.Permutation%20Difference%20between%20Two%20Strings/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two strings <code>s</code> and <code>t</code> such that every character occurs at most once in <code>s</code> and <code>t</code> is a permutation of <code>s</code>.</p>
 
@@ -57,11 +61,17 @@ edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3146.Pe
 	<li><code>s</code> consists only of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -69,6 +79,8 @@ class Solution:
         d = {c: i for i, c in enumerate(s)}
         return sum(abs(d[c] - i) for i, c in enumerate(t))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -86,6 +98,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -105,6 +119,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findPermutationDifference(s string, t string) (ans int) {
 	d := [26]int{}
@@ -117,6 +133,8 @@ func findPermutationDifference(s string, t string) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function findPermutationDifference(s: string, t: string): number {
@@ -135,4 +153,6 @@ function findPermutationDifference(s: string, t: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

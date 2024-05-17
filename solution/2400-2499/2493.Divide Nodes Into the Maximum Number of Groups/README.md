@@ -10,13 +10,15 @@ tags:
     - 图
 ---
 
+<!-- problem:start -->
+
 # [2493. 将节点分成尽可能多的组](https://leetcode.cn/problems/divide-nodes-into-the-maximum-number-of-groups)
 
 [English Version](/solution/2400-2499/2493.Divide%20Nodes%20Into%20the%20Maximum%20Number%20of%20Groups/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个正整数&nbsp;<code>n</code>&nbsp;，表示一个 <strong>无向</strong>&nbsp;图中的节点数目，节点编号从&nbsp;<code>1</code>&nbsp;到&nbsp;<code>n</code>&nbsp;。</p>
 
@@ -69,7 +71,11 @@ tags:
 	<li>两个点之间至多只有一条边。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：BFS + 枚举
 
@@ -84,6 +90,8 @@ tags:
 时间复杂度 $O(n \times (n + m))$，空间复杂度 $O(n + m)$。其中 $n$ 和 $m$ 分别为节点数和边数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -111,6 +119,8 @@ class Solution:
             d[root] = max(d[root], mx)
         return sum(d.values())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -151,6 +161,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -188,6 +200,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func magnificentSets(n int, edges [][]int) (ans int) {
@@ -234,6 +248,8 @@ func abs(x int) int {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number} n
@@ -274,4 +290,6 @@ var magnificentSets = function (n, edges) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

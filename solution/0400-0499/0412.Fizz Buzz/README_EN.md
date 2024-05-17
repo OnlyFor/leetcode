@@ -8,11 +8,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz)
 
 [中文文档](/solution/0400-0499/0412.Fizz%20Buzz/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer <code>n</code>, return <em>a string array </em><code>answer</code><em> (<strong>1-indexed</strong>) where</em>:</p>
 
@@ -41,11 +45,17 @@ tags:
 	<li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -62,6 +72,8 @@ class Solution:
                 ans.append(str(i))
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -85,6 +97,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -101,6 +115,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func fizzBuzz(n int) []string {
@@ -122,6 +138,8 @@ func fizzBuzz(n int) []string {
 }
 ```
 
+#### JavaScript
+
 ```js
 const fizzBuzz = function (n) {
     let arr = [];
@@ -134,6 +152,8 @@ const fizzBuzz = function (n) {
     return arr;
 };
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -161,4 +181,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

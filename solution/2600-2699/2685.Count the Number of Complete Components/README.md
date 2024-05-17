@@ -10,13 +10,15 @@ tags:
     - 图
 ---
 
+<!-- problem:start -->
+
 # [2685. 统计完全连通分量的数量](https://leetcode.cn/problems/count-the-number-of-complete-components)
 
 [English Version](/solution/2600-2699/2685.Count%20the%20Number%20of%20Complete%20Components/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数 <code>n</code> 。现有一个包含 <code>n</code> 个顶点的 <strong>无向</strong> 图，顶点按从 <code>0</code> 到 <code>n - 1</code> 编号。给你一个二维整数数组 <code>edges</code> 其中 <code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> 表示顶点 <code>a<sub>i</sub></code> 和 <code>b<sub>i</sub></code> 之间存在一条 <strong>无向</strong> 边。</p>
 
@@ -63,7 +65,11 @@ tags:
 	<li>不存在重复的边</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：DFS
 
@@ -76,6 +82,8 @@ tags:
 时间复杂度 $O(n + m)$，空间复杂度 $O(n + m)$。其中 $n$ 和 $m$ 分别是顶点数和边数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -102,6 +110,8 @@ class Solution:
                 ans += a * (a - 1) == b
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -144,6 +154,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -182,6 +194,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countCompleteComponents(n int, edges [][]int) (ans int) {
 	g := make([][]int, n)
@@ -218,4 +232,6 @@ func countCompleteComponents(n int, edges [][]int) (ans int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

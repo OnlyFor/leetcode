@@ -10,11 +10,15 @@ tags:
     - Heap (Priority Queue)
 ---
 
+<!-- problem:start -->
+
 # [1705. Maximum Number of Eaten Apples](https://leetcode.com/problems/maximum-number-of-eaten-apples)
 
 [中文文档](/solution/1700-1799/1705.Maximum%20Number%20of%20Eaten%20Apples/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There is a special kind of apple tree that grows apples every day for <code>n</code> days. On the <code>i<sup>th</sup></code> day, the tree grows <code>apples[i]</code> apples that will rot after <code>days[i]</code> days, that is on day <code>i + days[i]</code> the apples will be rotten and cannot be eaten. On some days, the apple tree does not grow any apples, which are denoted by <code>apples[i] == 0</code> and <code>days[i] == 0</code>.</p>
 
@@ -56,7 +60,11 @@ tags:
 	<li><code>days[i] = 0</code> if and only if <code>apples[i] = 0</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Greedy + Priority Queue
 
@@ -67,6 +75,8 @@ Therefore, we can use a priority queue (min heap) to store the rotting time of t
 The time complexity is $O(n \times \log n)$, and the space complexity is $O(n)$. Here, $n$ is the length of the array `apples` or `days`.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -88,6 +98,8 @@ class Solution:
             i += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -116,6 +128,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 using pii = pair<int, int>;
 
@@ -141,6 +155,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func eatenApples(apples []int, days []int) int {
@@ -180,4 +196,6 @@ func (a *hp) Pop() any          { l := len(*a); t := (*a)[l-1]; *a = (*a)[:l-1];
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

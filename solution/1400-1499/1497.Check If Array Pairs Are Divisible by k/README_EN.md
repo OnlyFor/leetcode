@@ -10,11 +10,15 @@ tags:
     - Counting
 ---
 
+<!-- problem:start -->
+
 # [1497. Check If Array Pairs Are Divisible by k](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k)
 
 [中文文档](/solution/1400-1499/1497.Check%20If%20Array%20Pairs%20Are%20Divisible%20by%20k/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array of integers <code>arr</code> of even length <code>n</code> and an integer <code>k</code>.</p>
 
@@ -58,11 +62,17 @@ tags:
 	<li><code>1 &lt;= k &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -70,6 +80,8 @@ class Solution:
         cnt = Counter(x % k for x in arr)
         return cnt[0] % 2 == 0 and all(cnt[i] == cnt[k - i] for i in range(1, k))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -87,6 +99,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -106,6 +120,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func canArrange(arr []int, k int) bool {
 	cnt := make([]int, k)
@@ -123,4 +139,6 @@ func canArrange(arr []int, k int) bool {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -12,11 +12,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [2552. Count Increasing Quadruplets](https://leetcode.com/problems/count-increasing-quadruplets)
 
 [中文文档](/solution/2500-2599/2552.Count%20Increasing%20Quadruplets/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a <strong>0-indexed</strong> integer array <code>nums</code> of size <code>n</code> containing all numbers from <code>1</code> to <code>n</code>, return <em>the number of increasing quadruplets</em>.</p>
 
@@ -56,7 +60,11 @@ There are no other quadruplets, so we return 2.
 	<li>All the integers of <code>nums</code> are <strong>unique</strong>. <code>nums</code> is a permutation.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration + Preprocessing
 
@@ -72,6 +80,8 @@ Therefore, the answer is the sum of all $f[j][k] \times g[j][k]$.
 The time complexity is $O(n^2)$, and the space complexity is $O(n^2)$. Where $n$ is the length of the array.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -97,6 +107,8 @@ class Solution:
             f[j][k] * g[j][k] for j in range(1, n - 2) for k in range(j + 1, n - 1)
         )
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -140,6 +152,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 const int N = 4001;
@@ -189,6 +203,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countQuadruplets(nums []int) int64 {
 	n := len(nums)
@@ -236,4 +252,6 @@ func countQuadruplets(nums []int) int64 {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

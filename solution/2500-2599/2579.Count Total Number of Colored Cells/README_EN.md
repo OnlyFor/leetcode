@@ -8,11 +8,15 @@ tags:
     - Math
 ---
 
+<!-- problem:start -->
+
 # [2579. Count Total Number of Colored Cells](https://leetcode.com/problems/count-total-number-of-colored-cells)
 
 [中文文档](/solution/2500-2599/2579.Count%20Total%20Number%20of%20Colored%20Cells/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There exists an infinitely large two-dimensional grid of uncolored unit cells. You are given a positive integer <code>n</code>, indicating that you must do the following routine for <code>n</code> minutes:</p>
 
@@ -49,7 +53,11 @@ tags:
 	<li><code>1 &lt;= n &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Mathematics
 
@@ -59,11 +67,15 @@ The time complexity is $O(1)$, and the space complexity is $O(1)$.
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def coloredCells(self, n: int) -> int:
         return 2 * n * (n - 1) + 1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -72,6 +84,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -82,17 +96,23 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func coloredCells(n int) int64 {
 	return int64(2*n*(n-1) + 1)
 }
 ```
 
+#### TypeScript
+
 ```ts
 function coloredCells(n: number): number {
     return 2 * n * (n - 1) + 1;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -104,4 +124,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

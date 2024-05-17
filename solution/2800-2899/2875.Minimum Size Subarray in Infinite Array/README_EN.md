@@ -11,11 +11,15 @@ tags:
     - Sliding Window
 ---
 
+<!-- problem:start -->
+
 # [2875. Minimum Size Subarray in Infinite Array](https://leetcode.com/problems/minimum-size-subarray-in-infinite-array)
 
 [中文文档](/solution/2800-2899/2875.Minimum%20Size%20Subarray%20in%20Infinite%20Array/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> array <code>nums</code> and an integer <code>target</code>.</p>
 
@@ -62,7 +66,11 @@ It can be proven that there is no subarray with sum equal to target = 3.
 	<li><code>1 &lt;= target &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Prefix Sum + Hash Table
 
@@ -77,6 +85,8 @@ If we find such a subarray, the final answer is $a + b$. Otherwise, the answer i
 The time complexity is $O(n)$, and the space complexity is $O(n)$, where n is the length of the array $nums$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -101,6 +111,8 @@ class Solution:
             pos[pre] = i
         return -1 if b == inf else a + b
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -134,6 +146,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -165,6 +179,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minSizeSubarray(nums []int, target int) int {
@@ -201,6 +217,8 @@ func minSizeSubarray(nums []int, target int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minSizeSubarray(nums: number[], target: number): number {
     const s = nums.reduce((a, b) => a + b);
@@ -233,9 +251,15 @@ function minSizeSubarray(nums: number[], target: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Java
 
 ```java
 class Solution {
@@ -287,4 +311,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

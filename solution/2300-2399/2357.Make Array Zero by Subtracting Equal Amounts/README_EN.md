@@ -13,11 +13,15 @@ tags:
     - Heap (Priority Queue)
 ---
 
+<!-- problem:start -->
+
 # [2357. Make Array Zero by Subtracting Equal Amounts](https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts)
 
 [中文文档](/solution/2300-2399/2357.Make%20Array%20Zero%20by%20Subtracting%20Equal%20Amounts/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a non-negative integer array <code>nums</code>. In one operation, you must:</p>
 
@@ -56,17 +60,25 @@ In the third operation, choose x = 2. Now, nums = [0,0,0,0,0].
 	<li><code>0 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
     def minimumOperations(self, nums: List[int]) -> int:
         return len({x for x in nums if x})
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -84,6 +96,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -103,6 +117,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumOperations(nums []int) (ans int) {
 	s := [101]bool{true}
@@ -116,6 +132,8 @@ func minimumOperations(nums []int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumOperations(nums: number[]): number {
     const set = new Set(nums);
@@ -123,6 +141,8 @@ function minimumOperations(nums: number[]): number {
     return set.size;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashSet;
@@ -134,6 +154,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 int minimumOperations(int* nums, int numsSize) {
@@ -153,4 +175,6 @@ int minimumOperations(int* nums, int numsSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

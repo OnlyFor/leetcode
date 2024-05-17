@@ -10,13 +10,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [1509. 三次操作后最大值与最小值的最小差](https://leetcode.cn/problems/minimum-difference-between-largest-and-smallest-value-in-three-moves)
 
 [English Version](/solution/1500-1599/1509.Minimum%20Difference%20Between%20Largest%20and%20Smallest%20Value%20in%20Three%20Moves/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个数组&nbsp;<code>nums</code>&nbsp;。</p>
 
@@ -70,7 +72,11 @@ tags:
 	<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：排序 + 贪心
 
@@ -86,6 +92,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minDifference(self, nums: List[int]) -> int:
@@ -99,6 +107,8 @@ class Solution:
             ans = min(ans, nums[n - 1 - r] - nums[l])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -117,6 +127,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -137,6 +149,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minDifference(nums []int) int {
 	n := len(nums)
@@ -155,4 +169,6 @@ func minDifference(nums []int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

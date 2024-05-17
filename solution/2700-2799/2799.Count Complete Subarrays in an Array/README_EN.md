@@ -10,11 +10,15 @@ tags:
     - Sliding Window
 ---
 
+<!-- problem:start -->
+
 # [2799. Count Complete Subarrays in an Array](https://leetcode.com/problems/count-complete-subarrays-in-an-array)
 
 [中文文档](/solution/2700-2799/2799.Count%20Complete%20Subarrays%20in%20an%20Array/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array <code>nums</code> consisting of <strong>positive</strong> integers.</p>
 
@@ -53,11 +57,17 @@ tags:
 	<li><code>1 &lt;= nums[i] &lt;= 2000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -72,6 +82,8 @@ class Solution:
                     ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -96,6 +108,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -117,6 +131,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countCompleteSubarrays(nums []int) (ans int) {
 	s := map[int]bool{}
@@ -137,6 +153,8 @@ func countCompleteSubarrays(nums []int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function countCompleteSubarrays(nums: number[]): number {
     const s: Set<number> = new Set(nums);
@@ -155,6 +173,8 @@ function countCompleteSubarrays(nums: number[]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashSet;
@@ -181,9 +201,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -202,6 +228,8 @@ class Solution:
                 i += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -227,6 +255,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -254,6 +284,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countCompleteSubarrays(nums []int) (ans int) {
 	d := map[int]int{}
@@ -277,6 +309,8 @@ func countCompleteSubarrays(nums []int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countCompleteSubarrays(nums: number[]): number {
@@ -303,6 +337,8 @@ function countCompleteSubarrays(nums: number[]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -333,4 +369,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

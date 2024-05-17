@@ -10,11 +10,15 @@ tags:
     - Counting
 ---
 
+<!-- problem:start -->
+
 # [1394. Find Lucky Integer in an Array](https://leetcode.com/problems/find-lucky-integer-in-an-array)
 
 [中文文档](/solution/1300-1399/1394.Find%20Lucky%20Integer%20in%20an%20Array/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array of integers <code>arr</code>, a <strong>lucky integer</strong> is an integer that has a frequency in the array equal to its value.</p>
 
@@ -53,7 +57,11 @@ tags:
 	<li><code>1 &lt;= arr[i] &lt;= 500</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Counting
 
@@ -62,6 +70,8 @@ We can use a hash table or array $cnt$ to count the occurrences of each number i
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Where $n$ is the length of $arr$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -73,6 +83,8 @@ class Solution:
                 ans = x
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -91,6 +103,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -112,6 +126,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findLucky(arr []int) int {
 	cnt := [510]int{}
@@ -128,6 +144,8 @@ func findLucky(arr []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findLucky(arr: number[]): number {
     const cnt = new Array(510).fill(0);
@@ -143,6 +161,8 @@ function findLucky(arr: number[]): number {
     return ans;
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -168,4 +188,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

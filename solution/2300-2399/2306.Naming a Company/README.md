@@ -12,13 +12,15 @@ tags:
     - 枚举
 ---
 
+<!-- problem:start -->
+
 # [2306. 公司命名](https://leetcode.cn/problems/naming-a-company)
 
 [English Version](/solution/2300-2399/2306.Naming%20a%20Company/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串数组 <code>ideas</code> 表示在公司命名过程中使用的名字列表。公司命名流程如下：</p>
 
@@ -70,7 +72,11 @@ tags:
 	<li><code>ideas</code> 中的所有字符串 <strong>互不相同</strong></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举计数
 
@@ -85,6 +91,8 @@ tags:
 时间复杂度 $O(n \times m \times |\Sigma|)$，空间复杂度 $O(|\Sigma|^2)$。其中 $n$ 和 $m$ 分别是 $ideas$ 中字符串的个数和字符串的最大长度，而 $|\Sigma|$ 是字符串中出现的字符集，本题中 $|\Sigma| \leq 26$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -108,6 +116,8 @@ class Solution:
                     ans += f[j][i]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -143,6 +153,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -172,6 +184,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func distinctNames(ideas []string) (ans int64) {
@@ -204,6 +218,8 @@ func distinctNames(ideas []string) (ans int64) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function distinctNames(ideas: string[]): number {
@@ -238,4 +254,6 @@ function distinctNames(ideas: string[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

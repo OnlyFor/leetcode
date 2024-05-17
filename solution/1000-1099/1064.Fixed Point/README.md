@@ -9,13 +9,15 @@ tags:
     - 二分查找
 ---
 
+<!-- problem:start -->
+
 # [1064. 不动点 🔒](https://leetcode.cn/problems/fixed-point)
 
 [English Version](/solution/1000-1099/1064.Fixed%20Point/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定已经按 <strong>升序</strong> 排列、由不同整数组成的数组 <code>arr</code>，返回满足 <code>arr[i] == i</code> 的最小索引 <code>i</code>。如果不存在这样的 <code>i</code>，返回 <code>-1</code>。</p>
 
@@ -58,7 +60,11 @@ tags:
 
 <p><strong>进阶：</strong>时间复杂度为 <code>O(n)</code> 的解决方案很直观也很简单。你可以设计更优的解决方案吗？</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：二分查找
 
@@ -72,6 +78,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def fixedPoint(self, arr: List[int]) -> int:
@@ -84,6 +92,8 @@ class Solution:
                 left = mid + 1
         return left if arr[left] == left else -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -101,6 +111,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -120,6 +132,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func fixedPoint(arr []int) int {
 	left, right := 0, len(arr)-1
@@ -137,6 +151,8 @@ func fixedPoint(arr []int) int {
 	return -1
 }
 ```
+
+#### TypeScript
 
 ```ts
 function fixedPoint(arr: number[]): number {
@@ -156,4 +172,6 @@ function fixedPoint(arr: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

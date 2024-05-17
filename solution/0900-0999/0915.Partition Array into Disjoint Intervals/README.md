@@ -6,13 +6,15 @@ tags:
     - 数组
 ---
 
+<!-- problem:start -->
+
 # [915. 分割数组](https://leetcode.cn/problems/partition-array-into-disjoint-intervals)
 
 [English Version](/solution/0900-0999/0915.Partition%20Array%20into%20Disjoint%20Intervals/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个数组&nbsp;<code>nums</code>&nbsp;，将其划分为两个连续子数组&nbsp;<code>left</code>&nbsp;和&nbsp;<code>right</code>，&nbsp;使得：</p>
 
@@ -54,7 +56,11 @@ tags:
 	<li>可以保证至少有一种方法能够按题目所描述的那样对 <code>nums</code> 进行划分。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：前缀最大值 + 后缀最小值
 
@@ -67,6 +73,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为数组 `nums` 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -81,6 +89,8 @@ class Solution:
             if mx <= mi[i]:
                 return i
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -104,6 +114,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -121,6 +133,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func partitionDisjoint(nums []int) int {
@@ -144,4 +158,6 @@ func partitionDisjoint(nums []int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

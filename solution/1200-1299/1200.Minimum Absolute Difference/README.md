@@ -9,13 +9,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [1200. 最小绝对差](https://leetcode.cn/problems/minimum-absolute-difference)
 
 [English Version](/solution/1200-1299/1200.Minimum%20Absolute%20Difference/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你个整数数组&nbsp;<code>arr</code>，其中每个元素都 <strong>不相同</strong>。</p>
 
@@ -61,7 +63,11 @@ tags:
 	<li><code>-10^6 &lt;= arr[i] &lt;= 10^6</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：排序
 
@@ -73,6 +79,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minimumAbsDifference(self, arr: List[int]) -> List[List[int]]:
@@ -80,6 +88,8 @@ class Solution:
         mi = min(b - a for a, b in pairwise(arr))
         return [[a, b] for a, b in pairwise(arr) if b - a == mi]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -100,6 +110,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -122,6 +134,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumAbsDifference(arr []int) (ans [][]int) {
 	sort.Ints(arr)
@@ -140,6 +154,8 @@ func minimumAbsDifference(arr []int) (ans [][]int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minimumAbsDifference(arr: number[]): number[][] {
@@ -161,4 +177,6 @@ function minimumAbsDifference(arr: number[]): number[][] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

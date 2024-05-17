@@ -11,13 +11,15 @@ tags:
     - 模拟
 ---
 
+<!-- problem:start -->
+
 # [2744. 最大字符串配对数目](https://leetcode.cn/problems/find-maximum-number-of-string-pairs)
 
 [English Version](/solution/2700-2799/2744.Find%20Maximum%20Number%20of%20String%20Pairs/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的数组&nbsp;<code>words</code>&nbsp;，数组中包含 <strong>互不相同</strong>&nbsp;的字符串。</p>
 
@@ -74,7 +76,11 @@ tags:
 	<li><code>words[i]</code>&nbsp;只包含小写英文字母。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表
 
@@ -88,6 +94,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maximumNumberOfStringPairs(self, words: List[str]) -> int:
@@ -98,6 +106,8 @@ class Solution:
             cnt[w] += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -113,6 +123,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -130,6 +142,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximumNumberOfStringPairs(words []string) (ans int) {
 	cnt := map[int]int{}
@@ -141,6 +155,8 @@ func maximumNumberOfStringPairs(words []string) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maximumNumberOfStringPairs(words: string[]): number {
@@ -157,4 +173,6 @@ function maximumNumberOfStringPairs(words: string[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,11 +9,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [2733. Neither Minimum nor Maximum](https://leetcode.com/problems/neither-minimum-nor-maximum)
 
 [中文文档](/solution/2700-2799/2733.Neither%20Minimum%20nor%20Maximum/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer array <code>nums</code> containing <strong>distinct</strong> <strong>positive</strong> integers, find and return <strong>any</strong> number from the array that is neither the <strong>minimum</strong> nor the <strong>maximum</strong> value in the array, or <strong><code>-1</code></strong> if there is no such number.</p>
 
@@ -53,7 +57,11 @@ tags:
 	<li>All values in <code>nums</code> are distinct</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -63,12 +71,16 @@ The time complexity is $O(n)$, where $n$ is the length of the array. The space c
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def findNonMinOrMax(self, nums: List[int]) -> int:
         mi, mx = min(nums), max(nums)
         return next((x for x in nums if x != mi and x != mx), -1)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -88,6 +100,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -103,6 +117,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findNonMinOrMax(nums []int) int {
 	mi, mx := slices.Min(nums), slices.Max(nums)
@@ -114,6 +130,8 @@ func findNonMinOrMax(nums []int) int {
 	return -1
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -143,9 +161,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -159,4 +183,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

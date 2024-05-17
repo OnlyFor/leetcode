@@ -10,13 +10,15 @@ tags:
     - 图
 ---
 
+<!-- problem:start -->
+
 # [1466. 重新规划路线](https://leetcode.cn/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero)
 
 [English Version](/solution/1400-1499/1466.Reorder%20Routes%20to%20Make%20All%20Paths%20Lead%20to%20the%20City%20Zero/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p><code>n</code> 座城市，从 <code>0</code> 到 <code>n-1</code> 编号，其间共有 <code>n-1</code> 条路线。因此，要想在两座不同城市之间旅行只有唯一一条路线可供选择（路线网形成一颗树）。去年，交通运输部决定重新规划路线，以改变交通拥堵的状况。</p>
 
@@ -64,7 +66,11 @@ tags:
 	<li><code>connections[i][0] != connections[i][1]</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：DFS
 
@@ -78,6 +84,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minReorder(self, n: int, connections: List[List[int]]) -> int:
@@ -90,6 +98,8 @@ class Solution:
             g[b].append((a, 0))
         return dfs(0, -1)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -119,6 +129,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -143,6 +155,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minReorder(n int, connections [][]int) int {
 	g := make([][][2]int, n)
@@ -164,6 +178,8 @@ func minReorder(n int, connections [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minReorder(n: number, connections: number[][]): number {
     const g: [number, number][][] = Array.from({ length: n }, () => []);
@@ -183,6 +199,8 @@ function minReorder(n: number, connections: number[][]): number {
     return dfs(0, -1);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -210,4 +228,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

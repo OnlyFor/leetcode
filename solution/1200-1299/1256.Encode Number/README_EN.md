@@ -10,11 +10,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1256. Encode Number 🔒](https://leetcode.com/problems/encode-number)
 
 [中文文档](/solution/1200-1299/1256.Encode%20Number/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a non-negative integer <code>num</code>, Return its <em>encoding</em> string.</p>
 
@@ -54,7 +58,11 @@ tags:
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Bit Manipulation
 
@@ -64,11 +72,15 @@ The time complexity is $O(\log n)$, and the space complexity is $O(\log n)$. Whe
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def encode(self, num: int) -> str:
         return bin(num + 1)[3:]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -77,6 +89,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -93,6 +107,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func encode(num int) string {
 	num++
@@ -100,6 +116,8 @@ func encode(num int) string {
 	return s[1:]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function encode(num: number): string {
@@ -111,4 +129,6 @@ function encode(num: number): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

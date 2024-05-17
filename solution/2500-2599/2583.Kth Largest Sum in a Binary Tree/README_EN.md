@@ -11,11 +11,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [2583. Kth Largest Sum in a Binary Tree](https://leetcode.com/problems/kth-largest-sum-in-a-binary-tree)
 
 [中文文档](/solution/2500-2599/2583.Kth%20Largest%20Sum%20in%20a%20Binary%20Tree/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given the <code>root</code> of a binary tree and a positive integer <code>k</code>.</p>
 
@@ -57,7 +61,11 @@ The 2<sup>nd</sup> largest level sum is 13.
 	<li><code>1 &lt;= k &lt;= n</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: BFS + Sorting
 
@@ -66,6 +74,8 @@ We can use BFS to traverse the binary tree, while recording the sum of nodes at 
 The time complexity is $O(n \times \log n)$, and the space complexity is $O(n)$. Where $n$ is the number of nodes in the binary tree.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -90,6 +100,8 @@ class Solution:
             arr.append(t)
         return -1 if len(arr) < k else nlargest(k, arr)[-1]
 ```
+
+#### Java
 
 ```java
 /**
@@ -135,6 +147,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -176,6 +190,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -210,6 +226,8 @@ func kthLargestLevelSum(root *TreeNode, k int) int64 {
 	return -1
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -253,6 +271,10 @@ function kthLargestLevelSum(root: TreeNode | null, k: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: DFS + Sorting
 
 We can also use DFS to traverse the binary tree, while recording the sum of nodes at each level, then sort the array of node sums, and finally return the $k$th largest node sum. Note that if the number of levels in the binary tree is less than $k$, then return $-1$.
@@ -260,6 +282,8 @@ We can also use DFS to traverse the binary tree, while recording the sum of node
 The time complexity is $O(n \times \log n)$, and the space complexity is $O(n)$. Where $n$ is the number of nodes in the binary tree.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -283,6 +307,8 @@ class Solution:
         dfs(root, 0)
         return -1 if len(arr) < k else nlargest(k, arr)[-1]
 ```
+
+#### Java
 
 ```java
 /**
@@ -326,6 +352,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -363,6 +391,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -395,6 +425,8 @@ func kthLargestLevelSum(root *TreeNode, k int) int64 {
 	return -1
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -435,4 +467,6 @@ function kthLargestLevelSum(root: TreeNode | null, k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

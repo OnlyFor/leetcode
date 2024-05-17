@@ -10,13 +10,15 @@ tags:
     - 滑动窗口
 ---
 
+<!-- problem:start -->
+
 # [3090. 每个字符最多出现两次的最长子字符串](https://leetcode.cn/problems/maximum-length-substring-with-two-occurrences)
 
 [English Version](/solution/3000-3099/3090.Maximum%20Length%20Substring%20With%20Two%20Occurrences/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串 <code>s</code> ，请找出满足每个字符最多出现两次的最长子字符串，并返回该<span data-keyword="substring">子字符串</span>的<strong> 最大 </strong>长度。</p>
 
@@ -56,7 +58,11 @@ tags:
 	<li><code>s</code> 仅由小写英文字母组成。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：双指针
 
@@ -69,6 +75,8 @@ tags:
 时间复杂度 $O(n)$，其中 $n$ 为字符串 $s$ 的长度。空间复杂度 $O(|\Sigma|)$，其中 $\Sigma$ 为字符集，本题中 $\Sigma = 26$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -83,6 +91,8 @@ class Solution:
             ans = max(ans, j - i + 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -101,6 +111,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -121,6 +133,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximumLengthSubstring(s string) (ans int) {
 	cnt := [26]int{}
@@ -137,6 +151,8 @@ func maximumLengthSubstring(s string) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maximumLengthSubstring(s: string): number {
@@ -156,4 +172,6 @@ function maximumLengthSubstring(s: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

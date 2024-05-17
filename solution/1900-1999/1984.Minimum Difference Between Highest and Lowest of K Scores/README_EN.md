@@ -10,11 +10,15 @@ tags:
     - Sliding Window
 ---
 
+<!-- problem:start -->
+
 # [1984. Minimum Difference Between Highest and Lowest of K Scores](https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores)
 
 [中文文档](/solution/1900-1999/1984.Minimum%20Difference%20Between%20Highest%20and%20Lowest%20of%20K%20Scores/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code>, where <code>nums[i]</code> represents the score of the <code>i<sup>th</sup></code> student. You are also given an integer <code>k</code>.</p>
 
@@ -55,7 +59,11 @@ The minimum possible difference is 2.</pre>
 	<li><code>0 &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sorting + Sliding Window
 
@@ -67,12 +75,16 @@ The time complexity is $O(n \times \log n)$, and the space complexity is $O(\log
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minimumDifference(self, nums: List[int], k: int) -> int:
         nums.sort()
         return min(nums[i + k - 1] - nums[i] for i in range(len(nums) - k + 1))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -86,6 +98,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -101,6 +115,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumDifference(nums []int, k int) int {
 	sort.Ints(nums)
@@ -111,6 +127,8 @@ func minimumDifference(nums []int, k int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minimumDifference(nums: number[], k: number): number {
@@ -123,6 +141,8 @@ function minimumDifference(nums: number[], k: number): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -137,6 +157,8 @@ impl Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -158,4 +180,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,11 +9,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [3069. Distribute Elements Into Two Arrays I](https://leetcode.com/problems/distribute-elements-into-two-arrays-i)
 
 [中文文档](/solution/3000-3099/3069.Distribute%20Elements%20Into%20Two%20Arrays%20I/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>1-indexed</strong> array of <strong>distinct</strong> integers <code>nums</code> of length <code>n</code>.</p>
 
@@ -60,7 +64,11 @@ Hence, the array result formed by concatenation is [5,3,4,8].
 	<li>All elements in <code>nums</code> are distinct.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -74,6 +82,8 @@ The time complexity is $O(n)$, and the space complexity is $O(n)$, where $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def resultArray(self, nums: List[int]) -> List[int]:
@@ -86,6 +96,8 @@ class Solution:
                 arr2.append(x)
         return arr1 + arr2
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -111,6 +123,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -131,6 +145,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func resultArray(nums []int) []int {
 	arr1 := []int{nums[0]}
@@ -145,6 +161,8 @@ func resultArray(nums []int) []int {
 	return append(arr1, arr2...)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function resultArray(nums: number[]): number[] {
@@ -163,4 +181,6 @@ function resultArray(nums: number[]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

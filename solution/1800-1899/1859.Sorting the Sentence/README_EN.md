@@ -9,11 +9,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [1859. Sorting the Sentence](https://leetcode.com/problems/sorting-the-sentence)
 
 [中文文档](/solution/1800-1899/1859.Sorting%20the%20Sentence/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>A <strong>sentence</strong> is a list of words that are separated by a single space with no leading or trailing spaces. Each word consists of lowercase and uppercase English letters.</p>
 
@@ -71,7 +75,11 @@ tags:
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: String Splitting
 
@@ -85,6 +93,8 @@ The time complexity is $O(n)$, and the space complexity is $O(n)$. Where $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def sortSentence(self, s: str) -> str:
@@ -92,6 +102,8 @@ class Solution:
         ws.sort(key=lambda x: x[1])
         return ' '.join(w for w, _ in ws)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -107,6 +119,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -132,6 +146,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sortSentence(s string) string {
 	ws := strings.Split(s, " ")
@@ -143,6 +159,8 @@ func sortSentence(s string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function sortSentence(s: string): string {
     const ws = s.split(' ');
@@ -153,6 +171,8 @@ function sortSentence(s: string): string {
     return ans.join(' ');
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -171,9 +191,15 @@ var sortSentence = function (s) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -187,4 +213,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

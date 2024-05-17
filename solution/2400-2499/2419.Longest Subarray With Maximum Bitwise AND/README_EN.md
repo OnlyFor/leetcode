@@ -10,11 +10,15 @@ tags:
     - Array
 ---
 
+<!-- problem:start -->
+
 # [2419. Longest Subarray With Maximum Bitwise AND](https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and)
 
 [中文文档](/solution/2400-2499/2419.Longest%20Subarray%20With%20Maximum%20Bitwise%20AND/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>nums</code> of size <code>n</code>.</p>
 
@@ -59,7 +63,11 @@ The longest subarray with that value is [4], so we return 1.
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Quick Thinking
 
@@ -72,6 +80,8 @@ First, traverse the array once to find the maximum value, then traverse the arra
 The time complexity is $O(n)$, where $n$ is the length of the array.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -86,6 +96,8 @@ class Solution:
                 cnt = 0
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -108,6 +120,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -127,6 +141,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func longestSubarray(nums []int) int {
 	mx := slices.Max(nums)
@@ -145,4 +161,6 @@ func longestSubarray(nums []int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

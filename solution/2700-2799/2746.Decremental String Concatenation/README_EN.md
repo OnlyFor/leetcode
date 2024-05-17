@@ -10,11 +10,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [2746. Decremental String Concatenation](https://leetcode.com/problems/decremental-string-concatenation)
 
 [中文文档](/solution/2700-2799/2746.Decremental%20String%20Concatenation/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> array <code>words</code> containing <code>n</code> strings.</p>
 
@@ -78,7 +82,11 @@ It can be shown that the minimum possible length of str<sub>2</sub> is 6.
 	<li>Each character in <code>words[i]</code> is an English lowercase letter</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Memoization Search
 
@@ -97,6 +105,8 @@ The time complexity is $O(n \times C^2)$, and the space complexity is $O(n \time
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minimizeConcatenatedLength(self, words: List[str]) -> int:
@@ -111,6 +121,8 @@ class Solution:
 
         return len(words[0]) + dfs(1, words[0][0], words[0][-1])
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -142,6 +154,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -166,6 +180,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimizeConcatenatedLength(words []string) int {
@@ -195,6 +211,8 @@ func minimizeConcatenatedLength(words []string) int {
 	return len(words[0]) + dfs(1, int(words[0][0]-'a'), int(words[0][len(words[0])-1]-'a'))
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minimizeConcatenatedLength(words: string[]): number {
@@ -230,4 +248,6 @@ function minimizeConcatenatedLength(words: string[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

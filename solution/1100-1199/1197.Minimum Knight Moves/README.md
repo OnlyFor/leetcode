@@ -8,13 +8,15 @@ tags:
     - 广度优先搜索
 ---
 
+<!-- problem:start -->
+
 # [1197. 进击的骑士 🔒](https://leetcode.cn/problems/minimum-knight-moves)
 
 [English Version](/solution/1100-1199/1197.Minimum%20Knight%20Moves/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>一个坐标可以从 <code>-infinity</code>&nbsp;延伸到&nbsp;<code>+infinity</code>&nbsp;的 <strong>无限大的</strong>&nbsp;棋盘上，你的 <strong>骑士&nbsp;</strong>驻扎在坐标为&nbsp;<code>[0, 0]</code>&nbsp;的方格里。</p>
 
@@ -53,7 +55,11 @@ tags:
 	<li><code>0 &lt;= |x| + |y| &lt;= 300</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：BFS
 
@@ -67,6 +73,8 @@ BFS 最短路模型。本题搜索空间不大，可以直接使用朴素 BFS，
 4. 只要其中一个队列为空，说明当前方向的搜索已经进行不下去了，说明起点到终点不连通，无需继续搜索。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -88,6 +96,8 @@ class Solution:
             ans += 1
         return -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -122,6 +132,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -154,6 +166,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minKnightMoves(x int, y int) int {
 	x, y = x+310, y+310
@@ -184,6 +198,8 @@ func minKnightMoves(x int, y int) int {
 	return -1
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::VecDeque;
@@ -259,9 +275,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -299,6 +321,8 @@ class Solution:
                 return t
         return -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -350,6 +374,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 typedef pair<int, int> PII;
 
@@ -396,6 +422,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minKnightMoves(x int, y int) int {
 	if x == 0 && y == 0 {
@@ -440,6 +468,8 @@ func minKnightMoves(x int, y int) int {
 	return -1
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::VecDeque;
@@ -540,4 +570,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

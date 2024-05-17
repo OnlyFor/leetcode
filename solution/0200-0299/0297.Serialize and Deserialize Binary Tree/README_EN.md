@@ -11,11 +11,15 @@ tags:
     - Binary Tree
 ---
 
+<!-- problem:start -->
+
 # [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree)
 
 [中文文档](/solution/0200-0299/0297.Serialize%20and%20Deserialize%20Binary%20Tree/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.</p>
 
@@ -46,11 +50,17 @@ tags:
 	<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -108,6 +118,8 @@ class Codec:
 # deser = Codec()
 # ans = deser.deserialize(ser.serialize(root))
 ```
+
+#### Java
 
 ```java
 /**
@@ -173,6 +185,8 @@ public class Codec {
 // TreeNode ans = deser.deserialize(ser.serialize(root));
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -226,6 +240,8 @@ public:
 // TreeNode* ans = deser.deserialize(ser.serialize(root));
 ```
 
+#### TypeScript
+
 ```ts
 /**
  * Definition for a binary tree node.
@@ -260,6 +276,8 @@ function deserialize(data: string): TreeNode | null {
  * deserialize(serialize(root));
  */
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -333,6 +351,8 @@ impl Codec {
  */
 ```
 
+#### JavaScript
+
 ```js
 /**
  * Definition for a binary tree node.
@@ -396,9 +416,15 @@ const rdeserialize = dataList => {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 /**
@@ -453,4 +479,6 @@ function deserialize(data: string): TreeNode | null {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,11 +9,15 @@ tags:
     - Prefix Sum
 ---
 
+<!-- problem:start -->
+
 # [1422. Maximum Score After Splitting a String](https://leetcode.com/problems/maximum-score-after-splitting-a-string)
 
 [中文文档](/solution/1400-1499/1422.Maximum%20Score%20After%20Splitting%20a%20String/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a&nbsp;string <code>s</code>&nbsp;of zeros and ones, <em>return the maximum score after splitting the string into two <strong>non-empty</strong> substrings</em> (i.e. <strong>left</strong> substring and <strong>right</strong> substring).</p>
 
@@ -57,17 +61,25 @@ left = &quot;01110&quot; and right = &quot;1&quot;, score = 2 + 1 = 3
 	<li>The string <code>s</code> consists of characters <code>&#39;0&#39;</code> and <code>&#39;1&#39;</code> only.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
     def maxScore(self, s: str) -> int:
         return max(s[:i].count('0') + s[i:].count('1') for i in range(1, len(s)))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -92,6 +104,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -111,6 +125,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxScore(s string) int {
@@ -132,6 +148,8 @@ func maxScore(s string) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxScore(s: string): number {
@@ -158,6 +176,8 @@ function maxScore(s: string): number {
     return res;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -190,9 +210,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -203,6 +229,8 @@ class Solution:
             ans = max(ans, t)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -226,6 +254,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -242,6 +272,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxScore(s string) int {
@@ -270,4 +302,6 @@ func maxScore(s string) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

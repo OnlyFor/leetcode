@@ -8,13 +8,15 @@ tags:
     - 图
 ---
 
+<!-- problem:start -->
+
 # [2924. 找到冠军 II](https://leetcode.cn/problems/find-champion-ii)
 
 [English Version](/solution/2900-2999/2924.Find%20Champion%20II/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>一场比赛中共有 <code>n</code> 支队伍，按从 <code>0</code> 到&nbsp; <code>n - 1</code> 编号。每支队伍也是 <strong>有向无环图（DAG）</strong> 上的一个节点。</p>
 
@@ -70,7 +72,11 @@ tags:
 	<li>生成的输入满足：如果 <code>a</code> 队比 <code>b</code> 队强，<code>b</code> 队比 <code>c</code> 队强，那么 <code>a</code> 队比 <code>c</code> 队强</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：统计入度
 
@@ -80,6 +86,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def findChampion(self, n: int, edges: List[List[int]]) -> int:
@@ -88,6 +96,8 @@ class Solution:
             indeg[v] += 1
         return -1 if indeg.count(0) != 1 else indeg.index(0)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -107,6 +117,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -129,6 +141,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findChampion(n int, edges [][]int) int {
 	indeg := make([]int, n)
@@ -149,6 +163,8 @@ func findChampion(n int, edges [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findChampion(n: number, edges: number[][]): number {
     const indeg: number[] = Array(n).fill(0);
@@ -168,4 +184,6 @@ function findChampion(n: number, edges: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

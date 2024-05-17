@@ -9,11 +9,15 @@ tags:
     - Math
 ---
 
+<!-- problem:start -->
+
 # [2834. Find the Minimum Possible Sum of a Beautiful Array](https://leetcode.com/problems/find-the-minimum-possible-sum-of-a-beautiful-array)
 
 [中文文档](/solution/2800-2899/2834.Find%20the%20Minimum%20Possible%20Sum%20of%20a%20Beautiful%20Array/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given positive integers <code>n</code> and <code>target</code>.</p>
 
@@ -68,7 +72,11 @@ It can be proven that 8 is the minimum possible sum that a beautiful array could
 	<li><code>1 &lt;= target &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Greedy + Mathematics
 
@@ -86,6 +94,8 @@ The time complexity is $O(1)$, and the space complexity is $O(1)$.
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minimumPossibleSum(self, n: int, target: int) -> int:
@@ -95,6 +105,8 @@ class Solution:
             return ((1 + n) * n // 2) % mod
         return ((1 + m) * m // 2 + (target + target + n - m - 1) * (n - m) // 2) % mod
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -110,6 +122,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -127,6 +141,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumPossibleSum(n int, target int) int {
 	const mod int = 1e9 + 7
@@ -140,6 +156,8 @@ func minimumPossibleSum(n int, target int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumPossibleSum(n: number, target: number): number {
     const mod = 10 ** 9 + 7;
@@ -150,6 +168,8 @@ function minimumPossibleSum(n: number, target: number): number {
     return (((1 + m) * m) / 2 + ((target + target + n - m - 1) * (n - m)) / 2) % mod;
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -168,4 +188,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

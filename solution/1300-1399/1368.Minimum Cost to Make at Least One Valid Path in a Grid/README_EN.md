@@ -13,11 +13,15 @@ tags:
     - Heap (Priority Queue)
 ---
 
+<!-- problem:start -->
+
 # [1368. Minimum Cost to Make at Least One Valid Path in a Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid)
 
 [中文文档](/solution/1300-1399/1368.Minimum%20Cost%20to%20Make%20at%20Least%20One%20Valid%20Path%20in%20a%20Grid/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an <code>m x n</code> grid. Each cell of the grid has a sign pointing to the next cell you should visit if you are currently in this cell. The sign of <code>grid[i][j]</code> can be:</p>
 
@@ -72,7 +76,11 @@ The total cost = 3.
 	<li><code>1 &lt;= grid[i][j] &lt;= 4</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Double-ended Queue BFS
 
@@ -83,6 +91,8 @@ In an undirected graph where the edge weights are only 0 and 1, we can use a dou
 > If the weight of an edge is 0, then the weight of the newly expanded node is the same as the weight of the current queue head node. Obviously, it can be used as the starting point for the next expansion.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -107,6 +117,8 @@ class Solution:
                         q.append((x, y, d + 1))
         return -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -142,6 +154,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -172,6 +186,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minCost(grid [][]int) int {
@@ -210,6 +226,8 @@ func minCost(grid [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minCost(grid: number[][]): number {
     const m = grid.length,
@@ -245,4 +263,6 @@ function minCost(grid: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

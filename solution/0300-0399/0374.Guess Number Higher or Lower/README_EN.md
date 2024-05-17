@@ -7,11 +7,15 @@ tags:
     - Interactive
 ---
 
+<!-- problem:start -->
+
 # [374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower)
 
 [中文文档](/solution/0300-0399/0374.Guess%20Number%20Higher%20or%20Lower/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>We are playing the Guess Game. The game is as follows:</p>
 
@@ -59,11 +63,17 @@ tags:
 	<li><code>1 &lt;= pick &lt;= n</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # The guess API is already defined for you.
@@ -83,6 +93,8 @@ class Solution:
                 left = mid + 1
         return left
 ```
+
+#### Java
 
 ```java
 /**
@@ -109,6 +121,8 @@ public class Solution extends GuessGame {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 /**
@@ -137,6 +151,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Forward declaration of guess API.
@@ -160,6 +176,8 @@ func guessNumber(n int) int {
 	return left
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -185,6 +203,8 @@ function guessNumber(n: number): number {
     return l;
 }
 ```
+
+#### Rust
 
 ```rust
 /**
@@ -218,6 +238,8 @@ impl Solution {
 }
 ```
 
+#### C#
+
 ```cs
 /**
  * Forward declaration of guess API.
@@ -246,9 +268,15 @@ public class Solution : GuessGame {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # The guess API is already defined for you.
@@ -263,6 +291,8 @@ class Solution:
     def guessNumber(self, n: int) -> int:
         return bisect.bisect(range(1, n + 1), 0, key=lambda x: -guess(x))
 ```
+
+#### Go
 
 ```go
 /**
@@ -284,4 +314,6 @@ func guessNumber(n int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

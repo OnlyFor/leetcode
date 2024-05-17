@@ -12,11 +12,15 @@ tags:
     - Number Theory
 ---
 
+<!-- problem:start -->
+
 # [1735. Count Ways to Make Array With Product](https://leetcode.com/problems/count-ways-to-make-array-with-product)
 
 [中文文档](/solution/1700-1799/1735.Count%20Ways%20to%20Make%20Array%20With%20Product/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a 2D integer array, <code>queries</code>. For each <code>queries[i]</code>, where <code>queries[i] = [n<sub>i</sub>, k<sub>i</sub>]</code>, find the number of different ways you can place positive integers into an array of size <code>n<sub>i</sub></code> such that the product of the integers is <code>k<sub>i</sub></code>. As the number of ways may be too large, the answer to the <code>i<sup>th</sup></code> query is the number of ways <strong>modulo</strong> <code>10<sup>9</sup> + 7</code>.</p>
 
@@ -49,7 +53,11 @@ tags:
 	<li><code>1 &lt;= n<sub>i</sub>, k<sub>i</sub> &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Prime Factorization + Combinatorial Mathematics
 
@@ -68,6 +76,8 @@ So, the problem is transformed into how to quickly calculate $C_m^n$. According 
 The time complexity is $O(K \times \log \log K + N + m \times \log K)$, and the space complexity is $O(N)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 N = 10020
@@ -106,6 +116,8 @@ class Solution:
             ans.append(t)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -171,6 +183,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 int N = 10020;
 int MOD = 1e9 + 7;
@@ -235,6 +249,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 const n = 1e4 + 20
 const mod = 1e9 + 7
@@ -296,4 +312,6 @@ func waysToFillArray(queries [][]int) (ans []int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -8,11 +8,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [916. Word Subsets](https://leetcode.com/problems/word-subsets)
 
 [中文文档](/solution/0900-0999/0916.Word%20Subsets/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two string arrays <code>words1</code> and <code>words2</code>.</p>
 
@@ -51,11 +55,17 @@ tags:
 	<li>All the strings of <code>words1</code> are <strong>unique</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -72,6 +82,8 @@ class Solution:
                 ans.append(a)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -107,6 +119,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -145,6 +159,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func wordSubsets(words1 []string, words2 []string) (ans []string) {
 	cnt := [26]int{}
@@ -179,4 +195,6 @@ func wordSubsets(words1 []string, words2 []string) (ans []string) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

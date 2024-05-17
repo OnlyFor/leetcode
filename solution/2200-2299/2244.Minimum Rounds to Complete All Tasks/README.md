@@ -11,13 +11,15 @@ tags:
     - 计数
 ---
 
+<!-- problem:start -->
+
 # [2244. 完成所有任务需要的最少轮数](https://leetcode.cn/problems/minimum-rounds-to-complete-all-tasks)
 
 [English Version](/solution/2200-2299/2244.Minimum%20Rounds%20to%20Complete%20All%20Tasks/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>tasks</code> ，其中 <code>tasks[i]</code> 表示任务的难度级别。在每一轮中，你可以完成 2 个或者 3 个 <strong>相同难度级别</strong> 的任务。</p>
 
@@ -53,7 +55,11 @@ tags:
 	<li><code>1 &lt;= tasks[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表
 
@@ -64,6 +70,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为数组 `tasks` 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -76,6 +84,8 @@ class Solution:
             ans += v // 3 + (v % 3 != 0)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -95,6 +105,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -116,6 +128,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumRounds(tasks []int) int {
 	cnt := map[int]int{}
@@ -136,6 +150,8 @@ func minimumRounds(tasks []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumRounds(tasks: number[]): number {
     const cnt = new Map();
@@ -152,6 +168,8 @@ function minimumRounds(tasks: number[]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -177,4 +195,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

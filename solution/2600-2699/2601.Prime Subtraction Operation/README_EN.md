@@ -12,11 +12,15 @@ tags:
     - Number Theory
 ---
 
+<!-- problem:start -->
+
 # [2601. Prime Subtraction Operation](https://leetcode.com/problems/prime-subtraction-operation)
 
 [中文文档](/solution/2600-2699/2601.Prime%20Subtraction%20Operation/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code> of length <code>n</code>.</p>
 
@@ -63,7 +67,11 @@ After the second operation, nums is sorted in strictly increasing order, so the 
 	<li><code><font face="monospace">nums.length == n</font></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Preprocessing prime numbers + binary search
 
@@ -76,6 +84,8 @@ If all the elements in $nums$ are processed, it means that it can be strictly in
 The time complexity is $O(n \log n)$ and the space complexity is $O(n)$. where $n$ is the length of the array $nums$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -98,6 +108,8 @@ class Solution:
             nums[i] -= p[j]
         return True
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -144,6 +156,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -177,6 +191,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func primeSubOperation(nums []int) bool {
 	p := []int{}
@@ -205,6 +221,8 @@ func primeSubOperation(nums []int) bool {
 	return true
 }
 ```
+
+#### TypeScript
 
 ```ts
 function primeSubOperation(nums: number[]): boolean {
@@ -251,4 +269,6 @@ function primeSubOperation(nums: number[]): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

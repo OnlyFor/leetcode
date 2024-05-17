@@ -12,11 +12,15 @@ tags:
     - Monotonic Stack
 ---
 
+<!-- problem:start -->
+
 # [1526. Minimum Number of Increments on Subarrays to Form a Target Array](https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array)
 
 [中文文档](/solution/1500-1599/1526.Minimum%20Number%20of%20Increments%20on%20Subarrays%20to%20Form%20a%20Target%20Array/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>target</code>. You have an integer array <code>initial</code> of the same size as <code>target</code> with all elements initially zeros.</p>
 
@@ -63,17 +67,25 @@ tags:
 	<li><code>1 &lt;= target[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
     def minNumberOperations(self, target: List[int]) -> int:
         return target[0] + sum(max(0, b - a) for a, b in pairwise(target))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -88,6 +100,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -104,6 +118,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minNumberOperations(target []int) int {
 	f := target[0]
@@ -115,6 +131,8 @@ func minNumberOperations(target []int) int {
 	return f
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minNumberOperations(target: number[]): number {
@@ -130,4 +148,6 @@ function minNumberOperations(target: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,13 +9,15 @@ tags:
     - 模拟
 ---
 
+<!-- problem:start -->
+
 # [1599. 经营摩天轮的最大利润](https://leetcode.cn/problems/maximum-profit-of-operating-a-centennial-wheel)
 
 [English Version](/solution/1500-1599/1599.Maximum%20Profit%20of%20Operating%20a%20Centennial%20Wheel/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你正在经营一座摩天轮，该摩天轮共有 <strong>4 个座舱</strong> ，每个座舱<strong> 最多可以容纳 4 位游客</strong> 。你可以 <strong>逆时针</strong>&nbsp;轮转座舱，但每次轮转都需要支付一定的运行成本 <code>runningCost</code> 。</p>
 
@@ -81,7 +83,11 @@ tags:
 	<li><code>1 &lt;= boardingCost, runningCost &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -90,6 +96,8 @@ tags:
 时间复杂度 $O(n)$，其中 $n$ 为数组 `customers` 的长度。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -112,6 +120,8 @@ class Solution:
         return ans
 ```
 
+#### Java
+
 ```java
 class Solution {
     public int minOperationsMaxProfit(int[] customers, int boardingCost, int runningCost) {
@@ -133,6 +143,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -157,6 +169,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minOperationsMaxProfit(customers []int, boardingCost int, runningCost int) int {
 	ans := -1
@@ -178,6 +192,8 @@ func minOperationsMaxProfit(customers []int, boardingCost int, runningCost int) 
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minOperationsMaxProfit(
@@ -203,6 +219,8 @@ function minOperationsMaxProfit(
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -237,4 +255,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

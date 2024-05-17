@@ -9,11 +9,15 @@ tags:
     - Array
 ---
 
+<!-- problem:start -->
+
 # [2997. Minimum Number of Operations to Make Array XOR Equal to K](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k)
 
 [中文文档](/solution/2900-2999/2997.Minimum%20Number%20of%20Operations%20to%20Make%20Array%20XOR%20Equal%20to%20K/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code> and a positive integer <code>k</code>.</p>
 
@@ -57,7 +61,11 @@ It can be shown that we cannot make the XOR equal to k in less than 2 operations
 	<li><code>0 &lt;= k &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Bit Manipulation
 
@@ -67,11 +75,15 @@ The time complexity is $O(n)$, where $n$ is the length of the array $nums$. The 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minOperations(self, nums: List[int], k: int) -> int:
         return reduce(xor, nums, k).bit_count()
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -83,6 +95,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -96,6 +110,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minOperations(nums []int, k int) (ans int) {
 	for _, x := range nums {
@@ -104,6 +120,8 @@ func minOperations(nums []int, k int) (ans int) {
 	return bits.OnesCount(uint(k))
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minOperations(nums: number[], k: number): number {
@@ -125,4 +143,6 @@ function bitCount(i: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

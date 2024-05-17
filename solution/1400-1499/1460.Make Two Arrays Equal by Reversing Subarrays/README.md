@@ -10,13 +10,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [1460. 通过翻转子数组使两个数组相等](https://leetcode.cn/problems/make-two-arrays-equal-by-reversing-subarrays)
 
 [English Version](/solution/1400-1499/1460.Make%20Two%20Arrays%20Equal%20by%20Reversing%20Subarrays/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你两个长度相同的整数数组&nbsp;<code>target</code>&nbsp;和&nbsp;<code>arr</code>&nbsp;。每一步中，你可以选择&nbsp;<code>arr</code>&nbsp;的任意 <strong>非空子数组</strong>&nbsp;并将它翻转。你可以执行此过程任意次。</p>
 
@@ -63,7 +65,11 @@ tags:
 	<li><code>1 &lt;= arr[i] &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：排序
 
@@ -75,11 +81,15 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
         return sorted(target) == sorted(arr)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -90,6 +100,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -102,6 +114,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func canBeEqual(target []int, arr []int) bool {
 	sort.Ints(target)
@@ -110,6 +124,8 @@ func canBeEqual(target []int, arr []int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function canBeEqual(target: number[], arr: number[]): boolean {
     target.sort((a, b) => a - b);
@@ -117,6 +133,8 @@ function canBeEqual(target: number[], arr: number[]): boolean {
     return target.join() === arr.join();
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -127,6 +145,8 @@ impl Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -142,6 +162,8 @@ class Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 int compare(const void* a, const void* b) {
@@ -162,6 +184,10 @@ bool canBeEqual(int* target, int targetSize, int* arr, int arrSize) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：计数
 
 我们注意到，题目中给出的数组元素的范围是 $1 \sim 1000$，因此我们可以使用两个长度为 $1001$ 的数组 `cnt1` 和 `cnt2` 分别记录数组 `target` 和 `arr` 中每个元素出现的次数。最后判断两个数组是否相等即可。
@@ -172,11 +198,15 @@ bool canBeEqual(int* target, int targetSize, int* arr, int arrSize) {
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
         return Counter(target) == Counter(arr)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -193,6 +223,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -211,6 +243,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func canBeEqual(target []int, arr []int) bool {
 	cnt1 := make([]int, 1001)
@@ -225,6 +259,8 @@ func canBeEqual(target []int, arr []int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function canBeEqual(target: number[], arr: number[]): boolean {
     const n = target.length;
@@ -236,6 +272,8 @@ function canBeEqual(target: number[], arr: number[]): boolean {
     return cnt.every(v => !v);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -253,4 +291,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

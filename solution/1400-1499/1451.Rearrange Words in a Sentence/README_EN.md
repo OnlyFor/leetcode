@@ -9,11 +9,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [1451. Rearrange Words in a Sentence](https://leetcode.com/problems/rearrange-words-in-a-sentence)
 
 [中文文档](/solution/1400-1499/1451.Rearrange%20Words%20in%20a%20Sentence/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a sentence&nbsp;<code>text</code> (A&nbsp;<em>sentence</em>&nbsp;is a string of space-separated words) in the following format:</p>
 
@@ -64,11 +68,17 @@ Output is ordered by length and the new first word starts with capital letter.
 	<li><code>1 &lt;= text.length &lt;= 10^5</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -79,6 +89,8 @@ class Solution:
         words[0] = words[0].title()
         return " ".join(words)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -91,6 +103,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -117,6 +131,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func arrangeWords(text string) string {
 	words := strings.Split(text, " ")
@@ -127,6 +143,8 @@ func arrangeWords(text string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function arrangeWords(text: string): string {
     let words: string[] = text.split(' ');
@@ -136,6 +154,8 @@ function arrangeWords(text: string): string {
     return words.join(' ');
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -150,6 +170,8 @@ var arrangeWords = function (text) {
     return arr.join(' ');
 };
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -176,4 +198,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

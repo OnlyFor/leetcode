@@ -11,11 +11,15 @@ tags:
     - Enumeration
 ---
 
+<!-- problem:start -->
+
 # [2212. Maximum Points in an Archery Competition](https://leetcode.com/problems/maximum-points-in-an-archery-competition)
 
 [中文文档](/solution/2200-2299/2212.Maximum%20Points%20in%20an%20Archery%20Competition/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Alice and Bob are opponents in an archery competition. The competition has set the following rules:</p>
 
@@ -73,11 +77,17 @@ It can be shown that Bob cannot obtain a score higher than 27 points.
 	<li><code>sum(aliceArrows[i]) == numArrows</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -102,6 +112,8 @@ class Solution:
         ans[0] = numArrows
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -135,6 +147,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -167,6 +181,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximumBobPoints(numArrows int, aliceArrows []int) []int {
 	n := len(aliceArrows)
@@ -196,6 +212,8 @@ func maximumBobPoints(numArrows int, aliceArrows []int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maximumBobPoints(numArrows: number, aliceArrows: number[]): number[] {
     const dfs = (arr: number[], i: number, c: number): number[] => {
@@ -219,6 +237,8 @@ function maximumBobPoints(numArrows: number, aliceArrows: number[]): number[] {
     return dfs(new Array(12).fill(0), 11, numArrows);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -257,4 +277,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

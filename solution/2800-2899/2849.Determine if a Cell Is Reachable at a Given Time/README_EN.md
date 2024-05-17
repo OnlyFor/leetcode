@@ -8,11 +8,15 @@ tags:
     - Math
 ---
 
+<!-- problem:start -->
+
 # [2849. Determine if a Cell Is Reachable at a Given Time](https://leetcode.com/problems/determine-if-a-cell-is-reachable-at-a-given-time)
 
 [中文文档](/solution/2800-2899/2849.Determine%20if%20a%20Cell%20Is%20Reachable%20at%20a%20Given%20Time/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given four integers <code>sx</code>, <code>sy</code>, <code>fx</code>, <code>fy</code>, and a <strong>non-negative</strong> integer <code>t</code>.</p>
 
@@ -47,11 +51,17 @@ tags:
 	<li><code>0 &lt;= t &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -62,6 +72,8 @@ class Solution:
         dy = abs(sy - fy)
         return max(dx, dy) <= t
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -76,6 +88,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -88,6 +102,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func isReachableAtTime(sx int, sy int, fx int, fy int, t int) bool {
@@ -107,6 +123,8 @@ func abs(x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function isReachableAtTime(sx: number, sy: number, fx: number, fy: number, t: number): boolean {
     if (sx === fx && sy === fy) {
@@ -117,6 +135,8 @@ function isReachableAtTime(sx: number, sy: number, fx: number, fy: number, t: nu
     return Math.max(dx, dy) <= t;
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -130,4 +150,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

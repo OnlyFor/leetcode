@@ -8,11 +8,15 @@ tags:
     - Array
 ---
 
+<!-- problem:start -->
+
 # [1431. Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies)
 
 [中文文档](/solution/1400-1499/1431.Kids%20With%20the%20Greatest%20Number%20of%20Candies/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There are <code>n</code> kids with candies. You are given an integer array <code>candies</code>, where each <code>candies[i]</code> represents the number of candies the <code>i<sup>th</sup></code> kid has, and an integer <code>extraCandies</code>, denoting the number of extra candies that you have.</p>
 
@@ -60,11 +64,17 @@ Kid 1 will always have the greatest number of candies, even if a different kid i
 	<li><code>1 &lt;= extraCandies &lt;= 50</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -72,6 +82,8 @@ class Solution:
         mx = max(candies)
         return [candy + extraCandies >= mx for candy in candies]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -89,6 +101,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -103,6 +117,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func kidsWithCandies(candies []int, extraCandies int) (ans []bool) {
 	mx := slices.Max(candies)
@@ -113,12 +129,16 @@ func kidsWithCandies(candies []int, extraCandies int) (ans []bool) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function kidsWithCandies(candies: number[], extraCandies: number): boolean[] {
     const max = candies.reduce((r, v) => Math.max(r, v));
     return candies.map(v => v + extraCandies >= max);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -131,6 +151,8 @@ impl Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -149,6 +171,8 @@ class Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 #define max(a, b) (((a) > (b)) ? (a) : (b))
@@ -171,4 +195,6 @@ bool* kidsWithCandies(int* candies, int candiesSize, int extraCandies, int* retu
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -7,13 +7,15 @@ tags:
     - 二分查找
 ---
 
+<!-- problem:start -->
+
 # [367. 有效的完全平方数](https://leetcode.cn/problems/valid-perfect-square)
 
 [English Version](/solution/0300-0399/0367.Valid%20Perfect%20Square/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个正整数 <code>num</code> 。如果 <code>num</code> 是一个完全平方数，则返回 <code>true</code> ，否则返回 <code>false</code> 。</p>
 
@@ -47,7 +49,11 @@ tags:
 	<li><code>1 &lt;= num &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：二分查找
 
@@ -56,6 +62,8 @@ tags:
 时间复杂度：$O(logN)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -69,6 +77,8 @@ class Solution:
                 left = mid + 1
         return left * left == num
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -87,6 +97,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -104,6 +116,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func isPerfectSquare(num int) bool {
 	left, right := 1, num
@@ -118,6 +132,8 @@ func isPerfectSquare(num int) bool {
 	return left*left == num
 }
 ```
+
+#### TypeScript
 
 ```ts
 function isPerfectSquare(num: number): boolean {
@@ -134,6 +150,8 @@ function isPerfectSquare(num: number): boolean {
     return left * left === num;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::cmp::Ordering;
@@ -163,6 +181,10 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：转换为数学问题
 
 由于 `n² = 1 + 3 + 5 + ... + (2n-1)`，对数字 `num` 不断减去 $i$ (`i = 1, 3, 5, ...`) 直至 `num` 不大于 0，如果最终 `num` 等于 0，说明是一个有效的完全平方数。
@@ -170,6 +192,8 @@ impl Solution {
 时间复杂度：$O(sqrt(N))$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -180,6 +204,8 @@ class Solution:
             i += 2
         return num == 0
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -192,6 +218,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -202,6 +230,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func isPerfectSquare(num int) bool {
 	for i := 1; num > 0; i += 2 {
@@ -210,6 +240,8 @@ func isPerfectSquare(num int) bool {
 	return num == 0
 }
 ```
+
+#### TypeScript
 
 ```ts
 function isPerfectSquare(num: number): boolean {
@@ -221,6 +253,8 @@ function isPerfectSquare(num: number): boolean {
     return num === 0;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -237,4 +271,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

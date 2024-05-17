@@ -9,11 +9,15 @@ tags:
     - Graph
 ---
 
+<!-- problem:start -->
+
 # [323. Number of Connected Components in an Undirected Graph 🔒](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph)
 
 [中文文档](/solution/0300-0399/0323.Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You have a graph of <code>n</code> nodes. You are given an integer <code>n</code> and an array <code>edges</code> where <code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> indicates that there is an edge between <code>a<sub>i</sub></code> and <code>b<sub>i</sub></code> in the graph.</p>
 
@@ -46,7 +50,11 @@ tags:
 	<li>There are no repeated edges.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: DFS
 
@@ -57,6 +65,8 @@ Then we traverse all nodes. For each node, we use DFS to traverse all its adjace
 The time complexity is $O(n + m)$, and the space complexity is $O(n + m)$. Where $n$ and $m$ are the number of nodes and edges, respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -76,6 +86,8 @@ class Solution:
         vis = set()
         return sum(dfs(i) for i in range(n))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -111,6 +123,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -141,6 +155,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countComponents(n int, edges [][]int) (ans int) {
 	g := make([][]int, n)
@@ -168,6 +184,8 @@ func countComponents(n int, edges [][]int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function countComponents(n: number, edges: number[][]): number {
     const g: number[][] = Array.from({ length: n }, () => []);
@@ -189,6 +207,8 @@ function countComponents(n: number, edges: number[][]): number {
     return g.reduce((acc, _, i) => acc + dfs(i), 0);
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -219,6 +239,10 @@ var countComponents = function (n, edges) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Union-Find
 
 We can use a union-find set to maintain the connected components in the graph.
@@ -230,6 +254,8 @@ Finally, we return the number of connected components.
 The time complexity is $O(n + m \times \alpha(n))$, and the space complexity is $O(n)$. Where $n$ and $m$ are the number of nodes and edges, respectively, and $\alpha(n)$ is the inverse of the Ackermann function, which can be regarded as a very small constant.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class UnionFind:
@@ -262,6 +288,8 @@ class Solution:
             n -= uf.union(a, b)
         return n
 ```
+
+#### Java
 
 ```java
 class UnionFind {
@@ -311,6 +339,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class UnionFind {
 public:
@@ -357,6 +387,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 type unionFind struct {
@@ -406,6 +438,8 @@ func countComponents(n int, edges [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 class UnionFind {
     p: number[];
@@ -451,4 +485,6 @@ function countComponents(n: number, edges: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

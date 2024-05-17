@@ -10,13 +10,15 @@ tags:
     - 哈希函数
 ---
 
+<!-- problem:start -->
+
 # [3135. Equalize Strings by Adding or Removing Characters at Ends 🔒](https://leetcode.cn/problems/equalize-strings-by-adding-or-removing-characters-at-ends)
 
 [English Version](/solution/3100-3199/3135.Equalize%20Strings%20by%20Adding%20or%20Removing%20Characters%20at%20Ends/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>Given two strings <code>initial</code> and <code>target</code>, your task is to modify <code>initial</code> by performing a series of operations to make it equal to <code>target</code>.</p>
 
@@ -100,7 +102,11 @@ tags:
 	<li><code>initial</code> and <code>target</code> consist only of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -123,6 +129,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minOperations(self, initial: str, target: str) -> int:
@@ -136,6 +144,8 @@ class Solution:
                     mx = max(mx, f[i][j])
         return m + n - mx * 2
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -155,6 +165,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -177,6 +189,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minOperations(initial string, target string) int {
 	m, n := len(initial), len(target)
@@ -196,6 +210,8 @@ func minOperations(initial string, target string) int {
 	return m + n - 2*mx
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minOperations(initial: string, target: string): number {
@@ -217,4 +233,6 @@ function minOperations(initial: string, target: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -9,13 +9,15 @@ tags:
     - 模拟
 ---
 
+<!-- problem:start -->
+
 # [2180. 统计各位数字之和为偶数的整数个数](https://leetcode.cn/problems/count-integers-with-even-digit-sum)
 
 [English Version](/solution/2100-2199/2180.Count%20Integers%20With%20Even%20Digit%20Sum/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个正整数 <code>num</code> ，请你统计并返回 <strong>小于或等于</strong> <code>num</code> 且各位数字之和为 <strong>偶数</strong> 的正整数的数目。</p>
 
@@ -50,7 +52,11 @@ tags:
 	<li><code>1 &lt;= num &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举
 
@@ -59,6 +65,8 @@ tags:
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(1)$。其中 $n$ 为 $num$ 的值。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -72,6 +80,8 @@ class Solution:
             ans += s % 2 == 0
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -91,6 +101,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -108,6 +120,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countEven(num int) (ans int) {
 	for i := 1; i <= num; i++ {
@@ -122,6 +136,8 @@ func countEven(num int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countEven(num: number): number {
@@ -141,6 +157,10 @@ function countEven(num: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：数学
 
 我们观察发现，在 $[0,..x]$ 的所有数中，每 $10$ 个数中，就有 $5$ 个数的各位数字之和为偶数。例如，在 $[0,..9]$ 中，每 $10$ 个数中，就有 $5$ 个数的各位数字之和为偶数，分别是 $0,2,4,6,8$。
@@ -157,6 +177,8 @@ function countEven(num: number): number {
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def countEven(self, num: int) -> int:
@@ -168,6 +190,8 @@ class Solution:
         ans += (num % 10 + 2 - (s & 1)) >> 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -182,6 +206,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -198,6 +224,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countEven(num int) (ans int) {
 	ans = num/10*5 - 1
@@ -209,6 +237,8 @@ func countEven(num int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countEven(num: number): number {
@@ -224,4 +254,6 @@ function countEven(num: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

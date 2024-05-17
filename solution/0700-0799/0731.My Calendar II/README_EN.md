@@ -9,11 +9,15 @@ tags:
     - Ordered Set
 ---
 
+<!-- problem:start -->
+
 # [731. My Calendar II](https://leetcode.com/problems/my-calendar-ii)
 
 [中文文档](/solution/0700-0799/0731.My%20Calendar%20II/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are implementing a program to use as your calendar. We can add a new event if adding the event will not cause a <strong>triple booking</strong>.</p>
 
@@ -56,11 +60,17 @@ myCalendarTwo.book(25, 55); // return True, The event can be booked, as the time
 	<li>At most <code>1000</code> calls will be made to <code>book</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 from sortedcontainers import SortedDict
@@ -87,6 +97,8 @@ class MyCalendarTwo:
 # obj = MyCalendarTwo()
 # param_1 = obj.book(start,end)
 ```
+
+#### Java
 
 ```java
 class MyCalendarTwo {
@@ -118,6 +130,8 @@ class MyCalendarTwo {
  */
 ```
 
+#### C++
+
 ```cpp
 class MyCalendarTwo {
 public:
@@ -148,6 +162,8 @@ public:
  * bool param_1 = obj->book(start,end);
  */
 ```
+
+#### Go
 
 ```go
 type MyCalendarTwo struct {
@@ -190,9 +206,15 @@ func (this *MyCalendarTwo) Book(start int, end int) bool {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Node:
@@ -272,6 +294,8 @@ class MyCalendarTwo:
 # obj = MyCalendarTwo()
 # param_1 = obj.book(start,end)
 ```
+
+#### Java
 
 ```java
 class Node {
@@ -384,6 +408,8 @@ class MyCalendarTwo {
  */
 ```
 
+#### C++
+
 ```cpp
 class Node {
 public:
@@ -483,6 +509,8 @@ public:
  * bool param_1 = obj->book(start,end);
  */
 ```
+
+#### Go
 
 ```go
 type node struct {
@@ -592,4 +620,6 @@ func (this *MyCalendarTwo) Book(start int, end int) bool {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -12,13 +12,15 @@ tags:
     - 二叉树
 ---
 
+<!-- problem:start -->
+
 # [1367. 二叉树中的链表](https://leetcode.cn/problems/linked-list-in-binary-tree)
 
 [English Version](/solution/1300-1399/1367.Linked%20List%20in%20Binary%20Tree/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一棵以&nbsp;<code>root</code>&nbsp;为根的二叉树和一个&nbsp;<code>head</code>&nbsp;为第一个节点的链表。</p>
 
@@ -62,7 +64,11 @@ tags:
 	<li>二叉树包含的节点数目在&nbsp;<code>1</code>&nbsp;到&nbsp;<code>2500</code>&nbsp;之间。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：递归
 
@@ -78,6 +84,8 @@ tags:
 时间复杂度 $O(n^2)，空间复杂度 O(n)$。其中 $n$ 是二叉树的节点数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for singly-linked list.
@@ -108,6 +116,8 @@ class Solution:
             or self.isSubPath(head, root.right)
         )
 ```
+
+#### Java
 
 ```java
 /**
@@ -155,6 +165,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for singly-linked list.
@@ -198,6 +210,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for singly-linked list.
@@ -231,6 +245,8 @@ func dfs(head *ListNode, root *TreeNode) bool {
 	return dfs(head.Next, root.Left) || dfs(head.Next, root.Right)
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -276,6 +292,8 @@ function isSubPath(head: ListNode | null, root: TreeNode | null): boolean {
     return dfs(head, root) || isSubPath(head, root.left) || isSubPath(head, root.right);
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for singly-linked list.
@@ -348,4 +366,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

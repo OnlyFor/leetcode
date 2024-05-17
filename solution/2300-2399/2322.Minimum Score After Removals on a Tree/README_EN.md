@@ -11,11 +11,15 @@ tags:
     - Array
 ---
 
+<!-- problem:start -->
+
 # [2322. Minimum Score After Removals on a Tree](https://leetcode.com/problems/minimum-score-after-removals-on-a-tree)
 
 [中文文档](/solution/2300-2399/2322.Minimum%20Score%20After%20Removals%20on%20a%20Tree/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There is an undirected connected tree with <code>n</code> nodes labeled from <code>0</code> to <code>n - 1</code> and <code>n - 1</code> edges.</p>
 
@@ -75,11 +79,17 @@ We cannot obtain a smaller score than 0.
 	<li><code>edges</code> represents a valid tree.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -120,6 +130,8 @@ class Solution:
                 dfs2(i, -1, j)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -179,6 +191,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -230,6 +244,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimumScore(nums []int, edges [][]int) int {
@@ -283,4 +299,6 @@ func minimumScore(nums []int, edges [][]int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

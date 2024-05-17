@@ -11,11 +11,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [2563. Count the Number of Fair Pairs](https://leetcode.com/problems/count-the-number-of-fair-pairs)
 
 [中文文档](/solution/2500-2599/2563.Count%20the%20Number%20of%20Fair%20Pairs/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a <strong>0-indexed</strong> integer array <code>nums</code> of size <code>n</code> and two integers <code>lower</code> and <code>upper</code>, return <em>the number of fair pairs</em>.</p>
 
@@ -53,7 +57,11 @@ tags:
 	<li><code><font face="monospace">-10<sup>9</sup>&nbsp;&lt;= lower &lt;= upper &lt;= 10<sup>9</sup></font></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sorting + Binary Search
 
@@ -62,6 +70,8 @@ First, we sort the array `nums` in ascending order. Then, for each `nums[i]`, we
 The time complexity is $O(n \times \log n)$, and the space complexity is $O(\log n)$. Where $n$ is the length of the array `nums`.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -74,6 +84,8 @@ class Solution:
             ans += k - j
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -104,6 +116,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -120,6 +134,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countFairPairs(nums []int, lower int, upper int) (ans int64) {
 	sort.Ints(nums)
@@ -131,6 +147,8 @@ func countFairPairs(nums []int, lower int, upper int) (ans int64) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countFairPairs(nums: number[], lower: number, upper: number): number {
@@ -160,4 +178,6 @@ function countFairPairs(nums: number[], lower: number, upper: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,11 +10,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [2399. Check Distances Between Same Letters](https://leetcode.com/problems/check-distances-between-same-letters)
 
 [中文文档](/solution/2300-2399/2399.Check%20Distances%20Between%20Same%20Letters/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> string <code>s</code> consisting of only lowercase English letters, where each letter in <code>s</code> appears <strong>exactly</strong> <strong>twice</strong>. You are also given a <strong>0-indexed</strong> integer array <code>distance</code> of length <code>26</code>.</p>
 
@@ -59,11 +63,17 @@ Because distance[0] = 1, s is not a well-spaced string.
 	<li><code>0 &lt;= distance[i] &lt;= 50</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -75,6 +85,8 @@ class Solution:
             d[c] = i
         return True
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -91,6 +103,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -109,6 +123,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func checkDistances(s string, distance []int) bool {
 	d := [26]int{}
@@ -122,6 +138,8 @@ func checkDistances(s string, distance []int) bool {
 	return true
 }
 ```
+
+#### TypeScript
 
 ```ts
 function checkDistances(s: string, distance: number[]): boolean {
@@ -137,6 +155,8 @@ function checkDistances(s: string, distance: number[]): boolean {
     return true;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -157,6 +177,8 @@ impl Solution {
 }
 ```
 
+#### C
+
 ```c
 bool checkDistances(char* s, int* distance, int distanceSize) {
     int n = strlen(s);
@@ -174,4 +196,6 @@ bool checkDistances(char* s, int* distance, int distanceSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

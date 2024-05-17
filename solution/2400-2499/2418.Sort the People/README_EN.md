@@ -11,11 +11,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [2418. Sort the People](https://leetcode.com/problems/sort-the-people)
 
 [中文文档](/solution/2400-2499/2418.Sort%20the%20People/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array of strings <code>names</code>, and an array <code>heights</code> that consists of <strong>distinct</strong> positive integers. Both arrays are of length <code>n</code>.</p>
 
@@ -52,7 +56,11 @@ tags:
 	<li>All the values of <code>heights</code> are distinct.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sorting
 
@@ -64,6 +72,8 @@ The time complexity is $O(n \times \log n)$, and the space complexity is $O(n)$.
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
@@ -71,6 +81,8 @@ class Solution:
         idx.sort(key=lambda i: -heights[i])
         return [names[i] for i in idx]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -90,6 +102,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -107,6 +121,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sortPeople(names []string, heights []int) (ans []string) {
 	n := len(names)
@@ -121,6 +137,8 @@ func sortPeople(names []string, heights []int) (ans []string) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function sortPeople(names: string[], heights: number[]): string[] {
@@ -138,6 +156,8 @@ function sortPeople(names: string[], heights: number[]): string[] {
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn sort_people(names: Vec<String>, heights: Vec<i32>) -> Vec<String> {
@@ -153,15 +173,23 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
     def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
         return [name for _, name in sorted(zip(heights, names), reverse=True)]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -180,6 +208,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -200,6 +230,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sortPeople(names []string, heights []int) []string {
 	n := len(names)
@@ -216,6 +248,8 @@ func sortPeople(names []string, heights []int) []string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function sortPeople(names: string[], heights: number[]): string[] {
     return names
@@ -227,4 +261,6 @@ function sortPeople(names: string[], heights: number[]): string[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

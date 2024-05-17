@@ -11,11 +11,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [1040. Moving Stones Until Consecutive II](https://leetcode.com/problems/moving-stones-until-consecutive-ii)
 
 [中文文档](/solution/1000-1099/1040.Moving%20Stones%20Until%20Consecutive%20II/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There are some stones in different positions on the X-axis. You are given an integer array <code>stones</code>, the positions of the stones.</p>
 
@@ -63,11 +67,17 @@ Notice we cannot move 10 -&gt; 2 to finish the game, because that would be an il
 	<li>All the values of <code>stones</code> are <strong>unique</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -85,6 +95,8 @@ class Solution:
                 mi = min(mi, n - (j - i + 1))
         return [mi, mx]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -107,6 +119,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -131,6 +145,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numMovesStonesII(stones []int) []int {
 	sort.Ints(stones)
@@ -151,6 +167,8 @@ func numMovesStonesII(stones []int) []int {
 	return []int{mi, mx}
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numMovesStonesII(stones: number[]): number[] {
@@ -174,4 +192,6 @@ function numMovesStonesII(stones: number[]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

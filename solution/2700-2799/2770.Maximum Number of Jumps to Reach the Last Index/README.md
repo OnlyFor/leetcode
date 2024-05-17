@@ -9,13 +9,15 @@ tags:
     - 动态规划
 ---
 
+<!-- problem:start -->
+
 # [2770. 达到末尾下标所需的最大跳跃次数](https://leetcode.cn/problems/maximum-number-of-jumps-to-reach-the-last-index)
 
 [English Version](/solution/2700-2799/2770.Maximum%20Number%20of%20Jumps%20to%20Reach%20the%20Last%20Index/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong> 开始、由 <code>n</code> 个整数组成的数组 <code>nums</code> 和一个整数 <code>target</code> 。</p>
 
@@ -71,7 +73,11 @@ tags:
 	<li><code>0 &lt;= target &lt;= 2 * 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：记忆化搜索
 
@@ -90,6 +96,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maximumJumps(self, nums: List[int], target: int) -> int:
@@ -107,6 +115,8 @@ class Solution:
         ans = dfs(0)
         return -1 if ans < 0 else ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -142,6 +152,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -169,6 +181,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maximumJumps(nums []int, target int) int {
@@ -208,6 +222,8 @@ func abs(x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maximumJumps(nums: number[], target: number): number {
     const n = nums.length;
@@ -234,4 +250,6 @@ function maximumJumps(nums: number[], target: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

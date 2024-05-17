@@ -11,11 +11,15 @@ tags:
     - Matrix
 ---
 
+<!-- problem:start -->
+
 # [2392. Build a Matrix With Conditions](https://leetcode.com/problems/build-a-matrix-with-conditions)
 
 [中文文档](/solution/2300-2399/2392.Build%20a%20Matrix%20With%20Conditions/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>positive</strong> integer <code>k</code>. You are also given:</p>
 
@@ -74,11 +78,17 @@ No matrix can satisfy all the conditions, so we return the empty matrix.
 	<li><code>left<sub>i</sub> != right<sub>i</sub></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -115,6 +125,8 @@ class Solution:
             ans[i][m[v]] = v
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -170,6 +182,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -222,6 +236,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func buildMatrix(k int, rowConditions [][]int, colConditions [][]int) [][]int {
@@ -279,6 +295,8 @@ func buildMatrix(k int, rowConditions [][]int, colConditions [][]int) [][]int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function buildMatrix(k: number, rowConditions: number[][], colConditions: number[][]): number[][] {
     function f(cond) {
@@ -326,4 +344,6 @@ function buildMatrix(k: number, rowConditions: number[][], colConditions: number
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

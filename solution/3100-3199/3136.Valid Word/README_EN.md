@@ -8,11 +8,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [3136. Valid Word](https://leetcode.com/problems/valid-word)
 
 [中文文档](/solution/3100-3199/3136.Valid%20Word/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>A word is considered <strong>valid</strong> if:</p>
 
@@ -79,7 +83,11 @@ tags:
 	<li><code>word</code> consists of English uppercase and lowercase letters, digits, <code>&#39;@&#39;</code>, <code>&#39;#&#39;</code>, and <code>&#39;$&#39;</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -92,6 +100,8 @@ Finally, if both `has_vowel` and `has_consonant` are `true`, we return `true`. O
 The time complexity is $O(n)$, and the space complexity is $O(1)$. Where $n$ is the length of the string.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -110,6 +120,8 @@ class Solution:
                     has_consonant = True
         return has_vowel and has_consonant
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -137,6 +149,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -167,6 +181,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func isValid(word string) bool {
 	if len(word) < 3 {
@@ -192,6 +208,8 @@ func isValid(word string) bool {
 	return hasVowel && hasConsonant
 }
 ```
+
+#### TypeScript
 
 ```ts
 function isValid(word: string): boolean {
@@ -219,4 +237,6 @@ function isValid(word: string): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,13 +10,15 @@ tags:
     - 概率与统计
 ---
 
+<!-- problem:start -->
+
 # [1093. 大样本统计](https://leetcode.cn/problems/statistics-from-a-large-sample)
 
 [English Version](/solution/1000-1099/1093.Statistics%20from%20a%20Large%20Sample/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>我们对&nbsp;<code>0</code>&nbsp;到&nbsp;<code>255</code>&nbsp;之间的整数进行采样，并将结果存储在数组&nbsp;<code>count</code>&nbsp;中：<code>count[k]</code>&nbsp;就是整数&nbsp;<code>k</code> 在样本中出现的次数。</p>
 
@@ -73,7 +75,11 @@ tags:
 	<li>&nbsp;<code>count</code>&nbsp;的众数是 <strong>唯一</strong> 的</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -103,6 +109,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def sampleStats(self, count: List[int]) -> List[float]:
@@ -130,6 +138,8 @@ class Solution:
         )
         return [mi, mx, s / cnt, median, mode]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -168,6 +178,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -199,6 +211,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func sampleStats(count []int) []float64 {
@@ -233,6 +247,8 @@ func sampleStats(count []int) []float64 {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function sampleStats(count: number[]): number[] {
     const find = (i: number): number => {
@@ -265,4 +281,6 @@ function sampleStats(count: number[]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

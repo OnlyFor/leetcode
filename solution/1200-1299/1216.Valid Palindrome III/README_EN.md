@@ -9,11 +9,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [1216. Valid Palindrome III 🔒](https://leetcode.com/problems/valid-palindrome-iii)
 
 [中文文档](/solution/1200-1299/1216.Valid%20Palindrome%20III/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a string <code>s</code> and an integer <code>k</code>, return <code>true</code> if <code>s</code> is a <code>k</code><strong>-palindrome</strong>.</p>
 
@@ -44,7 +48,11 @@ tags:
 	<li><code>1 &lt;= k &lt;= s.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming
 
@@ -61,6 +69,8 @@ Finally, we check whether there exists $f[i][j] + k \geq n$, where $n$ is the le
 The time complexity is $O(n^2)$, and the space complexity is $O(n^2)$. Here, $n$ is the length of the string $s$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -79,6 +89,8 @@ class Solution:
                     return True
         return False
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -104,6 +116,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -132,6 +146,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func isValidPalindrome(s string, k int) bool {
 	n := len(s)
@@ -156,6 +172,8 @@ func isValidPalindrome(s string, k int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function isValidPalindrome(s: string, k: number): boolean {
     const n = s.length;
@@ -178,6 +196,8 @@ function isValidPalindrome(s: string, k: number): boolean {
     return false;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -211,4 +231,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,13 +10,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [1847. 最近的房间](https://leetcode.cn/problems/closest-room)
 
 [English Version](/solution/1800-1899/1847.Closest%20Room/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>一个酒店里有 <code>n</code> 个房间，这些房间用二维整数数组 <code>rooms</code> 表示，其中 <code>rooms[i] = [roomId<sub>i</sub>, size<sub>i</sub>]</code> 表示有一个房间号为 <code>roomId<sub>i</sub></code> 的房间且它的面积为 <code>size<sub>i</sub></code> 。每一个房间号 <code>roomId<sub>i</sub></code> 保证是 <strong>独一无二</strong> 的。</p>
 
@@ -66,7 +68,11 @@ tags:
 	<li><code>1 <= size<sub>i</sub>, minSize<sub>j</sub> <= 10<sup>7</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：离线查询 + 有序集合 + 二分查找
 
@@ -79,6 +85,8 @@ tags:
 时间复杂度 $O(n \times \log n + k \times \log k)$，空间复杂度 $O(n + k)$。其中 $n$ 和 $k$ 分别是房间数和查询数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 from sortedcontainers import SortedList
@@ -108,6 +116,8 @@ class Solution:
                 ans[j] = sl[p - 1]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -151,6 +161,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -196,6 +208,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func closestRoom(rooms [][]int, queries [][]int) []int {
@@ -250,4 +264,6 @@ func closestRoom(rooms [][]int, queries [][]int) []int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

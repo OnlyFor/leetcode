@@ -10,11 +10,15 @@ tags:
     - Shortest Path
 ---
 
+<!-- problem:start -->
+
 # [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance)
 
 [中文文档](/solution/1300-1399/1334.Find%20the%20City%20With%20the%20Smallest%20Number%20of%20Neighbors%20at%20a%20Threshold%20Distance/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There are <code>n</code> cities numbered from <code>0</code> to <code>n-1</code>. Given the array <code>edges</code> where <code>edges[i] = [from<sub>i</sub>, to<sub>i</sub>, weight<sub>i</sub>]</code> represents a bidirectional and weighted edge between cities <code>from<sub>i</sub></code> and <code>to<sub>i</sub></code>, and given the integer <code>distanceThreshold</code>.</p>
 
@@ -64,11 +68,17 @@ The city 0 has 1 neighboring city at a distanceThreshold = 2.
 	<li>All pairs <code>(from<sub>i</sub>, to<sub>i</sub>)</code> are distinct.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -100,6 +110,8 @@ class Solution:
                 cnt, ans = t, i
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -162,6 +174,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -204,6 +218,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findTheCity(n int, edges [][]int, distanceThreshold int) int {
@@ -259,6 +275,8 @@ func findTheCity(n int, edges [][]int, distanceThreshold int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findTheCity(n: number, edges: number[][], distanceThreshold: number): number {
     const g: number[][] = Array.from({ length: n }, () => Array(n).fill(Infinity));
@@ -303,9 +321,15 @@ function findTheCity(n: number, edges: number[][], distanceThreshold: number): n
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -331,6 +355,8 @@ class Solution:
                 cnt, ans = t, i
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -371,6 +397,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -401,6 +429,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findTheCity(n int, edges [][]int, distanceThreshold int) int {
@@ -444,6 +474,8 @@ func findTheCity(n int, edges [][]int, distanceThreshold int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findTheCity(n: number, edges: number[][], distanceThreshold: number): number {
     const g: number[][] = Array.from({ length: n }, () => Array(n).fill(Infinity));
@@ -474,4 +506,6 @@ function findTheCity(n: number, edges: number[][], distanceThreshold: number): n
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

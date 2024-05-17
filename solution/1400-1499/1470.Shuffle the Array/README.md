@@ -8,13 +8,15 @@ tags:
     - 数组
 ---
 
+<!-- problem:start -->
+
 # [1470. 重新排列数组](https://leetcode.cn/problems/shuffle-the-array)
 
 [English Version](/solution/1400-1499/1470.Shuffle%20the%20Array/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个数组 <code>nums</code> ，数组中有 <code>2n</code> 个元素，按 <code>[x<sub>1</sub>,x<sub>2</sub>,...,x<sub>n</sub>,y<sub>1</sub>,y<sub>2</sub>,...,y<sub>n</sub>]</code> 的格式排列。</p>
 
@@ -51,11 +53,17 @@ tags:
 	<li><code>1 &lt;= nums[i] &lt;= 10^3</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -66,6 +74,8 @@ class Solution:
             ans.append(nums[i + n])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -79,6 +89,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -94,6 +106,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func shuffle(nums []int, n int) []int {
 	var ans []int
@@ -105,6 +119,8 @@ func shuffle(nums []int, n int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function shuffle(nums: number[], n: number): number[] {
     let ans = [];
@@ -114,6 +130,8 @@ function shuffle(nums: number[], n: number): number[] {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -128,6 +146,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 /**
@@ -146,9 +166,15 @@ int* shuffle(int* nums, int numsSize, int n, int* returnSize) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -156,6 +182,8 @@ class Solution:
         nums[::2], nums[1::2] = nums[:n], nums[n:]
         return nums
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -179,4 +207,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

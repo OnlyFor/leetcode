@@ -11,11 +11,15 @@ tags:
     - Counting
 ---
 
+<!-- problem:start -->
+
 # [2416. Sum of Prefix Scores of Strings](https://leetcode.com/problems/sum-of-prefix-scores-of-strings)
 
 [中文文档](/solution/2400-2499/2416.Sum%20of%20Prefix%20Scores%20of%20Strings/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array <code>words</code> of size <code>n</code> consisting of <strong>non-empty</strong> strings.</p>
 
@@ -69,7 +73,11 @@ Each prefix has a score of one, so the total is answer[0] = 1 + 1 + 1 + 1 = 4.
 	<li><code>words[i]</code> consists of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Trie
 
@@ -80,6 +88,8 @@ Then, traverse each string, accumulating the occurrence count of each prefix.
 The time complexity is $O(n \times m)$. Here, $n$ and $m$ are the length of the string array `words` and the maximum length of the strings in it, respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Trie:
@@ -115,6 +125,8 @@ class Solution:
             trie.insert(w)
         return [trie.search(w) for w in words]
 ```
+
+#### Java
 
 ```java
 class Trie {
@@ -162,6 +174,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Trie {
@@ -213,6 +227,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 type Trie struct {
 	children [26]*Trie
@@ -261,6 +277,8 @@ func sumPrefixScores(words []string) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function sumPrefixScores(words: string[]): number[] {
     const map = new Map();
@@ -287,9 +305,15 @@ function sumPrefixScores(words: string[]): number[] {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 class Trie {
@@ -343,4 +367,6 @@ function sumPrefixScores(words: string[]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

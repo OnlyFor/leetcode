@@ -8,11 +8,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1556. Thousand Separator](https://leetcode.com/problems/thousand-separator)
 
 [中文文档](/solution/1500-1599/1556.Thousand%20Separator/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer <code>n</code>, add a dot (&quot;.&quot;) as the thousands separator and return it in string format.</p>
 
@@ -38,11 +42,17 @@ tags:
 	<li><code>0 &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -60,6 +70,8 @@ class Solution:
                 cnt = 0
         return ''.join(ans[::-1])
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -84,6 +96,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -105,6 +119,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func thousandSeparator(n int) string {
@@ -132,4 +148,6 @@ func thousandSeparator(n int) string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

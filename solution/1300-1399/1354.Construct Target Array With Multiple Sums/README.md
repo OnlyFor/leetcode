@@ -9,13 +9,15 @@ tags:
     - 堆（优先队列）
 ---
 
+<!-- problem:start -->
+
 # [1354. 多次求和构造目标数组](https://leetcode.cn/problems/construct-target-array-with-multiple-sums)
 
 [English Version](/solution/1300-1399/1354.Construct%20Target%20Array%20With%20Multiple%20Sums/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组&nbsp;<code>target</code> 。一开始，你有一个数组&nbsp;<code>A</code> ，它的所有元素均为 1 ，你可以执行以下操作：</p>
 
@@ -63,7 +65,11 @@ tags:
 	<li><code>1 &lt;= target[i] &lt;= 10^9</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：逆向构造 + 优先队列（大根堆）
 
@@ -74,6 +80,8 @@ tags:
 时间复杂度 $O(n \log n)$，空间复杂度 $O(n)$。其中 $n$ 为数组 $target$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -91,6 +99,8 @@ class Solution:
             s = s - mx + x
         return True
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -118,6 +128,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -147,6 +159,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func isPossible(target []int) bool {
@@ -180,6 +194,8 @@ func (hp) Pop() (_ any)         { return }
 func (hp) Push(any)             {}
 ```
 
+#### TypeScript
+
 ```ts
 function isPossible(target: number[]): boolean {
     const pq = new MaxPriorityQueue();
@@ -204,4 +220,6 @@ function isPossible(target: number[]): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

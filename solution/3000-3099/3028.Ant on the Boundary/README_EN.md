@@ -10,11 +10,15 @@ tags:
     - Simulation
 ---
 
+<!-- problem:start -->
+
 # [3028. Ant on the Boundary](https://leetcode.com/problems/ant-on-the-boundary)
 
 [中文文档](/solution/3000-3099/3028.Ant%20on%20the%20Boundary/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>An ant is on a boundary. It sometimes goes <strong>left</strong> and sometimes <strong>right</strong>.</p>
 
@@ -67,7 +71,11 @@ The ant never returned to the boundary, so the answer is 0.
 	<li><code>nums[i] != 0</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Prefix Sum
 
@@ -77,11 +85,15 @@ The time complexity is $O(n)$, where $n$ is the length of `nums`. The space comp
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def returnToBoundaryCount(self, nums: List[int]) -> int:
         return sum(s == 0 for s in accumulate(nums))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -98,6 +110,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -112,6 +126,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func returnToBoundaryCount(nums []int) (ans int) {
 	s := 0
@@ -124,6 +140,8 @@ func returnToBoundaryCount(nums []int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function returnToBoundaryCount(nums: number[]): number {
@@ -138,4 +156,6 @@ function returnToBoundaryCount(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

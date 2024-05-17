@@ -11,11 +11,15 @@ tags:
     - Backtracking
 ---
 
+<!-- problem:start -->
+
 # [1096. Brace Expansion II](https://leetcode.com/problems/brace-expansion-ii)
 
 [中文文档](/solution/1000-1099/1096.Brace%20Expansion%20II/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Under the grammar given below, strings can represent a set of lowercase words. Let&nbsp;<code>R(expr)</code>&nbsp;denote the set of words the expression represents.</p>
 
@@ -77,11 +81,17 @@ tags:
 	<li>The given&nbsp;<code>expression</code>&nbsp;represents a set of words based on the grammar given in the description.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -100,6 +110,8 @@ class Solution:
         dfs(expression)
         return sorted(s)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -125,6 +137,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -155,6 +169,8 @@ private:
 };
 ```
 
+#### Go
+
 ```go
 func braceExpansionII(expression string) []string {
 	s := map[string]struct{}{}
@@ -181,6 +197,8 @@ func braceExpansionII(expression string) []string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function braceExpansionII(expression: string): string[] {
     const dfs = (exp: string) => {
@@ -204,4 +222,6 @@ function braceExpansionII(expression: string): string[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

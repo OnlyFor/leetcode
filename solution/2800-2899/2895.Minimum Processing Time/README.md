@@ -10,13 +10,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [2895. 最小处理时间](https://leetcode.cn/problems/minimum-processing-time)
 
 [English Version](/solution/2800-2899/2895.Minimum%20Processing%20Time/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你有 <code>n</code> 颗处理器，每颗处理器都有 <code>4</code> 个核心。现有 <code>n * 4</code> 个待执行任务，每个核心只执行 <strong>一个</strong> 任务。</p>
 
@@ -61,7 +63,11 @@ tags:
 	<li><code>tasks.length == 4 * n</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心 + 排序
 
@@ -72,6 +78,8 @@ tags:
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(\log n)$。其中 $n$ 为任务的数量。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -85,6 +93,8 @@ class Solution:
             i -= 4
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -100,6 +110,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -117,6 +129,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minProcessingTime(processorTime []int, tasks []int) (ans int) {
 	sort.Ints(processorTime)
@@ -129,6 +143,8 @@ func minProcessingTime(processorTime []int, tasks []int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minProcessingTime(processorTime: number[], tasks: number[]): number {
@@ -145,4 +161,6 @@ function minProcessingTime(processorTime: number[], tasks: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

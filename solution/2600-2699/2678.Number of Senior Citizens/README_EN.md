@@ -9,11 +9,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [2678. Number of Senior Citizens](https://leetcode.com/problems/number-of-senior-citizens)
 
 [中文文档](/solution/2600-2699/2678.Number%20of%20Senior%20Citizens/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> array of strings <code>details</code>. Each element of <code>details</code> provides information about a given passenger compressed into a string of length <code>15</code>. The system is such that:</p>
 
@@ -54,7 +58,11 @@ tags:
 	<li>The phone numbers and seat numbers of the passengers are distinct.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Traversal and Counting
 
@@ -66,11 +74,15 @@ The time complexity is $O(n)$, where $n$ is the length of `details`. The space c
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def countSeniors(self, details: List[str]) -> int:
         return sum(int(x[11:13]) > 60 for x in details)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -87,6 +99,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -101,6 +115,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countSeniors(details []string) (ans int) {
 	for _, x := range details {
@@ -112,6 +128,8 @@ func countSeniors(details []string) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countSeniors(details: string[]): number {
@@ -125,6 +143,8 @@ function countSeniors(details: string[]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -146,15 +166,23 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 function countSeniors(details: string[]): number {
     return details.filter(v => parseInt(v.slice(11, 13)) > 60).length;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -170,4 +198,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

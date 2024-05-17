@@ -11,11 +11,15 @@ tags:
     - Counting
 ---
 
+<!-- problem:start -->
+
 # [2206. Divide Array Into Equal Pairs](https://leetcode.com/problems/divide-array-into-equal-pairs)
 
 [中文文档](/solution/2200-2299/2206.Divide%20Array%20Into%20Equal%20Pairs/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>nums</code> consisting of <code>2 * n</code> integers.</p>
 
@@ -57,11 +61,17 @@ There is no way to divide nums into 4 / 2 = 2 pairs such that the pairs satisfy 
 	<li><code>1 &lt;= nums[i] &lt;= 500</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -69,6 +79,8 @@ class Solution:
         cnt = Counter(nums)
         return all(v % 2 == 0 for v in cnt.values())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -87,6 +99,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -100,6 +114,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func divideArray(nums []int) bool {
@@ -118,4 +134,6 @@ func divideArray(nums []int) bool {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

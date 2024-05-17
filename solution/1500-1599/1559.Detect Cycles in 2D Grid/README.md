@@ -12,13 +12,15 @@ tags:
     - 矩阵
 ---
 
+<!-- problem:start -->
+
 # [1559. 二维网格图中探测环](https://leetcode.cn/problems/detect-cycles-in-2d-grid)
 
 [English Version](/solution/1500-1599/1559.Detect%20Cycles%20in%202D%20Grid/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个二维字符网格数组&nbsp;<code>grid</code>&nbsp;，大小为&nbsp;<code>m x n</code>&nbsp;，你需要检查&nbsp;<code>grid</code>&nbsp;中是否存在 <strong>相同值</strong> 形成的环。</p>
 
@@ -70,11 +72,17 @@ tags:
 	<li><code>grid</code>&nbsp;只包含小写英文字母。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -96,6 +104,8 @@ class Solution:
                         p[find(x * n + y)] = find(i * n + j)
         return False
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -135,6 +145,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -165,6 +177,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func containsCycle(grid [][]byte) bool {
@@ -197,6 +211,8 @@ func containsCycle(grid [][]byte) bool {
 	return false
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -257,6 +273,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {character[][]} grid
@@ -293,4 +311,6 @@ var containsCycle = function (grid) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

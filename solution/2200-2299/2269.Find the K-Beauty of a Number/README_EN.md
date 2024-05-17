@@ -10,11 +10,15 @@ tags:
     - Sliding Window
 ---
 
+<!-- problem:start -->
+
 # [2269. Find the K-Beauty of a Number](https://leetcode.com/problems/find-the-k-beauty-of-a-number)
 
 [中文文档](/solution/2200-2299/2269.Find%20the%20K-Beauty%20of%20a%20Number/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>The <strong>k-beauty</strong> of an integer <code>num</code> is defined as the number of <strong>substrings</strong> of <code>num</code> when it is read as a string that meet the following conditions:</p>
 
@@ -68,7 +72,11 @@ Therefore, the k-beauty is 2.
 	<li><code>1 &lt;= k &lt;= num.length</code> (taking <code>num</code> as a string)</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration
 
@@ -77,6 +85,8 @@ We can convert $num$ to a string $s$, then enumerate all substrings of $s$ with 
 The time complexity is $O(\log num \times k)$, and the space complexity is $O(\log num + k)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -89,6 +99,8 @@ class Solution:
                 ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -106,6 +118,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -121,6 +135,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func divisorSubstrings(num int, k int) int {
 	ans := 0
@@ -134,6 +150,8 @@ func divisorSubstrings(num int, k int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function divisorSubstrings(num: number, k: number): number {
@@ -151,6 +169,10 @@ function divisorSubstrings(num: number, k: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Sliding Window
 
 We can maintain a sliding window of length $k$. Initially, the window contains the lowest $k$ digits of $num$. Then, for each iteration, we move the window one digit to the right, update the number in the window, and check if the number in the window is divisible by $num$. If it is, we increment the answer.
@@ -158,6 +180,8 @@ We can maintain a sliding window of length $k$. Initially, the window contains t
 The time complexity is $O(\log num)$, and the space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -177,6 +201,8 @@ class Solution:
             ans += int(x != 0 and num % x == 0)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -200,6 +226,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -226,6 +254,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func divisorSubstrings(num int, k int) (ans int) {
 	x, p, t := 0, 1, num
@@ -250,6 +280,8 @@ func divisorSubstrings(num int, k int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function divisorSubstrings(num: number, k: number): number {
     let [x, p, t] = [0, 1, num];
@@ -271,4 +303,6 @@ function divisorSubstrings(num: number, k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -12,13 +12,15 @@ tags:
     - 滑动窗口
 ---
 
+<!-- problem:start -->
+
 # [2968. 执行操作使频率分数最大](https://leetcode.cn/problems/apply-operations-to-maximize-frequency-score)
 
 [English Version](/solution/2900-2999/2968.Apply%20Operations%20to%20Maximize%20Frequency%20Score/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的整数数组&nbsp;<code>nums</code>&nbsp;和一个整数&nbsp;<code>k</code>&nbsp;。</p>
 
@@ -67,7 +69,11 @@ tags:
 	<li><code>0 &lt;= k &lt;= 10<sup>14</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：排序 + 前缀和 + 二分查找
 
@@ -101,6 +107,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maxFrequencyScore(self, nums: List[int], k: int) -> int:
@@ -125,6 +133,8 @@ class Solution:
                 r = mid - 1
         return l
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -162,6 +172,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -203,6 +215,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxFrequencyScore(nums []int, k int64) int {
 	sort.Ints(nums)
@@ -239,6 +253,8 @@ func maxFrequencyScore(nums []int, k int64) int {
 	return l
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxFrequencyScore(nums: number[], k: number): number {
@@ -277,4 +293,6 @@ function maxFrequencyScore(nums: number[], k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

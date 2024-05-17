@@ -10,11 +10,15 @@ tags:
     - Sliding Window
 ---
 
+<!-- problem:start -->
+
 # [2516. Take K of Each Character From Left and Right](https://leetcode.com/problems/take-k-of-each-character-from-left-and-right)
 
 [中文文档](/solution/2500-2599/2516.Take%20K%20of%20Each%20Character%20From%20Left%20and%20Right/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>s</code> consisting of the characters <code>&#39;a&#39;</code>, <code>&#39;b&#39;</code>, and <code>&#39;c&#39;</code> and a non-negative integer <code>k</code>. Each minute, you may take either the <strong>leftmost</strong> character of <code>s</code>, or the <strong>rightmost</strong> character of <code>s</code>.</p>
 
@@ -50,7 +54,11 @@ It can be proven that 8 is the minimum number of minutes needed.
 	<li><code>0 &lt;= k &lt;= s.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sliding Window
 
@@ -65,6 +73,8 @@ The final answer is the length of string $s$ minus the size of the maximum windo
 The time complexity is $O(n)$, where $n$ is the length of string $s$. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -81,6 +91,8 @@ class Solution:
             mx = max(mx, i - j + 1)
         return len(s) - mx
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -108,6 +120,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -137,6 +151,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func takeCharacters(s string, k int) int {
 	cnt := [3]int{}
@@ -159,6 +175,8 @@ func takeCharacters(s string, k int) int {
 	return len(s) - mx
 }
 ```
+
+#### TypeScript
 
 ```ts
 function takeCharacters(s: string, k: number): number {
@@ -183,6 +201,8 @@ function takeCharacters(s: string, k: number): number {
     return n - mx;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -217,4 +237,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

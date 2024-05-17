@@ -10,11 +10,15 @@ tags:
     - Heap (Priority Queue)
 ---
 
+<!-- problem:start -->
+
 # [2336. Smallest Number in Infinite Set](https://leetcode.com/problems/smallest-number-in-infinite-set)
 
 [中文文档](/solution/2300-2399/2336.Smallest%20Number%20in%20Infinite%20Set/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You have a set which contains all positive integers <code>[1, 2, 3, 4, 5, ...]</code>.</p>
 
@@ -57,7 +61,11 @@ smallestInfiniteSet.popSmallest(); // return 5, and remove it from the set.
 	<li>At most <code>1000</code> calls will be made <strong>in total</strong> to <code>popSmallest</code> and <code>addBack</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Ordered Set + Simulation
 
@@ -77,6 +85,8 @@ In the `addBack` operation, we just need to add the element back to the ordered 
 The space complexity is $O(n)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 from sortedcontainers import SortedSet
@@ -100,6 +110,8 @@ class SmallestInfiniteSet:
 # param_1 = obj.popSmallest()
 # obj.addBack(num)
 ```
+
+#### Java
 
 ```java
 class SmallestInfiniteSet {
@@ -127,6 +139,8 @@ class SmallestInfiniteSet {
  * obj.addBack(num);
  */
 ```
+
+#### C++
 
 ```cpp
 class SmallestInfiniteSet {
@@ -159,6 +173,8 @@ private:
  */
 ```
 
+#### Go
+
 ```go
 type SmallestInfiniteSet struct {
 	s *treemap.Map
@@ -189,6 +205,8 @@ func (this *SmallestInfiniteSet) AddBack(num int) {
  * obj.AddBack(num);
  */
 ```
+
+#### TypeScript
 
 ```ts
 class SmallestInfiniteSet {
@@ -858,6 +876,8 @@ class TreeMultiSet<T = number> {
  */
 ```
 
+#### Rust
+
 ```rust
 use std::collections::BTreeSet;
 
@@ -893,9 +913,15 @@ impl SmallestInfiniteSet {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 class SmallestInfiniteSet {
@@ -935,4 +961,6 @@ class SmallestInfiniteSet {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

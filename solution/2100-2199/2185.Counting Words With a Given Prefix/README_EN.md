@@ -10,11 +10,15 @@ tags:
     - String Matching
 ---
 
+<!-- problem:start -->
+
 # [2185. Counting Words With a Given Prefix](https://leetcode.com/problems/counting-words-with-a-given-prefix)
 
 [中文文档](/solution/2100-2199/2185.Counting%20Words%20With%20a%20Given%20Prefix/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array of strings <code>words</code> and a string <code>pref</code>.</p>
 
@@ -48,17 +52,25 @@ tags:
 	<li><code>words[i]</code> and <code>pref</code> consist of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
     def prefixCount(self, words: List[str], pref: str) -> int:
         return sum(w.startswith(pref) for w in words)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -74,6 +86,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -84,6 +98,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func prefixCount(words []string, pref string) (ans int) {
@@ -96,11 +112,15 @@ func prefixCount(words []string, pref string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function prefixCount(words: string[], pref: string): number {
     return words.reduce((r, s) => (r += s.startsWith(pref) ? 1 : 0), 0);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -112,6 +132,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 int prefixCount(char** words, int wordsSize, char* pref) {
@@ -128,9 +150,15 @@ int prefixCount(char** words, int wordsSize, char* pref) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Trie:
@@ -164,6 +192,8 @@ class Solution:
             tree.insert(w)
         return tree.search(pref)
 ```
+
+#### Java
 
 ```java
 class Trie {
@@ -205,6 +235,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Trie {
@@ -254,6 +286,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 type Trie struct {
 	children [26]*Trie
@@ -299,4 +333,6 @@ func prefixCount(words []string, pref string) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

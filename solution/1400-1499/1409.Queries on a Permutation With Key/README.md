@@ -10,13 +10,15 @@ tags:
     - 模拟
 ---
 
+<!-- problem:start -->
+
 # [1409. 查询带键的排列](https://leetcode.cn/problems/queries-on-a-permutation-with-key)
 
 [English Version](/solution/1400-1499/1409.Queries%20on%20a%20Permutation%20With%20Key/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个正整数数组&nbsp;<code>queries</code> ，其取值范围在&nbsp;<code>1</code> 到 <code>m</code> 之间。 请你根据以下规则按顺序处理所有&nbsp;<code>queries[i]</code>（从 <code>i=0</code> 到 <code>i=queries.length-1</code>）：</p>
 
@@ -66,7 +68,11 @@ tags:
 	<li><code>1 &lt;= queries[i] &lt;= m</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -89,6 +95,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def processQueries(self, queries: List[int], m: int) -> List[int]:
@@ -101,6 +109,8 @@ class Solution:
             p.insert(0, v)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -121,6 +131,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -145,6 +157,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func processQueries(queries []int, m int) []int {
@@ -171,9 +185,15 @@ func processQueries(queries []int, m int) []int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class BinaryIndexedTree:
@@ -216,6 +236,8 @@ class Solution:
             tree.update(n - i, 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class BinaryIndexedTree {
@@ -272,6 +294,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class BinaryIndexedTree {
 public:
@@ -327,6 +351,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 type BinaryIndexedTree struct {
 	n int
@@ -380,4 +406,6 @@ func processQueries(queries []int, m int) []int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

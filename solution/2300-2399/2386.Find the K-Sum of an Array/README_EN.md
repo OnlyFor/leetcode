@@ -10,11 +10,15 @@ tags:
     - Heap (Priority Queue)
 ---
 
+<!-- problem:start -->
+
 # [2386. Find the K-Sum of an Array](https://leetcode.com/problems/find-the-k-sum-of-an-array)
 
 [中文文档](/solution/2300-2399/2386.Find%20the%20K-Sum%20of%20an%20Array/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>nums</code> and a <strong>positive</strong> integer <code>k</code>. You can choose any <strong>subsequence</strong> of the array and sum all of its elements together.</p>
 
@@ -55,7 +59,11 @@ The 5-Sum of the array is 2.
 	<li><code>1 &lt;= k &lt;= min(2000, 2<sup>n</sup>)</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Priority Queue (Min Heap)
 
@@ -72,6 +80,8 @@ Since the array is sorted from small to large, this method can traverse all subs
 The time complexity is $O(n \times \log n + k \times \log k)$, where $n$ is the length of the array `nums`, and $k$ is the given $k$ in the problem.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -92,6 +102,8 @@ class Solution:
                     heappush(h, (s + nums[i] - nums[i - 1], i + 1))
         return mx - h[0][0]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -124,6 +136,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -158,6 +172,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func kSum(nums []int, k int) int64 {
@@ -196,4 +212,6 @@ func (h *hp) Pop() any          { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1]; 
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

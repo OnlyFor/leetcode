@@ -12,11 +12,15 @@ tags:
     - Matrix
 ---
 
+<!-- problem:start -->
+
 # [1020. Number of Enclaves](https://leetcode.com/problems/number-of-enclaves)
 
 [中文文档](/solution/1000-1099/1020.Number%20of%20Enclaves/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an <code>m x n</code> binary matrix <code>grid</code>, where <code>0</code> represents a sea cell and <code>1</code> represents a land cell.</p>
 
@@ -51,11 +55,17 @@ tags:
 	<li><code>grid[i][j]</code> is either <code>0</code> or <code>1</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -75,6 +85,8 @@ class Solution:
                     dfs(i, j)
         return sum(v for row in grid for v in row)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -115,6 +127,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -148,6 +162,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numEnclaves(grid [][]int) (ans int) {
 	m, n := len(grid), len(grid[0])
@@ -177,6 +193,8 @@ func numEnclaves(grid [][]int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numEnclaves(grid: number[][]): number {
@@ -209,6 +227,8 @@ function numEnclaves(grid: number[][]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -252,9 +272,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -276,6 +302,8 @@ class Solution:
                     grid[x][y] = 0
         return sum(v for row in grid for v in row)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -312,6 +340,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -350,6 +380,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numEnclaves(grid [][]int) (ans int) {
 	m, n := len(grid), len(grid[0])
@@ -382,6 +414,8 @@ func numEnclaves(grid [][]int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numEnclaves(grid: number[][]): number {
@@ -420,9 +454,15 @@ function numEnclaves(grid: number[][]): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 3
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class UnionFind:
@@ -467,6 +507,8 @@ class Solution:
             for j in range(n)
         )
 ```
+
+#### Java
 
 ```java
 class UnionFind {
@@ -538,6 +580,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class UnionFind {
 public:
@@ -603,6 +647,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 type unionFind struct {
@@ -672,4 +718,6 @@ func numEnclaves(grid [][]int) (ans int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

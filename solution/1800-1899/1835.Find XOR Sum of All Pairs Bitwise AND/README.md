@@ -10,13 +10,15 @@ tags:
     - 数学
 ---
 
+<!-- problem:start -->
+
 # [1835. 所有数对按位与结果的异或和](https://leetcode.cn/problems/find-xor-sum-of-all-pairs-bitwise-and)
 
 [English Version](/solution/1800-1899/1835.Find%20XOR%20Sum%20of%20All%20Pairs%20Bitwise%20AND/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>列表的 <strong>异或和</strong>（<strong>XOR sum</strong>）指对所有元素进行按位 <code>XOR</code> 运算的结果。如果列表中仅有一个元素，那么其 <strong>异或和</strong> 就等于该元素。</p>
 
@@ -55,7 +57,11 @@ tags:
 	<li><code>0 &lt;= arr1[i], arr2[j] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：位运算
 
@@ -82,6 +88,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def getXORSum(self, arr1: List[int], arr2: List[int]) -> int:
@@ -89,6 +97,8 @@ class Solution:
         b = reduce(xor, arr2)
         return a & b
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -105,6 +115,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -115,6 +127,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func getXORSum(arr1 []int, arr2 []int) int {
@@ -129,6 +143,8 @@ func getXORSum(arr1 []int, arr2 []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function getXORSum(arr1: number[], arr2: number[]): number {
     const a = arr1.reduce((acc, x) => acc ^ x);
@@ -139,4 +155,6 @@ function getXORSum(arr1: number[], arr2: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -8,13 +8,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [2264. 字符串中最大的 3 位相同数字](https://leetcode.cn/problems/largest-3-same-digit-number-in-string)
 
 [English Version](/solution/2200-2299/2264.Largest%203-Same-Digit%20Number%20in%20String/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串 <code>num</code> ，表示一个大整数。如果一个整数满足下述所有条件，则认为该整数是一个 <strong>优质整数</strong> ：</p>
 
@@ -68,7 +70,11 @@ tags:
 	<li><code>num</code> 仅由数字（<code>0</code> - <code>9</code>）组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举
 
@@ -80,6 +86,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def largestGoodInteger(self, num: str) -> str:
@@ -88,6 +96,8 @@ class Solution:
                 return s
         return ""
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -102,6 +112,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -118,6 +130,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func largestGoodInteger(num string) string {
 	for c := '9'; c >= '0'; c-- {
@@ -128,6 +142,8 @@ func largestGoodInteger(num string) string {
 	return ""
 }
 ```
+
+#### TypeScript
 
 ```ts
 function largestGoodInteger(num: string): string {
@@ -143,4 +159,6 @@ function largestGoodInteger(num: string): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

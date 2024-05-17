@@ -9,13 +9,15 @@ tags:
     - 矩阵
 ---
 
+<!-- problem:start -->
+
 # [1672. 最富有客户的资产总量](https://leetcode.cn/problems/richest-customer-wealth)
 
 [English Version](/solution/1600-1699/1672.Richest%20Customer%20Wealth/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个 <code>m x n</code> 的整数网格 <code>accounts</code> ，其中 <code>accounts[i][j]</code> 是第 <code>i​​​​​<sup>​​​​​​</sup>​</code> 位客户在第 <code>j</code> 家银行托管的资产数量。返回最富有客户所拥有的 <strong>资产总量</strong> 。</p>
 
@@ -60,7 +62,11 @@ tags:
 	<li><code>1 &lt;= accounts[i][j] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：求和
 
@@ -70,11 +76,15 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
         return max(sum(v) for v in accounts)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -93,6 +103,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -105,6 +117,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maximumWealth(accounts [][]int) int {
@@ -122,6 +136,8 @@ func maximumWealth(accounts [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maximumWealth(accounts: number[][]): number {
     return accounts.reduce(
@@ -135,6 +151,8 @@ function maximumWealth(accounts: number[][]): number {
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn maximum_wealth(accounts: Vec<Vec<i32>>) -> i32 {
@@ -146,6 +164,8 @@ impl Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -169,6 +189,8 @@ class Solution {
 }
 ```
 
+#### C
+
 ```c
 #define max(a, b) (((a) > (b)) ? (a) : (b))
 
@@ -184,6 +206,8 @@ int maximumWealth(int** accounts, int accountsSize, int* accountsColSize) {
     return ans;
 }
 ```
+
+#### Kotlin
 
 ```kotlin
 class Solution {
@@ -202,4 +226,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

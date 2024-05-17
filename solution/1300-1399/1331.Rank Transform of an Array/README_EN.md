@@ -10,11 +10,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [1331. Rank Transform of an Array](https://leetcode.com/problems/rank-transform-of-an-array)
 
 [中文文档](/solution/1300-1399/1331.Rank%20Transform%20of%20an%20Array/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array of integers&nbsp;<code>arr</code>, replace each element with its rank.</p>
 
@@ -57,11 +61,17 @@ tags:
 	<li><code>-10<sup>9</sup>&nbsp;&lt;= arr[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -69,6 +79,8 @@ class Solution:
         t = sorted(set(arr))
         return [bisect_right(t, x) for x in arr]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -91,6 +103,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -106,6 +120,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func arrayRankTransform(arr []int) (ans []int) {
@@ -126,6 +142,8 @@ func arrayRankTransform(arr []int) (ans []int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function arrayRankTransform(arr: number[]): number[] {
@@ -158,4 +176,6 @@ function arrayRankTransform(arr: number[]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

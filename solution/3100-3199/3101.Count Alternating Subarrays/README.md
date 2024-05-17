@@ -9,13 +9,15 @@ tags:
     - 数学
 ---
 
+<!-- problem:start -->
+
 # [3101. 交替子数组计数](https://leetcode.cn/problems/count-alternating-subarrays)
 
 [English Version](/solution/3100-3199/3101.Count%20Alternating%20Subarrays/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个<span data-keyword="binary-array">二进制数组 </span><code>nums</code> 。</p>
 
@@ -60,7 +62,11 @@ tags:
 	<li><code>nums[i]</code> 不是 <code>0</code> 就是 <code>1</code> 。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举
 
@@ -79,6 +85,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def countAlternatingSubarrays(self, nums: List[int]) -> int:
@@ -88,6 +96,8 @@ class Solution:
             ans += s
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -102,6 +112,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -115,6 +127,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countAlternatingSubarrays(nums []int) int64 {
@@ -131,6 +145,8 @@ func countAlternatingSubarrays(nums []int) int64 {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function countAlternatingSubarrays(nums: number[]): number {
     let [ans, s] = [1, 1];
@@ -144,4 +160,6 @@ function countAlternatingSubarrays(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

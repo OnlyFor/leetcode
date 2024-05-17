@@ -10,11 +10,15 @@ tags:
     - Binary Tree
 ---
 
+<!-- problem:start -->
+
 # [1530. Number of Good Leaf Nodes Pairs](https://leetcode.com/problems/number-of-good-leaf-nodes-pairs)
 
 [中文文档](/solution/1500-1599/1530.Number%20of%20Good%20Leaf%20Nodes%20Pairs/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given the <code>root</code> of a binary tree and an integer <code>distance</code>. A pair of two different <strong>leaf</strong> nodes of a binary tree is said to be good if the length of <strong>the shortest path</strong> between them is less than or equal to <code>distance</code>.</p>
 
@@ -54,11 +58,17 @@ tags:
 	<li><code>1 &lt;= distance &lt;= 10</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -94,6 +104,8 @@ class Solution:
                     ans += v1 * v2
         return ans
 ```
+
+#### Java
 
 ```java
 /**
@@ -145,6 +157,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -187,6 +201,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 /**
@@ -231,4 +247,6 @@ func dfs(root *TreeNode, cnt []int, i int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

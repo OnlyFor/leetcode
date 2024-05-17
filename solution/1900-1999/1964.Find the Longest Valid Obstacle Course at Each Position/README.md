@@ -10,13 +10,15 @@ tags:
     - 二分查找
 ---
 
+<!-- problem:start -->
+
 # [1964. 找出到每个位置为止最长的有效障碍赛跑路线](https://leetcode.cn/problems/find-the-longest-valid-obstacle-course-at-each-position)
 
 [English Version](/solution/1900-1999/1964.Find%20the%20Longest%20Valid%20Obstacle%20Course%20at%20Each%20Position/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你打算构建一些障碍赛跑路线。给你一个 <strong>下标从 0 开始</strong> 的整数数组 <code>obstacles</code> ，数组长度为 <code>n</code> ，其中 <code>obstacles[i]</code> 表示第 <code>i</code> 个障碍的高度。</p>
 
@@ -80,7 +82,11 @@ tags:
 	<li><code>1 &lt;= obstacles[i] &lt;= 10<sup>7</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：树状数组
 
@@ -91,6 +97,8 @@ tags:
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(n)$。其中 $n$ 为障碍的数量。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class BinaryIndexedTree:
@@ -125,6 +133,8 @@ class Solution:
             tree.update(i, ans[-1])
         return ans
 ```
+
+#### Java
 
 ```java
 class BinaryIndexedTree {
@@ -170,6 +180,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class BinaryIndexedTree {
@@ -220,6 +232,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 type BinaryIndexedTree struct {
 	n int
@@ -258,6 +272,8 @@ func longestObstacleCourseAtEachPosition(obstacles []int) (ans []int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 class BinaryIndexedTree {
@@ -315,4 +331,6 @@ function longestObstacleCourseAtEachPosition(obstacles: number[]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

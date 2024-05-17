@@ -13,11 +13,15 @@ tags:
     - Heap (Priority Queue)
 ---
 
+<!-- problem:start -->
+
 # [1268. Search Suggestions System](https://leetcode.com/problems/search-suggestions-system)
 
 [中文文档](/solution/1200-1299/1268.Search%20Suggestions%20System/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array of strings <code>products</code> and a string <code>searchWord</code>.</p>
 
@@ -57,7 +61,11 @@ After typing mou, mous and mouse the system suggests [&quot;mouse&quot;,&quot;mo
 	<li><code>searchWord</code> consists of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sorting + Trie
 
@@ -75,6 +83,8 @@ During the search, we start from the root node of the trie, find the index array
 The time complexity is $O(L \times \log n + m)$, and the space complexity is $O(L)$. Where $L$ is the sum of the lengths of all strings in the `products` array, and $n$ and $m$ are the lengths of the `products` array and `searchWord`, respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Trie:
@@ -114,6 +124,8 @@ class Solution:
             trie.insert(w, i)
         return [[products[i] for i in v] for v in trie.search(searchWord)]
 ```
+
+#### Java
 
 ```java
 class Trie {
@@ -170,6 +182,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Trie {
@@ -229,6 +243,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 type Trie struct {
 	children [26]*Trie
@@ -286,4 +302,6 @@ func suggestedProducts(products []string, searchWord string) (ans [][]string) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -12,13 +12,15 @@ tags:
     - 单调栈
 ---
 
+<!-- problem:start -->
+
 # [1124. 表现良好的最长时间段](https://leetcode.cn/problems/longest-well-performing-interval)
 
 [English Version](/solution/1100-1199/1124.Longest%20Well-Performing%20Interval/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一份工作时间表&nbsp;<code>hours</code>，上面记录着某一位员工每天的工作小时数。</p>
 
@@ -53,7 +55,11 @@ tags:
 	<li><code>0 &lt;= hours[i] &lt;= 16</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：前缀和 + 哈希表
 
@@ -71,6 +77,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def longestWPI(self, hours: List[int]) -> int:
@@ -86,6 +94,8 @@ class Solution:
                 pos[s] = i
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -105,6 +115,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -127,6 +139,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func longestWPI(hours []int) (ans int) {
@@ -153,4 +167,6 @@ func longestWPI(hours []int) (ans int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

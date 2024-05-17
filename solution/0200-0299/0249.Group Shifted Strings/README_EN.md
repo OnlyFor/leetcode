@@ -8,11 +8,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [249. Group Shifted Strings 🔒](https://leetcode.com/problems/group-shifted-strings)
 
 [中文文档](/solution/0200-0299/0249.Group%20Shifted%20Strings/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>We can shift a string by shifting each of its letters to its successive letter.</p>
 
@@ -45,7 +49,11 @@ tags:
 	<li><code>strings[i]</code> consists of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table
 
@@ -58,6 +66,8 @@ Finally, we take out all the values in $g$, which is the answer.
 The time complexity is $O(L)$ and the space complexity is $O(L)$, where $L$ is the sum of the lengths of all strings.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -74,6 +84,8 @@ class Solution:
             g["".join(t)].append(s)
         return list(g.values())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -94,6 +106,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -121,6 +135,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func groupStrings(strings []string) [][]string {
 	g := make(map[string][]string)
@@ -145,4 +161,6 @@ func groupStrings(strings []string) [][]string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

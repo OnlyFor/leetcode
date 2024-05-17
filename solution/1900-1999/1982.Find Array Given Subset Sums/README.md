@@ -9,13 +9,15 @@ tags:
     - 分治
 ---
 
+<!-- problem:start -->
+
 # [1982. 从子集的和还原数组](https://leetcode.cn/problems/find-array-given-subset-sums)
 
 [English Version](/solution/1900-1999/1982.Find%20Array%20Given%20Subset%20Sums/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>存在一个未知数组需要你进行还原，给你一个整数 <code>n</code> 表示该数组的长度。另给你一个数组 <code>sums</code> ，由未知数组中全部 <code>2<sup>n</sup></code> 个 <strong>子集的和</strong> 组成（子集中的元素没有特定的顺序）。</p>
 
@@ -70,11 +72,17 @@ tags:
 	<li><code>-10<sup>4</sup> &lt;= sums[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 from sortedcontainers import SortedList
@@ -101,6 +109,8 @@ class Solution:
                 break
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -156,6 +166,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -203,6 +215,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func recoverArray(n int, sums []int) []int {
@@ -263,9 +277,15 @@ func recoverArray(n int, sums []int) []int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -291,6 +311,8 @@ class Solution:
             sums = sums1 if sign == 1 else sums2
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -327,6 +349,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -366,6 +390,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func recoverArray(n int, sums []int) (ans []int) {
 	sort.Ints(sums)
@@ -402,4 +428,6 @@ func recoverArray(n int, sums []int) (ans []int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

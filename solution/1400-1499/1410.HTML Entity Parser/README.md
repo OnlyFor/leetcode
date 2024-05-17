@@ -9,13 +9,15 @@ tags:
     - 字符串
 ---
 
+<!-- problem:start -->
+
 # [1410. HTML 实体解析器](https://leetcode.cn/problems/html-entity-parser)
 
 [English Version](/solution/1400-1499/1410.HTML%20Entity%20Parser/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>「HTML&nbsp;实体解析器」 是一种特殊的解析器，它将 HTML 代码作为输入，并用字符本身替换掉所有这些特殊的字符实体。</p>
 
@@ -79,7 +81,11 @@ tags:
 	<li>字符串可能包含 256 个ASCII 字符中的任意字符。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表 + 模拟
 
@@ -88,6 +94,8 @@ tags:
 时间复杂度 $O(n \times l)$，空间复杂度 $O(l)$。其中 $n$ 是字符串的长度，而 $l$ 是字符实体的总长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -114,6 +122,8 @@ class Solution:
                 i += 1
         return ''.join(ans)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -151,6 +161,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -185,6 +197,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func entityParser(text string) string {
@@ -222,6 +236,8 @@ func entityParser(text string) string {
 	return ans.String()
 }
 ```
+
+#### TypeScript
 
 ```ts
 function entityParser(text: string): string {
@@ -264,9 +280,15 @@ function entityParser(text: string): string {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 function entityParser(text: string): string {
@@ -286,4 +308,6 @@ function entityParser(text: string): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

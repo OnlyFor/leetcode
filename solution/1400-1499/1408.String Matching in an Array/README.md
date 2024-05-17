@@ -10,13 +10,15 @@ tags:
     - 字符串匹配
 ---
 
+<!-- problem:start -->
+
 # [1408. 数组中的字符串匹配](https://leetcode.cn/problems/string-matching-in-an-array)
 
 [English Version](/solution/1400-1499/1408.String%20Matching%20in%20an%20Array/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串数组 <code>words</code> ，数组中的每个字符串都可以看作是一个单词。请你按 <strong>任意</strong> 顺序返回 <code>words</code> 中是其他单词的子字符串的所有单词。</p>
 
@@ -59,7 +61,11 @@ tags:
 	<li>题目数据 <strong>保证</strong> 每个 <code>words[i]</code> 都是独一无二的。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：暴力枚举
 
@@ -68,6 +74,8 @@ tags:
 时间复杂度 $O(n^3)$，空间复杂度 $O(n)$。其中 $n$ 为字符串数组的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -78,6 +86,8 @@ class Solution:
                 ans.append(s)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -96,6 +106,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -116,6 +128,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func stringMatching(words []string) []string {
 	ans := []string{}
@@ -130,6 +144,8 @@ func stringMatching(words []string) []string {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function stringMatching(words: string[]): string[] {
@@ -146,6 +162,8 @@ function stringMatching(words: string[]): string[] {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -167,4 +185,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

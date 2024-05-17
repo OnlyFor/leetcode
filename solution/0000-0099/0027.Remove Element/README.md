@@ -7,13 +7,15 @@ tags:
     - 双指针
 ---
 
+<!-- problem:start -->
+
 # [27. 移除元素](https://leetcode.cn/problems/remove-element)
 
 [English Version](/solution/0000-0099/0027.Remove%20Element/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个数组 <code>nums</code><em>&nbsp;</em>和一个值 <code>val</code>，你需要 <strong><a href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" target="_blank">原地</a></strong> 移除所有数值等于&nbsp;<code>val</code><em>&nbsp;</em>的元素，并返回移除后数组的新长度。</p>
 
@@ -70,7 +72,11 @@ for (int i = 0; i &lt; len; i++) {
 	<li><code>0 &lt;= val &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：一次遍历
 
@@ -84,6 +90,8 @@ for (int i = 0; i &lt; len; i++) {
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
@@ -94,6 +102,8 @@ class Solution:
                 k += 1
         return k
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -108,6 +118,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -124,6 +136,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func removeElement(nums []int, val int) int {
 	k := 0
@@ -137,6 +151,8 @@ func removeElement(nums []int, val int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function removeElement(nums: number[], val: number): number {
     let k: number = 0;
@@ -148,6 +164,8 @@ function removeElement(nums: number[], val: number): number {
     return k;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -163,6 +181,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -180,6 +200,8 @@ var removeElement = function (nums, val) {
     return k;
 };
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -200,4 +222,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

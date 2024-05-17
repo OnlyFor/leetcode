@@ -4,13 +4,15 @@ difficulty: 困难
 edit_url: https://github.com/doocs/leetcode/edit/main/lcci/17.25.Word%20Rectangle/README.md
 ---
 
+<!-- problem:start -->
+
 # [面试题 17.25. 单词矩阵](https://leetcode.cn/problems/word-rectangle-lcci)
 
 [English Version](/lcci/17.25.Word%20Rectangle/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一份单词的清单，设计一个算法，创建由字母组成的面积最大的矩形，其中每一行组成一个单词(自左向右)，每一列也组成一个单词(自上而下)。不要求这些单词在清单里连续出现，但要求所有行等长，所有列等高。</p>
 <p>如果有多个面积最大的矩形，输出任意一个均可。一个单词可以重复使用。</p>
@@ -32,7 +34,11 @@ edit_url: https://github.com/doocs/leetcode/edit/main/lcci/17.25.Word%20Rectangl
 	<li>数据保证单词足够随机</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：分组 + 回溯 + 字典树
 
@@ -43,6 +49,8 @@ edit_url: https://github.com/doocs/leetcode/edit/main/lcci/17.25.Word%20Rectangl
 在判断单词矩阵是否合法时，我们可以使用字典树来进行优化。我们将所有的单词加入到字典树中，然后对于每一列，我们检查其是否是一个单词。如果是一个单词，那么我们就检查下一列，否则我们就可以停止对该单词矩阵的搜索了。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Trie:
@@ -108,6 +116,8 @@ class Solution:
             dfs(ws)
         return ans
 ```
+
+#### Java
 
 ```java
 class Trie {
@@ -188,6 +198,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Trie {
@@ -273,6 +285,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 type Trie struct {
 	children [26]*Trie
@@ -348,6 +362,8 @@ func maxRectangle(words []string) (ans []string) {
 	return
 }
 ```
+
+#### Swift
 
 ```swift
 class Trie {
@@ -432,4 +448,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

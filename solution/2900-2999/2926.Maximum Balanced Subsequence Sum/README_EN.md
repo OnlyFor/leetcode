@@ -12,11 +12,15 @@ tags:
     - Dynamic Programming
 ---
 
+<!-- problem:start -->
+
 # [2926. Maximum Balanced Subsequence Sum](https://leetcode.com/problems/maximum-balanced-subsequence-sum)
 
 [中文文档](/solution/2900-2999/2926.Maximum%20Balanced%20Subsequence%20Sum/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code>.</p>
 
@@ -73,7 +77,11 @@ It is a balanced subsequence, and its sum is the maximum among the balanced subs
 	<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming + Binary Indexed Tree
 
@@ -96,6 +104,8 @@ We can use a Binary Indexed Tree to maintain the maximum value of the prefix, i.
 The time complexity is $O(n \times \log n)$, and the space complexity is $O(n)$. Here, $n$ is the length of the array $nums$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class BinaryIndexedTree:
@@ -127,6 +137,8 @@ class Solution:
             tree.update(j, v)
         return tree.query(len(s))
 ```
+
+#### Java
 
 ```java
 class BinaryIndexedTree {
@@ -195,6 +207,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class BinaryIndexedTree {
 private:
@@ -246,6 +260,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 const inf int = 1e18
@@ -303,6 +319,8 @@ func maxBalancedSubsequenceSum(nums []int) int64 {
 	return int64(tree.query(m))
 }
 ```
+
+#### TypeScript
 
 ```ts
 class BinaryIndexedTree {
@@ -369,4 +387,6 @@ function maxBalancedSubsequenceSum(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

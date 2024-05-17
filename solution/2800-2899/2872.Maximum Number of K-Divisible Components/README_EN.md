@@ -9,11 +9,15 @@ tags:
     - Depth-First Search
 ---
 
+<!-- problem:start -->
+
 # [2872. Maximum Number of K-Divisible Components](https://leetcode.com/problems/maximum-number-of-k-divisible-components)
 
 [中文文档](/solution/2800-2899/2872.Maximum%20Number%20of%20K-Divisible%20Components/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>There is an undirected tree with <code>n</code> nodes labeled from <code>0</code> to <code>n - 1</code>. You are given the integer <code>n</code> and a 2D integer array <code>edges</code> of length <code>n - 1</code>, where <code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> indicates that there is an edge between nodes <code>a<sub>i</sub></code> and <code>b<sub>i</sub></code> in the tree.</p>
 
@@ -61,7 +65,11 @@ It can be shown that no other valid split has more than 3 connected components.
 	<li>The input is generated such that <code>edges</code> represents a valid tree.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: DFS
 
@@ -72,6 +80,8 @@ Therefore, we can use depth-first search to traverse the entire tree starting fr
 The time complexity is $O(n)$, and the space complexity is $O(n)$, where n is the number of nodes in the tree.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -95,6 +105,8 @@ class Solution:
         dfs(0, -1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -130,6 +142,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -157,6 +171,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxKDivisibleComponents(n int, edges [][]int, values []int, k int) (ans int) {
 	g := make([][]int, n)
@@ -182,6 +198,8 @@ func maxKDivisibleComponents(n int, edges [][]int, values []int, k int) (ans int
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxKDivisibleComponents(
@@ -215,9 +233,15 @@ function maxKDivisibleComponents(
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Java
 
 ```java
 class Solution {
@@ -258,4 +282,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

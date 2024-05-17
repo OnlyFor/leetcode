@@ -10,11 +10,15 @@ tags:
     - Sorting
 ---
 
+<!-- problem:start -->
+
 # [3074. Apple Redistribution into Boxes](https://leetcode.com/problems/apple-redistribution-into-boxes)
 
 [中文文档](/solution/3000-3099/3074.Apple%20Redistribution%20into%20Boxes/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array <code>apple</code> of size <code>n</code> and an array <code>capacity</code> of size <code>m</code>.</p>
 
@@ -52,7 +56,11 @@ It is possible to distribute the apples as the total capacity is greater than or
 	<li>The input is generated such that it&#39;s possible to redistribute packs of apples into boxes.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Greedy + Sorting
 
@@ -61,6 +69,8 @@ To minimize the number of boxes needed, we should prioritize using boxes with la
 The time complexity is $O(m \times \log m + n)$ and the space complexity is $O(\log m)$, where $m$ and $n$ are the lengths of the arrays `capacity` and `apple` respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -72,6 +82,8 @@ class Solution:
             if s <= 0:
                 return i
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -91,6 +103,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -106,6 +120,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimumBoxes(apple []int, capacity []int) int {
@@ -123,6 +139,8 @@ func minimumBoxes(apple []int, capacity []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumBoxes(apple: number[], capacity: number[]): number {
     capacity.sort((a, b) => b - a);
@@ -138,4 +156,6 @@ function minimumBoxes(apple: number[], capacity: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

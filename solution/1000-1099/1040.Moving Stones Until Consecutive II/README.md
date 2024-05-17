@@ -11,13 +11,15 @@ tags:
     - 排序
 ---
 
+<!-- problem:start -->
+
 # [1040. 移动石子直到连续 II](https://leetcode.cn/problems/moving-stones-until-consecutive-ii)
 
 [English Version](/solution/1000-1099/1040.Moving%20Stones%20Until%20Consecutive%20II/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>在一个长度 <strong>无限 </strong>的数轴上，第 <code>i</code> 颗石子的位置为 <code>stones[i]</code>。如果一颗石子的位置最小/最大，那么该石子被称作 <strong>端点石子 </strong>。</p>
 
@@ -70,7 +72,11 @@ tags:
 
 <p> </p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：排序 + 分类讨论 + 双指针
 
@@ -88,6 +94,8 @@ tags:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numMovesStonesII(self, stones: List[int]) -> List[int]:
@@ -104,6 +112,8 @@ class Solution:
                 mi = min(mi, n - (j - i + 1))
         return [mi, mx]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -126,6 +136,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -150,6 +162,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numMovesStonesII(stones []int) []int {
 	sort.Ints(stones)
@@ -170,6 +184,8 @@ func numMovesStonesII(stones []int) []int {
 	return []int{mi, mx}
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numMovesStonesII(stones: number[]): number[] {
@@ -193,4 +209,6 @@ function numMovesStonesII(stones: number[]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

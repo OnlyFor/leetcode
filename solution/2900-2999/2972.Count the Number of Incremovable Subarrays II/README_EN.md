@@ -10,11 +10,15 @@ tags:
     - Binary Search
 ---
 
+<!-- problem:start -->
+
 # [2972. Count the Number of Incremovable Subarrays II](https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-ii)
 
 [中文文档](/solution/2900-2999/2972.Count%20the%20Number%20of%20Incremovable%20Subarrays%20II/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> array of <strong>positive</strong> integers <code>nums</code>.</p>
 
@@ -60,7 +64,11 @@ It can be shown that there are only 7 incremovable subarrays in nums.
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Two Pointers
 
@@ -92,6 +100,8 @@ The time complexity is $O(n)$, where $n$ is the length of the array $nums$. The 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def incremovableSubarrayCount(self, nums: List[int]) -> int:
@@ -111,6 +121,8 @@ class Solution:
             j -= 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -136,6 +148,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -163,6 +177,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func incremovableSubarrayCount(nums []int) int64 {
 	i, n := 0, len(nums)
@@ -185,6 +201,8 @@ func incremovableSubarrayCount(nums []int) int64 {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function incremovableSubarrayCount(nums: number[]): number {
@@ -212,4 +230,6 @@ function incremovableSubarrayCount(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -4,11 +4,15 @@ difficulty: Medium
 edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3147.Taking%20Maximum%20Energy%20From%20the%20Mystic%20Dungeon/README_EN.md
 ---
 
+<!-- problem:start -->
+
 # [3147. Taking Maximum Energy From the Mystic Dungeon](https://leetcode.com/problems/taking-maximum-energy-from-the-mystic-dungeon)
 
 [中文文档](/solution/3100-3199/3147.Taking%20Maximum%20Energy%20From%20the%20Mystic%20Dungeon/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>In a mystic dungeon, <code>n</code> magicians are standing in a line. Each magician has an attribute that gives you energy. Some magicians can give you negative energy, which means taking energy from you.</p>
 
@@ -81,7 +85,11 @@ edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3147.Ta
 <p>&nbsp;</p>
 ​​​​​​
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration + Suffix Sum
 
@@ -90,6 +98,8 @@ We can enumerate the endpoint in the range of $[n - k, n)$, then start from the 
 The time complexity is $O(n)$, where $n$ is the length of the array `energy`. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -104,6 +114,8 @@ class Solution:
                 j -= k
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -120,6 +132,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -138,6 +152,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximumEnergy(energy []int, k int) int {
 	ans := -(1 << 30)
@@ -151,6 +167,8 @@ func maximumEnergy(energy []int, k int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maximumEnergy(energy: number[], k: number): number {
@@ -168,4 +186,6 @@ function maximumEnergy(energy: number[], k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,13 +10,15 @@ tags:
     - 前缀和
 ---
 
+<!-- problem:start -->
+
 # [3015. 按距离统计房屋对数目 I](https://leetcode.cn/problems/count-the-number-of-houses-at-a-certain-distance-i)
 
 [English Version](/solution/3000-3099/3015.Count%20the%20Number%20of%20Houses%20at%20a%20Certain%20Distance%20I/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你三个<strong> 正整数 </strong><code>n</code> 、<code>x</code> 和 <code>y</code> 。</p>
 
@@ -77,7 +79,11 @@ tags:
 	<li><code>1 &lt;= x, y &lt;= n</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举
 
@@ -86,6 +92,8 @@ tags:
 时间复杂度 $O(n^2)$，其中 $n$ 是题目给定的 $n$。忽略答案数组的空间消耗，空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -100,6 +108,8 @@ class Solution:
                 ans[min(a, b, c) - 1] += 2
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -120,6 +130,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -139,6 +151,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countOfPairs(n int, x int, y int) []int {
@@ -163,6 +177,8 @@ func abs(x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function countOfPairs(n: number, x: number, y: number): number[] {
     const ans: number[] = Array(n).fill(0);
@@ -182,4 +198,6 @@ function countOfPairs(n: number, x: number, y: number): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -8,11 +8,15 @@ tags:
     - Math
 ---
 
+<!-- problem:start -->
+
 # [1362. Closest Divisors](https://leetcode.com/problems/closest-divisors)
 
 [中文文档](/solution/1300-1399/1362.Closest%20Divisors/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer <code>num</code>, find the closest two integers in absolute difference whose product equals&nbsp;<code>num + 1</code>&nbsp;or <code>num + 2</code>.</p>
 
@@ -48,7 +52,11 @@ tags:
 	<li><code>1 &lt;= num &lt;= 10^9</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration
 
@@ -59,6 +67,8 @@ Next, we only need to calculate $f(num + 1)$ and $f(num + 2)$ respectively, and 
 The time complexity is $O(\sqrt{num})$, and the space complexity is $O(1)$. Where $num$ is the given integer.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -72,6 +82,8 @@ class Solution:
         b = f(num + 2)
         return a if abs(a[0] - a[1]) < abs(b[0] - b[1]) else b
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -91,6 +103,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -108,6 +122,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func closestDivisors(num int) []int {
@@ -135,4 +151,6 @@ func abs(x int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -10,13 +10,15 @@ tags:
     - 模拟
 ---
 
+<!-- problem:start -->
+
 # [2073. 买票需要的时间](https://leetcode.cn/problems/time-needed-to-buy-tickets)
 
 [English Version](/solution/2000-2099/2073.Time%20Needed%20to%20Buy%20Tickets/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>有 <code>n</code> 个人前来排队买票，其中第 <code>0</code> 人站在队伍 <strong>最前方</strong> ，第 <code>(n - 1)</code> 人站在队伍 <strong>最后方</strong> 。</p>
 
@@ -59,11 +61,17 @@ tags:
 	<li><code>0 &lt;= k &lt; n</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -76,6 +84,8 @@ class Solution:
                 ans += min(tickets[k] - 1, t)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -92,6 +102,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -110,6 +122,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func timeRequiredToBuy(tickets []int, k int) int {
 	ans := 0
@@ -123,6 +137,8 @@ func timeRequiredToBuy(tickets []int, k int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function timeRequiredToBuy(tickets: number[], k: number): number {
@@ -152,4 +168,6 @@ function timeRequiredToBuy(tickets: number[], k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

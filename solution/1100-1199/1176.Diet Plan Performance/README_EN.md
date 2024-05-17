@@ -9,11 +9,15 @@ tags:
     - Sliding Window
 ---
 
+<!-- problem:start -->
+
 # [1176. Diet Plan Performance 🔒](https://leetcode.com/problems/diet-plan-performance)
 
 [中文文档](/solution/1100-1199/1176.Diet%20Plan%20Performance/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>A dieter consumes&nbsp;<code>calories[i]</code>&nbsp;calories on the <code>i</code>-th day.&nbsp;</p>
 
@@ -69,7 +73,11 @@ calories[2] + calories[3] &lt; lower so 1 point is lost.
 	<li><code>0 &lt;= lower &lt;= upper</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Prefix Sum
 
@@ -80,6 +88,8 @@ Then we traverse the prefix sum array $s$. For each position $i$, we calculate $
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Here, $n$ is the length of the `calories` array.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -96,6 +106,8 @@ class Solution:
                 ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -118,6 +130,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -143,6 +157,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func dietPlanPerformance(calories []int, k int, lower int, upper int) (ans int) {
 	n := len(calories)
@@ -161,6 +177,8 @@ func dietPlanPerformance(calories []int, k int, lower int, upper int) (ans int) 
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function dietPlanPerformance(calories: number[], k: number, lower: number, upper: number): number {
@@ -184,6 +202,10 @@ function dietPlanPerformance(calories: number[], k: number, lower: number, upper
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Sliding Window
 
 We maintain a sliding window of length $k$, and the sum of the elements in the window is denoted as $s$. If $s \lt lower$, the score decreases by $1$; if $s > upper$, the score increases by $1$.
@@ -191,6 +213,8 @@ We maintain a sliding window of length $k$, and the sum of the elements in the w
 The time complexity is $O(n)$, where $n$ is the length of the `calories` array. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -211,6 +235,8 @@ class Solution:
             ans += check(s)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -238,6 +264,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -263,6 +291,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func dietPlanPerformance(calories []int, k int, lower int, upper int) (ans int) {
 	n := len(calories)
@@ -286,6 +316,8 @@ func dietPlanPerformance(calories []int, k int, lower int, upper int) (ans int) 
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function dietPlanPerformance(calories: number[], k: number, lower: number, upper: number): number {
@@ -311,4 +343,6 @@ function dietPlanPerformance(calories: number[], k: number, lower: number, upper
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -15,11 +15,15 @@ tags:
     - Matrix
 ---
 
+<!-- problem:start -->
+
 # [2328. Number of Increasing Paths in a Grid](https://leetcode.com/problems/number-of-increasing-paths-in-a-grid)
 
 [中文文档](/solution/2300-2399/2328.Number%20of%20Increasing%20Paths%20in%20a%20Grid/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an <code>m x n</code> integer matrix <code>grid</code>, where you can move from a cell to any adjacent cell in all <code>4</code> directions.</p>
 
@@ -62,7 +66,11 @@ The total number of paths is 2 + 1 = 3.
 	<li><code>1 &lt;= grid[i][j] &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: DFS + Memorization
 
@@ -81,6 +89,8 @@ The time complexity is $O(m \times n)$, and the space complexity is $O(m \times 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def countPaths(self, grid: List[List[int]]) -> int:
@@ -97,6 +107,8 @@ class Solution:
         m, n = len(grid), len(grid[0])
         return sum(dfs(i, j) for i in range(m) for j in range(n)) % mod
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -137,6 +149,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -170,6 +184,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countPaths(grid [][]int) (ans int) {
 	const mod = 1e9 + 7
@@ -201,6 +217,8 @@ func countPaths(grid [][]int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countPaths(grid: number[][]): number {
@@ -235,4 +253,6 @@ function countPaths(grid: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

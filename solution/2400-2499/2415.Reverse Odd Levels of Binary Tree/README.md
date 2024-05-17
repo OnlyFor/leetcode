@@ -11,13 +11,15 @@ tags:
     - 二叉树
 ---
 
+<!-- problem:start -->
+
 # [2415. 反转二叉树的奇数层](https://leetcode.cn/problems/reverse-odd-levels-of-binary-tree)
 
 [English Version](/solution/2400-2499/2415.Reverse%20Odd%20Levels%20of%20Binary%20Tree/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一棵 <strong>完美</strong> 二叉树的根节点 <code>root</code> ，请你反转这棵树中每个 <strong>奇数</strong> 层的节点值。</p>
 
@@ -72,7 +74,11 @@ tags:
 	<li><code>root</code> 是一棵 <strong>完美</strong> 二叉树</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：BFS
 
@@ -81,6 +87,8 @@ tags:
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 是二叉树的节点数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -107,6 +115,8 @@ class Solution:
             i += 1
         return root
 ```
+
+#### Java
 
 ```java
 /**
@@ -151,6 +161,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -189,6 +201,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -220,6 +234,8 @@ func reverseOddLevels(root *TreeNode) *TreeNode {
 	return root
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -256,6 +272,8 @@ function reverseOddLevels(root: TreeNode | null): TreeNode | null {
     return root;
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -328,4 +346,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

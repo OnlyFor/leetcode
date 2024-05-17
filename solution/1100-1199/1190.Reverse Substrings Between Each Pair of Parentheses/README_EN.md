@@ -9,11 +9,15 @@ tags:
     - String
 ---
 
+<!-- problem:start -->
+
 # [1190. Reverse Substrings Between Each Pair of Parentheses](https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses)
 
 [中文文档](/solution/1100-1199/1190.Reverse%20Substrings%20Between%20Each%20Pair%20of%20Parentheses/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>s</code> that consists of lower case English letters and brackets.</p>
 
@@ -54,7 +58,11 @@ tags:
 	<li>It is guaranteed that all parentheses are balanced.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -63,6 +71,8 @@ We can use a double-ended queue or stack to simulate the reversal process.
 The time complexity is $O(n^2)$, where $n$ is the length of the string $s$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -79,6 +89,8 @@ class Solution:
                 stk.append(c)
         return ''.join(stk)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -111,6 +123,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -134,6 +148,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func reverseParentheses(s string) string {
 	stk := []byte{}
@@ -153,6 +169,8 @@ func reverseParentheses(s string) string {
 	return string(stk)
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -191,6 +209,10 @@ var reverseParentheses = function (s) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Quick Thinking
 
 We observe that during the traversal of the string, each time we encounter '(' or ')', we jump to the corresponding ')' or '(', then reverse the traversal direction and continue.
@@ -202,6 +224,8 @@ Then, we traverse the string from left to right. When we encounter '(' or ')', w
 The time complexity is $O(n)$, where $n$ is the length of the string $s$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -226,6 +250,8 @@ class Solution:
             i += x
         return ''.join(ans)
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -260,6 +286,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func reverseParentheses(s string) string {
 	n := len(s)
@@ -291,4 +319,6 @@ func reverseParentheses(s string) string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -12,11 +12,15 @@ tags:
     - Heap (Priority Queue)
 ---
 
+<!-- problem:start -->
+
 # [3080. Mark Elements on Array by Performing Queries](https://leetcode.com/problems/mark-elements-on-array-by-performing-queries)
 
 [中文文档](/solution/3000-3099/3080.Mark%20Elements%20on%20Array%20by%20Performing%20Queries/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> array <code>nums</code> of size <code>n</code> consisting of positive integers.</p>
 
@@ -74,7 +78,11 @@ tags:
 	<li><code>0 &lt;= index<sub>i</sub>, k<sub>i</sub> &lt;= n - 1</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sorting + Simulation
 
@@ -89,6 +97,8 @@ After traversing all the queries, we get the answer array.
 The time complexity is $O(n \times \log n)$, and the space complexity is $O(n)$. Here, $n$ is the length of the array $nums$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -112,6 +122,8 @@ class Solution:
             ans.append(s)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -146,6 +158,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -179,6 +193,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func unmarkedSumArray(nums []int, queries [][]int) []int64 {
@@ -219,6 +235,8 @@ func unmarkedSumArray(nums []int, queries [][]int) []int64 {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function unmarkedSumArray(nums: number[], queries: number[][]): number[] {
     const n = nums.length;
@@ -248,4 +266,6 @@ function unmarkedSumArray(nums: number[], queries: number[][]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

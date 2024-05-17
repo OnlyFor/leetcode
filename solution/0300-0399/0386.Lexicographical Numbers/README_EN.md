@@ -7,11 +7,15 @@ tags:
     - Trie
 ---
 
+<!-- problem:start -->
+
 # [386. Lexicographical Numbers](https://leetcode.com/problems/lexicographical-numbers)
 
 [中文文档](/solution/0300-0399/0386.Lexicographical%20Numbers/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer <code>n</code>, return all the numbers in the range <code>[1, n]</code> sorted in lexicographical order.</p>
 
@@ -32,11 +36,17 @@ tags:
 	<li><code>1 &lt;= n &lt;= 5 * 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -53,6 +63,8 @@ class Solution:
             dfs(i)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -76,6 +88,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -92,6 +106,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func lexicalOrder(n int) []int {
@@ -112,6 +128,8 @@ func lexicalOrder(n int) []int {
 	return ans
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -134,6 +152,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -160,9 +180,15 @@ var lexicalOrder = function (n) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Java
 
 ```java
 class Solution {
@@ -185,6 +211,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -204,6 +232,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func lexicalOrder(n int) []int {
@@ -226,4 +256,6 @@ func lexicalOrder(n int) []int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->
