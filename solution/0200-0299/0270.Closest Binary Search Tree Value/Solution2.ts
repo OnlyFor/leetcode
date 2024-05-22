@@ -12,20 +12,17 @@
  * }
  */
 
-function levelOrder(root: TreeNode | null): number[] {
-    const ans: number[] = [];
-    if (!root) {
-        return ans;
-    }
-    const q: TreeNode[] = [root];
-    while (q.length) {
-        const t: TreeNode[] = [];
-        for (const { val, left, right } of q) {
-            ans.push(val);
-            left && t.push(left);
-            right && t.push(right);
+function closestValue(root: TreeNode | null, target: number): number {
+    let ans = 0;
+    let diff = Number.POSITIVE_INFINITY;
+
+    while (root) {
+        const nxt = Math.abs(root.val - target);
+        if (nxt < diff || (nxt === diff && root.val < ans)) {
+            diff = nxt;
+            ans = root.val;
         }
-        q.splice(0, q.length, ...t);
+        root = target < root.val ? root.left : root.right;
     }
     return ans;
 }

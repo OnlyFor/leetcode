@@ -12,25 +12,25 @@
  * }
  */
 
-function pathSum(root: TreeNode | null, target: number): number[][] {
-    const ans: number[][] = [];
-    const t: number[] = [];
+function closestValue(root: TreeNode | null, target: number): number {
+    let ans = 0;
+    let diff = Number.POSITIVE_INFINITY;
 
-    const dfs = (root: TreeNode | null, s: number): void => {
-        if (!root) {
+    const dfs = (node: TreeNode | null): void => {
+        if (!node) {
             return;
         }
-        const { val, left, right } = root;
-        t.push(val);
-        s -= val;
-        if (!left && !right && s === 0) {
-            ans.push([...t]);
+
+        const nxt = Math.abs(target - node.val);
+        if (nxt < diff || (nxt === diff && node.val < ans)) {
+            diff = nxt;
+            ans = node.val;
         }
-        dfs(left, s);
-        dfs(right, s);
-        t.pop();
+
+        node = target < node.val ? node.left : node.right;
+        dfs(node);
     };
 
-    dfs(root, target);
+    dfs(root);
     return ans;
 }
