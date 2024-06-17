@@ -26,6 +26,13 @@ comments: true
 
 ## 往期竞赛
 
+#### 第 402 场周赛(2024-06-16 10:30, 90 分钟) 参赛人数 3283
+
+- [3184. 构成整天的下标对数目 I](/solution/3100-3199/3184.Count%20Pairs%20That%20Form%20a%20Complete%20Day%20I/README.md)
+- [3185. 构成整天的下标对数目 II](/solution/3100-3199/3185.Count%20Pairs%20That%20Form%20a%20Complete%20Day%20II/README.md)
+- [3186. 施咒的最大总伤害](/solution/3100-3199/3186.Maximum%20Total%20Damage%20With%20Spell%20Casting/README.md)
+- [3187. 数组中的峰值](/solution/3100-3199/3187.Peaks%20in%20Array/README.md)
+
 #### 第 401 场周赛(2024-06-09 10:30, 90 分钟) 参赛人数 3160
 
 - [3178. 找出 K 秒后拿着球的孩子](/solution/3100-3199/3178.Find%20the%20Child%20Who%20Has%20the%20Ball%20After%20K%20Seconds/README.md)
@@ -2833,7 +2840,7 @@ comments: true
 - [1031. 两个非重叠子数组的最大和](/solution/1000-1099/1031.Maximum%20Sum%20of%20Two%20Non-Overlapping%20Subarrays/README.md)
 - [1032. 字符流](/solution/1000-1099/1032.Stream%20of%20Characters/README.md)
 
-#### 第 132 场周赛(2019-04-14 10:30, 90 分钟) 参赛人数 1049
+#### 第 132 场周赛(2019-04-14 10:30, 90 分钟) 参赛人数 1050
 
 - [1025. 除数博弈](/solution/1000-1099/1025.Divisor%20Game/README.md)
 - [1026. 节点与其祖先之间的最大差值](/solution/1000-1099/1026.Maximum%20Difference%20Between%20Node%20and%20Ancestor/README.md)
