@@ -691,7 +691,7 @@ Press <kbd>Control</kbd> + <kbd>F</kbd>(or <kbd>Command</kbd> + <kbd>F</kbd> on 
 |  0680  |  [Valid Palindrome II](/solution/0600-0699/0680.Valid%20Palindrome%20II/README_EN.md)  |  `Greedy`,`Two Pointers`,`String`  |  Easy  |    |
 |  0681  |  [Next Closest Time](/solution/0600-0699/0681.Next%20Closest%20Time/README_EN.md)  |  `Hash Table`,`String`,`Backtracking`,`Enumeration`  |  Medium  |  🔒  |
 |  0682  |  [Baseball Game](/solution/0600-0699/0682.Baseball%20Game/README_EN.md)  |  `Stack`,`Array`,`Simulation`  |  Easy  |    |
-|  0683  |  [K Empty Slots](/solution/0600-0699/0683.K%20Empty%20Slots/README_EN.md)  |  `Binary Indexed Tree`,`Array`,`Ordered Set`,`Sliding Window`  |  Hard  |  🔒  |
+|  0683  |  [K Empty Slots](/solution/0600-0699/0683.K%20Empty%20Slots/README_EN.md)  |  `Binary Indexed Tree`,`Segment Tree`,`Queue`,`Array`,`Ordered Set`,`Sliding Window`,`Monotonic Queue`,`Heap (Priority Queue)`  |  Hard  |  🔒  |
 |  0684  |  [Redundant Connection](/solution/0600-0699/0684.Redundant%20Connection/README_EN.md)  |  `Depth-First Search`,`Breadth-First Search`,`Union Find`,`Graph`  |  Medium  |    |
 |  0685  |  [Redundant Connection II](/solution/0600-0699/0685.Redundant%20Connection%20II/README_EN.md)  |  `Depth-First Search`,`Breadth-First Search`,`Union Find`,`Graph`  |  Hard  |    |
 |  0686  |  [Repeated String Match](/solution/0600-0699/0686.Repeated%20String%20Match/README_EN.md)  |  `String`,`String Matching`  |  Medium  |    |
@@ -1523,7 +1523,7 @@ Press <kbd>Control</kbd> + <kbd>F</kbd>(or <kbd>Command</kbd> + <kbd>F</kbd> on 
 |  1512  |  [Number of Good Pairs](/solution/1500-1599/1512.Number%20of%20Good%20Pairs/README_EN.md)  |  `Array`,`Hash Table`,`Math`,`Counting`  |  Easy  |  Weekly Contest 197  |
 |  1513  |  [Number of Substrings With Only 1s](/solution/1500-1599/1513.Number%20of%20Substrings%20With%20Only%201s/README_EN.md)  |  `Math`,`String`  |  Medium  |  Weekly Contest 197  |
 |  1514  |  [Path with Maximum Probability](/solution/1500-1599/1514.Path%20with%20Maximum%20Probability/README_EN.md)  |  `Graph`,`Array`,`Shortest Path`,`Heap (Priority Queue)`  |  Medium  |  Weekly Contest 197  |
-|  1515  |  [Best Position for a Service Centre](/solution/1500-1599/1515.Best%20Position%20for%20a%20Service%20Centre/README_EN.md)  |  `Geometry`,`Math`,`Randomized`  |  Hard  |  Weekly Contest 197  |
+|  1515  |  [Best Position for a Service Centre](/solution/1500-1599/1515.Best%20Position%20for%20a%20Service%20Centre/README_EN.md)  |  `Geometry`,`Array`,`Math`,`Randomized`  |  Hard  |  Weekly Contest 197  |
 |  1516  |  [Move Sub-Tree of N-Ary Tree](/solution/1500-1599/1516.Move%20Sub-Tree%20of%20N-Ary%20Tree/README_EN.md)  |  `Tree`,`Depth-First Search`  |  Hard  |  🔒  |
 |  1517  |  [Find Users With Valid E-Mails](/solution/1500-1599/1517.Find%20Users%20With%20Valid%20E-Mails/README_EN.md)  |  `Database`  |  Easy  |    |
 |  1518  |  [Water Bottles](/solution/1500-1599/1518.Water%20Bottles/README_EN.md)  |  `Math`,`Simulation`  |  Easy  |  Weekly Contest 198  |
@@ -3223,6 +3223,7 @@ Press <kbd>Control</kbd> + <kbd>F</kbd>(or <kbd>Command</kbd> + <kbd>F</kbd> on 
 |  3212  |  [Count Submatrices With Equal Frequency of X and Y](/solution/3200-3299/3212.Count%20Submatrices%20With%20Equal%20Frequency%20of%20X%20and%20Y/README_EN.md)  |  `Array`,`Matrix`,`Prefix Sum`  |  Medium  |  Weekly Contest 405  |
 |  3213  |  [Construct String with Minimum Cost](/solution/3200-3299/3213.Construct%20String%20with%20Minimum%20Cost/README_EN.md)  |  `Array`,`String`,`Dynamic Programming`,`Suffix Array`  |  Hard  |  Weekly Contest 405  |
 |  3214  |  [Year on Year Growth Rate](/solution/3200-3299/3214.Year%20on%20Year%20Growth%20Rate/README_EN.md)  |  `Database`  |  Hard  |  🔒  |
+|  3215  |  [Count Triplets with Even XOR Set Bits II](/solution/3200-3299/3215.Count%20Triplets%20with%20Even%20XOR%20Set%20Bits%20II/README_EN.md)  |    |  Medium  |  🔒  |
 
 ## Copyright
 
